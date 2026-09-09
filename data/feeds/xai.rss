@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>xAI Status</title>
+    <link>https://status.x.ai</link>
+    <description>No incidents declared. We are not actively mitigating any known incidents at this time.</description>
+  </channel>
+</rss>

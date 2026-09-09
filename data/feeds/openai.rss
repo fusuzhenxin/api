@@ -1,0 +1,1547 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    <channel>
+        <title>OpenAI status</title>
+        <link>https://status.openai.com/</link>
+        <description>OpenAI status page updates</description>
+        <lastBuildDate>Wed, 09 Sep 2026 08:45:50 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>incident.io</generator>
+        <item>
+            <title><![CDATA[Elevated errors for image generation]]></title>
+            <link>https://status.openai.com//incidents/01M20PYYYGRT9303VHAPA7YNT2</link>
+            <guid>https://status.openai.com//incidents/01M20PYYYGRT9303VHAPA7YNT2</guid>
+            <pubDate>Tue, 08 Sep 2026 21:59:24 GMT</pubDate>
+            <description><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Images (Operational)</li>
+<li>Image Generation (Operational)</li>
+          </ul>]]></description>
+            <content:encoded><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Images (Operational)</li>
+<li>Image Generation (Operational)</li>
+          </ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[File uploads are delayed or failing]]></title>
+            <link>https://status.openai.com//incidents/01M20QBACYZMK2PRCJQCBSWTYJ</link>
+            <guid>https://status.openai.com//incidents/01M20QBACYZMK2PRCJQCBSWTYJ</guid>
+            <pubDate>Tue, 08 Sep 2026 19:16:08 GMT</pubDate>
+            <description><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>File uploads (Operational)</li>
+<li>GPTs (Operational)</li>
+          </ul>]]></description>
+            <content:encoded><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>File uploads (Operational)</li>
+<li>GPTs (Operational)</li>
+          </ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Users in APAC region may face increased error in ChatGPT, Work, image generation, file upload, Voice, and Codex Cloud]]></title>
+            <link>https://status.openai.com//incidents/01M1NKFZH5EEYEREC54HNAHY35</link>
+            <guid>https://status.openai.com//incidents/01M1NKFZH5EEYEREC54HNAHY35</guid>
+            <pubDate>Fri, 04 Sep 2026 10:46:54 GMT</pubDate>
+            <description><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>File uploads (Operational)</li>
+<li>Voice mode (Operational)</li>
+<li>Conversations (Operational)</li>
+<li>Image Generation (Operational)</li>
+<li>Codex Web (Operational)</li>
+          </ul>]]></description>
+            <content:encoded><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>File uploads (Operational)</li>
+<li>Voice mode (Operational)</li>
+<li>Conversations (Operational)</li>
+<li>Image Generation (Operational)</li>
+<li>Codex Web (Operational)</li>
+          </ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Elevated errors across ChatGPT and Codex]]></title>
+            <link>https://status.openai.com//incidents/01M1KWEDH417T2CF44YYHZDFCR</link>
+            <guid>https://status.openai.com//incidents/01M1KWEDH417T2CF44YYHZDFCR</guid>
+            <pubDate>Thu, 03 Sep 2026 16:55:49 GMT</pubDate>
+            <description><![CDATA[<b>Status: Resolved</b><br/><br/>The issue causing elevated errors across ChatGPT and Codex has been resolved.
+
+Some Codex remote control users may need to pair their mobile device again following this incident.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Deep Research (Operational)</li>
+<li>Codex Web (Operational)</li>
+<li>Connectors/Apps (Operational)</li>
+<li>Compliance API (Operational)</li>
+<li>GPTs (Operational)</li>
+<li>Codex in ChatGPT Desktop (Operational)</li>
+<li>ChatGPT Work (Operational)</li>
+<li>Voice mode (Operational)</li>
+<li>ChatGPT Atlas (Operational)</li>
+<li>CLI (Operational)</li>
+<li>VS Code extension (Operational)</li>
+<li>Codex API (Operational)</li>
+<li>Login (Operational)</li>
+<li>File uploads (Operational)</li>
+<li>Agent (Operational)</li>
+<li>Sites (Operational)</li>
+<li>Search (Operational)</li>
+<li>Conversations (Operational)</li>
+<li>Image Generation (Operational)</li>
+          </ul>]]></description>
+            <content:encoded><![CDATA[<b>Status: Resolved</b><br/><br/>The issue causing elevated errors across ChatGPT and Codex has been resolved.
+
+Some Codex remote control users may need to pair their mobile device again following this incident.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Deep Research (Operational)</li>
+<li>Codex Web (Operational)</li>
+<li>Connectors/Apps (Operational)</li>
+<li>Compliance API (Operational)</li>
+<li>GPTs (Operational)</li>
+<li>Codex in ChatGPT Desktop (Operational)</li>
+<li>ChatGPT Work (Operational)</li>
+<li>Voice mode (Operational)</li>
+<li>ChatGPT Atlas (Operational)</li>
+<li>CLI (Operational)</li>
+<li>VS Code extension (Operational)</li>
+<li>Codex API (Operational)</li>
+<li>Login (Operational)</li>
+<li>File uploads (Operational)</li>
+<li>Agent (Operational)</li>
+<li>Sites (Operational)</li>
+<li>Search (Operational)</li>
+<li>Conversations (Operational)</li>
+<li>Image Generation (Operational)</li>
+          </ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[ChatGPT Work Mode High Error Rates]]></title>
+            <link>https://status.openai.com//incidents/01M1J99EDCYED5GP2W8GZ3N2NA</link>
+            <guid>https://status.openai.com//incidents/01M1J99EDCYED5GP2W8GZ3N2NA</guid>
+            <pubDate>Thu, 03 Sep 2026 00:10:45 GMT</pubDate>
+            <description><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Image Generation (Operational)</li>
+<li>GPTs (Operational)</li>
+<li>Agent (Operational)</li>
+<li>Deep Research (Operational)</li>
+<li>ChatGPT Atlas (Operational)</li>
+<li>File uploads (Operational)</li>
+<li>Voice mode (Operational)</li>
+<li>ChatGPT Work (Operational)</li>
+<li>Sites (Operational)</li>
+<li>Login (Operational)</li>
+<li>Conversations (Operational)</li>
+<li>Compliance API (Operational)</li>
+<li>Connectors/Apps (Operational)</li>
+<li>Codex in ChatGPT Desktop (Operational)</li>
+<li>Search (Operational)</li>
+          </ul>]]></description>
+            <content:encoded><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Image Generation (Operational)</li>
+<li>GPTs (Operational)</li>
+<li>Agent (Operational)</li>
+<li>Deep Research (Operational)</li>
+<li>ChatGPT Atlas (Operational)</li>
+<li>File uploads (Operational)</li>
+<li>Voice mode (Operational)</li>
+<li>ChatGPT Work (Operational)</li>
+<li>Sites (Operational)</li>
+<li>Login (Operational)</li>
+<li>Conversations (Operational)</li>
+<li>Compliance API (Operational)</li>
+<li>Connectors/Apps (Operational)</li>
+<li>Codex in ChatGPT Desktop (Operational)</li>
+<li>Search (Operational)</li>
+          </ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Elevated errors creating new accounts]]></title>
+            <link>https://status.openai.com//incidents/01M1HN7GRR6FJNWFVX2F8QMA3R</link>
+            <guid>https://status.openai.com//incidents/01M1HN7GRR6FJNWFVX2F8QMA3R</guid>
+            <pubDate>Wed, 02 Sep 2026 18:45:12 GMT</pubDate>
+            <description><![CDATA[<b>Status: Resolved</b><br/><br/>The issue affecting new account creation has been resolved.]]></description>
+            <content:encoded><![CDATA[<b>Status: Resolved</b><br/><br/>The issue affecting new account creation has been resolved.]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Elevated latency in the Responses API]]></title>
+            <link>https://status.openai.com//incidents/01M1CYZDD84XD0H56XNEV2PT98</link>
+            <guid>https://status.openai.com//incidents/01M1CYZDD84XD0H56XNEV2PT98</guid>
+            <pubDate>Tue, 01 Sep 2026 19:05:46 GMT</pubDate>
+            <description><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Responses (Operational)</li>
+          </ul>]]></description>
+            <content:encoded><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Responses (Operational)</li>
+          </ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Elevated errors in ChatGPT conversations for Free and Go plans]]></title>
+            <link>https://status.openai.com//incidents/01M1D6E14BQSYQA3R5CNQBB7EB</link>
+            <guid>https://status.openai.com//incidents/01M1D6E14BQSYQA3R5CNQBB7EB</guid>
+            <pubDate>Tue, 01 Sep 2026 01:00:01 GMT</pubDate>
+            <description><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Conversations (Operational)</li>
+          </ul>]]></description>
+            <content:encoded><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Conversations (Operational)</li>
+          </ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[ChatGPT Work seeing elevated errors and latency]]></title>
+            <link>https://status.openai.com//incidents/01M1C5M4K0WC8PPT0Z175RJA1E</link>
+            <guid>https://status.openai.com//incidents/01M1C5M4K0WC8PPT0Z175RJA1E</guid>
+            <pubDate>Mon, 31 Aug 2026 20:28:40 GMT</pubDate>
+            <description><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>ChatGPT Work (Operational)</li>
+          </ul>]]></description>
+            <content:encoded><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>ChatGPT Work (Operational)</li>
+          </ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Users may experience an increase in error rates in Workspace Agents and ChatGPT Work on Web and Mobile]]></title>
+            <link>https://status.openai.com//incidents/01M1263309PD7VYV8EF95W2M2P</link>
+            <guid>https://status.openai.com//incidents/01M1263309PD7VYV8EF95W2M2P</guid>
+            <pubDate>Thu, 27 Aug 2026 22:14:44 GMT</pubDate>
+            <description><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Agent (Operational)</li>
+<li>ChatGPT Work (Operational)</li>
+          </ul>]]></description>
+            <content:encoded><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Agent (Operational)</li>
+<li>ChatGPT Work (Operational)</li>
+          </ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Unexpected logouts for some ChatGPT web users]]></title>
+            <link>https://status.openai.com//incidents/01M0JXWD740S0Y50DWJZS7SH75</link>
+            <guid>https://status.openai.com//incidents/01M0JXWD740S0Y50DWJZS7SH75</guid>
+            <pubDate>Fri, 21 Aug 2026 23:15:09 GMT</pubDate>
+            <description><![CDATA[<b>Status: Resolved</b><br/><br/>The issue causing some ChatGPT web users to be unexpectedly logged out when refreshing the page has been resolved.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Login (Operational)</li>
+          </ul>]]></description>
+            <content:encoded><![CDATA[<b>Status: Resolved</b><br/><br/>The issue causing some ChatGPT web users to be unexpectedly logged out when refreshing the page has been resolved.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Login (Operational)</li>
+          </ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Elevated Codex API authentication errors]]></title>
+            <link>https://status.openai.com//incidents/01M0G1RZER839AZXWMYKSZF3GR</link>
+            <guid>https://status.openai.com//incidents/01M0G1RZER839AZXWMYKSZF3GR</guid>
+            <pubDate>Thu, 20 Aug 2026 17:52:16 GMT</pubDate>
+            <description><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Codex API (Operational)</li>
+          </ul>]]></description>
+            <content:encoded><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Codex API (Operational)</li>
+          </ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Elevated Errors for Thinking mode in ChatGPT ]]></title>
+            <link>https://status.openai.com//incidents/01M0FQAR3NNH3ANVTQMBRD47DC</link>
+            <guid>https://status.openai.com//incidents/01M0FQAR3NNH3ANVTQMBRD47DC</guid>
+            <pubDate>Thu, 20 Aug 2026 16:51:51 GMT</pubDate>
+            <description><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Conversations (Operational)</li>
+<li>Image Generation (Operational)</li>
+<li>ChatGPT Work (Operational)</li>
+          </ul>]]></description>
+            <content:encoded><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Conversations (Operational)</li>
+<li>Image Generation (Operational)</li>
+<li>ChatGPT Work (Operational)</li>
+          </ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Chatgpt.com is down - all signups and logins are down as of right now]]></title>
+            <link>https://status.openai.com//incidents/01M0E7K87VJNMGW0QTMHPEQQ39</link>
+            <guid>https://status.openai.com//incidents/01M0E7K87VJNMGW0QTMHPEQQ39</guid>
+            <pubDate>Thu, 20 Aug 2026 00:54:17 GMT</pubDate>
+            <description><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Login (Operational)</li>
+          </ul>]]></description>
+            <content:encoded><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Login (Operational)</li>
+          </ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Elevated errors deploying Sites]]></title>
+            <link>https://status.openai.com//incidents/01M0B4WSV41BCFZ9VDWKSMQVSP</link>
+            <guid>https://status.openai.com//incidents/01M0B4WSV41BCFZ9VDWKSMQVSP</guid>
+            <pubDate>Tue, 18 Aug 2026 19:37:24 GMT</pubDate>
+            <description><![CDATA[<b>Status: Resolved</b><br/><br/>The issue affecting site deployments has been resolved.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Sites (Operational)</li>
+          </ul>]]></description>
+            <content:encoded><![CDATA[<b>Status: Resolved</b><br/><br/>The issue affecting site deployments has been resolved.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Sites (Operational)</li>
+          </ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Elevated errors in ChatGPT conversations for Free users]]></title>
+            <link>https://status.openai.com//incidents/01KZXVAJQ5XFH7PTM43XVPQWGJ</link>
+            <guid>https://status.openai.com//incidents/01KZXVAJQ5XFH7PTM43XVPQWGJ</guid>
+            <pubDate>Thu, 13 Aug 2026 23:58:22 GMT</pubDate>
+            <description><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Conversations (Operational)</li>
+          </ul>]]></description>
+            <content:encoded><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Conversations (Operational)</li>
+          </ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Error while creating custom RBAC roles for Enterprise users]]></title>
+            <link>https://status.openai.com//incidents/01KZXPZD4KHMQQFF09PSNNEZT8</link>
+            <guid>https://status.openai.com//incidents/01KZXPZD4KHMQQFF09PSNNEZT8</guid>
+            <pubDate>Thu, 13 Aug 2026 22:26:53 GMT</pubDate>
+            <description><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.]]></description>
+            <content:encoded><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Increase in errors on API, Codex and Work Mode]]></title>
+            <link>https://status.openai.com//incidents/01KZSC0T66YTVM57N5T79SV8ZV</link>
+            <guid>https://status.openai.com//incidents/01KZSC0T66YTVM57N5T79SV8ZV</guid>
+            <pubDate>Tue, 11 Aug 2026 22:42:26 GMT</pubDate>
+            <description><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.]]></description>
+            <content:encoded><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Users unable to login to ads manager]]></title>
+            <link>https://status.openai.com//incidents/01KZRXPE0NGXA12FJNP8WZF8D7</link>
+            <guid>https://status.openai.com//incidents/01KZRXPE0NGXA12FJNP8WZF8D7</guid>
+            <pubDate>Tue, 11 Aug 2026 17:28:04 GMT</pubDate>
+            <description><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Ads Manager (Operational)</li>
+          </ul>]]></description>
+            <content:encoded><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Ads Manager (Operational)</li>
+          </ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Increased error rates]]></title>
+            <link>https://status.openai.com//incidents/01KZRE6ZA1RE1ZH4HQ111CX1S8</link>
+            <guid>https://status.openai.com//incidents/01KZRE6ZA1RE1ZH4HQ111CX1S8</guid>
+            <pubDate>Tue, 11 Aug 2026 15:01:38 GMT</pubDate>
+            <description><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Conversations (Operational)</li>
+<li>ChatGPT Work (Operational)</li>
+          </ul>]]></description>
+            <content:encoded><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Conversations (Operational)</li>
+<li>ChatGPT Work (Operational)</li>
+          </ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Elevated errors affecting ChatGPT Go conversations]]></title>
+            <link>https://status.openai.com//incidents/01KZRJHTR75WDXCMC0ZERX6YJC</link>
+            <guid>https://status.openai.com//incidents/01KZRJHTR75WDXCMC0ZERX6YJC</guid>
+            <pubDate>Tue, 11 Aug 2026 14:20:28 GMT</pubDate>
+            <description><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Conversations (Operational)</li>
+          </ul>]]></description>
+            <content:encoded><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Conversations (Operational)</li>
+          </ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Increased error rates]]></title>
+            <link>https://status.openai.com//incidents/01KZNZTPWMV06Z6TQNMY1R1QDR</link>
+            <guid>https://status.openai.com//incidents/01KZNZTPWMV06Z6TQNMY1R1QDR</guid>
+            <pubDate>Tue, 11 Aug 2026 02:48:20 GMT</pubDate>
+            <description><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Conversations (Operational)</li>
+          </ul>]]></description>
+            <content:encoded><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Conversations (Operational)</li>
+          </ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Increased errors for some ChatGPT users]]></title>
+            <link>https://status.openai.com//incidents/01KZN8RYNZY8T4QQGB3JWMPYRW</link>
+            <guid>https://status.openai.com//incidents/01KZN8RYNZY8T4QQGB3JWMPYRW</guid>
+            <pubDate>Mon, 10 Aug 2026 08:09:19 GMT</pubDate>
+            <description><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Conversations (Operational)</li>
+          </ul>]]></description>
+            <content:encoded><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Conversations (Operational)</li>
+          </ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Elevated errors with image generation]]></title>
+            <link>https://status.openai.com//incidents/01KZ96S5HEWX0CX26W2WFYFKE6</link>
+            <guid>https://status.openai.com//incidents/01KZ96S5HEWX0CX26W2WFYFKE6</guid>
+            <pubDate>Wed, 05 Aug 2026 23:22:45 GMT</pubDate>
+            <description><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Files (Operational)</li>
+<li>Image Generation (Operational)</li>
+          </ul>]]></description>
+            <content:encoded><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Files (Operational)</li>
+<li>Image Generation (Operational)</li>
+          </ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Issues with Custom GPT actions]]></title>
+            <link>https://status.openai.com//incidents/01KZ9DMQD2GJ8JJWDN7572RH78</link>
+            <guid>https://status.openai.com//incidents/01KZ9DMQD2GJ8JJWDN7572RH78</guid>
+            <pubDate>Wed, 05 Aug 2026 22:49:08 GMT</pubDate>
+            <description><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>GPTs (Operational)</li>
+          </ul>]]></description>
+            <content:encoded><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>GPTs (Operational)</li>
+          </ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Elevated errors in ChatGPT conversations with files]]></title>
+            <link>https://status.openai.com//incidents/01KZ9E7QD8WFJD5DMF73QGVYH8</link>
+            <guid>https://status.openai.com//incidents/01KZ9E7QD8WFJD5DMF73QGVYH8</guid>
+            <pubDate>Wed, 05 Aug 2026 20:19:28 GMT</pubDate>
+            <description><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Conversations (Operational)</li>
+          </ul>]]></description>
+            <content:encoded><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Conversations (Operational)</li>
+          </ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Elevated ChatGPT conversation errors affecting Plus, Pro, Business, and Edu users]]></title>
+            <link>https://status.openai.com//incidents/01KZ6CT9K9Q52S3707W75MNBGB</link>
+            <guid>https://status.openai.com//incidents/01KZ6CT9K9Q52S3707W75MNBGB</guid>
+            <pubDate>Tue, 04 Aug 2026 15:25:30 GMT</pubDate>
+            <description><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Conversations (Operational)</li>
+          </ul>]]></description>
+            <content:encoded><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Conversations (Operational)</li>
+          </ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Enterprise & Education Chat Errors]]></title>
+            <link>https://status.openai.com//incidents/01KYVPNEY9736Z04D3X1NSFFF9</link>
+            <guid>https://status.openai.com//incidents/01KYVPNEY9736Z04D3X1NSFFF9</guid>
+            <pubDate>Fri, 31 Jul 2026 09:28:52 GMT</pubDate>
+            <description><![CDATA[<b>Status: Resolved</b><br/><br/>This is now resolved.]]></description>
+            <content:encoded><![CDATA[<b>Status: Resolved</b><br/><br/>This is now resolved.]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Elevated errors affecting ChatGPT conversations]]></title>
+            <link>https://status.openai.com//incidents/01KYSQ7PC81PV3PZE3ZEVFK6K5</link>
+            <guid>https://status.openai.com//incidents/01KYSQ7PC81PV3PZE3ZEVFK6K5</guid>
+            <pubDate>Thu, 30 Jul 2026 16:01:11 GMT</pubDate>
+            <description><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Conversations (Operational)</li>
+          </ul>]]></description>
+            <content:encoded><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Conversations (Operational)</li>
+          </ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Elevated error rates with the invalid_prompt error code]]></title>
+            <link>https://status.openai.com//incidents/01KYNNX2TQ3PV0KPJ9PTRRPX6C</link>
+            <guid>https://status.openai.com//incidents/01KYNNX2TQ3PV0KPJ9PTRRPX6C</guid>
+            <pubDate>Wed, 29 Jul 2026 02:20:19 GMT</pubDate>
+            <description><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Chat Completions (Operational)</li>
+          </ul>]]></description>
+            <content:encoded><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Chat Completions (Operational)</li>
+          </ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Elevated Image Generation Error Rate in ChatGPT]]></title>
+            <link>https://status.openai.com//incidents/01KYMJND2XYYBDVCF8DKA5DY3N</link>
+            <guid>https://status.openai.com//incidents/01KYMJND2XYYBDVCF8DKA5DY3N</guid>
+            <pubDate>Tue, 28 Jul 2026 15:15:32 GMT</pubDate>
+            <description><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Image Generation (Operational)</li>
+          </ul>]]></description>
+            <content:encoded><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Image Generation (Operational)</li>
+          </ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Image generation unavailable in ChatGPT]]></title>
+            <link>https://status.openai.com//incidents/01KYJFG4S86K8FMTB4N6BDZS7F</link>
+            <guid>https://status.openai.com//incidents/01KYJFG4S86K8FMTB4N6BDZS7F</guid>
+            <pubDate>Mon, 27 Jul 2026 20:24:51 GMT</pubDate>
+            <description><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Image Generation (Operational)</li>
+          </ul>]]></description>
+            <content:encoded><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Image Generation (Operational)</li>
+          </ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Image generation unavailable in ChatGPT]]></title>
+            <link>https://status.openai.com//incidents/01KY23YCPJ9M5BFFT6ZHKQE9MP</link>
+            <guid>https://status.openai.com//incidents/01KY23YCPJ9M5BFFT6ZHKQE9MP</guid>
+            <pubDate>Mon, 27 Jul 2026 19:04:42 GMT</pubDate>
+            <description><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Images (Operational)</li>
+<li>Image Generation (Operational)</li>
+          </ul>]]></description>
+            <content:encoded><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Images (Operational)</li>
+<li>Image Generation (Operational)</li>
+          </ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[We’re seeing elevated latency, timeouts, and interrupted streaming across gpt 5.1 mini model and gpt 4.1 mini]]></title>
+            <link>https://status.openai.com//incidents/01KYJC3TDHZVSQFFPTC8X9RAHC</link>
+            <guid>https://status.openai.com//incidents/01KYJC3TDHZVSQFFPTC8X9RAHC</guid>
+            <pubDate>Mon, 27 Jul 2026 17:30:00 GMT</pubDate>
+            <description><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Chat Completions (Operational)</li>
+          </ul>]]></description>
+            <content:encoded><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Chat Completions (Operational)</li>
+          </ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Elevated errors affecting ChatGPT conversations]]></title>
+            <link>https://status.openai.com//incidents/01KYDN6YPS6ARY1EC9089N089G</link>
+            <guid>https://status.openai.com//incidents/01KYDN6YPS6ARY1EC9089N089G</guid>
+            <pubDate>Mon, 27 Jul 2026 16:32:09 GMT</pubDate>
+            <description><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Conversations (Operational)</li>
+          </ul>]]></description>
+            <content:encoded><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Conversations (Operational)</li>
+          </ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Elevated error rates]]></title>
+            <link>https://status.openai.com//incidents/01KYCGY017EG43XZS6GFVXA8VH</link>
+            <guid>https://status.openai.com//incidents/01KYCGY017EG43XZS6GFVXA8VH</guid>
+            <pubDate>Sat, 25 Jul 2026 11:57:02 GMT</pubDate>
+            <description><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Chat Completions (Operational)</li>
+<li>Codex API (Operational)</li>
+<li>Images (Operational)</li>
+<li>Audio (Operational)</li>
+<li>Files (Operational)</li>
+<li>Compliance API (Operational)</li>
+<li>VS Code extension (Operational)</li>
+<li>Embeddings (Operational)</li>
+<li>Agent (Operational)</li>
+<li>Realtime (Operational)</li>
+<li>Responses (Operational)</li>
+<li>Codex Web (Operational)</li>
+<li>Login (Operational)</li>
+<li>File uploads (Operational)</li>
+<li>Search (Operational)</li>
+<li>GPTs (Operational)</li>
+<li>Connectors/Apps (Operational)</li>
+<li>Sora (Operational)</li>
+<li>CLI (Operational)</li>
+<li>Codex in ChatGPT Desktop (Operational)</li>
+<li>Image Generation (Operational)</li>
+<li>ChatGPT Work (Operational)</li>
+<li>Sites (Operational)</li>
+<li>Login (Operational)</li>
+<li>Deep Research (Operational)</li>
+<li>Moderations (Operational)</li>
+<li>Voice mode (Operational)</li>
+<li>Conversations (Operational)</li>
+<li>Batch (Operational)</li>
+<li>Fine-tuning (Operational)</li>
+<li>ChatGPT Atlas (Operational)</li>
+          </ul>]]></description>
+            <content:encoded><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Chat Completions (Operational)</li>
+<li>Codex API (Operational)</li>
+<li>Images (Operational)</li>
+<li>Audio (Operational)</li>
+<li>Files (Operational)</li>
+<li>Compliance API (Operational)</li>
+<li>VS Code extension (Operational)</li>
+<li>Embeddings (Operational)</li>
+<li>Agent (Operational)</li>
+<li>Realtime (Operational)</li>
+<li>Responses (Operational)</li>
+<li>Codex Web (Operational)</li>
+<li>Login (Operational)</li>
+<li>File uploads (Operational)</li>
+<li>Search (Operational)</li>
+<li>GPTs (Operational)</li>
+<li>Connectors/Apps (Operational)</li>
+<li>Sora (Operational)</li>
+<li>CLI (Operational)</li>
+<li>Codex in ChatGPT Desktop (Operational)</li>
+<li>Image Generation (Operational)</li>
+<li>ChatGPT Work (Operational)</li>
+<li>Sites (Operational)</li>
+<li>Login (Operational)</li>
+<li>Deep Research (Operational)</li>
+<li>Moderations (Operational)</li>
+<li>Voice mode (Operational)</li>
+<li>Conversations (Operational)</li>
+<li>Batch (Operational)</li>
+<li>Fine-tuning (Operational)</li>
+<li>ChatGPT Atlas (Operational)</li>
+          </ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Elevated error rates]]></title>
+            <link>https://status.openai.com//incidents/01KYC921K145JTR1JK7DYKGWH1</link>
+            <guid>https://status.openai.com//incidents/01KYC921K145JTR1JK7DYKGWH1</guid>
+            <pubDate>Sat, 25 Jul 2026 11:08:36 GMT</pubDate>
+            <description><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Image Generation (Operational)</li>
+<li>VS Code extension (Operational)</li>
+<li>ChatGPT Work (Operational)</li>
+<li>Conversations (Operational)</li>
+<li>Files (Operational)</li>
+<li>Embeddings (Operational)</li>
+<li>Responses (Operational)</li>
+<li>Login (Operational)</li>
+<li>Compliance API (Operational)</li>
+<li>GPTs (Operational)</li>
+<li>Agent (Operational)</li>
+<li>Deep Research (Operational)</li>
+<li>ChatGPT Atlas (Operational)</li>
+<li>Codex API (Operational)</li>
+<li>Sites (Operational)</li>
+<li>Connectors/Apps (Operational)</li>
+<li>Codex in ChatGPT Desktop (Operational)</li>
+<li>File uploads (Operational)</li>
+<li>Audio (Operational)</li>
+<li>Codex Web (Operational)</li>
+<li>Voice mode (Operational)</li>
+<li>Images (Operational)</li>
+<li>Batch (Operational)</li>
+<li>Sora (Operational)</li>
+<li>Chat Completions (Operational)</li>
+<li>Login (Operational)</li>
+<li>CLI (Operational)</li>
+<li>Search (Operational)</li>
+<li>Fine-tuning (Operational)</li>
+<li>Realtime (Operational)</li>
+<li>Moderations (Operational)</li>
+          </ul>]]></description>
+            <content:encoded><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Image Generation (Operational)</li>
+<li>VS Code extension (Operational)</li>
+<li>ChatGPT Work (Operational)</li>
+<li>Conversations (Operational)</li>
+<li>Files (Operational)</li>
+<li>Embeddings (Operational)</li>
+<li>Responses (Operational)</li>
+<li>Login (Operational)</li>
+<li>Compliance API (Operational)</li>
+<li>GPTs (Operational)</li>
+<li>Agent (Operational)</li>
+<li>Deep Research (Operational)</li>
+<li>ChatGPT Atlas (Operational)</li>
+<li>Codex API (Operational)</li>
+<li>Sites (Operational)</li>
+<li>Connectors/Apps (Operational)</li>
+<li>Codex in ChatGPT Desktop (Operational)</li>
+<li>File uploads (Operational)</li>
+<li>Audio (Operational)</li>
+<li>Codex Web (Operational)</li>
+<li>Voice mode (Operational)</li>
+<li>Images (Operational)</li>
+<li>Batch (Operational)</li>
+<li>Sora (Operational)</li>
+<li>Chat Completions (Operational)</li>
+<li>Login (Operational)</li>
+<li>CLI (Operational)</li>
+<li>Search (Operational)</li>
+<li>Fine-tuning (Operational)</li>
+<li>Realtime (Operational)</li>
+<li>Moderations (Operational)</li>
+          </ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Elevated Error Rates]]></title>
+            <link>https://status.openai.com//incidents/01KY7SX5MYJ2BP51X5MXAPYX71</link>
+            <guid>https://status.openai.com//incidents/01KY7SX5MYJ2BP51X5MXAPYX71</guid>
+            <pubDate>Fri, 24 Jul 2026 19:33:22 GMT</pubDate>
+            <description><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Realtime (Operational)</li>
+<li>CLI (Operational)</li>
+<li>Conversations (Operational)</li>
+<li>Audio (Operational)</li>
+<li>Fine-tuning (Operational)</li>
+<li>Files (Operational)</li>
+<li>Embeddings (Operational)</li>
+<li>Login (Operational)</li>
+<li>Connectors/Apps (Operational)</li>
+<li>Sora (Operational)</li>
+<li>Moderations (Operational)</li>
+<li>Responses (Operational)</li>
+<li>Codex Web (Operational)</li>
+<li>VS Code extension (Operational)</li>
+<li>Images (Operational)</li>
+<li>Agent (Operational)</li>
+<li>Codex API (Operational)</li>
+<li>ChatGPT Work (Operational)</li>
+<li>Batch (Operational)</li>
+<li>Chat Completions (Operational)</li>
+          </ul>]]></description>
+            <content:encoded><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Realtime (Operational)</li>
+<li>CLI (Operational)</li>
+<li>Conversations (Operational)</li>
+<li>Audio (Operational)</li>
+<li>Fine-tuning (Operational)</li>
+<li>Files (Operational)</li>
+<li>Embeddings (Operational)</li>
+<li>Login (Operational)</li>
+<li>Connectors/Apps (Operational)</li>
+<li>Sora (Operational)</li>
+<li>Moderations (Operational)</li>
+<li>Responses (Operational)</li>
+<li>Codex Web (Operational)</li>
+<li>VS Code extension (Operational)</li>
+<li>Images (Operational)</li>
+<li>Agent (Operational)</li>
+<li>Codex API (Operational)</li>
+<li>ChatGPT Work (Operational)</li>
+<li>Batch (Operational)</li>
+<li>Chat Completions (Operational)</li>
+          </ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Elevated Errors in Codex Review]]></title>
+            <link>https://status.openai.com//incidents/01KY9HYHCMK8AND23B4X17XQEK</link>
+            <guid>https://status.openai.com//incidents/01KY9HYHCMK8AND23B4X17XQEK</guid>
+            <pubDate>Fri, 24 Jul 2026 09:35:02 GMT</pubDate>
+            <description><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>CLI (Operational)</li>
+<li>VS Code extension (Operational)</li>
+<li>Codex API (Operational)</li>
+<li>Codex Web (Operational)</li>
+          </ul>]]></description>
+            <content:encoded><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>CLI (Operational)</li>
+<li>VS Code extension (Operational)</li>
+<li>Codex API (Operational)</li>
+<li>Codex Web (Operational)</li>
+          </ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Elevated API error rates and latency on gpt-image-2 model]]></title>
+            <link>https://status.openai.com//incidents/01KY8PGR54KXGBSFXHEJ3FM83F</link>
+            <guid>https://status.openai.com//incidents/01KY8PGR54KXGBSFXHEJ3FM83F</guid>
+            <pubDate>Fri, 24 Jul 2026 00:09:22 GMT</pubDate>
+            <description><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Images (Operational)</li>
+          </ul>]]></description>
+            <content:encoded><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Images (Operational)</li>
+          </ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Some users may experience elevated error rates in ChatGPT]]></title>
+            <link>https://status.openai.com//incidents/01KY81XMFAV8KXNJGVNEMKAK15</link>
+            <guid>https://status.openai.com//incidents/01KY81XMFAV8KXNJGVNEMKAK15</guid>
+            <pubDate>Thu, 23 Jul 2026 20:41:01 GMT</pubDate>
+            <description><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>GPTs (Operational)</li>
+<li>ChatGPT Atlas (Operational)</li>
+<li>Sites (Operational)</li>
+<li>File uploads (Operational)</li>
+<li>Conversations (Operational)</li>
+<li>Compliance API (Operational)</li>
+<li>Codex in ChatGPT Desktop (Operational)</li>
+<li>ChatGPT Work (Operational)</li>
+<li>Voice mode (Operational)</li>
+<li>Agent (Operational)</li>
+<li>Deep Research (Operational)</li>
+<li>Connectors/Apps (Operational)</li>
+<li>Login (Operational)</li>
+<li>Search (Operational)</li>
+<li>Image Generation (Operational)</li>
+          </ul>]]></description>
+            <content:encoded><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>GPTs (Operational)</li>
+<li>ChatGPT Atlas (Operational)</li>
+<li>Sites (Operational)</li>
+<li>File uploads (Operational)</li>
+<li>Conversations (Operational)</li>
+<li>Compliance API (Operational)</li>
+<li>Codex in ChatGPT Desktop (Operational)</li>
+<li>ChatGPT Work (Operational)</li>
+<li>Voice mode (Operational)</li>
+<li>Agent (Operational)</li>
+<li>Deep Research (Operational)</li>
+<li>Connectors/Apps (Operational)</li>
+<li>Login (Operational)</li>
+<li>Search (Operational)</li>
+<li>Image Generation (Operational)</li>
+          </ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Elevated errors for Workspace Agent]]></title>
+            <link>https://status.openai.com//incidents/01KY54SWGRK806N6TJ495MYPDD</link>
+            <guid>https://status.openai.com//incidents/01KY54SWGRK806N6TJ495MYPDD</guid>
+            <pubDate>Wed, 22 Jul 2026 16:09:35 GMT</pubDate>
+            <description><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Agent (Operational)</li>
+          </ul>]]></description>
+            <content:encoded><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Agent (Operational)</li>
+          </ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Elevated Errors Affecting File Uploads and Image Generation]]></title>
+            <link>https://status.openai.com//incidents/01KY4BT971GFN59WBT0CKSGCPJ</link>
+            <guid>https://status.openai.com//incidents/01KY4BT971GFN59WBT0CKSGCPJ</guid>
+            <pubDate>Wed, 22 Jul 2026 14:39:42 GMT</pubDate>
+            <description><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>File uploads (Operational)</li>
+<li>Image Generation (Operational)</li>
+          </ul>]]></description>
+            <content:encoded><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>File uploads (Operational)</li>
+<li>Image Generation (Operational)</li>
+          </ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Elevated errors for API image generation]]></title>
+            <link>https://status.openai.com//incidents/01KY32PEQHPV5F2W4HCNFJ60RD</link>
+            <guid>https://status.openai.com//incidents/01KY32PEQHPV5F2W4HCNFJ60RD</guid>
+            <pubDate>Tue, 21 Jul 2026 22:19:31 GMT</pubDate>
+            <description><![CDATA[<b>Status: Resolved</b><br/><br/>Image generation functionality has fully recovered, and error rates have returned to normal levels.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Images (Operational)</li>
+<li>Image Generation (Operational)</li>
+          </ul>]]></description>
+            <content:encoded><![CDATA[<b>Status: Resolved</b><br/><br/>Image generation functionality has fully recovered, and error rates have returned to normal levels.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Images (Operational)</li>
+<li>Image Generation (Operational)</li>
+          </ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Issues with logins and signups]]></title>
+            <link>https://status.openai.com//incidents/01KY2ZF047ZNVDX0Z6F3QFXB1K</link>
+            <guid>https://status.openai.com//incidents/01KY2ZF047ZNVDX0Z6F3QFXB1K</guid>
+            <pubDate>Tue, 21 Jul 2026 19:00:27 GMT</pubDate>
+            <description><![CDATA[<b>Status: Resolved</b><br/><br/>All affected API Platform functionality has now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Login (Operational)</li>
+<li>Login (Operational)</li>
+          </ul>]]></description>
+            <content:encoded><![CDATA[<b>Status: Resolved</b><br/><br/>All affected API Platform functionality has now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Login (Operational)</li>
+<li>Login (Operational)</li>
+          </ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Elevated errors for GitHub-dependent ChatGPT and Codex workflows]]></title>
+            <link>https://status.openai.com//incidents/01KXYF4BTCV9DTZ5NDSFN716FH</link>
+            <guid>https://status.openai.com//incidents/01KXYF4BTCV9DTZ5NDSFN716FH</guid>
+            <pubDate>Mon, 20 Jul 2026 03:34:06 GMT</pubDate>
+            <description><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>VS Code extension (Operational)</li>
+<li>Codex Web (Operational)</li>
+<li>Connectors/Apps (Operational)</li>
+<li>CLI (Operational)</li>
+          </ul>]]></description>
+            <content:encoded><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>VS Code extension (Operational)</li>
+<li>Codex Web (Operational)</li>
+<li>Connectors/Apps (Operational)</li>
+<li>CLI (Operational)</li>
+          </ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Elevated errors affecting ChatGPT]]></title>
+            <link>https://status.openai.com//incidents/01KXXDNEAKEPRGFM661SBJJAM6</link>
+            <guid>https://status.openai.com//incidents/01KXXDNEAKEPRGFM661SBJJAM6</guid>
+            <pubDate>Sun, 19 Jul 2026 17:05:02 GMT</pubDate>
+            <description><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Voice mode (Operational)</li>
+<li>Conversations (Operational)</li>
+<li>Connectors/Apps (Operational)</li>
+<li>ChatGPT Work (Operational)</li>
+          </ul>]]></description>
+            <content:encoded><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Voice mode (Operational)</li>
+<li>Conversations (Operational)</li>
+<li>Connectors/Apps (Operational)</li>
+<li>ChatGPT Work (Operational)</li>
+          </ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Some users are unable to access Codex]]></title>
+            <link>https://status.openai.com//incidents/01KXT44TAQQ2R0AZDDVSJGAC4H</link>
+            <guid>https://status.openai.com//incidents/01KXT44TAQQ2R0AZDDVSJGAC4H</guid>
+            <pubDate>Sat, 18 Jul 2026 12:58:14 GMT</pubDate>
+            <description><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>CLI (Operational)</li>
+<li>Codex in ChatGPT Desktop (Operational)</li>
+          </ul>]]></description>
+            <content:encoded><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>CLI (Operational)</li>
+<li>Codex in ChatGPT Desktop (Operational)</li>
+          </ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[New ChatGPT App Not Available For Enterprise Users Without Codex Permissions]]></title>
+            <link>https://status.openai.com//incidents/01KXRBA8B98QHMMVP3M86NHFZ1</link>
+            <guid>https://status.openai.com//incidents/01KXRBA8B98QHMMVP3M86NHFZ1</guid>
+            <pubDate>Sat, 18 Jul 2026 08:24:02 GMT</pubDate>
+            <description><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Codex in ChatGPT Desktop (Operational)</li>
+          </ul>]]></description>
+            <content:encoded><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Codex in ChatGPT Desktop (Operational)</li>
+          </ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Codex 5.6-sol Experiencing Increased Server-Overload Errors]]></title>
+            <link>https://status.openai.com//incidents/01KXRHE25717D2WQ1WFMT2B7WZ</link>
+            <guid>https://status.openai.com//incidents/01KXRHE25717D2WQ1WFMT2B7WZ</guid>
+            <pubDate>Fri, 17 Jul 2026 20:42:53 GMT</pubDate>
+            <description><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.]]></description>
+            <content:encoded><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Elevated errors for Github connector]]></title>
+            <link>https://status.openai.com//incidents/01KXPJ62Z704GE0SRNKQA64X4X</link>
+            <guid>https://status.openai.com//incidents/01KXPJ62Z704GE0SRNKQA64X4X</guid>
+            <pubDate>Fri, 17 Jul 2026 00:17:49 GMT</pubDate>
+            <description><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Connectors/Apps (Operational)</li>
+          </ul>]]></description>
+            <content:encoded><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Connectors/Apps (Operational)</li>
+          </ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Elevated Error Rates For SSO Login]]></title>
+            <link>https://status.openai.com//incidents/01KXN14DD3EYYJ6PJ9M736WDSV</link>
+            <guid>https://status.openai.com//incidents/01KXN14DD3EYYJ6PJ9M736WDSV</guid>
+            <pubDate>Thu, 16 Jul 2026 15:23:13 GMT</pubDate>
+            <description><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Login (Operational)</li>
+<li>Login (Operational)</li>
+          </ul>]]></description>
+            <content:encoded><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Login (Operational)</li>
+<li>Login (Operational)</li>
+          </ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Elevated errors affecting ChatGPT]]></title>
+            <link>https://status.openai.com//incidents/01KXHH1BJ9BS0FVE2MGEJ9FZ5M</link>
+            <guid>https://status.openai.com//incidents/01KXHH1BJ9BS0FVE2MGEJ9FZ5M</guid>
+            <pubDate>Wed, 15 Jul 2026 00:39:32 GMT</pubDate>
+            <description><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>File uploads (Operational)</li>
+<li>Conversations (Operational)</li>
+<li>Agent (Operational)</li>
+<li>ChatGPT Atlas (Operational)</li>
+<li>Compliance API (Operational)</li>
+<li>GPTs (Operational)</li>
+<li>Connectors/Apps (Operational)</li>
+<li>Codex in ChatGPT Desktop (Operational)</li>
+<li>ChatGPT Work (Operational)</li>
+<li>Login (Operational)</li>
+<li>Voice mode (Operational)</li>
+<li>Search (Operational)</li>
+<li>Deep Research (Operational)</li>
+<li>Sites (Operational)</li>
+<li>Image Generation (Operational)</li>
+          </ul>]]></description>
+            <content:encoded><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>File uploads (Operational)</li>
+<li>Conversations (Operational)</li>
+<li>Agent (Operational)</li>
+<li>ChatGPT Atlas (Operational)</li>
+<li>Compliance API (Operational)</li>
+<li>GPTs (Operational)</li>
+<li>Connectors/Apps (Operational)</li>
+<li>Codex in ChatGPT Desktop (Operational)</li>
+<li>ChatGPT Work (Operational)</li>
+<li>Login (Operational)</li>
+<li>Voice mode (Operational)</li>
+<li>Search (Operational)</li>
+<li>Deep Research (Operational)</li>
+<li>Sites (Operational)</li>
+<li>Image Generation (Operational)</li>
+          </ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Issue affecting voice mode in ChatGPT]]></title>
+            <link>https://status.openai.com//incidents/01KXHK8YFSP8B9WP110W4XEM45</link>
+            <guid>https://status.openai.com//incidents/01KXHK8YFSP8B9WP110W4XEM45</guid>
+            <pubDate>Wed, 15 Jul 2026 00:38:18 GMT</pubDate>
+            <description><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Voice mode (Operational)</li>
+          </ul>]]></description>
+            <content:encoded><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Voice mode (Operational)</li>
+          </ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Some ChatGPT Go users may experience conversation failures when using GPT-5.5.]]></title>
+            <link>https://status.openai.com//incidents/01KXGJPKV743DPQZDZQ57VR0JQ</link>
+            <guid>https://status.openai.com//incidents/01KXGJPKV743DPQZDZQ57VR0JQ</guid>
+            <pubDate>Tue, 14 Jul 2026 16:02:46 GMT</pubDate>
+            <description><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Conversations (Operational)</li>
+          </ul>]]></description>
+            <content:encoded><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Conversations (Operational)</li>
+          </ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Users may experience elevated errors uploading, deleting, and navigating files in the ChatGPT Library]]></title>
+            <link>https://status.openai.com//incidents/01KXDBYJ7BWBE2NRDAQTKPM5WK</link>
+            <guid>https://status.openai.com//incidents/01KXDBYJ7BWBE2NRDAQTKPM5WK</guid>
+            <pubDate>Mon, 13 Jul 2026 14:35:47 GMT</pubDate>
+            <description><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>File uploads (Operational)</li>
+          </ul>]]></description>
+            <content:encoded><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>File uploads (Operational)</li>
+          </ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Elevated errors when creating sites in ChatGPT]]></title>
+            <link>https://status.openai.com//incidents/01KXDMD4T8TM58CSKBN7YFD2CK</link>
+            <guid>https://status.openai.com//incidents/01KXDMD4T8TM58CSKBN7YFD2CK</guid>
+            <pubDate>Mon, 13 Jul 2026 12:59:55 GMT</pubDate>
+            <description><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Sites (Operational)</li>
+          </ul>]]></description>
+            <content:encoded><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Sites (Operational)</li>
+          </ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Elevated conversation and login errors on ChatGPT for iOS and macOS]]></title>
+            <link>https://status.openai.com//incidents/01KXAVPTZ85KG478DP1YC0SV2V</link>
+            <guid>https://status.openai.com//incidents/01KXAVPTZ85KG478DP1YC0SV2V</guid>
+            <pubDate>Sun, 12 Jul 2026 15:28:24 GMT</pubDate>
+            <description><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Login (Operational)</li>
+<li>Conversations (Operational)</li>
+          </ul>]]></description>
+            <content:encoded><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Login (Operational)</li>
+<li>Conversations (Operational)</li>
+          </ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Elevated Errors for Sora API]]></title>
+            <link>https://status.openai.com//incidents/01KX7Y6ETMKP3ATQ85Z33J0EHN</link>
+            <guid>https://status.openai.com//incidents/01KX7Y6ETMKP3ATQ85Z33J0EHN</guid>
+            <pubDate>Sat, 11 Jul 2026 07:03:51 GMT</pubDate>
+            <description><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Sora (Operational)</li>
+          </ul>]]></description>
+            <content:encoded><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Sora (Operational)</li>
+          </ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Codex, workspace analytics, conversation search, searching for custom GPTs, ChatGPT user invites, and Compliance Log Platform download endpoint not working in FedRAMP workspaces]]></title>
+            <link>https://status.openai.com//incidents/01KWDW344V7XWEQERJSEW62W57</link>
+            <guid>https://status.openai.com//incidents/01KWDW344V7XWEQERJSEW62W57</guid>
+            <pubDate>Sat, 11 Jul 2026 02:11:01 GMT</pubDate>
+            <description><![CDATA[<b>Status: Resolved</b><br/><br/>Core functionality in FedRAMP workspaces has been restored, and the broader incident is resolved.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>FedRAMP (Operational)</li>
+          </ul>]]></description>
+            <content:encoded><![CDATA[<b>Status: Resolved</b><br/><br/>Core functionality in FedRAMP workspaces has been restored, and the broader incident is resolved.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>FedRAMP (Operational)</li>
+          </ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[OpenAI website and Help Center content may be unavailable]]></title>
+            <link>https://status.openai.com//incidents/01KX6Y1QMFX4NASV5DD591AD50</link>
+            <guid>https://status.openai.com//incidents/01KX6Y1QMFX4NASV5DD591AD50</guid>
+            <pubDate>Fri, 10 Jul 2026 23:07:39 GMT</pubDate>
+            <description><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.]]></description>
+            <content:encoded><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Users are experiencing elevated errors when selecting models]]></title>
+            <link>https://status.openai.com//incidents/01KX46HHYJ0YB8VPBZTB0KZ03V</link>
+            <guid>https://status.openai.com//incidents/01KX46HHYJ0YB8VPBZTB0KZ03V</guid>
+            <pubDate>Thu, 09 Jul 2026 20:42:57 GMT</pubDate>
+            <description><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.]]></description>
+            <content:encoded><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Elevated errors with image generation in ChatGPT]]></title>
+            <link>https://status.openai.com//incidents/01KWY5DQZ0KC8PTT3Y3T26H30D</link>
+            <guid>https://status.openai.com//incidents/01KWY5DQZ0KC8PTT3Y3T26H30D</guid>
+            <pubDate>Tue, 07 Jul 2026 16:12:58 GMT</pubDate>
+            <description><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Image Generation (Operational)</li>
+          </ul>]]></description>
+            <content:encoded><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Image Generation (Operational)</li>
+          </ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Codex Usage Limits Depleting Faster Than Expected]]></title>
+            <link>https://status.openai.com//incidents/01KW2E6W0503W4NXJNCVAG8V6T</link>
+            <guid>https://status.openai.com//incidents/01KW2E6W0503W4NXJNCVAG8V6T</guid>
+            <pubDate>Mon, 29 Jun 2026 17:06:33 GMT</pubDate>
+            <description><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Codex in ChatGPT Desktop (Operational)</li>
+<li>VS Code extension (Operational)</li>
+<li>Codex API (Operational)</li>
+<li>Codex Web (Operational)</li>
+<li>CLI (Operational)</li>
+          </ul>]]></description>
+            <content:encoded><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Codex in ChatGPT Desktop (Operational)</li>
+<li>VS Code extension (Operational)</li>
+<li>Codex API (Operational)</li>
+<li>Codex Web (Operational)</li>
+<li>CLI (Operational)</li>
+          </ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Issues with ChatGPT Windows desktop app]]></title>
+            <link>https://status.openai.com//incidents/01KW5HJAH5X1A2V62HP4ZST1V7</link>
+            <guid>https://status.openai.com//incidents/01KW5HJAH5X1A2V62HP4ZST1V7</guid>
+            <pubDate>Sun, 28 Jun 2026 03:29:18 GMT</pubDate>
+            <description><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Conversations (Operational)</li>
+          </ul>]]></description>
+            <content:encoded><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Conversations (Operational)</li>
+          </ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[FedRAMP workspaces and API orgs have degraded performance]]></title>
+            <link>https://status.openai.com//incidents/01KV6NGBYE50GK3TRXHD2EMTXA</link>
+            <guid>https://status.openai.com//incidents/01KV6NGBYE50GK3TRXHD2EMTXA</guid>
+            <pubDate>Fri, 26 Jun 2026 23:07:55 GMT</pubDate>
+            <description><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>FedRAMP (Operational)</li>
+          </ul>]]></description>
+            <content:encoded><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>FedRAMP (Operational)</li>
+          </ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Small Number of Users Have Incorrectly Cancelled Subscription]]></title>
+            <link>https://status.openai.com//incidents/01KVZRA3Z551H993JHJ9P2TW9E</link>
+            <guid>https://status.openai.com//incidents/01KVZRA3Z551H993JHJ9P2TW9E</guid>
+            <pubDate>Fri, 26 Jun 2026 02:18:06 GMT</pubDate>
+            <description><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Login (Operational)</li>
+<li>Voice mode (Operational)</li>
+<li>Search (Operational)</li>
+<li>Conversations (Operational)</li>
+<li>Compliance API (Operational)</li>
+<li>GPTs (Operational)</li>
+<li>Connectors/Apps (Operational)</li>
+<li>ChatGPT Atlas (Operational)</li>
+<li>File uploads (Operational)</li>
+<li>Image Generation (Operational)</li>
+<li>Agent (Operational)</li>
+<li>Deep Research (Operational)</li>
+          </ul>]]></description>
+            <content:encoded><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Login (Operational)</li>
+<li>Voice mode (Operational)</li>
+<li>Search (Operational)</li>
+<li>Conversations (Operational)</li>
+<li>Compliance API (Operational)</li>
+<li>GPTs (Operational)</li>
+<li>Connectors/Apps (Operational)</li>
+<li>ChatGPT Atlas (Operational)</li>
+<li>File uploads (Operational)</li>
+<li>Image Generation (Operational)</li>
+<li>Agent (Operational)</li>
+<li>Deep Research (Operational)</li>
+          </ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Users may encounter issues using access token with Codex]]></title>
+            <link>https://status.openai.com//incidents/01KVYNAMMJ7AMF94YBECG6JG6Q</link>
+            <guid>https://status.openai.com//incidents/01KVYNAMMJ7AMF94YBECG6JG6Q</guid>
+            <pubDate>Thu, 25 Jun 2026 11:03:57 GMT</pubDate>
+            <description><![CDATA[<b>Status: Resolved</b><br/><br/>This is now resolved<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Codex API (Operational)</li>
+<li>Codex Web (Operational)</li>
+<li>CLI (Operational)</li>
+<li>Codex in ChatGPT Desktop (Operational)</li>
+<li>VS Code extension (Operational)</li>
+          </ul>]]></description>
+            <content:encoded><![CDATA[<b>Status: Resolved</b><br/><br/>This is now resolved<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Codex API (Operational)</li>
+<li>Codex Web (Operational)</li>
+<li>CLI (Operational)</li>
+<li>Codex in ChatGPT Desktop (Operational)</li>
+<li>VS Code extension (Operational)</li>
+          </ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[gpt-4o-mini high error rate]]></title>
+            <link>https://status.openai.com//incidents/01KVW3CQQ51SWCV4A1SWA6ATVM</link>
+            <guid>https://status.openai.com//incidents/01KVW3CQQ51SWCV4A1SWA6ATVM</guid>
+            <pubDate>Wed, 24 Jun 2026 06:07:32 GMT</pubDate>
+            <description><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Realtime (Operational)</li>
+<li>Embeddings (Operational)</li>
+<li>Responses (Operational)</li>
+<li>Sora (Operational)</li>
+<li>Audio (Operational)</li>
+<li>Files (Operational)</li>
+<li>Moderations (Operational)</li>
+<li>Login (Operational)</li>
+<li>Images (Operational)</li>
+<li>Batch (Operational)</li>
+<li>Chat Completions (Operational)</li>
+<li>Fine-tuning (Operational)</li>
+          </ul>]]></description>
+            <content:encoded><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Realtime (Operational)</li>
+<li>Embeddings (Operational)</li>
+<li>Responses (Operational)</li>
+<li>Sora (Operational)</li>
+<li>Audio (Operational)</li>
+<li>Files (Operational)</li>
+<li>Moderations (Operational)</li>
+<li>Login (Operational)</li>
+<li>Images (Operational)</li>
+<li>Batch (Operational)</li>
+<li>Chat Completions (Operational)</li>
+<li>Fine-tuning (Operational)</li>
+          </ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Users may experience elevated errors in ChatGPT uploading and downloading files ]]></title>
+            <link>https://status.openai.com//incidents/01KVTDW6E1PXBTY2A9XEBT4MY4</link>
+            <guid>https://status.openai.com//incidents/01KVTDW6E1PXBTY2A9XEBT4MY4</guid>
+            <pubDate>Tue, 23 Jun 2026 16:38:19 GMT</pubDate>
+            <description><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>File uploads (Operational)</li>
+          </ul>]]></description>
+            <content:encoded><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>File uploads (Operational)</li>
+          </ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[chatgpt.com access issues]]></title>
+            <link>https://status.openai.com//incidents/01KVEZD06ZFM2CMDZQMQYDV9RK</link>
+            <guid>https://status.openai.com//incidents/01KVEZD06ZFM2CMDZQMQYDV9RK</guid>
+            <pubDate>Fri, 19 Jun 2026 05:23:27 GMT</pubDate>
+            <description><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Login (Operational)</li>
+          </ul>]]></description>
+            <content:encoded><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Login (Operational)</li>
+          </ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[SSO login errors for some ChatGPT Enterprise workspaces]]></title>
+            <link>https://status.openai.com//incidents/01KVCZ38K0RJZTSX7Y70RQMV2D</link>
+            <guid>https://status.openai.com//incidents/01KVCZ38K0RJZTSX7Y70RQMV2D</guid>
+            <pubDate>Thu, 18 Jun 2026 11:55:12 GMT</pubDate>
+            <description><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Login (Operational)</li>
+          </ul>]]></description>
+            <content:encoded><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Login (Operational)</li>
+          </ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[ChatGPT failing to load or save]]></title>
+            <link>https://status.openai.com//incidents/01KVCC8P5XTCA7H7W7E6A2MYJS</link>
+            <guid>https://status.openai.com//incidents/01KVCC8P5XTCA7H7W7E6A2MYJS</guid>
+            <pubDate>Thu, 18 Jun 2026 03:55:02 GMT</pubDate>
+            <description><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Compliance API (Operational)</li>
+<li>Image Generation (Operational)</li>
+<li>Agent (Operational)</li>
+<li>ChatGPT Atlas (Operational)</li>
+<li>Login (Operational)</li>
+<li>File uploads (Operational)</li>
+<li>Voice mode (Operational)</li>
+<li>GPTs (Operational)</li>
+<li>Deep Research (Operational)</li>
+<li>Connectors/Apps (Operational)</li>
+<li>Search (Operational)</li>
+<li>Conversations (Operational)</li>
+          </ul>]]></description>
+            <content:encoded><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Compliance API (Operational)</li>
+<li>Image Generation (Operational)</li>
+<li>Agent (Operational)</li>
+<li>ChatGPT Atlas (Operational)</li>
+<li>Login (Operational)</li>
+<li>File uploads (Operational)</li>
+<li>Voice mode (Operational)</li>
+<li>GPTs (Operational)</li>
+<li>Deep Research (Operational)</li>
+<li>Connectors/Apps (Operational)</li>
+<li>Search (Operational)</li>
+<li>Conversations (Operational)</li>
+          </ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Errors with conversations on Android and iOS devices]]></title>
+            <link>https://status.openai.com//incidents/01KVB9JAB1PP9GS4A6AZ52TT5Y</link>
+            <guid>https://status.openai.com//incidents/01KVB9JAB1PP9GS4A6AZ52TT5Y</guid>
+            <pubDate>Wed, 17 Jun 2026 18:23:18 GMT</pubDate>
+            <description><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Conversations (Operational)</li>
+          </ul>]]></description>
+            <content:encoded><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Conversations (Operational)</li>
+          </ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Codex "Selected Model is at Capacity" Error]]></title>
+            <link>https://status.openai.com//incidents/01KV7ZT644J4V94GSXMFPY2ANR</link>
+            <guid>https://status.openai.com//incidents/01KV7ZT644J4V94GSXMFPY2ANR</guid>
+            <pubDate>Tue, 16 Jun 2026 13:48:12 GMT</pubDate>
+            <description><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Codex in ChatGPT Desktop (Operational)</li>
+<li>VS Code extension (Operational)</li>
+<li>Codex API (Operational)</li>
+<li>Codex Web (Operational)</li>
+<li>CLI (Operational)</li>
+          </ul>]]></description>
+            <content:encoded><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Codex in ChatGPT Desktop (Operational)</li>
+<li>VS Code extension (Operational)</li>
+<li>Codex API (Operational)</li>
+<li>Codex Web (Operational)</li>
+<li>CLI (Operational)</li>
+          </ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Users may experience issue with Codex Cloud tasks]]></title>
+            <link>https://status.openai.com//incidents/01KV6W1JX2T4T1455777Q1R2W5</link>
+            <guid>https://status.openai.com//incidents/01KV6W1JX2T4T1455777Q1R2W5</guid>
+            <pubDate>Tue, 16 Jun 2026 00:55:57 GMT</pubDate>
+            <description><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Codex Web (Operational)</li>
+          </ul>]]></description>
+            <content:encoded><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Codex Web (Operational)</li>
+          </ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[OAuth Account Creation / Login Error]]></title>
+            <link>https://status.openai.com//incidents/01KV67B3HB2B6JKHAMHCCYS0KZ</link>
+            <guid>https://status.openai.com//incidents/01KV67B3HB2B6JKHAMHCCYS0KZ</guid>
+            <pubDate>Mon, 15 Jun 2026 20:12:26 GMT</pubDate>
+            <description><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Login (Operational)</li>
+<li>Login (Operational)</li>
+          </ul>]]></description>
+            <content:encoded><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Login (Operational)</li>
+<li>Login (Operational)</li>
+          </ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Elevated 431 Errors]]></title>
+            <link>https://status.openai.com//incidents/01KTWCER83NNKE698QXNXJG11M</link>
+            <guid>https://status.openai.com//incidents/01KTWCER83NNKE698QXNXJG11M</guid>
+            <pubDate>Fri, 12 Jun 2026 00:47:57 GMT</pubDate>
+            <description><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Chat Completions (Operational)</li>
+<li>Audio (Operational)</li>
+<li>Realtime (Operational)</li>
+<li>Files (Operational)</li>
+<li>Moderations (Operational)</li>
+<li>Responses (Operational)</li>
+<li>Login (Operational)</li>
+<li>Batch (Operational)</li>
+<li>Fine-tuning (Operational)</li>
+<li>Embeddings (Operational)</li>
+<li>Sora (Operational)</li>
+<li>Images (Operational)</li>
+          </ul>]]></description>
+            <content:encoded><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Chat Completions (Operational)</li>
+<li>Audio (Operational)</li>
+<li>Realtime (Operational)</li>
+<li>Files (Operational)</li>
+<li>Moderations (Operational)</li>
+<li>Responses (Operational)</li>
+<li>Login (Operational)</li>
+<li>Batch (Operational)</li>
+<li>Fine-tuning (Operational)</li>
+<li>Embeddings (Operational)</li>
+<li>Sora (Operational)</li>
+<li>Images (Operational)</li>
+          </ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Elevated error rates for GPT 5.5 in Codex]]></title>
+            <link>https://status.openai.com//incidents/01KTW7QY5W9DDYT0ETXX6MPVSY</link>
+            <guid>https://status.openai.com//incidents/01KTW7QY5W9DDYT0ETXX6MPVSY</guid>
+            <pubDate>Thu, 11 Jun 2026 22:28:09 GMT</pubDate>
+            <description><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Codex in ChatGPT Desktop (Operational)</li>
+<li>VS Code extension (Operational)</li>
+<li>Codex API (Operational)</li>
+<li>Codex Web (Operational)</li>
+<li>CLI (Operational)</li>
+          </ul>]]></description>
+            <content:encoded><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Codex in ChatGPT Desktop (Operational)</li>
+<li>VS Code extension (Operational)</li>
+<li>Codex API (Operational)</li>
+<li>Codex Web (Operational)</li>
+<li>CLI (Operational)</li>
+          </ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Disruption in service availabilty for Free and Go users]]></title>
+            <link>https://status.openai.com//incidents/01KTVCFSN91M935M3MD3Z9W7C9</link>
+            <guid>https://status.openai.com//incidents/01KTVCFSN91M935M3MD3Z9W7C9</guid>
+            <pubDate>Thu, 11 Jun 2026 14:04:45 GMT</pubDate>
+            <description><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Conversations (Operational)</li>
+          </ul>]]></description>
+            <content:encoded><![CDATA[<b>Status: Resolved</b><br/><br/>All impacted services have now fully recovered.<br/><br/><b>Affected components</b>
+          <ul>
+          <li>Conversations (Operational)</li>
+          </ul>]]></content:encoded>
+        </item>
+    </channel>
+</rss>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Google AI Studio and the Gemini API Status</title>
+    <link>https://aistudio.google.com/status</link>
+    <description>Official Gemini / AI Studio status updates</description>
+    <item>
+      <title>Issues with apps in AI Studio Build.</title>
+      <pubDate>Wed, 15 Jul 2026 11:39:00 +0000</pubDate>
+      <description><![CDATA[<p><strong>Status:</strong> resolved</p><p>Issue has been resolved.</p><p><strong>Affected components:</strong> Google AI Studio</p>]]></description>
+    </item>
+    <item>
+      <title>Issues with Nano Banana</title>
+      <pubDate>Fri, 19 Jun 2026 08:30:00 +0000</pubDate>
+      <description><![CDATA[<p><strong>Status:</strong> resolved</p><p>Issues with Nano Banana 2 and Nano Banana Pro models on Gemini API and AI Studio when using 2k or 4k resolution.</p><p><strong>Affected components:</strong> Gemini API, Google AI Studio</p>]]></description>
+    </item>
+    <item>
+      <title>Issues with Gemini API context caching</title>
+      <pubDate>Sun, 07 Jun 2026 17:39:00 +0000</pubDate>
+      <description><![CDATA[<p><strong>Status:</strong> resolved</p><p>Gemini API context caching resulting in higher token usage than expected.</p><p><strong>Affected components:</strong> Gemini API</p>]]></description>
+    </item>
+    <item>
+      <title>Issues with Gemini API batch</title>
+      <pubDate>Fri, 05 Jun 2026 01:19:00 +0000</pubDate>
+      <description><![CDATA[<p><strong>Status:</strong> resolved</p><p>Gemini API batch endpoints.</p><p><strong>Affected components:</strong> Gemini API</p>]]></description>
+    </item>
+    <item>
+      <title>Partial outage impacting some AI Studio features</title>
+      <pubDate>Sun, 31 May 2026 03:15:00 +0000</pubDate>
+      <description><![CDATA[<p><strong>Status:</strong> resolved</p><p>Multiple AI Studio features experienced issues.</p><p><strong>Affected components:</strong> Google AI Studio</p>]]></description>
+    </item>
+    <item>
+      <title>Infrastructure outage affecting AI Studio and Gemini API</title>
+      <pubDate>Thu, 21 May 2026 05:20:00 +0000</pubDate>
+      <description><![CDATA[<p><strong>Status:</strong> resolved</p><p>Infrastructure outage affecting AI Studio and Gemini API.</p><p><strong>Affected components:</strong> Gemini API, Google AI Studio, Multimodal Live API</p>]]></description>
+    </item>
+  </channel>
+</rss>

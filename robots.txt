@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /data/votes.json
+
+User-agent: Baiduspider
+Allow: /
+Disallow: /api/
+
+Sitemap: https://www.veridrop.cn/sitemap.xml

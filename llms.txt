@@ -1,0 +1,26 @@
+# API中转站导航
+
+> https://www.veridrop.cn
+
+> 第三方 API 中转站导航。对照 ChatGPT / Claude / DeepSeek 等中转的可用性、延迟和站内投票，充值前先看模型是否活着。
+
+本站不是官方渠道，不代收充值，也不鉴定模型是不是「加密级真品」。详情页顶部的「相对稳 / 一般 / 慎充」只根据整站探测和投票，建议小额实测。
+
+## 页面
+
+- 首页: /
+- ChatGPT / GPT 中转: /model/gpt
+- Claude 中转: /model/claude
+- DeepSeek API: /model/deepseek
+- Gemini API: /model/gemini
+- 低倍率: /cat/cheaprate
+- 签到送余额: /cat/checkin
+- 国内支付: /cat/pay
+- 站点详情: /site/{id}-{slug}
+- 官方模型实况: /official/openai （以及 claude / gemini / deepseek / kimi / grok）
+
+## 怎么看一页
+
+1. 先看结论胶囊，再看可用性、延迟、投票。
+2. 在线不等于每个模型都通。
+3. 探币只记在本机，和中转站自己的签到余额不是一回事。
