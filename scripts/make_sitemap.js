@@ -38,13 +38,23 @@ const urls = [{ loc: "/", pri: "1.0", freq: "hourly" }];
   urls.push({ loc: sitePath(site), pri: site.promoted ? "0.7" : "0.5", freq: "daily" });
 });
 
+function locUrl(pathname) {
+  return (
+    origin +
+    String(pathname || "/")
+      .split("/")
+      .map((part) => encodeURIComponent(part))
+      .join("/")
+  );
+}
+
 const xml =
   '<?xml version="1.0" encoding="UTF-8"?>\n' +
   '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
   urls
     .map(
       (u) =>
-        `  <url><loc>${origin}${u.loc}</loc><lastmod>${lastmod}</lastmod><changefreq>${u.freq}</changefreq><priority>${u.pri}</priority></url>`
+        `  <url><loc>${locUrl(u.loc)}</loc><lastmod>${lastmod}</lastmod><changefreq>${u.freq}</changefreq><priority>${u.pri}</priority></url>`
     )
     .join("\n") +
   "\n</urlset>\n";

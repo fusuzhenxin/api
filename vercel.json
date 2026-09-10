@@ -1,0 +1,42 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "regions": ["sin1"],
+  "headers": [
+    {
+      "source": "/js/stations-data.js",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=300, stale-while-revalidate=86400" }]
+    },
+    {
+      "source": "/js/(.*)",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=300, stale-while-revalidate=86400" }]
+    },
+    {
+      "source": "/css/(.*)",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=86400" }]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/",
+      "has": [{ "type": "host", "value": "veridrop.cn" }],
+      "destination": "https://www.veridrop.cn/",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "veridrop.cn" }],
+      "destination": "https://www.veridrop.cn/:path*",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
+    { "source": "/site/:path*", "destination": "/index.html" },
+    { "source": "/cat/:path*", "destination": "/index.html" },
+    { "source": "/model/:path*", "destination": "/index.html" },
+    { "source": "/official/:path*", "destination": "/index.html" },
+    { "source": "/rank", "destination": "/index.html" },
+    { "source": "/rank/:path*", "destination": "/index.html" },
+    { "source": "/((?!api/|og/).*)", "destination": "/index.html" }
+  ]
+}
