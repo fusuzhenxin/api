@@ -129,6 +129,7 @@ def main() -> None:
         IMG / "favicon-16.png": 16,
         IMG / "favicon-32.png": 32,
         IMG / "icon-48.png": 48,
+        IMG / "icon-96.png": 96,
         IMG / "icon-64.png": 64,
         IMG / "icon-128.png": 128,
         IMG / "apple-touch-icon.png": 180,
