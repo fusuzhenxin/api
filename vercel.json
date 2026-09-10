@@ -31,12 +31,11 @@
     }
   ],
   "rewrites": [
-    { "source": "/site/:path*", "destination": "/index.html" },
-    { "source": "/cat/:path*", "destination": "/index.html" },
-    { "source": "/model/:path*", "destination": "/index.html" },
-    { "source": "/official/:path*", "destination": "/index.html" },
-    { "source": "/rank", "destination": "/index.html" },
-    { "source": "/rank/:path*", "destination": "/index.html" },
-    { "source": "/((?!api/|og/).*)", "destination": "/index.html" }
+    { "source": "/site/:path*", "destination": "/" },
+    { "source": "/cat/:path*", "destination": "/" },
+    { "source": "/model/:path*", "destination": "/" },
+    { "source": "/official/:path*", "destination": "/" },
+    { "source": "/rank", "destination": "/" },
+    { "source": "/rank/:path*", "destination": "/" }
   ]
 }
