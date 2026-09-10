@@ -1,5 +1,7 @@
 User-agent: *
 Allow: /
+Allow: /favicon.ico
+Allow: /img/
 Disallow: /api/
 Disallow: /data/votes.json
 

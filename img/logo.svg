@@ -1,13 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="线探">
-  <defs>
-    <linearGradient id="g" x1="6" y1="6" x2="58" y2="58" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#3EE0C2"/>
-      <stop offset="1" stop-color="#2F8BFF"/>
-    </linearGradient>
-  </defs>
-  <rect width="64" height="64" fill="url(#g)"/>
-  <path d="M10 38h12l6-10 8 16 6-8h12" fill="none" stroke="#F4FFFC" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="42" cy="24" r="4.2" fill="#F4FFFC"/>
-  <path d="M42 15.5a12 12 0 0 1 8.5 8.5" fill="none" stroke="#F4FFFC" stroke-width="2.4" stroke-linecap="round"/>
-  <path d="M42 10.5a17 17 0 0 1 12 12" fill="none" stroke="#F4FFFC" stroke-width="2.2" stroke-linecap="round" opacity=".75"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="API中转站导航">
+  <rect width="64" height="64" fill="#061220"/>
+  <rect x="5" y="5" width="54" height="54" rx="11" fill="#14C4A8"/>
+  <path d="M18 40 L32 22 L47 37" fill="none" stroke="#F4FFFC" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="18" cy="40" r="4.6" fill="#F4FFFC"/>
+  <circle cx="32" cy="22" r="4.6" fill="#F4FFFC"/>
+  <circle cx="47" cy="37" r="4.6" fill="#F4FFFC"/>
 </svg>

@@ -62,6 +62,6 @@ const xml =
 fs.writeFileSync(path.join(ROOT, "sitemap.xml"), xml);
 fs.writeFileSync(
   path.join(ROOT, "robots.txt"),
-  `User-agent: *\nAllow: /\nDisallow: /api/\nDisallow: /data/votes.json\n\nUser-agent: Baiduspider\nAllow: /\nDisallow: /api/\n\nSitemap: ${origin}/sitemap.xml\n`
+  `User-agent: *\nAllow: /\nAllow: /favicon.ico\nAllow: /img/\nDisallow: /api/\nDisallow: /data/votes.json\n\nUser-agent: Baiduspider\nAllow: /\nAllow: /favicon.ico\nAllow: /img/\nDisallow: /api/\n\nSitemap: ${origin}/sitemap.xml\n`
 );
 console.log("sitemap", urls.length, "urls ->", origin);
