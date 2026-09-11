@@ -2,25 +2,32 @@
 
 > https://www.veridrop.cn
 
-> 第三方 API 中转站导航。对照 ChatGPT / Claude / DeepSeek 等中转的可用性、延迟和站内投票，充值前先看模型是否活着。
+> 第三方 API 中转站导航。对照 ChatGPT / Claude / DeepSeek 等中转的可用性、延迟和站内投票，并单独列出公益站。本站不代收充值。
 
-本站不是官方渠道，不代收充值，也不鉴定模型是不是「加密级真品」。详情页顶部的「相对稳 / 一般 / 慎充」只根据整站探测和投票，建议小额实测。
+本站不是官方渠道，也不鉴定模型是不是「原厂」。详情页顶部的「相对稳 / 一般 / 慎充」只根据整站探测和投票，建议小额实测。
 
 ## 页面
 
 - 首页: /
+- 公益站: /cat/charity
 - ChatGPT / GPT 中转: /model/gpt
 - Claude 中转: /model/claude
 - DeepSeek API: /model/deepseek
 - Gemini API: /model/gemini
 - 低倍率: /cat/cheaprate
 - 签到送余额: /cat/checkin
+- 新用户赠额: /cat/gift
 - 国内支付: /cat/pay
 - 站点详情: /site/{id}-{slug}
 - 官方模型实况: /official/openai （以及 claude / gemini / deepseek / kimi / grok）
+
+## 公益站
+
+公益站一般是个人或小团队用爱发电、提供免费调用额度的入口。不是官方渠道，停更和限流都常见，不适合当主力。完整对照见 /cat/charity。
 
 ## 怎么看一页
 
 1. 先看结论胶囊，再看可用性、延迟、投票。
 2. 在线不等于每个模型都通。
 3. 探币只记在本机，和中转站自己的签到余额不是一回事。
+4. 公益站额度以对方页面为准。

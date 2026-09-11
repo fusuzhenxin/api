@@ -1,0 +1,12 @@
+{
+  "name": "veridrop-api",
+  "private": true,
+  "scripts": {
+    "build": "node scripts/make_sitemap.js",
+    "start": "node scripts/serve.js"
+  },
+  "dependencies": {
+    "@upstash/redis": "^1.35.3",
+    "@vercel/blob": "^2.8.0"
+  }
+}

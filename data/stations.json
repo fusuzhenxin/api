@@ -13762,6 +13762,10 @@
       "name": "新站上榜"
     },
     {
+      "id": "charity",
+      "name": "公益站"
+    },
+    {
       "id": "online",
       "name": "当前在线"
     },
@@ -21572,7 +21576,8 @@
       "description": "基元律动（tokenrhythm）是国产大模型聚合中转，支持 DeepSeek V4、GLM-5.2、Kimi、Qwen 3.7、MiniMax 等，兼容 OpenAI 协议。🎁 注册即送 68 元免费 token 额度，邀请好友双方各得 68 元（活动多次延长），下载客户端体验 OpenSquilla 新功能。传为华为前员工创业项目，N 站大量薅羊毛帖。",
       "categories": [
         "gift",
-        "invite"
+        "invite",
+        "charity"
       ],
       "promoted": false,
       "rank": 0.247358,
@@ -21623,8 +21628,10 @@
       "checks": [],
       "features": [
         "gift",
-        "invite"
-      ]
+        "invite",
+        "charity"
+      ],
+      "charitySlug": "token-rhythm"
     },
     {
       "id": 195,
@@ -22808,7 +22815,9 @@
       "logo": "AR",
       "tag": "第三方",
       "description": "智能路由中转服务，支持多渠道自动切换。",
-      "categories": [],
+      "categories": [
+        "charity"
+      ],
       "promoted": false,
       "rank": 0.17518,
       "createdAt": "2026-03-04 17:39:11",
@@ -22825,7 +22834,10 @@
       },
       "models": [],
       "checks": [],
-      "features": []
+      "features": [
+        "charity"
+      ],
+      "charitySlug": "anyrouter"
     },
     {
       "id": 246,
@@ -23432,7 +23444,9 @@
       "logo": "🌐",
       "tag": "第三方",
       "description": "半公益性质的站，轻度用户可以试试，有点坑的是模型并没有视觉能力",
-      "categories": [],
+      "categories": [
+        "charity"
+      ],
       "promoted": false,
       "rank": 0.163189,
       "createdAt": "2026-05-07 12:40:04",
@@ -23449,7 +23463,10 @@
       },
       "models": [],
       "checks": [],
-      "features": []
+      "features": [
+        "charity"
+      ],
+      "charitySlug": "supxh"
     },
     {
       "id": 3664,
@@ -27814,7 +27831,8 @@
       "tag": "第三方",
       "description": "",
       "categories": [
-        "highup"
+        "highup",
+        "charity"
       ],
       "promoted": false,
       "rank": 0.091895,
@@ -27833,8 +27851,11 @@
       "models": [],
       "checks": [],
       "features": [
-        "highup"
-      ]
+        "highup",
+        "charity"
+      ],
+      "charitySlug": "agentrouter",
+      "charityPin": 1001
     },
     {
       "id": 1599,
@@ -33541,7 +33562,8 @@
       "tag": "第三方",
       "description": "BM API 注册即送月卡，邀请新人再送一个月（勿自邀会被封），月卡约 60 刀额度速度不错；另提供 gpt pro 套餐 4000 积分倍率 1x。",
       "categories": [
-        "invite"
+        "invite",
+        "charity"
       ],
       "promoted": false,
       "rank": 0.071964,
@@ -33567,8 +33589,10 @@
       ],
       "checks": [],
       "features": [
-        "invite"
-      ]
+        "invite",
+        "charity"
+      ],
+      "charitySlug": "bmapi"
     },
     {
       "id": 512,
@@ -38721,7 +38745,8 @@
       "description": "mcgrox.top 提供 0.8 / 2 / 5 倍率分组的中转服务，新用户注册后进 QQ 群绑定账号口令即送 100 刀免费额度，邀请好友双方各得 100 刀。⚠️ 此前有帖子标注活动停止，近期重新发帖开启，以最新帖为准；不同帖子邀请码不同，需填邀请码才有奖励。",
       "categories": [
         "gift",
-        "invite"
+        "invite",
+        "charity"
       ],
       "promoted": false,
       "rank": 0.062396,
@@ -38741,8 +38766,10 @@
       "checks": [],
       "features": [
         "gift",
-        "invite"
-      ]
+        "invite",
+        "charity"
+      ],
+      "charitySlug": "grox"
     },
     {
       "id": 4038,
@@ -46933,7 +46960,9 @@
       "logo": "",
       "tag": "第三方",
       "description": "",
-      "categories": [],
+      "categories": [
+        "charity"
+      ],
       "promoted": false,
       "rank": 0.051589,
       "createdAt": "2026-08-09 03:59:27",
@@ -46950,7 +46979,10 @@
       },
       "models": [],
       "checks": [],
-      "features": []
+      "features": [
+        "charity"
+      ],
+      "charitySlug": "gancaopu"
     },
     {
       "id": 4106,
@@ -49775,7 +49807,9 @@
       "logo": "",
       "tag": "第三方",
       "description": "",
-      "categories": [],
+      "categories": [
+        "charity"
+      ],
       "promoted": false,
       "rank": 0.048825,
       "createdAt": "2026-08-09 03:59:19",
@@ -49792,7 +49826,10 @@
       },
       "models": [],
       "checks": [],
-      "features": []
+      "features": [
+        "charity"
+      ],
+      "charitySlug": "docode"
     },
     {
       "id": 2385,
@@ -49914,7 +49951,9 @@
       "logo": "🌐",
       "tag": "第三方",
       "description": "暂无更多描述",
-      "categories": [],
+      "categories": [
+        "charity"
+      ],
       "promoted": false,
       "rank": 0.048723,
       "createdAt": "2026-06-09 21:31:46",
@@ -49931,7 +49970,10 @@
       },
       "models": [],
       "checks": [],
-      "features": []
+      "features": [
+        "charity"
+      ],
+      "charitySlug": "chatanywhere"
     },
     {
       "id": 764,
@@ -63763,7 +63805,9 @@
       "logo": "🌐",
       "tag": "第三方",
       "description": "暂无更多描述",
-      "categories": [],
+      "categories": [
+        "charity"
+      ],
       "promoted": false,
       "rank": 0.020634,
       "createdAt": "2026-06-09 21:31:46",
@@ -63780,7 +63824,10 @@
       },
       "models": [],
       "checks": [],
-      "features": []
+      "features": [
+        "charity"
+      ],
+      "charitySlug": "vsllm"
     },
     {
       "id": 3663,
@@ -70920,7 +70967,9 @@
       "logo": "",
       "tag": "第三方",
       "description": "支付 查看详情/访问官网｜OpenAI",
-      "categories": [],
+      "categories": [
+        "charity"
+      ],
       "promoted": false,
       "rank": 0.020445,
       "createdAt": "2026-08-09 03:59:13",
@@ -70944,7 +70993,10 @@
         }
       ],
       "checks": [],
-      "features": []
+      "features": [
+        "charity"
+      ],
+      "charitySlug": "helpcoder"
     },
     {
       "id": 2838,
@@ -75438,7 +75490,9 @@
       "logo": "",
       "tag": "第三方",
       "description": "",
-      "categories": [],
+      "categories": [
+        "charity"
+      ],
       "promoted": false,
       "rank": 0.020316,
       "createdAt": "2026-08-09 03:59:21",
@@ -75455,7 +75509,10 @@
       },
       "models": [],
       "checks": [],
-      "features": []
+      "features": [
+        "charity"
+      ],
+      "charitySlug": "panda-api"
     },
     {
       "id": 1456,
@@ -77121,7 +77178,9 @@
       "logo": "🌐",
       "tag": "第三方",
       "description": "暂无更多描述",
-      "categories": [],
+      "categories": [
+        "charity"
+      ],
       "promoted": false,
       "rank": 0.020275,
       "createdAt": "2026-06-09 21:31:46",
@@ -77138,7 +77197,10 @@
       },
       "models": [],
       "checks": [],
-      "features": []
+      "features": [
+        "charity"
+      ],
+      "charitySlug": "muyuan"
     },
     {
       "id": 1573,
@@ -78238,7 +78300,8 @@
       "tag": "第三方",
       "description": "",
       "categories": [
-        "highup"
+        "highup",
+        "charity"
       ],
       "promoted": false,
       "rank": 0.02024,
@@ -78257,8 +78320,10 @@
       "models": [],
       "checks": [],
       "features": [
-        "highup"
-      ]
+        "highup",
+        "charity"
+      ],
+      "charitySlug": "true-sota"
     },
     {
       "id": 2771,
@@ -85993,7 +86058,9 @@
       "logo": "🌐",
       "tag": "第三方",
       "description": "暂无更多描述",
-      "categories": [],
+      "categories": [
+        "charity"
+      ],
       "promoted": false,
       "rank": 0.020049,
       "createdAt": "2026-06-09 21:31:46",
@@ -86010,7 +86077,10 @@
       },
       "models": [],
       "checks": [],
-      "features": []
+      "features": [
+        "charity"
+      ],
+      "charitySlug": "iamhc"
     },
     {
       "id": 2675,
@@ -87438,7 +87508,8 @@
       "tag": "第三方",
       "description": "Tokeness 价格不错 0.1x：opus-4-8 输入 ¥3.5/1M、gpt5.5 输入 ¥3.5/1M，站长近期推出 0.06x 倍率，学生党实测稳定。",
       "categories": [
-        "cheaprate"
+        "cheaprate",
+        "charity"
       ],
       "promoted": false,
       "rank": 0.020007,
@@ -87470,8 +87541,10 @@
       ],
       "checks": [],
       "features": [
-        "cheaprate"
-      ]
+        "cheaprate",
+        "charity"
+      ],
+      "charitySlug": "tokeness"
     },
     {
       "id": 1629,
@@ -89668,7 +89741,9 @@
       "logo": "",
       "tag": "第三方",
       "description": "",
-      "categories": [],
+      "categories": [
+        "charity"
+      ],
       "promoted": false,
       "rank": 0.019958,
       "createdAt": "2026-08-09 03:59:19",
@@ -89685,7 +89760,11 @@
       },
       "models": [],
       "checks": [],
-      "features": []
+      "features": [
+        "charity"
+      ],
+      "charitySlug": "tabitoken",
+      "charityPin": 1002
     },
     {
       "id": 3670,
@@ -92509,7 +92588,9 @@
       "logo": "",
       "tag": "第三方",
       "description": "",
-      "categories": [],
+      "categories": [
+        "charity"
+      ],
       "promoted": false,
       "rank": 0.01988,
       "createdAt": "2026-08-09 03:59:23",
@@ -92526,7 +92607,10 @@
       },
       "models": [],
       "checks": [],
-      "features": []
+      "features": [
+        "charity"
+      ],
+      "charitySlug": "100xlabs"
     },
     {
       "id": 3642,
@@ -94802,7 +94886,9 @@
       "logo": "",
       "tag": "第三方",
       "description": "",
-      "categories": [],
+      "categories": [
+        "charity"
+      ],
       "promoted": false,
       "rank": 0.019819,
       "createdAt": "2026-08-09 03:59:23",
@@ -94819,7 +94905,10 @@
       },
       "models": [],
       "checks": [],
-      "features": []
+      "features": [
+        "charity"
+      ],
+      "charitySlug": "cavoti"
     },
     {
       "id": 4307,
@@ -98860,7 +98949,9 @@
       "logo": "🌐",
       "tag": "第三方",
       "description": "暂无更多描述",
-      "categories": [],
+      "categories": [
+        "charity"
+      ],
       "promoted": false,
       "rank": 0.019694,
       "createdAt": "2026-06-09 21:31:46",
@@ -98877,7 +98968,10 @@
       },
       "models": [],
       "checks": [],
-      "features": []
+      "features": [
+        "charity"
+      ],
+      "charitySlug": "aisz-nexus"
     },
     {
       "id": 1157,
@@ -99508,7 +99602,9 @@
       "logo": "🌐",
       "tag": "第三方",
       "description": "暂无更多描述",
-      "categories": [],
+      "categories": [
+        "charity"
+      ],
       "promoted": false,
       "rank": 0.019677,
       "createdAt": "2026-06-09 21:31:46",
@@ -99532,7 +99628,10 @@
         }
       ],
       "checks": [],
-      "features": []
+      "features": [
+        "charity"
+      ],
+      "charitySlug": "gemai"
     },
     {
       "id": 2141,
@@ -104279,7 +104378,8 @@
       "tag": "第三方",
       "description": "",
       "categories": [
-        "highup"
+        "highup",
+        "charity"
       ],
       "promoted": false,
       "rank": 0.019551,
@@ -104298,8 +104398,10 @@
       "models": [],
       "checks": [],
       "features": [
-        "highup"
-      ]
+        "highup",
+        "charity"
+      ],
+      "charitySlug": "hlool"
     },
     {
       "id": 796,
@@ -105810,7 +105912,9 @@
       "logo": "",
       "tag": "第三方",
       "description": "支付 查看详情/访问官网｜Claude OpenAI Gemini +2",
-      "categories": [],
+      "categories": [
+        "charity"
+      ],
       "promoted": false,
       "rank": 0.019507,
       "createdAt": "2026-08-09 03:59:13",
@@ -105846,7 +105950,10 @@
         }
       ],
       "checks": [],
-      "features": []
+      "features": [
+        "charity"
+      ],
+      "charitySlug": "makelove-nianhua"
     },
     {
       "id": 228,
@@ -107970,7 +108077,8 @@
       "tag": "第三方",
       "description": "",
       "categories": [
-        "highup"
+        "highup",
+        "charity"
       ],
       "promoted": false,
       "rank": 0.019453,
@@ -107989,8 +108097,10 @@
       "models": [],
       "checks": [],
       "features": [
-        "highup"
-      ]
+        "highup",
+        "charity"
+      ],
+      "charitySlug": "bohe"
     },
     {
       "id": 3973,
@@ -113141,7 +113251,8 @@
       "tag": "第三方",
       "description": "",
       "categories": [
-        "highup"
+        "highup",
+        "charity"
       ],
       "promoted": false,
       "rank": 0.019323,
@@ -113160,8 +113271,10 @@
       "models": [],
       "checks": [],
       "features": [
-        "highup"
-      ]
+        "highup",
+        "charity"
+      ],
+      "charitySlug": "api456"
     },
     {
       "id": 3743,
@@ -120896,7 +121009,9 @@
       "logo": "🌐",
       "tag": "第三方",
       "description": "暂无更多描述",
-      "categories": [],
+      "categories": [
+        "charity"
+      ],
       "promoted": false,
       "rank": 0.019125,
       "createdAt": "2026-06-09 21:31:46",
@@ -120920,7 +121035,10 @@
         }
       ],
       "checks": [],
-      "features": []
+      "features": [
+        "charity"
+      ],
+      "charitySlug": "moyuu"
     },
     {
       "id": 2913,
@@ -122645,7 +122763,9 @@
       "logo": "🌐",
       "tag": "第三方",
       "description": "暂无更多描述",
-      "categories": [],
+      "categories": [
+        "charity"
+      ],
       "promoted": false,
       "rank": 0.019078,
       "createdAt": "2026-06-09 21:31:46",
@@ -122662,7 +122782,10 @@
       },
       "models": [],
       "checks": [],
-      "features": []
+      "features": [
+        "charity"
+      ],
+      "charitySlug": "future-hub"
     },
     {
       "id": 2280,
@@ -138700,7 +138823,9 @@
       "logo": "",
       "tag": "第三方",
       "description": "",
-      "categories": [],
+      "categories": [
+        "charity"
+      ],
       "promoted": false,
       "rank": 0,
       "createdAt": "2026-08-09 03:59:22",
@@ -138717,7 +138842,10 @@
       },
       "models": [],
       "checks": [],
-      "features": []
+      "features": [
+        "charity"
+      ],
+      "charitySlug": "chy"
     },
     {
       "id": 2589,
@@ -143057,7 +143185,9 @@
       "logo": "",
       "tag": "第三方",
       "description": "",
-      "categories": [],
+      "categories": [
+        "charity"
+      ],
       "promoted": false,
       "rank": 0,
       "createdAt": "2026-08-09 03:59:28",
@@ -143074,7 +143204,10 @@
       },
       "models": [],
       "checks": [],
-      "features": []
+      "features": [
+        "charity"
+      ],
+      "charitySlug": "52mx"
     },
     {
       "id": 3908,
@@ -146676,7 +146809,9 @@
       "logo": "🌐",
       "tag": "第三方",
       "description": "暂无更多描述",
-      "categories": [],
+      "categories": [
+        "charity"
+      ],
       "promoted": false,
       "rank": 0,
       "createdAt": "2026-06-09 21:31:46",
@@ -146693,7 +146828,10 @@
       },
       "models": [],
       "checks": [],
-      "features": []
+      "features": [
+        "charity"
+      ],
+      "charitySlug": "chuyel-furry"
     },
     {
       "id": 319,
@@ -150913,8 +151051,1908 @@
       "models": [],
       "checks": [],
       "features": []
+    },
+    {
+      "id": 900001,
+      "name": "JustWoker",
+      "url": "https://api.justwoker.icu/sign-up",
+      "domain": "api.justwoker.icu",
+      "logo": "",
+      "tag": "公益站",
+      "description": "JustWoker 是一个签到送额度的公益 API，每日签到可随机获得额度。",
+      "categories": [
+        "charity",
+        "checkin"
+      ],
+      "features": [
+        "charity",
+        "checkin"
+      ],
+      "promoted": false,
+      "rank": 0,
+      "createdAt": "",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "status": {
+        "online": null,
+        "ms": null,
+        "uptime": null,
+        "avgMs": null,
+        "checkedAt": ""
+      },
+      "models": [],
+      "checks": [],
+      "charitySlug": "justwoker",
+      "charityPin": 1003
+    },
+    {
+      "id": 900002,
+      "name": "莱斯超级API",
+      "url": "https://laisiai.tw.cpolar.io/",
+      "domain": "laisiai.tw.cpolar.io",
+      "logo": "",
+      "tag": "公益站",
+      "description": "莱斯超级API通过注册赠送和每日签到提供公益额度，支持 Mistral、GPT 5.4、Gemini 3.1、Gemini 2.5、DeepSeek 和千问系列模型。",
+      "categories": [
+        "charity",
+        "checkin"
+      ],
+      "features": [
+        "charity",
+        "checkin"
+      ],
+      "promoted": false,
+      "rank": 0,
+      "createdAt": "",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "status": {
+        "online": null,
+        "ms": null,
+        "uptime": null,
+        "avgMs": null,
+        "checkedAt": ""
+      },
+      "models": [
+        {
+          "id": "gpt",
+          "label": "GPT",
+          "rate": null,
+          "mentioned": true
+        },
+        {
+          "id": "gemini",
+          "label": "Gemini",
+          "rate": null,
+          "mentioned": true
+        },
+        {
+          "id": "deepseek",
+          "label": "DeepSeek",
+          "rate": null,
+          "mentioned": true
+        },
+        {
+          "id": "qwen",
+          "label": "Qwen",
+          "rate": null,
+          "mentioned": true
+        }
+      ],
+      "checks": [],
+      "charitySlug": "laisiai",
+      "charityPin": 0
+    },
+    {
+      "id": 900003,
+      "name": "S3AI API",
+      "url": "https://ai.furry.vg/sign-up",
+      "domain": "ai.furry.vg",
+      "logo": "",
+      "tag": "公益站",
+      "description": "S3AI API 是一条低价多厂商聚合路由，但留了两个免费用法——NIM 分组免费不限速、free 分组近乎零成本，里面有 DeepSeek、mimo、nano-banana 系生图等模型，还独家带了 3D 生成 API。",
+      "categories": [
+        "charity"
+      ],
+      "features": [
+        "charity"
+      ],
+      "promoted": false,
+      "rank": 0,
+      "createdAt": "",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "status": {
+        "online": null,
+        "ms": null,
+        "uptime": null,
+        "avgMs": null,
+        "checkedAt": ""
+      },
+      "models": [
+        {
+          "id": "deepseek",
+          "label": "DeepSeek",
+          "rate": null,
+          "mentioned": true
+        },
+        {
+          "id": "image",
+          "label": "生图",
+          "rate": null,
+          "mentioned": true
+        }
+      ],
+      "checks": [],
+      "charitySlug": "s3ai",
+      "charityPin": 0
+    },
+    {
+      "id": 900004,
+      "name": "星见雅 API",
+      "url": "https://new.xinjianya.top/register",
+      "domain": "new.xinjianya.top",
+      "logo": "",
+      "tag": "公益站",
+      "description": "模型多到挑花眼的公益免费 API 站，自家「银狮」币制、10 银狮兑 1 刀。",
+      "categories": [
+        "charity",
+        "checkin"
+      ],
+      "features": [
+        "charity",
+        "checkin"
+      ],
+      "promoted": false,
+      "rank": 0,
+      "createdAt": "",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "status": {
+        "online": null,
+        "ms": null,
+        "uptime": null,
+        "avgMs": null,
+        "checkedAt": ""
+      },
+      "models": [
+        {
+          "id": "gpt",
+          "label": "GPT",
+          "rate": null,
+          "mentioned": true
+        },
+        {
+          "id": "grok",
+          "label": "Grok",
+          "rate": null,
+          "mentioned": true
+        },
+        {
+          "id": "deepseek",
+          "label": "DeepSeek",
+          "rate": null,
+          "mentioned": true
+        },
+        {
+          "id": "kimi",
+          "label": "Kimi",
+          "rate": null,
+          "mentioned": true
+        },
+        {
+          "id": "qwen",
+          "label": "Qwen",
+          "rate": null,
+          "mentioned": true
+        },
+        {
+          "id": "glm",
+          "label": "GLM",
+          "rate": null,
+          "mentioned": true
+        }
+      ],
+      "checks": [],
+      "charitySlug": "xinjianya",
+      "charityPin": 0
+    },
+    {
+      "id": 900005,
+      "name": "Rua Chat",
+      "url": "https://api.rua.chat/sign-up",
+      "domain": "api.rua.chat",
+      "logo": "",
+      "tag": "公益站",
+      "description": "Gemini 和 Grok 免费、Claude 走收费的公益站，受邀注册送 10 刀、每天签到再补 2–5 刀，综合倍率 0.5。",
+      "categories": [
+        "charity",
+        "checkin",
+        "gift"
+      ],
+      "features": [
+        "charity",
+        "checkin",
+        "gift"
+      ],
+      "promoted": false,
+      "rank": 0,
+      "createdAt": "",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "status": {
+        "online": null,
+        "ms": null,
+        "uptime": null,
+        "avgMs": null,
+        "checkedAt": ""
+      },
+      "models": [
+        {
+          "id": "gpt",
+          "label": "GPT",
+          "rate": null,
+          "mentioned": true
+        },
+        {
+          "id": "claude",
+          "label": "Claude",
+          "rate": null,
+          "mentioned": true
+        },
+        {
+          "id": "gemini",
+          "label": "Gemini",
+          "rate": null,
+          "mentioned": true
+        },
+        {
+          "id": "grok",
+          "label": "Grok",
+          "rate": null,
+          "mentioned": true
+        }
+      ],
+      "checks": [],
+      "charitySlug": "ruachat",
+      "charityPin": 0
+    },
+    {
+      "id": 900006,
+      "name": "DeadlySignal API",
+      "url": "https://myapi.creitingameplays.com/",
+      "domain": "myapi.creitingameplays.com",
+      "logo": "",
+      "tag": "公益站",
+      "description": "只开放 GitHub 登录注册的公益 AI API 站，GitHub 账号注册时间须满六个月。",
+      "categories": [
+        "charity",
+        "checkin"
+      ],
+      "features": [
+        "charity",
+        "checkin"
+      ],
+      "promoted": false,
+      "rank": 0,
+      "createdAt": "",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "status": {
+        "online": null,
+        "ms": null,
+        "uptime": null,
+        "avgMs": null,
+        "checkedAt": ""
+      },
+      "models": [
+        {
+          "id": "gpt",
+          "label": "GPT",
+          "rate": null,
+          "mentioned": true
+        },
+        {
+          "id": "claude",
+          "label": "Claude",
+          "rate": null,
+          "mentioned": true
+        },
+        {
+          "id": "gemini",
+          "label": "Gemini",
+          "rate": null,
+          "mentioned": true
+        },
+        {
+          "id": "grok",
+          "label": "Grok",
+          "rate": null,
+          "mentioned": true
+        },
+        {
+          "id": "deepseek",
+          "label": "DeepSeek",
+          "rate": null,
+          "mentioned": true
+        },
+        {
+          "id": "kimi",
+          "label": "Kimi",
+          "rate": null,
+          "mentioned": true
+        },
+        {
+          "id": "qwen",
+          "label": "Qwen",
+          "rate": null,
+          "mentioned": true
+        },
+        {
+          "id": "glm",
+          "label": "GLM",
+          "rate": null,
+          "mentioned": true
+        }
+      ],
+      "checks": [],
+      "charitySlug": "deadlysignal-api",
+      "charityPin": 0
+    },
+    {
+      "id": 900007,
+      "name": "NOFX",
+      "url": "https://nofx.one/zh-CN",
+      "domain": "nofx.one",
+      "logo": "",
+      "tag": "公益站",
+      "description": "NOFX 注册送 20 积分，每日签到送 5 积分，每成功邀请一位好友再得 5 积分；积分可用于主流模型，优势是分组倍率较低，适合先用免费额度做日常体验。",
+      "categories": [
+        "charity",
+        "checkin",
+        "gift",
+        "invite"
+      ],
+      "features": [
+        "charity",
+        "checkin",
+        "gift",
+        "invite"
+      ],
+      "promoted": false,
+      "rank": 0,
+      "createdAt": "",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "status": {
+        "online": null,
+        "ms": null,
+        "uptime": null,
+        "avgMs": null,
+        "checkedAt": ""
+      },
+      "models": [],
+      "checks": [],
+      "charitySlug": "nofx-one",
+      "charityPin": 0
+    },
+    {
+      "id": 900008,
+      "name": "Liminality",
+      "url": "https://beizhi.sylu.cc/",
+      "domain": "beizhi.sylu.cc",
+      "logo": "",
+      "tag": "公益站",
+      "description": "Liminality 是一个采用每日签到模式的大模型聚合公益站。",
+      "categories": [
+        "charity",
+        "checkin"
+      ],
+      "features": [
+        "charity",
+        "checkin"
+      ],
+      "promoted": false,
+      "rank": 0,
+      "createdAt": "",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "status": {
+        "online": null,
+        "ms": null,
+        "uptime": null,
+        "avgMs": null,
+        "checkedAt": ""
+      },
+      "models": [
+        {
+          "id": "gpt",
+          "label": "GPT",
+          "rate": null,
+          "mentioned": true
+        }
+      ],
+      "checks": [],
+      "charitySlug": "liminality",
+      "charityPin": 0
+    },
+    {
+      "id": 900009,
+      "name": "黑与白公益站",
+      "url": "https://ai.hybgzs.com/",
+      "domain": "ai.hybgzs.com",
+      "logo": "",
+      "tag": "公益站",
+      "description": "黑与白公益站（hybgzs）是一套\"双站体系\"——主站 ai.hybgzs.com 是 Done Hub 网关，管你怎么调用模型；福利站 cdk.hybgzs.com 管你怎么去赚配额（签到/转盘/农场），赚回来的量会转回主站接着造。",
+      "categories": [
+        "charity",
+        "checkin"
+      ],
+      "features": [
+        "charity",
+        "checkin"
+      ],
+      "promoted": false,
+      "rank": 0,
+      "createdAt": "",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "status": {
+        "online": null,
+        "ms": null,
+        "uptime": null,
+        "avgMs": null,
+        "checkedAt": ""
+      },
+      "models": [
+        {
+          "id": "gpt",
+          "label": "GPT",
+          "rate": null,
+          "mentioned": true
+        },
+        {
+          "id": "claude",
+          "label": "Claude",
+          "rate": null,
+          "mentioned": true
+        },
+        {
+          "id": "gemini",
+          "label": "Gemini",
+          "rate": null,
+          "mentioned": true
+        }
+      ],
+      "checks": [],
+      "charitySlug": "hybgzs",
+      "charityPin": 0
+    },
+    {
+      "id": 900010,
+      "name": "小欢公益站",
+      "url": "https://free-llm.cups.moe/",
+      "domain": "free-llm.cups.moe",
+      "logo": "",
+      "tag": "公益站",
+      "description": "小欢公益站是博主\"小欢\"挂在自己个人博客 cups.moe 后院的免费大模型 API 服务，登录即送 200 次使用额度，额度快见底就去那篇 14.4 万阅读的博文底下留言喊话加量——没有邀请码、没有充值入口，全靠一篇博文加一条评论区撑着。",
+      "categories": [
+        "charity",
+        "invite"
+      ],
+      "features": [
+        "charity",
+        "invite"
+      ],
+      "promoted": false,
+      "rank": 0,
+      "createdAt": "",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "status": {
+        "online": null,
+        "ms": null,
+        "uptime": null,
+        "avgMs": null,
+        "checkedAt": ""
+      },
+      "models": [
+        {
+          "id": "claude",
+          "label": "Claude",
+          "rate": null,
+          "mentioned": true
+        },
+        {
+          "id": "deepseek",
+          "label": "DeepSeek",
+          "rate": null,
+          "mentioned": true
+        }
+      ],
+      "checks": [],
+      "charitySlug": "xiaohuan",
+      "charityPin": 0
+    },
+    {
+      "id": 900011,
+      "name": "免费 ChatGPT API（free.v36.cm）",
+      "url": "https://free.v36.cm/",
+      "domain": "free.v36.cm",
+      "logo": "",
+      "tag": "公益站",
+      "description": "免费 ChatGPT API（free.v36.cm）公益站脱胎自 GitHub 上 6.5k+ star 的老仓库 popjane/free_chatgpt_api，邮箱自助注册和 GitHub 一键授权两条路子都能领 Key，国内直连不用额外绕线。",
+      "categories": [
+        "charity"
+      ],
+      "features": [
+        "charity"
+      ],
+      "promoted": false,
+      "rank": 0,
+      "createdAt": "",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "status": {
+        "online": null,
+        "ms": null,
+        "uptime": null,
+        "avgMs": null,
+        "checkedAt": ""
+      },
+      "models": [
+        {
+          "id": "gpt",
+          "label": "GPT",
+          "rate": null,
+          "mentioned": true
+        }
+      ],
+      "checks": [],
+      "charitySlug": "free-v36",
+      "charityPin": 0
+    },
+    {
+      "id": 900012,
+      "name": "冰佬公益站",
+      "url": "https://icoe.pp.ua/",
+      "domain": "icoe.pp.ua",
+      "logo": "",
+      "tag": "公益站",
+      "description": "冰佬公益站是老资格的那一挂公益站，如今临时落脚在 icoe.pp.ua 这个域名下，页面自己挂的招牌是「冰のCodex」——域名跟着心情换，招牌跟着域名飘，算是这站最典型的标签。",
+      "categories": [
+        "charity",
+        "invite"
+      ],
+      "features": [
+        "charity",
+        "invite"
+      ],
+      "promoted": false,
+      "rank": 0,
+      "createdAt": "",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "status": {
+        "online": null,
+        "ms": null,
+        "uptime": null,
+        "avgMs": null,
+        "checkedAt": ""
+      },
+      "models": [
+        {
+          "id": "gpt",
+          "label": "GPT",
+          "rate": null,
+          "mentioned": true
+        }
+      ],
+      "checks": [],
+      "charitySlug": "icoe",
+      "charityPin": 0
+    },
+    {
+      "id": 900013,
+      "name": "橘子 AI（juziai）",
+      "url": "https://api.juziai.cc/",
+      "domain": "api.juziai.cc",
+      "logo": "",
+      "tag": "公益站",
+      "description": "注册直接到账 $50 的公益免费 API 站，除了 OpenAI 兼容还开了 Anthropic 原生端点——能直接喂 Claude Code。",
+      "categories": [
+        "charity"
+      ],
+      "features": [
+        "charity"
+      ],
+      "promoted": false,
+      "rank": 0,
+      "createdAt": "",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "status": {
+        "online": null,
+        "ms": null,
+        "uptime": null,
+        "avgMs": null,
+        "checkedAt": ""
+      },
+      "models": [
+        {
+          "id": "gpt",
+          "label": "GPT",
+          "rate": null,
+          "mentioned": true
+        },
+        {
+          "id": "claude",
+          "label": "Claude",
+          "rate": null,
+          "mentioned": true
+        },
+        {
+          "id": "gemini",
+          "label": "Gemini",
+          "rate": null,
+          "mentioned": true
+        },
+        {
+          "id": "grok",
+          "label": "Grok",
+          "rate": null,
+          "mentioned": true
+        }
+      ],
+      "checks": [],
+      "charitySlug": "juziai",
+      "charityPin": 0
+    },
+    {
+      "id": 900014,
+      "name": "88888 AI",
+      "url": "https://88888.qzz.io/",
+      "domain": "88888.qzz.io",
+      "logo": "",
+      "tag": "公益站",
+      "description": "注册就送 $100 额度、还支持临时邮箱的公益免费 API 线路：OpenAI 兼容端点，自己建 key 就能白嫖一长串国产大模型——DeepSeek-v4、GLM5.1、Kimi-k2.6、MiniMax-m3、Qwen--3.5、Step 系列实测都能跑。",
+      "categories": [
+        "charity"
+      ],
+      "features": [
+        "charity"
+      ],
+      "promoted": false,
+      "rank": 0,
+      "createdAt": "",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "status": {
+        "online": null,
+        "ms": null,
+        "uptime": null,
+        "avgMs": null,
+        "checkedAt": ""
+      },
+      "models": [
+        {
+          "id": "gpt",
+          "label": "GPT",
+          "rate": null,
+          "mentioned": true
+        },
+        {
+          "id": "deepseek",
+          "label": "DeepSeek",
+          "rate": null,
+          "mentioned": true
+        },
+        {
+          "id": "kimi",
+          "label": "Kimi",
+          "rate": null,
+          "mentioned": true
+        },
+        {
+          "id": "qwen",
+          "label": "Qwen",
+          "rate": null,
+          "mentioned": true
+        },
+        {
+          "id": "glm",
+          "label": "GLM",
+          "rate": null,
+          "mentioned": true
+        }
+      ],
+      "checks": [],
+      "charitySlug": "88888-ai",
+      "charityPin": 0
+    },
+    {
+      "id": 900015,
+      "name": "小米 MiMo 公益站",
+      "url": "https://fufu.iqach.top/",
+      "domain": "fufu.iqach.top",
+      "logo": "",
+      "tag": "公益站",
+      "description": "专开小米自家 MiMo 全套模型的公益站，走 LinuxDo（L 站）授权登录、要等级 1 以上才放行。",
+      "categories": [
+        "charity"
+      ],
+      "features": [
+        "charity"
+      ],
+      "promoted": false,
+      "rank": 0,
+      "createdAt": "",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "status": {
+        "online": null,
+        "ms": null,
+        "uptime": null,
+        "avgMs": null,
+        "checkedAt": ""
+      },
+      "models": [
+        {
+          "id": "gpt",
+          "label": "GPT",
+          "rate": null,
+          "mentioned": true
+        },
+        {
+          "id": "claude",
+          "label": "Claude",
+          "rate": null,
+          "mentioned": true
+        }
+      ],
+      "checks": [],
+      "charitySlug": "fufu-mimo",
+      "charityPin": 0
+    },
+    {
+      "id": 900016,
+      "name": "DGB 公益站",
+      "url": "https://freeapi.dgbmc.top/register",
+      "domain": "freeapi.dgbmc.top",
+      "logo": "",
+      "tag": "公益站",
+      "description": "注册随机送钱、临时邮箱也能薅的公益免费 API 站，OpenAI 兼容直连。",
+      "categories": [
+        "charity"
+      ],
+      "features": [
+        "charity"
+      ],
+      "promoted": false,
+      "rank": 0,
+      "createdAt": "",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "status": {
+        "online": null,
+        "ms": null,
+        "uptime": null,
+        "avgMs": null,
+        "checkedAt": ""
+      },
+      "models": [
+        {
+          "id": "gpt",
+          "label": "GPT",
+          "rate": null,
+          "mentioned": true
+        },
+        {
+          "id": "gemini",
+          "label": "Gemini",
+          "rate": null,
+          "mentioned": true
+        },
+        {
+          "id": "grok",
+          "label": "Grok",
+          "rate": null,
+          "mentioned": true
+        },
+        {
+          "id": "image",
+          "label": "生图",
+          "rate": null,
+          "mentioned": true
+        }
+      ],
+      "checks": [],
+      "charitySlug": "dgb",
+      "charityPin": 0
+    },
+    {
+      "id": 900017,
+      "name": "V-API 公益站",
+      "url": "https://v-api.de5.net/",
+      "domain": "v-api.de5.net",
+      "logo": "",
+      "tag": "公益站",
+      "description": "V-API 公益站是我这两天才摸到的新灶——2026年7月3日刚挂牌，公告、logo、后台启动时间三处戳互证，柴火都还没烧热，LinuxDo 上挂的 CDK 兑换码开张当天就被薅空三轮。",
+      "categories": [
+        "charity"
+      ],
+      "features": [
+        "charity"
+      ],
+      "promoted": false,
+      "rank": 0,
+      "createdAt": "",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "status": {
+        "online": null,
+        "ms": null,
+        "uptime": null,
+        "avgMs": null,
+        "checkedAt": ""
+      },
+      "models": [
+        {
+          "id": "gpt",
+          "label": "GPT",
+          "rate": null,
+          "mentioned": true
+        },
+        {
+          "id": "deepseek",
+          "label": "DeepSeek",
+          "rate": null,
+          "mentioned": true
+        },
+        {
+          "id": "glm",
+          "label": "GLM",
+          "rate": null,
+          "mentioned": true
+        }
+      ],
+      "checks": [],
+      "charitySlug": "v-api",
+      "charityPin": 0
+    },
+    {
+      "id": 900018,
+      "name": "九幺公益站",
+      "url": "https://api.7r.fit/",
+      "domain": "api.7r.fit",
+      "logo": "",
+      "tag": "公益站",
+      "description": "九幺公益站是个走 LinuxDo 账号登录的免费大模型中转站，额度大头不是靠天天签到攒出来的，而是站长在 LD士多挂着「九幺公益10000$额度」商品让人用 LDC 兑换，外加不定期在福利羊毛区甩大额 CDK。",
+      "categories": [
+        "charity",
+        "checkin"
+      ],
+      "features": [
+        "charity",
+        "checkin"
+      ],
+      "promoted": false,
+      "rank": 0,
+      "createdAt": "",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "status": {
+        "online": null,
+        "ms": null,
+        "uptime": null,
+        "avgMs": null,
+        "checkedAt": ""
+      },
+      "models": [
+        {
+          "id": "claude",
+          "label": "Claude",
+          "rate": null,
+          "mentioned": true
+        },
+        {
+          "id": "grok",
+          "label": "Grok",
+          "rate": null,
+          "mentioned": true
+        },
+        {
+          "id": "deepseek",
+          "label": "DeepSeek",
+          "rate": null,
+          "mentioned": true
+        },
+        {
+          "id": "qwen",
+          "label": "Qwen",
+          "rate": null,
+          "mentioned": true
+        },
+        {
+          "id": "glm",
+          "label": "GLM",
+          "rate": null,
+          "mentioned": true
+        }
+      ],
+      "checks": [],
+      "charitySlug": "jiuyao",
+      "charityPin": 0
+    },
+    {
+      "id": 900019,
+      "name": "0DAI 模型站",
+      "url": "https://ai.0d0d.top/",
+      "domain": "ai.0d0d.top",
+      "logo": "",
+      "tag": "公益站",
+      "description": "0DAI 模型站把当前可调用的 6 个模型和 OpenAI 兼容示例直接摆在首页：mimo-v2.5、north-mini-code、minimax-m2.7、gpt-oss、deepseek-v4-flash、mimo-auto 都能在控制台建 Key 后接进去。",
+      "categories": [
+        "charity",
+        "invite"
+      ],
+      "features": [
+        "charity",
+        "invite"
+      ],
+      "promoted": false,
+      "rank": 0,
+      "createdAt": "",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "status": {
+        "online": null,
+        "ms": null,
+        "uptime": null,
+        "avgMs": null,
+        "checkedAt": ""
+      },
+      "models": [
+        {
+          "id": "gpt",
+          "label": "GPT",
+          "rate": null,
+          "mentioned": true
+        },
+        {
+          "id": "deepseek",
+          "label": "DeepSeek",
+          "rate": null,
+          "mentioned": true
+        }
+      ],
+      "checks": [],
+      "charitySlug": "0dai",
+      "charityPin": 0
+    },
+    {
+      "id": 900020,
+      "name": "SharedChat 公益入口",
+      "url": "https://new.sharedchat.cc/",
+      "domain": "new.sharedchat.cc",
+      "logo": "",
+      "tag": "公益站",
+      "description": "SharedChat 的公益入口为 new.sharedchat.cc，页面含 Vibe Code 与图像/视频功能入口；但当前公开接口明确提示“旧转发链路已关闭”，模型网关未接入独立公益站。",
+      "categories": [
+        "charity"
+      ],
+      "features": [
+        "charity"
+      ],
+      "promoted": false,
+      "rank": 0,
+      "createdAt": "",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "status": {
+        "online": null,
+        "ms": null,
+        "uptime": null,
+        "avgMs": null,
+        "checkedAt": ""
+      },
+      "models": [
+        {
+          "id": "claude",
+          "label": "Claude",
+          "rate": null,
+          "mentioned": true
+        },
+        {
+          "id": "video",
+          "label": "视频",
+          "rate": null,
+          "mentioned": true
+        }
+      ],
+      "checks": [],
+      "charitySlug": "sharedchat",
+      "charityPin": 0
+    },
+    {
+      "id": 900021,
+      "name": "Huainova（坏宝）公益站",
+      "url": "https://ai.huaibao.top/",
+      "domain": "ai.huaibao.top",
+      "logo": "",
+      "tag": "公益站",
+      "description": "Huainova（坏宝）公益站是一个靠社区号池吃饭的免费 API 站，巅峰期玩法花——注册送额度、签到、站内小游戏赚余额、每晚定点抽奖轮着来。",
+      "categories": [
+        "charity",
+        "checkin",
+        "gift"
+      ],
+      "features": [
+        "charity",
+        "checkin",
+        "gift"
+      ],
+      "promoted": false,
+      "rank": 0,
+      "createdAt": "",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "status": {
+        "online": null,
+        "ms": null,
+        "uptime": null,
+        "avgMs": null,
+        "checkedAt": ""
+      },
+      "models": [],
+      "checks": [],
+      "charitySlug": "huainova",
+      "charityPin": 0
+    },
+    {
+      "id": 900022,
+      "name": "66o API（追梦云API）",
+      "url": "https://api.66o.uk/",
+      "domain": "api.66o.uk",
+      "logo": "",
+      "tag": "公益站",
+      "description": "66o API公益站进门就是个双面戏法——域名叫66o.uk，站内后台系统名却自称\"追梦云API\"，连浏览器标题栏都懒得改，还留着通用New API字样。",
+      "categories": [
+        "charity"
+      ],
+      "features": [
+        "charity"
+      ],
+      "promoted": false,
+      "rank": 0,
+      "createdAt": "",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "status": {
+        "online": null,
+        "ms": null,
+        "uptime": null,
+        "avgMs": null,
+        "checkedAt": ""
+      },
+      "models": [
+        {
+          "id": "claude",
+          "label": "Claude",
+          "rate": null,
+          "mentioned": true
+        },
+        {
+          "id": "deepseek",
+          "label": "DeepSeek",
+          "rate": null,
+          "mentioned": true
+        }
+      ],
+      "checks": [],
+      "charitySlug": "66o",
+      "charityPin": 0
+    },
+    {
+      "id": 900023,
+      "name": "GGBOOM 公益站",
+      "url": "https://ai.qaq.al/",
+      "domain": "ai.qaq.al",
+      "logo": "",
+      "tag": "公益站",
+      "description": "GGBOOM 公益站是专供 Codex 系模型的免费网关，挂着 gpt-5.3-codex、gpt-5.2-codex、gpt-5.1-codex-max 这些型号，端点走 openai-responses 格式，Codex CLI 能原生对接。",
+      "categories": [
+        "charity",
+        "checkin"
+      ],
+      "features": [
+        "charity",
+        "checkin"
+      ],
+      "promoted": false,
+      "rank": 0,
+      "createdAt": "",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "status": {
+        "online": null,
+        "ms": null,
+        "uptime": null,
+        "avgMs": null,
+        "checkedAt": ""
+      },
+      "models": [
+        {
+          "id": "gpt",
+          "label": "GPT",
+          "rate": null,
+          "mentioned": true
+        }
+      ],
+      "checks": [],
+      "charitySlug": "ggboom",
+      "charityPin": 0
+    },
+    {
+      "id": 900024,
+      "name": "GoGoGo 公益站",
+      "url": "https://api.chengtx.vip/",
+      "domain": "api.chengtx.vip",
+      "logo": "",
+      "tag": "公益站",
+      "description": "GoGoGo 公益站，这名字是从老横评里带出来的招牌，官网入口是 api.chengtx.vip。",
+      "categories": [
+        "charity",
+        "checkin"
+      ],
+      "features": [
+        "charity",
+        "checkin"
+      ],
+      "promoted": false,
+      "rank": 0,
+      "createdAt": "",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "status": {
+        "online": null,
+        "ms": null,
+        "uptime": null,
+        "avgMs": null,
+        "checkedAt": ""
+      },
+      "models": [
+        {
+          "id": "gpt",
+          "label": "GPT",
+          "rate": null,
+          "mentioned": true
+        }
+      ],
+      "checks": [],
+      "charitySlug": "gogogo",
+      "charityPin": 0
+    },
+    {
+      "id": 900025,
+      "name": "猫羽雫公益站",
+      "url": "https://maoyulin.xyz/",
+      "domain": "maoyulin.xyz",
+      "logo": "",
+      "tag": "公益站",
+      "description": "猫羽雫公益站是个把公告栏活生生玩成段子板的免费大模型中转站，货币单位不叫美元不叫积分，干脆自定义成\"猫猫\"，站长自己形容主线路是台\"土豆服务器，随时爆炸\"。",
+      "categories": [
+        "charity",
+        "checkin"
+      ],
+      "features": [
+        "charity",
+        "checkin"
+      ],
+      "promoted": false,
+      "rank": 0,
+      "createdAt": "",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "status": {
+        "online": null,
+        "ms": null,
+        "uptime": null,
+        "avgMs": null,
+        "checkedAt": ""
+      },
+      "models": [
+        {
+          "id": "gemini",
+          "label": "Gemini",
+          "rate": null,
+          "mentioned": true
+        },
+        {
+          "id": "grok",
+          "label": "Grok",
+          "rate": null,
+          "mentioned": true
+        },
+        {
+          "id": "deepseek",
+          "label": "DeepSeek",
+          "rate": null,
+          "mentioned": true
+        },
+        {
+          "id": "qwen",
+          "label": "Qwen",
+          "rate": null,
+          "mentioned": true
+        }
+      ],
+      "checks": [],
+      "charitySlug": "maoyulin",
+      "charityPin": 0
+    },
+    {
+      "id": 900026,
+      "name": "MODELOC 算力平台（注册填码互得 10 万算力 · Claude Opus 4.8 / GPT 5.5 旗舰闭源全开）",
+      "url": "https://modeloc.com/i/3WPJEY7W",
+      "domain": "modeloc.com",
+      "logo": "",
+      "tag": "公益站",
+      "description": "一个「模型可信度 + 算力」平台，注册就白送算力去调一水儿的旗舰大模型，最馋的是别家公益线路多半只给国产，它这儿 Claude Opus 4.8 / 4.7 / 4.6、GPT 5.5 / 5.4、Gemini 3.5 Flash 这些闭源顶配全给你开着。",
+      "categories": [
+        "charity",
+        "invite"
+      ],
+      "features": [
+        "charity",
+        "invite"
+      ],
+      "promoted": false,
+      "rank": 0,
+      "createdAt": "",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "status": {
+        "online": null,
+        "ms": null,
+        "uptime": null,
+        "avgMs": null,
+        "checkedAt": ""
+      },
+      "models": [
+        {
+          "id": "gpt",
+          "label": "GPT",
+          "rate": null,
+          "mentioned": true
+        },
+        {
+          "id": "claude",
+          "label": "Claude",
+          "rate": null,
+          "mentioned": true
+        },
+        {
+          "id": "gemini",
+          "label": "Gemini",
+          "rate": null,
+          "mentioned": true
+        }
+      ],
+      "checks": [],
+      "charitySlug": "modeloc",
+      "charityPin": 0
+    },
+    {
+      "id": 900027,
+      "name": "白嫖福利站",
+      "url": "https://ai.baipiao.co/",
+      "domain": "ai.baipiao.co",
+      "logo": "",
+      "tag": "公益站",
+      "description": "白嫖 BaiPiao 自己开的公益 API 福利站，账号密码即可注册，目前不用邮箱验证；每天签到随机送 $1–$100，不定期还会在白嫖社区发兑换码。",
+      "categories": [
+        "charity",
+        "checkin"
+      ],
+      "features": [
+        "charity",
+        "checkin"
+      ],
+      "promoted": false,
+      "rank": 0,
+      "createdAt": "",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "status": {
+        "online": null,
+        "ms": null,
+        "uptime": null,
+        "avgMs": null,
+        "checkedAt": ""
+      },
+      "models": [
+        {
+          "id": "gpt",
+          "label": "GPT",
+          "rate": null,
+          "mentioned": true
+        },
+        {
+          "id": "grok",
+          "label": "Grok",
+          "rate": null,
+          "mentioned": true
+        },
+        {
+          "id": "deepseek",
+          "label": "DeepSeek",
+          "rate": null,
+          "mentioned": true
+        },
+        {
+          "id": "glm",
+          "label": "GLM",
+          "rate": null,
+          "mentioned": true
+        }
+      ],
+      "checks": [],
+      "charitySlug": "ai-baipiao-co",
+      "charityPin": 0
+    },
+    {
+      "id": 900028,
+      "name": "kktoken",
+      "url": "https://kktoken.cc/sign-up",
+      "domain": "kktoken.cc",
+      "logo": "",
+      "tag": "公益站",
+      "description": "kktoken 注册送 100 额度、每日签到送 20，目前提供 claude-opus-4-8、claude-opus-4-8-thinking、claude-opus-5、claude-opus-5-thinking 四款 Claude Opus 模型。",
+      "categories": [
+        "charity",
+        "checkin",
+        "gift"
+      ],
+      "features": [
+        "charity",
+        "checkin",
+        "gift"
+      ],
+      "promoted": false,
+      "rank": 0,
+      "createdAt": "",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "status": {
+        "online": null,
+        "ms": null,
+        "uptime": null,
+        "avgMs": null,
+        "checkedAt": ""
+      },
+      "models": [
+        {
+          "id": "claude",
+          "label": "Claude",
+          "rate": null,
+          "mentioned": true
+        }
+      ],
+      "checks": [],
+      "charitySlug": "kktoken",
+      "charityPin": 1004
+    },
+    {
+      "id": 900029,
+      "name": "GoRouter 公益站",
+      "url": "https://gorouter.app/",
+      "domain": "gorouter.app",
+      "logo": "",
+      "tag": "公益站",
+      "description": "GoRouter 是一套 New API 风格的模型控制台：当前可用 GitHub 登录，注册开关与签到功能都处于开启状态，控制台提供令牌、用量记录、模型和兑换入口。",
+      "categories": [
+        "charity",
+        "checkin",
+        "gift"
+      ],
+      "features": [
+        "charity",
+        "checkin",
+        "gift"
+      ],
+      "promoted": false,
+      "rank": 0,
+      "createdAt": "",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "status": {
+        "online": null,
+        "ms": null,
+        "uptime": null,
+        "avgMs": null,
+        "checkedAt": ""
+      },
+      "models": [],
+      "checks": [],
+      "charitySlug": "gorouter",
+      "charityPin": 0
+    },
+    {
+      "id": 900030,
+      "name": "chuan公益API",
+      "url": "https://chuan.sylu.cc/",
+      "domain": "chuan.sylu.cc",
+      "logo": "",
+      "tag": "公益站",
+      "description": "chuan公益API 提供签到和邀请额度，签到最高送 50、邀请送 50；站点会在模型报错时尝试切换兜底模型，Gemini 系列严禁用于编程或大型任务。",
+      "categories": [
+        "charity",
+        "checkin",
+        "invite"
+      ],
+      "features": [
+        "charity",
+        "checkin",
+        "invite"
+      ],
+      "promoted": false,
+      "rank": 0,
+      "createdAt": "",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "status": {
+        "online": null,
+        "ms": null,
+        "uptime": null,
+        "avgMs": null,
+        "checkedAt": ""
+      },
+      "models": [
+        {
+          "id": "gpt",
+          "label": "GPT",
+          "rate": null,
+          "mentioned": true
+        },
+        {
+          "id": "gemini",
+          "label": "Gemini",
+          "rate": null,
+          "mentioned": true
+        }
+      ],
+      "checks": [],
+      "charitySlug": "chuan-api",
+      "charityPin": 0
+    },
+    {
+      "id": 900031,
+      "name": "云枢 api",
+      "url": "https://yunshuapi.site/sign-up",
+      "domain": "yunshuapi.site",
+      "logo": "",
+      "tag": "公益站",
+      "description": "云枢 API 是一条模型菜单铺得很全的公益线路，Claude Opus 全家桶、GPT-5.6 三兄弟（sol / terra / luna）、GPT-5.4/5.5、DeepSeek v4 和 gpt-image-2 生图一次挂齐。",
+      "categories": [
+        "charity",
+        "gift"
+      ],
+      "features": [
+        "charity",
+        "gift"
+      ],
+      "promoted": false,
+      "rank": 0,
+      "createdAt": "",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "status": {
+        "online": false,
+        "ms": null,
+        "uptime": null,
+        "avgMs": null,
+        "checkedAt": ""
+      },
+      "models": [
+        {
+          "id": "gpt",
+          "label": "GPT",
+          "rate": null,
+          "mentioned": true
+        },
+        {
+          "id": "claude",
+          "label": "Claude",
+          "rate": null,
+          "mentioned": true
+        },
+        {
+          "id": "deepseek",
+          "label": "DeepSeek",
+          "rate": null,
+          "mentioned": true
+        },
+        {
+          "id": "image",
+          "label": "生图",
+          "rate": null,
+          "mentioned": true
+        }
+      ],
+      "checks": [],
+      "charitySlug": "yunshuapi",
+      "charityPin": 0
+    },
+    {
+      "id": 900032,
+      "name": "MotoMoto",
+      "url": "https://motomoto.lol/sign-up",
+      "domain": "motomoto.lol",
+      "logo": "",
+      "tag": "公益站",
+      "description": "MotoMoto 是不收费的 AI 公益站，目前提供 gpt-5.5 和 gpt-5.6-sol；注册赠送 $30 额度，每天签到还能领取 $50。",
+      "categories": [
+        "charity",
+        "checkin",
+        "gift"
+      ],
+      "features": [
+        "charity",
+        "checkin",
+        "gift"
+      ],
+      "promoted": false,
+      "rank": 0,
+      "createdAt": "",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "status": {
+        "online": null,
+        "ms": null,
+        "uptime": null,
+        "avgMs": null,
+        "checkedAt": ""
+      },
+      "models": [
+        {
+          "id": "gpt",
+          "label": "GPT",
+          "rate": null,
+          "mentioned": true
+        }
+      ],
+      "checks": [],
+      "charitySlug": "motomoto",
+      "charityPin": 0
+    },
+    {
+      "id": 900033,
+      "name": "ShareLLM",
+      "url": "https://sharellm.net/sign-up",
+      "domain": "sharellm.net",
+      "logo": "",
+      "tag": "公益站",
+      "description": "ShareLLM 提供 qwen、deepseek、glm、kimi 等国产模型免费调用，注册可得 120 / 5 小时与 600 / 周两档额度；海外模型需到 .net 站查看。",
+      "categories": [
+        "charity"
+      ],
+      "features": [
+        "charity"
+      ],
+      "promoted": false,
+      "rank": 0,
+      "createdAt": "",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "status": {
+        "online": null,
+        "ms": null,
+        "uptime": null,
+        "avgMs": null,
+        "checkedAt": ""
+      },
+      "models": [
+        {
+          "id": "gpt",
+          "label": "GPT",
+          "rate": null,
+          "mentioned": true
+        },
+        {
+          "id": "deepseek",
+          "label": "DeepSeek",
+          "rate": null,
+          "mentioned": true
+        },
+        {
+          "id": "kimi",
+          "label": "Kimi",
+          "rate": null,
+          "mentioned": true
+        },
+        {
+          "id": "qwen",
+          "label": "Qwen",
+          "rate": null,
+          "mentioned": true
+        },
+        {
+          "id": "glm",
+          "label": "GLM",
+          "rate": null,
+          "mentioned": true
+        }
+      ],
+      "checks": [],
+      "charitySlug": "sharellm",
+      "charityPin": 0
+    },
+    {
+      "id": 900034,
+      "name": "聚合 API（aiyiwei）",
+      "url": "https://aiyiwei.vip/register",
+      "domain": "aiyiwei.vip",
+      "logo": "",
+      "tag": "公益站",
+      "description": "模型杂、可生图、跑了挺久没掉链子的公益免费大站。",
+      "categories": [
+        "charity",
+        "checkin",
+        "cheaprate"
+      ],
+      "features": [
+        "charity",
+        "checkin",
+        "cheaprate"
+      ],
+      "promoted": false,
+      "rank": 0,
+      "createdAt": "",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "status": {
+        "online": null,
+        "ms": null,
+        "uptime": null,
+        "avgMs": null,
+        "checkedAt": ""
+      },
+      "models": [
+        {
+          "id": "gpt",
+          "label": "GPT",
+          "rate": null,
+          "mentioned": true
+        },
+        {
+          "id": "image",
+          "label": "生图",
+          "rate": null,
+          "mentioned": true
+        }
+      ],
+      "checks": [],
+      "charitySlug": "aiyiwei",
+      "charityPin": 0
+    },
+    {
+      "id": 900035,
+      "name": "UltraRouter",
+      "url": "https://ultrarouter.org/sign-up",
+      "domain": "ultrarouter.org",
+      "logo": "",
+      "tag": "公益站",
+      "description": "UltraRouter 是一条 OpenAI 兼容的公益 API 线路，每天签到赠送 $28 额度；目前可用 Claude Opus 5、Claude Sonnet 5、DeepSeek V4 和 Grok 4.6 等模型。",
+      "categories": [
+        "charity",
+        "checkin",
+        "gift"
+      ],
+      "features": [
+        "charity",
+        "checkin",
+        "gift"
+      ],
+      "promoted": false,
+      "rank": 0,
+      "createdAt": "",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "status": {
+        "online": null,
+        "ms": null,
+        "uptime": null,
+        "avgMs": null,
+        "checkedAt": ""
+      },
+      "models": [
+        {
+          "id": "gpt",
+          "label": "GPT",
+          "rate": null,
+          "mentioned": true
+        },
+        {
+          "id": "claude",
+          "label": "Claude",
+          "rate": null,
+          "mentioned": true
+        },
+        {
+          "id": "grok",
+          "label": "Grok",
+          "rate": null,
+          "mentioned": true
+        },
+        {
+          "id": "deepseek",
+          "label": "DeepSeek",
+          "rate": null,
+          "mentioned": true
+        }
+      ],
+      "checks": [],
+      "charitySlug": "ultrarouter",
+      "charityPin": 0
+    },
+    {
+      "id": 900036,
+      "name": "cheap",
+      "url": "https://api.cheapcodex.online/register",
+      "domain": "api.cheapcodex.online",
+      "logo": "",
+      "tag": "公益站",
+      "description": "cheap 是一条 AI API 公益线路，注册赠送 $20 额度，站内签到还能再领取 $20；支持通过 API Key 访问模型列表、Chat Completions 和 Responses 接口。",
+      "categories": [
+        "charity",
+        "checkin",
+        "gift"
+      ],
+      "features": [
+        "charity",
+        "checkin",
+        "gift"
+      ],
+      "promoted": false,
+      "rank": 0,
+      "createdAt": "",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "status": {
+        "online": null,
+        "ms": null,
+        "uptime": null,
+        "avgMs": null,
+        "checkedAt": ""
+      },
+      "models": [
+        {
+          "id": "gpt",
+          "label": "GPT",
+          "rate": null,
+          "mentioned": true
+        }
+      ],
+      "checks": [],
+      "charitySlug": "cheap",
+      "charityPin": 0
+    },
+    {
+      "id": 900037,
+      "name": "Claude Now 镜像站",
+      "url": "https://www.claude.now/",
+      "domain": "claude.now",
+      "logo": "",
+      "tag": "公益站",
+      "description": "Claude Now 公益站主打一个「零门槛」——浏览器打开 claude.now 就是完整的 Claude 网页聊天，不用注册、不用登录、不用魔法，连 API 是什么都不用懂。",
+      "categories": [
+        "charity"
+      ],
+      "features": [
+        "charity"
+      ],
+      "promoted": false,
+      "rank": 0,
+      "createdAt": "",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "status": {
+        "online": null,
+        "ms": null,
+        "uptime": null,
+        "avgMs": null,
+        "checkedAt": ""
+      },
+      "models": [
+        {
+          "id": "claude",
+          "label": "Claude",
+          "rate": null,
+          "mentioned": true
+        }
+      ],
+      "checks": [],
+      "charitySlug": "claude-now",
+      "charityPin": 0
     }
   ],
   "officialUpdatedAt": "2026-09-01T03:06:16.852Z",
-  "featuresUpdatedAt": "2026-09-01T03:56:59.402Z"
+  "featuresUpdatedAt": "2026-09-01T03:56:59.402Z",
+  "charityUpdatedAt": "2026-09-11T07:40:57.184Z",
+  "charitySource": "https://baipiao.org/charity/"
 }

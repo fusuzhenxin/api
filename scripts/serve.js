@@ -2,8 +2,9 @@ const http = require("http");
 const fs = require("fs");
 const path = require("path");
 const { spawn } = require("child_process");
-const { OFFICIAL_PROVIDERS } = require("../js/official.js");
 const { parseRoute, seoFor, injectSeoHtml, ogPayload } = require("../js/seo.js");
+const { dump: dumpVotes, getOne: getVote, vote: castVote } = require("../lib/votes");
+const { fetchOfficialFeed } = require("../lib/official-feed");
 
 const ROOT = path.resolve(__dirname, "..");
 const PORT = Number(process.env.PORT) || 4173;
@@ -50,64 +51,22 @@ function readBody(req, limit = 65536) {
   });
 }
 
-function runPythonVotes(args) {
-  const script = path.join(ROOT, "scripts", "votes.py");
-  const attempts = [];
-  if (process.env.PYTHON) attempts.push([process.env.PYTHON, [script, ...args]]);
-  attempts.push(["python", [script, ...args]]);
-  attempts.push(["py", ["-3", script, ...args]]);
-
-  function tryOne(i) {
-    if (i >= attempts.length) return Promise.reject(new Error("python not found"));
-    const [bin, argv] = attempts[i];
-    return new Promise((resolve, reject) => {
-      const child = spawn(bin, argv, { cwd: ROOT, windowsHide: true });
-      let out = "";
-      let err = "";
-      child.stdout.on("data", (d) => {
-        out += d;
-      });
-      child.stderr.on("data", (d) => {
-        err += d;
-      });
-      child.on("error", () => resolve(tryOne(i + 1)));
-      child.on("close", (code) => {
-        if (code !== 0) {
-          if (!out && i + 1 < attempts.length) return resolve(tryOne(i + 1));
-          return reject(new Error((err || out || "vote failed").trim()));
-        }
-        try {
-          resolve(JSON.parse(out));
-        } catch {
-          reject(new Error("bad vote json"));
-        }
-      });
-    });
-  }
-  return tryOne(0);
-}
-
 async function serveVotes(req, res, parsed) {
   try {
     if (req.method === "GET") {
       const voter = parsed.searchParams.get("voter") || "";
       const id = parsed.searchParams.get("id") || "";
-      const args = id ? ["get", "--id", id] : ["dump"];
-      if (voter) args.push("--voter", voter);
-      sendJson(res, 200, await runPythonVotes(args));
+      sendJson(res, 200, id ? await getVote(id, voter) : await dumpVotes(voter));
       return;
     }
     if (req.method === "POST") {
       const body = JSON.parse((await readBody(req)) || "{}");
-      const id = String(body.id || "");
-      const dir = String(body.dir || "");
-      const voter = String(body.voter || "anon");
-      sendJson(res, 200, await runPythonVotes(["vote", "--id", id, "--dir", dir, "--voter", voter]));
+      sendJson(res, 200, await castVote(body.id, body.dir, body.voter));
       return;
     }
     sendJson(res, 405, { error: "method not allowed" });
   } catch (err) {
-    sendJson(res, 500, { error: String(err.message || err) });
+    sendJson(res, 400, { error: String(err.message || err) });
   }
 }
 
@@ -209,42 +168,21 @@ function serveSpa(req, res, url) {
   const ctx = { origin: requestOrigin(req), total: (data.stations || []).length };
   if (r.name === "site") ctx.station = (data.stations || []).find((s) => s.id === r.id);
   if (r.name === "official") ctx.official = (data.official || []).find((x) => x.provider === r.provider);
+  if (r.name === "cat") {
+    const id = r.id;
+    let list = data.stations || [];
+    if (id === "online") list = list.filter((s) => s.status && s.status.online);
+    else if (id !== "all" && id !== "fav") list = list.filter((s) => (s.categories || []).includes(id));
+    ctx.stations = id === "charity" ? list : list.slice(0, 40);
+    ctx.count = list.length;
+  }
   const html = fs.readFileSync(path.join(ROOT, "index.html"), "utf8");
   send(res, 200, "text/html; charset=utf-8", injectSeoHtml(html, seoFor(r, ctx), r));
 }
 
 async function serveOfficialFeed(provider, res) {
-  const item = OFFICIAL_PROVIDERS.find((row) => row.provider === provider);
-  const cache = path.join(ROOT, "data", "feeds", provider + ".rss");
-  const urls = item ? [item.rss].concat(item.rssFallbacks || []) : [];
-  for (const url of urls) {
-    try {
-      const ctrl = new AbortController();
-      const timer = setTimeout(() => ctrl.abort(), 12000);
-      const remote = await fetch(url, {
-        signal: ctrl.signal,
-        headers: {
-          Accept: "application/rss+xml, application/atom+xml, text/xml, */*",
-          "User-Agent": "XianTan/1.0 (official status)",
-        },
-      });
-      clearTimeout(timer);
-      if (!remote.ok) continue;
-      const text = await remote.text();
-      if (!/<rss\b|<feed\b|<item\b|<entry\b/i.test(text)) continue;
-      fs.mkdirSync(path.dirname(cache), { recursive: true });
-      fs.writeFileSync(cache, text, "utf8");
-      send(res, 200, "application/xml; charset=utf-8", text);
-      return;
-    } catch (err) {
-      /* try next url or cache */
-    }
-  }
-  if (fs.existsSync(cache)) {
-    send(res, 200, "application/xml; charset=utf-8", fs.readFileSync(cache));
-    return;
-  }
-  send(res, 502, "text/plain; charset=utf-8", "feed unavailable");
+  const result = await fetchOfficialFeed(provider);
+  send(res, result.status, result.type, result.body);
 }
 
 http
@@ -264,9 +202,18 @@ http
       serveOgCard(res, og[1]);
       return;
     }
+    const clean = url.replace(/\/$/, "") || "/";
+    const staticHtml =
+      clean === "/"
+        ? path.join(ROOT, "index.html")
+        : path.join(ROOT, clean.replace(/^[/\\]+/, "") + ".html");
+    if (staticHtml.startsWith(ROOT) && fs.existsSync(staticHtml)) {
+      send(res, 200, "text/html; charset=utf-8", fs.readFileSync(staticHtml));
+      return;
+    }
     if (isSpaPath(url)) {
       try {
-        serveSpa(req, res, url.replace(/\/$/, "") || "/");
+        serveSpa(req, res, clean);
       } catch (err) {
         send(res, 500, "text/plain; charset=utf-8", String(err.message || err));
       }

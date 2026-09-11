@@ -72,7 +72,7 @@ html[data-theme="dark"] { color-scheme: dark; }
 html[data-theme="light"] { color-scheme: light; }
 body {
   font-size: 17px;
-  font-family: "Noto Sans SC", "IBM Plex Sans", sans-serif;
+  font-family: "PingFang SC", "Microsoft YaHei", "Noto Sans SC", system-ui, sans-serif;
   color: var(--text);
   background:
     radial-gradient(1200px 600px at 10% -10%, var(--bg-glow-1), transparent 55%),
@@ -133,6 +133,12 @@ button { cursor: pointer; }
   font-weight: 700;
   white-space: nowrap;
 }
+.top-links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+}
 .top-contact {
   flex-shrink: 0;
   padding: 6px 12px;
@@ -145,6 +151,9 @@ button { cursor: pointer; }
 .top-contact:hover {
   color: var(--text);
   background: var(--bg-soft);
+}
+.top-links a[href="/cat/charity"] {
+  color: var(--teal);
 }
 #contact { scroll-margin-top: 68px; }
 
@@ -161,6 +170,13 @@ button { cursor: pointer; }
   border-radius: 999px;
   padding: 8px 14px;
   transition: 0.18s ease;
+}
+a.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  white-space: nowrap;
 }
 .chip:hover, .btn:hover { border-color: var(--hover-line); }
 .btn-primary {
@@ -521,6 +537,16 @@ a.more-btn {
   height: 26px;
   color: var(--teal);
 }
+.type-head h2 a.type-jump {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: inherit;
+  text-decoration: none;
+}
+.type-head h2 a.type-jump:hover {
+  color: var(--teal);
+}
 .type-actions {
   display: flex;
   align-items: center;
@@ -596,6 +622,7 @@ a.more-btn {
 }
 .badge.ok { background: var(--teal-dim); color: var(--teal); }
 .badge.bad { background: rgba(255, 93, 122, 0.14); color: var(--rose); }
+.badge.wait { background: rgba(148, 163, 184, 0.16); color: var(--muted, #8b95a8); }
 .desc {
   margin: 0;
   color: var(--desc);
@@ -1029,6 +1056,24 @@ html[data-theme="light"] .vote-btn[data-vote="down"] {
   font-size: 14px;
 }
 .crumbs a { color: var(--blue); text-decoration: none; }
+.seo-static,
+.seo-article {
+  margin: 0 0 16px;
+  padding: 16px 18px 18px;
+  border-radius: 16px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+}
+.seo-static h1,
+.seo-static h2,
+.seo-article h1,
+.seo-article h2 { margin: 0 0 12px; font-size: 18px; }
+.seo-article h1 { font-size: 22px; }
+.seo-article p { margin: 0 0 14px; line-height: 1.75; color: var(--desc); }
+.seo-static ol,
+.seo-toc { margin: 0 0 16px; padding-left: 1.2em; line-height: 1.7; }
+.seo-toc a { color: var(--blue); text-decoration: none; }
+.seo-toc a:hover { text-decoration: underline; }
 .seo-faq dt {
   margin: 14px 0 6px;
   font-weight: 700;

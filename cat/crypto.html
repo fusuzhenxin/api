@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>加密充值API中转站_USDT充值接口</title>
+  <meta name="description" content="支持加密货币、USDT充值的API中转站。本站提供可用性与延迟对照，充值前建议小额测试。">
+  <meta name="keywords" content="USDT充值API,加密充值中转,加密充值">
+  <meta name="application-name" content="API中转站导航">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#070b14">
+  <meta name="msapplication-TileColor" content="#070b14">
+  <meta name="applicable-device" content="pc,mobile">
+  <meta name="msapplication-TileImage" content="/img/icon-192.png">
+  <link rel="canonical" href="https://www.veridrop.cn/cat/crypto">
+  <link rel="sitemap" type="application/xml" href="https://www.veridrop.cn/sitemap.xml">
+  <link rel="icon" type="image/png" sizes="48x48" href="/img/icon-48.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/img/icon-96.png">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" sizes="16x16 32x32 48x48">
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="API中转站导航">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:title" content="加密充值API中转站_USDT充值接口">
+  <meta property="og:description" content="支持加密货币、USDT充值的API中转站。本站提供可用性与延迟对照，充值前建议小额测试。">
+  <meta property="og:url" content="https://www.veridrop.cn/cat/crypto">
+  <meta property="og:image" content="https://www.veridrop.cn/img/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="加密充值API中转站_USDT充值接口">
+  <meta name="twitter:description" content="支持加密货币、USDT充值的API中转站。本站提供可用性与延迟对照，充值前建议小额测试。">
+  <meta name="twitter:image" content="https://www.veridrop.cn/img/og.png">
+  <script type="application/ld+json" id="seo-jsonld">{"@context":"https://schema.org","@graph":[{"@type":"CollectionPage","name":"加密充值","description":"支持加密货币、USDT充值的API中转站。本站提供可用性与延迟对照，充值前建议小额测试。","url":"https://www.veridrop.cn/cat/crypto","isPartOf":{"@type":"WebSite","name":"API中转站导航","url":"https://www.veridrop.cn/"},"numberOfItems":36},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"API中转站导航","item":"https://www.veridrop.cn/"},{"@type":"ListItem","position":2,"name":"加密充值","item":"https://www.veridrop.cn/cat/crypto"}]}]}</script>
+  <script>
+    (function () {
+      var saved = localStorage.getItem("xiantan.theme");
+      var theme = saved === "light" || saved === "dark"
+        ? saved
+        : (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="app" id="app">
+    <header class="topbar">
+      <div class="brand-cluster">
+        <a class="brand" href="/" aria-label="API中转站导航首页">
+          <img class="logo-mark" src="/img/icon-192.png" width="36" height="36" alt="API中转站导航">
+          <p class="brand-title">API中转站导航</p>
+        </a>
+      </div>
+      <nav class="top-links">
+        <a class="top-contact" href="/cat/charity">公益站</a>
+        <a class="top-contact" id="contactTop" href="#contact">联系我们</a>
+      </nav>
+    </header>
+
+    <main id="home" class="home-shell is-cat">
+      <aside class="sidebar">
+        <h3>有用分类</h3>
+        <nav class="filters" id="cats">
+          <button class="filter active" data-cat="all" type="button"><i>▦</i><span>全部中转</span></button>
+          <button class="filter" data-cat="charity" type="button"><i>♥</i><span>公益站</span></button>
+          <button class="filter" data-cat="stable" type="button"><i>▣</i><span>稳定企业向</span></button>
+          <button class="filter" data-cat="cheap" type="button"><i>◇</i><span>便宜个人向</span></button>
+          <button class="filter" data-cat="special" type="button"><i>✦</i><span>小有特色</span></button>
+          <button class="filter" data-cat="new" type="button"><i>＋</i><span>新站上榜</span></button>
+          <button class="filter" data-cat="online" type="button"><i>●</i><span>当前在线</span></button>
+          <button class="filter" data-cat="checkin" type="button"><i>日</i><span>签到送余额</span></button>
+          <button class="filter" data-cat="gift" type="button"><i>赠</i><span>新用户赠额</span></button>
+          <button class="filter" data-cat="cheaprate" type="button"><i>低</i><span>低倍率</span></button>
+          <button class="filter" data-cat="fast" type="button"><i>快</i><span>低延迟</span></button>
+          <button class="filter" data-cat="pay" type="button"><i>付</i><span>国内支付</span></button>
+          <button class="filter" data-cat="invite" type="button"><i>邀</i><span>邀请返利</span></button>
+          <button class="filter" data-cat="crypto" type="button"><i>U</i><span>加密充值</span></button>
+          <button class="filter" data-cat="invoice" type="button"><i>票</i><span>可开发票</span></button>
+          <button class="filter" data-cat="highup" type="button"><i>稳</i><span>高可用</span></button>
+          <button class="filter" data-cat="fav" type="button"><i>★</i><span>我的收藏</span></button>
+        </nav>
+        <h3>模型筛选</h3>
+        <div class="model-filters" id="modelFilters">
+          <button class="filter" data-model="gpt" type="button"><i>G</i><span>GPT</span></button>
+          <button class="filter" data-model="claude" type="button"><i>C</i><span>Claude</span></button>
+          <button class="filter" data-model="gemini" type="button"><i>N</i><span>Gemini</span></button>
+          <button class="filter" data-model="grok" type="button"><i>X</i><span>Grok</span></button>
+          <button class="filter" data-model="deepseek" type="button"><i>D</i><span>DeepSeek</span></button>
+          <button class="filter" data-model="kimi" type="button"><i>K</i><span>Kimi</span></button>
+          <button class="filter" data-model="qwen" type="button"><i>Q</i><span>Qwen</span></button>
+          <button class="filter" data-model="glm" type="button"><i>智</i><span>GLM</span></button>
+          <button class="filter" data-model="image" type="button"><i>图</i><span>生图</span></button>
+          <button class="filter" data-model="video" type="button"><i>影</i><span>视频</span></button>
+        </div>
+      </aside>
+      <div class="main-col">
+        <section class="hero">
+          <h1>加密充值</h1>
+          <p class="seo-lead">支持加密货币、USDT充值的API中转站。本站提供可用性与延迟对照，充值前建议小额测试。</p>
+          <form class="search-box" id="searchForm">
+            <input id="q" type="search" placeholder="搜站点、模型、倍率或域名" autocomplete="off">
+            <button class="btn" id="randomBtn" type="button">随机探一站</button>
+            <button class="btn btn-primary" type="submit">搜索</button>
+          </form>
+          <section class="official-wrap">
+            <div class="official-head">
+              <h3>官方模型实况</h3>
+              <span id="officialMeta">已同步官方订阅 · 09/01 11:06</span>
+              <button class="btn" id="officialRefresh" type="button">刷新</button>
+            </div>
+            <div class="official" id="official"><!--STATIC_OFFICIAL--><a class="off-chip warn" href="/official/openai"><span class="dot warn"></span><span>OpenAI</span><strong>94.22%</strong><small>降级</small></a><a class="off-chip on" href="/official/anthropic"><span class="dot on"></span><span>Claude</span><strong>96.11%</strong><small>正常</small></a><a class="off-chip on" href="/official/gemini"><span class="dot on"></span><span>Gemini</span><strong>98.15%</strong><small>正常</small></a><a class="off-chip on" href="/official/deepseek"><span class="dot on"></span><span>DeepSeek</span><strong>98.27%</strong><small>正常</small></a><a class="off-chip on" href="/official/moonshot"><span class="dot on"></span><span>Kimi</span><strong>100.00%</strong><small>正常</small></a><a class="off-chip on" href="/official/xai"><span class="dot on"></span><span>Grok</span><strong>100.00%</strong><small>正常</small></a><!--/STATIC_OFFICIAL--></div>
+          </section>
+        </section>
+        <div class="stats">
+          <span id="resultMeta">加密充值 <b>36</b> 站 · 探测在线 3691</span>
+          <span id="updatedAt"></span>
+          <div class="sorts" id="sorts">
+            <button class="filter active" data-sort="" type="button">综合</button>
+            <button class="filter" data-sort="uptime" type="button">可用优先</button>
+            <button class="filter" data-sort="latency" type="button">延迟优先</button>
+          </div>
+        </div>
+        <div id="grid"><!--STATIC_GRID--><p class="cat-back crumbs"><a href="/">首页</a><span>/</span><a href="/cat/crypto">加密充值</a></p>
+    <section class="type-block" id="type-crypto">
+      <div class="type-head"><h1><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.2l7.2 4.1v8.4L12 19.8l-7.2-4.1V7.3L12 3.2z"/><path d="M12 8.2v7.6M9.6 10.2c.6-.7 1.4-1 2.4-1 1.6 0 2.6.7 2.6 1.8s-1 1.7-2.6 1.9c1.8.1 2.8.8 2.8 2s-1.2 2-2.8 2c-1.1 0-2-.3-2.6-1"/></svg></span><span>加密充值</span></h1></div>
+      <p class="seo-lead">支持加密货币、USDT充值的API中转站。本站提供可用性与延迟对照，充值前建议小额测试。 本页 36 站。</p>
+      
+      <div class="type-head"><h2 class="related-title">加密充值站点列表</h2><div class="type-actions"><span>36/36 站</span></div></div>
+      <div class="grid"><article class="card">
+      <a class="card-link" href="/site/1622-dmc-cc">
+        <div class="card-head">
+          <div class="avatar">DM</div>
+          <div class="card-id">
+            <h3 class="card-title">DMC</h3>
+            <p class="card-sub">dmc.cc</p>
+          </div>
+          <span class="badge ok">在线</span>
+        </div>
+        <p class="desc">按量: 10起充｜支持 USDT/VISA｜支付 访问官网｜国产</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.2l7.2 4.1v8.4L12 19.8l-7.2-4.1V7.3L12 3.2z"/><path d="M12 8.2v7.6M9.6 10.2c.6-.7 1.4-1 2.4-1 1.6 0 2.6.7 2.6 1.8s-1 1.7-2.6 1.9c1.8.1 2.8.8 2.8 2s-1.2 2-2.8 2c-1.1 0-2-.3-2.6-1"/></svg></span>加密充值</span><span class="model">未标明模型</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>99.2%</b></span>
+        <span><small>延迟</small><b>3.4s</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="1622">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/1652-tokenage-ai">
+        <div class="card-head">
+          <div class="avatar">TO</div>
+          <div class="card-id">
+            <h3 class="card-title">TokenAge</h3>
+            <p class="card-sub">tokenage.ai</p>
+          </div>
+          <span class="badge ok">在线</span>
+        </div>
+        <p class="desc">按量: 1起充｜支持 支付宝/USDT/VISA｜支付 查看详情/访问官网｜OpenAI Claude Gemini +2</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="2.2"/><path d="M3 10.5h18"/><path d="M7 15h4"/></svg></span>国内支付</span><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.2l7.2 4.1v8.4L12 19.8l-7.2-4.1V7.3L12 3.2z"/><path d="M12 8.2v7.6M9.6 10.2c.6-.7 1.4-1 2.4-1 1.6 0 2.6.7 2.6 1.8s-1 1.7-2.6 1.9c1.8.1 2.8.8 2.8 2s-1.2 2-2.8 2c-1.1 0-2-.3-2.6-1"/></svg></span>加密充值</span><span class="model">GPT</span><span class="model">Claude</span><span class="model">Gemini</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>99.2%</b></span>
+        <span><small>延迟</small><b>1.5s</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="1652">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/1685-zivv-pro">
+        <div class="card-head">
+          <div class="avatar">ZI</div>
+          <div class="card-id">
+            <h3 class="card-title">zivv api</h3>
+            <p class="card-sub">zivv.pro</p>
+          </div>
+          <span class="badge ok">在线</span>
+        </div>
+        <p class="desc">按量: $5起充｜支持 微信/支付宝/USDT/VISA｜支付 访问官网｜Gemini OpenAI Claude +1</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="2.2"/><path d="M3 10.5h18"/><path d="M7 15h4"/></svg></span>国内支付</span><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.2l7.2 4.1v8.4L12 19.8l-7.2-4.1V7.3L12 3.2z"/><path d="M12 8.2v7.6M9.6 10.2c.6-.7 1.4-1 2.4-1 1.6 0 2.6.7 2.6 1.8s-1 1.7-2.6 1.9c1.8.1 2.8.8 2.8 2s-1.2 2-2.8 2c-1.1 0-2-.3-2.6-1"/></svg></span>加密充值</span><span class="model">GPT</span><span class="model">Claude</span><span class="model">Gemini</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>99.2%</b></span>
+        <span><small>延迟</small><b>2.2s</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="1685">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/1694-makerend-com">
+        <div class="card-head">
+          <div class="avatar">创界</div>
+          <div class="card-id">
+            <h3 class="card-title">创界 API</h3>
+            <p class="card-sub">makerend.com</p>
+          </div>
+          <span class="badge ok">在线</span>
+        </div>
+        <p class="desc">按量: ¥0.6起充｜支持 微信/支付宝/USDT｜支付 新用户赠金/查看详情/访问官网｜OpenAI Claude Gemini +2</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="2.2"/><path d="M3 10.5h18"/><path d="M7 15h4"/></svg></span>国内支付</span><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.2l7.2 4.1v8.4L12 19.8l-7.2-4.1V7.3L12 3.2z"/><path d="M12 8.2v7.6M9.6 10.2c.6-.7 1.4-1 2.4-1 1.6 0 2.6.7 2.6 1.8s-1 1.7-2.6 1.9c1.8.1 2.8.8 2.8 2s-1.2 2-2.8 2c-1.1 0-2-.3-2.6-1"/></svg></span>加密充值</span><span class="model">GPT</span><span class="model">Claude</span><span class="model">Gemini</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>99.6%</b></span>
+        <span><small>延迟</small><b>1.9s</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="1694">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/1710-s-lconai-com">
+        <div class="card-head">
+          <div class="avatar">智创</div>
+          <div class="card-id">
+            <h3 class="card-title">智创聚合API</h3>
+            <p class="card-sub">s.lconai.com</p>
+          </div>
+          <span class="badge ok">在线</span>
+        </div>
+        <p class="desc">按量: ¥1起充｜支持 微信/支付宝/USDT｜支付 A 社名单/A 社认证/查看详情/访问官网｜OpenAI Claude Gemini +2</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="2.2"/><path d="M3 10.5h18"/><path d="M7 15h4"/></svg></span>国内支付</span><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.2l7.2 4.1v8.4L12 19.8l-7.2-4.1V7.3L12 3.2z"/><path d="M12 8.2v7.6M9.6 10.2c.6-.7 1.4-1 2.4-1 1.6 0 2.6.7 2.6 1.8s-1 1.7-2.6 1.9c1.8.1 2.8.8 2.8 2s-1.2 2-2.8 2c-1.1 0-2-.3-2.6-1"/></svg></span>加密充值</span><span class="model">GPT</span><span class="model">Claude</span><span class="model">Gemini</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>99.6%</b></span>
+        <span><small>延迟</small><b>3.0s</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="1710">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/1683-shop-xuedingtoken-com">
+        <div class="card-head">
+          <div class="avatar">XU</div>
+          <div class="card-id">
+            <h3 class="card-title">xuedingtoke</h3>
+            <p class="card-sub">shop.xuedingtoken.com</p>
+          </div>
+          <span class="badge ok">在线</span>
+        </div>
+        <p class="desc">按量: ¥1起充｜支持 微信/支付宝/USDT｜支付 访问官网｜OpenAI Claude Gemini +1</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="2.2"/><path d="M3 10.5h18"/><path d="M7 15h4"/></svg></span>国内支付</span><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.2l7.2 4.1v8.4L12 19.8l-7.2-4.1V7.3L12 3.2z"/><path d="M12 8.2v7.6M9.6 10.2c.6-.7 1.4-1 2.4-1 1.6 0 2.6.7 2.6 1.8s-1 1.7-2.6 1.9c1.8.1 2.8.8 2.8 2s-1.2 2-2.8 2c-1.1 0-2-.3-2.6-1"/></svg></span>加密充值</span><span class="model">GPT</span><span class="model">Claude</span><span class="model">Gemini</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>99.6%</b></span>
+        <span><small>延迟</small><b>1.9s</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="1683">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/1640-openllm-shop">
+        <div class="card-head">
+          <div class="avatar">OP</div>
+          <div class="card-id">
+            <h3 class="card-title">OpenLLM</h3>
+            <p class="card-sub">openllm.shop</p>
+          </div>
+          <span class="badge ok">在线</span>
+        </div>
+        <p class="desc">按量: $5起充｜支持 微信/支付宝/USDT/VISA｜支付 访问官网｜OpenAI Claude Gemini +1</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="2.2"/><path d="M3 10.5h18"/><path d="M7 15h4"/></svg></span>国内支付</span><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.2l7.2 4.1v8.4L12 19.8l-7.2-4.1V7.3L12 3.2z"/><path d="M12 8.2v7.6M9.6 10.2c.6-.7 1.4-1 2.4-1 1.6 0 2.6.7 2.6 1.8s-1 1.7-2.6 1.9c1.8.1 2.8.8 2.8 2s-1.2 2-2.8 2c-1.1 0-2-.3-2.6-1"/></svg></span>加密充值</span><span class="model">GPT</span><span class="model">Claude</span><span class="model">Gemini</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>98.9%</b></span>
+        <span><small>延迟</small><b>3.2s</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="1640">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/1642-openmodels-market">
+        <div class="card-head">
+          <div class="avatar">OP</div>
+          <div class="card-id">
+            <h3 class="card-title">OpenModels</h3>
+            <p class="card-sub">openmodels.market</p>
+          </div>
+          <span class="badge ok">在线</span>
+        </div>
+        <p class="desc">按量: $1起充 | 订阅: ¥6起｜支持 VISA/USDT｜支付 访问官网｜OpenAI Claude Gemini +2</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.2l7.2 4.1v8.4L12 19.8l-7.2-4.1V7.3L12 3.2z"/><path d="M12 8.2v7.6M9.6 10.2c.6-.7 1.4-1 2.4-1 1.6 0 2.6.7 2.6 1.8s-1 1.7-2.6 1.9c1.8.1 2.8.8 2.8 2s-1.2 2-2.8 2c-1.1 0-2-.3-2.6-1"/></svg></span>加密充值</span><span class="model">GPT</span><span class="model">Claude</span><span class="model">Gemini</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>99.2%</b></span>
+        <span><small>延迟</small><b>1.7s</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="1642">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/1647-sucloud-vip">
+        <div class="card-head">
+          <div class="avatar">SU</div>
+          <div class="card-id">
+            <h3 class="card-title">Sucloud API</h3>
+            <p class="card-sub">sucloud.vip</p>
+          </div>
+          <span class="badge ok">在线</span>
+        </div>
+        <p class="desc">按量: ¥0.7起充｜支持 微信/支付宝/USDT/VISA｜支付 查看详情/访问官网｜OpenAI Claude Gemini +2</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="2.2"/><path d="M3 10.5h18"/><path d="M7 15h4"/></svg></span>国内支付</span><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.2l7.2 4.1v8.4L12 19.8l-7.2-4.1V7.3L12 3.2z"/><path d="M12 8.2v7.6M9.6 10.2c.6-.7 1.4-1 2.4-1 1.6 0 2.6.7 2.6 1.8s-1 1.7-2.6 1.9c1.8.1 2.8.8 2.8 2s-1.2 2-2.8 2c-1.1 0-2-.3-2.6-1"/></svg></span>加密充值</span><span class="model">GPT</span><span class="model">Claude</span><span class="model">Gemini</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>98.9%</b></span>
+        <span><small>延迟</small><b>1.3s</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="1647">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/1661-router-worldclaw-ai">
+        <div class="card-head">
+          <div class="avatar">WO</div>
+          <div class="card-id">
+            <h3 class="card-title">Worldrouter</h3>
+            <p class="card-sub">router.worldclaw.ai</p>
+          </div>
+          <span class="badge ok">在线</span>
+        </div>
+        <p class="desc">按量: $1起充｜支持 支付宝/USDT/VISA｜支付 访问官网｜Claude OpenAI Gemini +2</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="2.2"/><path d="M3 10.5h18"/><path d="M7 15h4"/></svg></span>国内支付</span><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.2l7.2 4.1v8.4L12 19.8l-7.2-4.1V7.3L12 3.2z"/><path d="M12 8.2v7.6M9.6 10.2c.6-.7 1.4-1 2.4-1 1.6 0 2.6.7 2.6 1.8s-1 1.7-2.6 1.9c1.8.1 2.8.8 2.8 2s-1.2 2-2.8 2c-1.1 0-2-.3-2.6-1"/></svg></span>加密充值</span><span class="model">GPT</span><span class="model">Claude</span><span class="model">Gemini</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>99.2%</b></span>
+        <span><small>延迟</small><b>1.6s</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="1661">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/635-api-vveai-com">
+        <div class="card-head">
+          <div class="avatar">AP</div>
+          <div class="card-id">
+            <h3 class="card-title">api.vveai.com</h3>
+            <p class="card-sub">api.vveai.com</p>
+          </div>
+          <span class="badge ok">在线</span>
+        </div>
+        <p class="desc">V-API 是一家支持 Anthropic Claude、OpenAI(GPT)、Google Gemini、xAI Grok、国产大模型 的 AI API 中转站,支持 微信、USDT、对公转账 充值。按量最低  起充。\n\n它把 Anthropic Claude 等模型的官方接口转售给国内用户,用人民币即可调用,省去海外信用卡和网络门槛。一站覆盖多家大模型,适合需要在不同模型间切换的开发者。\n\n该站为新用户提供赠金,可以先用免费额度测速、跑通流程,确认稳定后再决定是否充值——这是挑选中转站最稳妥的方式。</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11h16v9.5a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 20.5V11z"/><path d="M3.5 7.5h17v3.5h-17z"/><path d="M12 7.5v14.5"/><path d="M12 7.5c0-2.4-1.6-4-3.4-4S6 6 7.2 7.8C8 8.8 10 9.2 12 7.5z"/><path d="M12 7.5c0-2.4 1.6-4 3.4-4S18 6 16.8 7.8C16 8.8 14 9.2 12 7.5z"/></svg></span>新用户赠额</span><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.2l7.2 4.1v8.4L12 19.8l-7.2-4.1V7.3L12 3.2z"/><path d="M12 8.2v7.6M9.6 10.2c.6-.7 1.4-1 2.4-1 1.6 0 2.6.7 2.6 1.8s-1 1.7-2.6 1.9c1.8.1 2.8.8 2.8 2s-1.2 2-2.8 2c-1.1 0-2-.3-2.6-1"/></svg></span>加密充值</span><span class="model">GPT</span><span class="model">Claude</span><span class="model">Gemini</span><span class="model">Grok</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>99.6%</b></span>
+        <span><small>延迟</small><b>1.8s</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="635">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/1609-dayueai-fun">
+        <div class="card-head">
+          <div class="avatar">AA</div>
+          <div class="card-id">
+            <h3 class="card-title">AayueAI</h3>
+            <p class="card-sub">dayueai.fun</p>
+          </div>
+          <span class="badge ok">在线</span>
+        </div>
+        <p class="desc">按量: ¥1起充｜支持 微信/支付宝/USDT/VISA｜支付 查看详情/访问官网｜OpenAI Claude Gemini +2</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="2.2"/><path d="M3 10.5h18"/><path d="M7 15h4"/></svg></span>国内支付</span><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.2l7.2 4.1v8.4L12 19.8l-7.2-4.1V7.3L12 3.2z"/><path d="M12 8.2v7.6M9.6 10.2c.6-.7 1.4-1 2.4-1 1.6 0 2.6.7 2.6 1.8s-1 1.7-2.6 1.9c1.8.1 2.8.8 2.8 2s-1.2 2-2.8 2c-1.1 0-2-.3-2.6-1"/></svg></span>加密充值</span><span class="model">GPT</span><span class="model">Claude</span><span class="model">Gemini</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>99.2%</b></span>
+        <span><small>延迟</small><b>2.6s</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="1609">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/1663-xclis-ai">
+        <div class="card-head">
+          <div class="avatar">XC</div>
+          <div class="card-id">
+            <h3 class="card-title">Xclis</h3>
+            <p class="card-sub">xclis.ai</p>
+          </div>
+          <span class="badge ok">在线</span>
+        </div>
+        <p class="desc">按量: $1起充｜支持 支付宝/USDT/VISA｜支付 访问官网｜OpenAI Claude Gemini +1</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="2.2"/><path d="M3 10.5h18"/><path d="M7 15h4"/></svg></span>国内支付</span><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.2l7.2 4.1v8.4L12 19.8l-7.2-4.1V7.3L12 3.2z"/><path d="M12 8.2v7.6M9.6 10.2c.6-.7 1.4-1 2.4-1 1.6 0 2.6.7 2.6 1.8s-1 1.7-2.6 1.9c1.8.1 2.8.8 2.8 2s-1.2 2-2.8 2c-1.1 0-2-.3-2.6-1"/></svg></span>加密充值</span><span class="model">GPT</span><span class="model">Claude</span><span class="model">Gemini</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>99.2%</b></span>
+        <span><small>延迟</small><b>2.2s</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="1663">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/1629-api-hopeplay-online">
+        <div class="card-head">
+          <div class="avatar">HO</div>
+          <div class="card-id">
+            <h3 class="card-title">HopePlay</h3>
+            <p class="card-sub">api.hopeplay.online</p>
+          </div>
+          <span class="badge ok">在线</span>
+        </div>
+        <p class="desc">按量: ¥1起充｜支持 支付宝/USDT｜支付 访问官网｜OpenAI Claude 国产</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="2.2"/><path d="M3 10.5h18"/><path d="M7 15h4"/></svg></span>国内支付</span><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.2l7.2 4.1v8.4L12 19.8l-7.2-4.1V7.3L12 3.2z"/><path d="M12 8.2v7.6M9.6 10.2c.6-.7 1.4-1 2.4-1 1.6 0 2.6.7 2.6 1.8s-1 1.7-2.6 1.9c1.8.1 2.8.8 2.8 2s-1.2 2-2.8 2c-1.1 0-2-.3-2.6-1"/></svg></span>加密充值</span><span class="model">GPT</span><span class="model">Claude</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>99.2%</b></span>
+        <span><small>延迟</small><b>1.9s</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="1629">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/1650-tokendocker-com">
+        <div class="card-head">
+          <div class="avatar">TO</div>
+          <div class="card-id">
+            <h3 class="card-title">Token Docker</h3>
+            <p class="card-sub">tokendocker.com</p>
+          </div>
+          <span class="badge ok">在线</span>
+        </div>
+        <p class="desc">按量: $2起充 | 订阅: ¥4起｜支持 微信/支付宝/USDT｜支付 访问官网｜OpenAI</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="2.2"/><path d="M3 10.5h18"/><path d="M7 15h4"/></svg></span>国内支付</span><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.2l7.2 4.1v8.4L12 19.8l-7.2-4.1V7.3L12 3.2z"/><path d="M12 8.2v7.6M9.6 10.2c.6-.7 1.4-1 2.4-1 1.6 0 2.6.7 2.6 1.8s-1 1.7-2.6 1.9c1.8.1 2.8.8 2.8 2s-1.2 2-2.8 2c-1.1 0-2-.3-2.6-1"/></svg></span>加密充值</span><span class="model">GPT</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>99.2%</b></span>
+        <span><small>延迟</small><b>1.4s</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="1650">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/1713-codex-lgp888-xyz">
+        <div class="card-head">
+          <div class="avatar">胖虎</div>
+          <div class="card-id">
+            <h3 class="card-title">胖虎中转站</h3>
+            <p class="card-sub">codex.lgp888.xyz</p>
+          </div>
+          <span class="badge ok">在线</span>
+        </div>
+        <p class="desc">按量: ¥1起充｜支持 USDT｜支付 新用户赠金/查看详情/访问官网｜OpenAI</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.2l7.2 4.1v8.4L12 19.8l-7.2-4.1V7.3L12 3.2z"/><path d="M12 8.2v7.6M9.6 10.2c.6-.7 1.4-1 2.4-1 1.6 0 2.6.7 2.6 1.8s-1 1.7-2.6 1.9c1.8.1 2.8.8 2.8 2s-1.2 2-2.8 2c-1.1 0-2-.3-2.6-1"/></svg></span>加密充值</span><span class="model">GPT</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>99.2%</b></span>
+        <span><small>延迟</small><b>2.4s</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="1713">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/1692-api-bakdr-com">
+        <div class="card-head">
+          <div class="avatar">兔纸</div>
+          <div class="card-id">
+            <h3 class="card-title">兔纸API</h3>
+            <p class="card-sub">api.bakdr.com</p>
+          </div>
+          <span class="badge ok">在线</span>
+        </div>
+        <p class="desc">按量: ¥10起充 | 订阅: ¥59起｜支持 微信/支付宝/USDT｜支付 查看详情/访问官网｜OpenAI Claude Gemini +1</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="2.2"/><path d="M3 10.5h18"/><path d="M7 15h4"/></svg></span>国内支付</span><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.2l7.2 4.1v8.4L12 19.8l-7.2-4.1V7.3L12 3.2z"/><path d="M12 8.2v7.6M9.6 10.2c.6-.7 1.4-1 2.4-1 1.6 0 2.6.7 2.6 1.8s-1 1.7-2.6 1.9c1.8.1 2.8.8 2.8 2s-1.2 2-2.8 2c-1.1 0-2-.3-2.6-1"/></svg></span>加密充值</span><span class="model">GPT</span><span class="model">Claude</span><span class="model">Gemini</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>99.2%</b></span>
+        <span><small>延迟</small><b>2.4s</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="1692">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/1672-clawrouter-com">
+        <div class="card-head">
+          <div class="avatar">CL</div>
+          <div class="card-id">
+            <h3 class="card-title">clawrouter</h3>
+            <p class="card-sub">clawrouter.com</p>
+          </div>
+          <span class="badge ok">在线</span>
+        </div>
+        <p class="desc">按量: $10起充｜支持 USDT/VISA｜支付 查看详情/访问官网｜OpenAI Claude Gemini</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.2l7.2 4.1v8.4L12 19.8l-7.2-4.1V7.3L12 3.2z"/><path d="M12 8.2v7.6M9.6 10.2c.6-.7 1.4-1 2.4-1 1.6 0 2.6.7 2.6 1.8s-1 1.7-2.6 1.9c1.8.1 2.8.8 2.8 2s-1.2 2-2.8 2c-1.1 0-2-.3-2.6-1"/></svg></span>加密充值</span><span class="model">GPT</span><span class="model">Claude</span><span class="model">Gemini</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>99.2%</b></span>
+        <span><small>延迟</small><b>1.5s</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="1672">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/1656-tokenmix-ai">
+        <div class="card-head">
+          <div class="avatar">TO</div>
+          <div class="card-id">
+            <h3 class="card-title">TokenMix</h3>
+            <p class="card-sub">tokenmix.ai</p>
+          </div>
+          <span class="badge ok">在线</span>
+        </div>
+        <p class="desc">按量: 1起充｜支持 微信/支付宝/USDT/VISA｜支付 访问官网｜OpenAI Claude Gemini +2</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="2.2"/><path d="M3 10.5h18"/><path d="M7 15h4"/></svg></span>国内支付</span><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.2l7.2 4.1v8.4L12 19.8l-7.2-4.1V7.3L12 3.2z"/><path d="M12 8.2v7.6M9.6 10.2c.6-.7 1.4-1 2.4-1 1.6 0 2.6.7 2.6 1.8s-1 1.7-2.6 1.9c1.8.1 2.8.8 2.8 2s-1.2 2-2.8 2c-1.1 0-2-.3-2.6-1"/></svg></span>加密充值</span><span class="model">GPT</span><span class="model">Claude</span><span class="model">Gemini</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>99.2%</b></span>
+        <span><small>延迟</small><b>1.3s</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="1656">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/1621-crazyrouter-com">
+        <div class="card-head">
+          <div class="avatar">CR</div>
+          <div class="card-id">
+            <h3 class="card-title">Crazyrouter</h3>
+            <p class="card-sub">crazyrouter.com</p>
+          </div>
+          <span class="badge ok">在线</span>
+        </div>
+        <p class="desc">按量: $1起充｜支持 微信/支付宝/USDT/VISA｜支付 查看详情/访问官网｜OpenAI Claude Gemini +2</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="2.2"/><path d="M3 10.5h18"/><path d="M7 15h4"/></svg></span>国内支付</span><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.2l7.2 4.1v8.4L12 19.8l-7.2-4.1V7.3L12 3.2z"/><path d="M12 8.2v7.6M9.6 10.2c.6-.7 1.4-1 2.4-1 1.6 0 2.6.7 2.6 1.8s-1 1.7-2.6 1.9c1.8.1 2.8.8 2.8 2s-1.2 2-2.8 2c-1.1 0-2-.3-2.6-1"/></svg></span>加密充值</span><span class="model">GPT</span><span class="model">Claude</span><span class="model">Gemini</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>99.2%</b></span>
+        <span><small>延迟</small><b>1.8s</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="1621">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/1682-token115-com">
+        <div class="card-head">
+          <div class="avatar">TO</div>
+          <div class="card-id">
+            <h3 class="card-title">token115</h3>
+            <p class="card-sub">token115.com</p>
+          </div>
+          <span class="badge ok">在线</span>
+        </div>
+        <p class="desc">按量: ¥10起充｜支持 微信/支付宝/USDT｜支付 访问官网｜OpenAI Claude</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="2.2"/><path d="M3 10.5h18"/><path d="M7 15h4"/></svg></span>国内支付</span><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.2l7.2 4.1v8.4L12 19.8l-7.2-4.1V7.3L12 3.2z"/><path d="M12 8.2v7.6M9.6 10.2c.6-.7 1.4-1 2.4-1 1.6 0 2.6.7 2.6 1.8s-1 1.7-2.6 1.9c1.8.1 2.8.8 2.8 2s-1.2 2-2.8 2c-1.1 0-2-.3-2.6-1"/></svg></span>加密充值</span><span class="model">GPT</span><span class="model">Claude</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>99.6%</b></span>
+        <span><small>延迟</small><b>1.6s</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="1682">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/1601-openrouter-ai">
+        <div class="card-head">
+          <div class="avatar">OP</div>
+          <div class="card-id">
+            <h3 class="card-title">OpenRouter</h3>
+            <p class="card-sub">openrouter.ai</p>
+          </div>
+          <span class="badge ok">在线</span>
+        </div>
+        <p class="desc">按量: $5起充｜支持 USDT/VISA｜支付 查看详情/访问官网｜OpenAI 国产 Grok +2</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.2l7.2 4.1v8.4L12 19.8l-7.2-4.1V7.3L12 3.2z"/><path d="M12 8.2v7.6M9.6 10.2c.6-.7 1.4-1 2.4-1 1.6 0 2.6.7 2.6 1.8s-1 1.7-2.6 1.9c1.8.1 2.8.8 2.8 2s-1.2 2-2.8 2c-1.1 0-2-.3-2.6-1"/></svg></span>加密充值</span><span class="model">GPT</span><span class="model">Grok</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>99.2%</b></span>
+        <span><small>延迟</small><b>2.2s</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="1601">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/1597-novaapi-ai">
+        <div class="card-head">
+          <div class="avatar">NO</div>
+          <div class="card-id">
+            <h3 class="card-title">NovaAPI</h3>
+            <p class="card-sub">novaapi.ai</p>
+          </div>
+          <span class="badge ok">在线</span>
+        </div>
+        <p class="desc">NovaAPI（全球 AI Token 算力中转平台）：多主流大模型统一接入，算力调度低延迟不掉线；全程定价透明，API 调用优惠最高可达 15%；邀请好友注册使用，长期赚取邀请奖励。｜支持 OpenAI/Claude/Gemini｜支付 微信/支付宝/USDT/VISA｜标签 精选/邀请赠金</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M3.6 18.5c.6-3 2.7-4.7 5.4-4.7s4.8 1.7 5.4 4.7"/><circle cx="17" cy="9" r="2.3"/><path d="M16.2 13.9c2 .3 3.4 1.6 3.9 3.8"/></svg></span>邀请返利</span><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="2.2"/><path d="M3 10.5h18"/><path d="M7 15h4"/></svg></span>国内支付</span><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.2l7.2 4.1v8.4L12 19.8l-7.2-4.1V7.3L12 3.2z"/><path d="M12 8.2v7.6M9.6 10.2c.6-.7 1.4-1 2.4-1 1.6 0 2.6.7 2.6 1.8s-1 1.7-2.6 1.9c1.8.1 2.8.8 2.8 2s-1.2 2-2.8 2c-1.1 0-2-.3-2.6-1"/></svg></span>加密充值</span><span class="model">GPT</span><span class="model">Claude</span><span class="model">Gemini</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>99.2%</b></span>
+        <span><small>延迟</small><b>2.5s</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="1597">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/1680-openmodel-ai">
+        <div class="card-head">
+          <div class="avatar">OP</div>
+          <div class="card-id">
+            <h3 class="card-title">openmodel</h3>
+            <p class="card-sub">openmodel.ai</p>
+          </div>
+          <span class="badge ok">在线</span>
+        </div>
+        <p class="desc">按量: ¥1起充｜支持 支付宝/USDT/VISA｜支付 充值特惠/访问官网｜OpenAI Claude Gemini +1</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="2.2"/><path d="M3 10.5h18"/><path d="M7 15h4"/></svg></span>国内支付</span><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.2l7.2 4.1v8.4L12 19.8l-7.2-4.1V7.3L12 3.2z"/><path d="M12 8.2v7.6M9.6 10.2c.6-.7 1.4-1 2.4-1 1.6 0 2.6.7 2.6 1.8s-1 1.7-2.6 1.9c1.8.1 2.8.8 2.8 2s-1.2 2-2.8 2c-1.1 0-2-.3-2.6-1"/></svg></span>加密充值</span><span class="model">GPT</span><span class="model">Claude</span><span class="model">Gemini</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>99.6%</b></span>
+        <span><small>延迟</small><b>1.4s</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="1680">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/1176-us-vveai-com">
+        <div class="card-head">
+          <div class="avatar">US</div>
+          <div class="card-id">
+            <h3 class="card-title">us.vveai.com</h3>
+            <p class="card-sub">us.vveai.com</p>
+          </div>
+          <span class="badge ok">在线</span>
+        </div>
+        <p class="desc">V-API 是一家支持 Anthropic Claude、OpenAI(GPT)、Google Gemini、xAI Grok、国产大模型 的 AI API 中转站,支持 微信、USDT、对公转账 充值。按量最低  起充。\n\n它把 Anthropic Claude 等模型的官方接口转售给国内用户,用人民币即可调用,省去海外信用卡和网络门槛。一站覆盖多家大模型,适合需要在不同模型间切换的开发者。\n\n该站为新用户提供赠金,可以先用免费额度测速、跑通流程,确认稳定后再决定是否充值——这是挑选中转站最稳妥的方式。</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11h16v9.5a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 20.5V11z"/><path d="M3.5 7.5h17v3.5h-17z"/><path d="M12 7.5v14.5"/><path d="M12 7.5c0-2.4-1.6-4-3.4-4S6 6 7.2 7.8C8 8.8 10 9.2 12 7.5z"/><path d="M12 7.5c0-2.4 1.6-4 3.4-4S18 6 16.8 7.8C16 8.8 14 9.2 12 7.5z"/></svg></span>新用户赠额</span><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.2l7.2 4.1v8.4L12 19.8l-7.2-4.1V7.3L12 3.2z"/><path d="M12 8.2v7.6M9.6 10.2c.6-.7 1.4-1 2.4-1 1.6 0 2.6.7 2.6 1.8s-1 1.7-2.6 1.9c1.8.1 2.8.8 2.8 2s-1.2 2-2.8 2c-1.1 0-2-.3-2.6-1"/></svg></span>加密充值</span><span class="model">GPT</span><span class="model">Claude</span><span class="model">Gemini</span><span class="model">Grok</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>99.6%</b></span>
+        <span><small>延迟</small><b>2.9s</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="1176">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/1634-modelboxs-com">
+        <div class="card-head">
+          <div class="avatar">MO</div>
+          <div class="card-id">
+            <h3 class="card-title">Modelboxs</h3>
+            <p class="card-sub">modelboxs.com</p>
+          </div>
+          <span class="badge ok">在线</span>
+        </div>
+        <p class="desc">按量: $10起充｜支持 微信/支付宝/USDT｜支付 访问官网｜OpenAI Claude Gemini</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="2.2"/><path d="M3 10.5h18"/><path d="M7 15h4"/></svg></span>国内支付</span><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.2l7.2 4.1v8.4L12 19.8l-7.2-4.1V7.3L12 3.2z"/><path d="M12 8.2v7.6M9.6 10.2c.6-.7 1.4-1 2.4-1 1.6 0 2.6.7 2.6 1.8s-1 1.7-2.6 1.9c1.8.1 2.8.8 2.8 2s-1.2 2-2.8 2c-1.1 0-2-.3-2.6-1"/></svg></span>加密充值</span><span class="model">GPT</span><span class="model">Claude</span><span class="model">Gemini</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>99.2%</b></span>
+        <span><small>延迟</small><b>1.6s</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="1634">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/1673-referer-shadowai-xyz">
+        <div class="card-head">
+          <div class="avatar">CL</div>
+          <div class="card-id">
+            <h3 class="card-title">close AI</h3>
+            <p class="card-sub">referer.shadowai.xyz</p>
+          </div>
+          <span class="badge ok">在线</span>
+        </div>
+        <p class="desc">按量: ¥1起充｜支持 微信/支付宝/USDT｜支付 访问官网｜OpenAI Claude Gemini +2</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="2.2"/><path d="M3 10.5h18"/><path d="M7 15h4"/></svg></span>国内支付</span><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.2l7.2 4.1v8.4L12 19.8l-7.2-4.1V7.3L12 3.2z"/><path d="M12 8.2v7.6M9.6 10.2c.6-.7 1.4-1 2.4-1 1.6 0 2.6.7 2.6 1.8s-1 1.7-2.6 1.9c1.8.1 2.8.8 2.8 2s-1.2 2-2.8 2c-1.1 0-2-.3-2.6-1"/></svg></span>加密充值</span><span class="model">GPT</span><span class="model">Claude</span><span class="model">Gemini</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>99.2%</b></span>
+        <span><small>延迟</small><b>2.6s</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="1673">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/1654-tokenbeat-net">
+        <div class="card-head">
+          <div class="avatar">TO</div>
+          <div class="card-id">
+            <h3 class="card-title">TokenBeat</h3>
+            <p class="card-sub">tokenbeat.net</p>
+          </div>
+          <span class="badge ok">在线</span>
+        </div>
+        <p class="desc">按量: $34起充｜支持 微信/支付宝/USDT/VISA｜支付 访问官网｜OpenAI Claude Grok +2</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="2.2"/><path d="M3 10.5h18"/><path d="M7 15h4"/></svg></span>国内支付</span><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.2l7.2 4.1v8.4L12 19.8l-7.2-4.1V7.3L12 3.2z"/><path d="M12 8.2v7.6M9.6 10.2c.6-.7 1.4-1 2.4-1 1.6 0 2.6.7 2.6 1.8s-1 1.7-2.6 1.9c1.8.1 2.8.8 2.8 2s-1.2 2-2.8 2c-1.1 0-2-.3-2.6-1"/></svg></span>加密充值</span><span class="model">GPT</span><span class="model">Claude</span><span class="model">Grok</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>99.2%</b></span>
+        <span><small>延迟</small><b>1.7s</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="1654">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/1702-jmpb-szb-com">
+        <div class="card-head">
+          <div class="avatar">宏云</div>
+          <div class="card-id">
+            <h3 class="card-title">宏云api</h3>
+            <p class="card-sub">jmpb-szb.com</p>
+          </div>
+          <span class="badge ok">在线</span>
+        </div>
+        <p class="desc">按量: ¥1起充｜支持 微信/支付宝/USDT｜支付 查看详情/访问官网｜OpenAI Claude Gemini +2</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="2.2"/><path d="M3 10.5h18"/><path d="M7 15h4"/></svg></span>国内支付</span><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.2l7.2 4.1v8.4L12 19.8l-7.2-4.1V7.3L12 3.2z"/><path d="M12 8.2v7.6M9.6 10.2c.6-.7 1.4-1 2.4-1 1.6 0 2.6.7 2.6 1.8s-1 1.7-2.6 1.9c1.8.1 2.8.8 2.8 2s-1.2 2-2.8 2c-1.1 0-2-.3-2.6-1"/></svg></span>加密充值</span><span class="model">GPT</span><span class="model">Claude</span><span class="model">Gemini</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>99.6%</b></span>
+        <span><small>延迟</small><b>2.3s</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="1702">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/1658-relay-upthos-com">
+        <div class="card-head">
+          <div class="avatar">UP</div>
+          <div class="card-id">
+            <h3 class="card-title">Upthos</h3>
+            <p class="card-sub">relay.upthos.com</p>
+          </div>
+          <span class="badge ok">在线</span>
+        </div>
+        <p class="desc">按量: ¥30起充 | 订阅: ¥49起｜支持 微信/支付宝/USDT｜支付 访问官网｜OpenAI</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="2.2"/><path d="M3 10.5h18"/><path d="M7 15h4"/></svg></span>国内支付</span><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.2l7.2 4.1v8.4L12 19.8l-7.2-4.1V7.3L12 3.2z"/><path d="M12 8.2v7.6M9.6 10.2c.6-.7 1.4-1 2.4-1 1.6 0 2.6.7 2.6 1.8s-1 1.7-2.6 1.9c1.8.1 2.8.8 2.8 2s-1.2 2-2.8 2c-1.1 0-2-.3-2.6-1"/></svg></span>加密充值</span><span class="model">GPT</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>99.2%</b></span>
+        <span><small>延迟</small><b>1.4s</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="1658">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/1509-api-ej2075-com">
+        <div class="card-head">
+          <div class="avatar">EJ</div>
+          <div class="card-id">
+            <h3 class="card-title">EJ2075</h3>
+            <p class="card-sub">api.ej2075.com</p>
+          </div>
+          <span class="badge ok">在线</span>
+        </div>
+        <p class="desc">EJ2075 1RMB=1刀，支持检测、微信/对公转账/USDT，可开发票，欢迎企业对接。</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.2l7.2 4.1v8.4L12 19.8l-7.2-4.1V7.3L12 3.2z"/><path d="M12 8.2v7.6M9.6 10.2c.6-.7 1.4-1 2.4-1 1.6 0 2.6.7 2.6 1.8s-1 1.7-2.6 1.9c1.8.1 2.8.8 2.8 2s-1.2 2-2.8 2c-1.1 0-2-.3-2.6-1"/></svg></span>加密充值</span><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3.5h7.2L19 8.2V20a1.5 1.5 0 0 1-1.5 1.5h-10A1.5 1.5 0 0 1 6 20V5a1.5 1.5 0 0 1 1-1.5z"/><path d="M14 3.6V8h4.4"/><path d="M9 12.2h6M9 15.6h4.5"/></svg></span>可开发票</span><span class="model">未标明模型</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>99.6%</b></span>
+        <span><small>延迟</small><b>1.5s</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="1509">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/1671-claude-api-org">
+        <div class="card-head">
+          <div class="avatar">CL</div>
+          <div class="card-id">
+            <h3 class="card-title">claude-api.org</h3>
+            <p class="card-sub">claude-api.org</p>
+          </div>
+          <span class="badge ok">在线</span>
+        </div>
+        <p class="desc">按量: ¥1起充｜支持 微信/支付宝/USDT｜支付 访问官网｜OpenAI Claude Gemini</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="2.2"/><path d="M3 10.5h18"/><path d="M7 15h4"/></svg></span>国内支付</span><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.2l7.2 4.1v8.4L12 19.8l-7.2-4.1V7.3L12 3.2z"/><path d="M12 8.2v7.6M9.6 10.2c.6-.7 1.4-1 2.4-1 1.6 0 2.6.7 2.6 1.8s-1 1.7-2.6 1.9c1.8.1 2.8.8 2.8 2s-1.2 2-2.8 2c-1.1 0-2-.3-2.6-1"/></svg></span>加密充值</span><span class="model">GPT</span><span class="model">Claude</span><span class="model">Gemini</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>99.2%</b></span>
+        <span><small>延迟</small><b>2.8s</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="1671">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/1662-xiaohumini-site">
+        <div class="card-head">
+          <div class="avatar">XI</div>
+          <div class="card-id">
+            <h3 class="card-title">XIAOHUMINI-API</h3>
+            <p class="card-sub">xiaohumini.site</p>
+          </div>
+          <span class="badge ok">在线</span>
+        </div>
+        <p class="desc">按量: ¥0.8起充｜支持 微信/支付宝/USDT｜支付 A 社名单/A 社认证/查看详情/访问官网｜OpenAI Gemini Claude +2</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="2.2"/><path d="M3 10.5h18"/><path d="M7 15h4"/></svg></span>国内支付</span><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.2l7.2 4.1v8.4L12 19.8l-7.2-4.1V7.3L12 3.2z"/><path d="M12 8.2v7.6M9.6 10.2c.6-.7 1.4-1 2.4-1 1.6 0 2.6.7 2.6 1.8s-1 1.7-2.6 1.9c1.8.1 2.8.8 2.8 2s-1.2 2-2.8 2c-1.1 0-2-.3-2.6-1"/></svg></span>加密充值</span><span class="model">GPT</span><span class="model">Claude</span><span class="model">Gemini</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>99.2%</b></span>
+        <span><small>延迟</small><b>2.1s</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="1662">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/1690-jiugx-com">
+        <div class="card-head">
+          <div class="avatar">九哥</div>
+          <div class="card-id">
+            <h3 class="card-title">九哥API</h3>
+            <p class="card-sub">jiugx.com</p>
+          </div>
+          <span class="badge ok">在线</span>
+        </div>
+        <p class="desc">按量: 1起充｜支持 支付宝/USDT｜支付 查看详情/访问官网｜OpenAI Claude Gemini +1</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="2.2"/><path d="M3 10.5h18"/><path d="M7 15h4"/></svg></span>国内支付</span><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.2l7.2 4.1v8.4L12 19.8l-7.2-4.1V7.3L12 3.2z"/><path d="M12 8.2v7.6M9.6 10.2c.6-.7 1.4-1 2.4-1 1.6 0 2.6.7 2.6 1.8s-1 1.7-2.6 1.9c1.8.1 2.8.8 2.8 2s-1.2 2-2.8 2c-1.1 0-2-.3-2.6-1"/></svg></span>加密充值</span><span class="model">GPT</span><span class="model">Claude</span><span class="model">Gemini</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>89.7%</b></span>
+        <span><small>延迟</small><b>2.2s</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="1690">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/1600-dancehorse-ai">
+        <div class="card-head">
+          <div class="avatar">DA</div>
+          <div class="card-id">
+            <h3 class="card-title">DanceHorse</h3>
+            <p class="card-sub">dancehorse.ai</p>
+          </div>
+          <span class="badge bad">异常</span>
+        </div>
+        <p class="desc">AI Video API 供给层｜对接 Seedance/HappyHorse 等视频生成模型｜支持预充值、分销码、白标接口、返佣等多种合作方式｜面向 API 中转站、视频工具开发者、内容团队｜支持 视频生成｜支付 USDT/微信｜标签 精选/视频API/B2B</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.2l7.2 4.1v8.4L12 19.8l-7.2-4.1V7.3L12 3.2z"/><path d="M12 8.2v7.6M9.6 10.2c.6-.7 1.4-1 2.4-1 1.6 0 2.6.7 2.6 1.8s-1 1.7-2.6 1.9c1.8.1 2.8.8 2.8 2s-1.2 2-2.8 2c-1.1 0-2-.3-2.6-1"/></svg></span>加密充值</span><span class="model">视频</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>0%</b></span>
+        <span><small>延迟</small><b>1.8s</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="1600">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/1699-ai-17nas-com">
+        <div class="card-head">
+          <div class="avatar">境核</div>
+          <div class="card-id">
+            <h3 class="card-title">境核Ai中转</h3>
+            <p class="card-sub">ai.17nas.com</p>
+          </div>
+          <span class="badge bad">异常</span>
+        </div>
+        <p class="desc">订阅: ¥10起｜支持 支付宝/USDT｜支付 访问官网｜OpenAI Claude Grok +1</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="2.2"/><path d="M3 10.5h18"/><path d="M7 15h4"/></svg></span>国内支付</span><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.2l7.2 4.1v8.4L12 19.8l-7.2-4.1V7.3L12 3.2z"/><path d="M12 8.2v7.6M9.6 10.2c.6-.7 1.4-1 2.4-1 1.6 0 2.6.7 2.6 1.8s-1 1.7-2.6 1.9c1.8.1 2.8.8 2.8 2s-1.2 2-2.8 2c-1.1 0-2-.3-2.6-1"/></svg></span>加密充值</span><span class="model">GPT</span><span class="model">Claude</span><span class="model">Grok</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>14.4%</b></span>
+        <span><small>延迟</small><b>2.2s</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="1699">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article></div>
+    </section><!--/STATIC_GRID--></div>
+        <div class="pager" id="pager"></div>
+        
+      </div>
+    </main>
+
+    <main id="detail" class="detail" hidden></main>
+    <main id="officialPage" class="detail official-page" hidden></main>
+
+    <footer class="site-foot">
+      <div class="site-foot-inner">
+        <section>
+          <a class="foot-brand" href="/">
+            <img src="/img/icon-192.png" width="40" height="40" alt="API中转站导航">
+            <div>
+              <strong>API中转站导航</strong>
+              <span>中转站导航 · 模型实况</span>
+            </div>
+          </a>
+          <p>用来对照第三方 API 中转站：先看 ChatGPT、Claude、DeepSeek 是否可用，再决定去哪家充值。目录按公益站、签到送余额、新用户赠额、低倍率、国内支付等分类排布。</p>
+          <p class="foot-keys">
+            <a href="/cat/charity">公益站</a>
+            <a href="/cat/cheaprate">低倍率API</a>
+            <a href="/cat/checkin">签到送余额</a>
+            <a href="/cat/gift">新用户赠额</a>
+            <a href="/cat/pay">国内支付API</a>
+            <a href="/cat/fast">低延迟中转</a>
+            <a href="/cat/highup">高可用API</a>
+            <a href="/model/gpt">ChatGPT中转</a>
+            <a href="/model/claude">Claude中转</a>
+            <a href="/model/deepseek">DeepSeek API</a>
+          </p>
+        </section>
+        <section>
+          <h3>怎么用</h3>
+          <p>顶部看官方模型实况，中间按分类浏览站点。卡片上的可用率和延迟来自整站探测，模型标签从站点简介提取，投票记在本站。充值前建议小额实测，对方站点规则以他们自己的页面为准。</p>
+        </section>
+        <section>
+          <h3>说明</h3>
+          <p>收录的都是第三方中转，不是官方渠道。状态会变，本站不保证任何站点的额度、价格或稳定性，也不提供官方上游充值。探币只记在这台电脑上，和中转站自己的签到余额不是一回事。</p>
+        </section>
+        <section id="contact">
+          <h3>联系我们</h3>
+          <p class="foot-contact">
+            邮箱 <a href="mailto:2201219073@qq.com">2201219073@qq.com</a><br>
+            QQ <a href="https://wpa.qq.com/msgrd?v=3&amp;uin=2201219073&amp;site=qq&amp;menu=yes" target="_blank" rel="noopener noreferrer">2201219073</a>
+          </p>
+        </section>
+      </div>
+      <p class="foot-copy">© API中转站导航 · 仅作导航对照，充值与使用风险自负</p>
+    </footer>
+  </div>
+
+  <div class="drawer-mask" id="drawerMask">
+    <div class="drawer" id="drawerBody"></div>
+  </div>
+  <div class="fab-dock" id="fabDock">
+    <button class="fab" id="toTopBtn" type="button" aria-label="回到顶部" title="回到顶部">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5"/><path d="m6 11 6-6 6 6"/></svg>
+    </button>
+    <button class="fab" id="fabThemeBtn" type="button" aria-label="切换浅色或深色" title="切换颜色">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 14.5A8.5 8.5 0 1 1 9.5 3 7 7 0 0 0 21 14.5z"/></svg>
+    </button>
+  </div>
+  <div class="toast" id="toast"></div>
+
+  <script src="/js/stations-data.js"></script>
+  <script src="/js/store.js"></script>
+  <script src="/js/icons.js"></script>
+  <script src="/js/seo.js"></script>
+  <script src="/js/official.js"></script>
+  <script src="/js/app.js"></script>
+</body>
+</html>

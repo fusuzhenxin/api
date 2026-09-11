@@ -71,8 +71,9 @@ async function main() {
   }
   const counts = {};
   for (const site of payload.stations) {
-    const keep = (site.categories || []).filter((c) => ["stable", "cheap", "special", "new"].includes(c));
+    const keep = (site.categories || []).filter((c) => ["stable", "cheap", "special", "new", "charity"].includes(c));
     const feats = inferFeatures(site);
+    if (keep.includes("charity") && !feats.includes("charity")) feats.push("charity");
     site.features = feats;
     site.categories = [...new Set([...keep, ...feats])];
     for (const f of site.categories) counts[f] = (counts[f] || 0) + 1;
@@ -92,6 +93,7 @@ async function main() {
     { id: "cheap", name: "便宜个人向" },
     { id: "special", name: "小有特色" },
     { id: "new", name: "新站上榜" },
+    { id: "charity", name: "公益站" },
     { id: "online", name: "当前在线" },
     { id: "fav", name: "我的收藏" },
   ];

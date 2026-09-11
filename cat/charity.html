@@ -1,0 +1,1615 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>公益站对照_免费API入口与使用注意</title>
+  <meta name="description" content="对照用爱发电的免费 API 入口：常见登录门槛、停更和限流风险。本站只做导航，不代收、不保证额度，适合先看清楚再决定要不要用。">
+  <meta name="keywords" content="公益站,免费API,公益API">
+  <meta name="application-name" content="API中转站导航">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#070b14">
+  <meta name="msapplication-TileColor" content="#070b14">
+  <meta name="applicable-device" content="pc,mobile">
+  <meta name="msapplication-TileImage" content="/img/icon-192.png">
+  <link rel="canonical" href="https://www.veridrop.cn/cat/charity">
+  <link rel="sitemap" type="application/xml" href="https://www.veridrop.cn/sitemap.xml">
+  <link rel="icon" type="image/png" sizes="48x48" href="/img/icon-48.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/img/icon-96.png">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" sizes="16x16 32x32 48x48">
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="API中转站导航">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:title" content="公益站对照_免费API入口与使用注意">
+  <meta property="og:description" content="对照用爱发电的免费 API 入口：常见登录门槛、停更和限流风险。本站只做导航，不代收、不保证额度，适合先看清楚再决定要不要用。">
+  <meta property="og:url" content="https://www.veridrop.cn/cat/charity">
+  <meta property="og:image" content="https://www.veridrop.cn/img/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="公益站对照_免费API入口与使用注意">
+  <meta name="twitter:description" content="对照用爱发电的免费 API 入口：常见登录门槛、停更和限流风险。本站只做导航，不代收、不保证额度，适合先看清楚再决定要不要用。">
+  <meta name="twitter:image" content="https://www.veridrop.cn/img/og.png">
+  <script type="application/ld+json" id="seo-jsonld">{"@context":"https://schema.org","@graph":[{"@type":"CollectionPage","name":"公益站对照","description":"对照用爱发电的免费 API 入口：常见登录门槛、停更和限流风险。本站只做导航，不代收、不保证额度，适合先看清楚再决定要不要用。","url":"https://www.veridrop.cn/cat/charity","isPartOf":{"@type":"WebSite","name":"API中转站导航","url":"https://www.veridrop.cn/"},"numberOfItems":67},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"API中转站导航","item":"https://www.veridrop.cn/"},{"@type":"ListItem","position":2,"name":"公益站","item":"https://www.veridrop.cn/cat/charity"}]},{"@type":"ItemList","name":"公益站对照","numberOfItems":67,"itemListElement":[{"@type":"ListItem","position":1,"name":"kktoken","url":"https://www.veridrop.cn/site/900028-kktoken-cc"},{"@type":"ListItem","position":2,"name":"JustWoker","url":"https://www.veridrop.cn/site/900001-api-justwoker-icu"},{"@type":"ListItem","position":3,"name":"tabitoken","url":"https://www.veridrop.cn/site/1915-tabitoken-com"},{"@type":"ListItem","position":4,"name":"co","url":"https://www.veridrop.cn/site/3282-co-agentrouter-org"},{"@type":"ListItem","position":5,"name":"0DAI 模型站","url":"https://www.veridrop.cn/site/900019-ai-0d0d-top"},{"@type":"ListItem","position":6,"name":"52mx","url":"https://www.veridrop.cn/site/3885-52mx-net"},{"@type":"ListItem","position":7,"name":"66o API（追梦云API）","url":"https://www.veridrop.cn/site/900022-api-66o-uk"},{"@type":"ListItem","position":8,"name":"88888 AI","url":"https://www.veridrop.cn/site/900014-88888-qzz-io"},{"@type":"ListItem","position":9,"name":"白嫖福利站","url":"https://www.veridrop.cn/site/900027-ai-baipiao-co"},{"@type":"ListItem","position":10,"name":"帮帮程序员","url":"https://www.veridrop.cn/site/1704-helpcoder-cc"},{"@type":"ListItem","position":11,"name":"冰佬公益站","url":"https://www.veridrop.cn/site/900012-icoe-pp-ua"},{"@type":"ListItem","position":12,"name":"黑与白公益站","url":"https://www.veridrop.cn/site/900009-ai-hybgzs-com"},{"@type":"ListItem","position":13,"name":"基元律动","url":"https://www.veridrop.cn/site/1432-tokenrhythm-studio"},{"@type":"ListItem","position":14,"name":"九幺公益站","url":"https://www.veridrop.cn/site/900018-api-7r-fit"},{"@type":"ListItem","position":15,"name":"橘子 AI（juziai）","url":"https://www.veridrop.cn/site/900013-api-juziai-cc"},{"@type":"ListItem","position":16,"name":"聚合 API（aiyiwei）","url":"https://www.veridrop.cn/site/900034-aiyiwei-vip"},{"@type":"ListItem","position":17,"name":"莱斯超级API","url":"https://www.veridrop.cn/site/900002-laisiai-tw-cpolar-io"},{"@type":"ListItem","position":18,"name":"猫羽雫公益站","url":"https://www.veridrop.cn/site/900025-maoyulin-xyz"},{"@type":"ListItem","position":19,"name":"免费 ChatGPT API（free.v36.cm）","url":"https://www.veridrop.cn/site/900011-free-v36-cm"},{"@type":"ListItem","position":20,"name":"年华 API 中转站","url":"https://www.veridrop.cn/site/1705-newapi-makelove-cloud"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"公益站和普通 API 中转有什么区别？","acceptedAnswer":{"@type":"Answer","text":"普通中转多是付费买额度；公益站主打免费额度。公益站更便宜，但停更、限流、改规则都更常见，适合试用，不适合当长期主力。"}},{"@type":"Question","name":"这里的名单会保证能用吗？","acceptedAnswer":{"@type":"Answer","text":"不会。本站只做对照导航。入口、额度、模型是否还开放，都以对方当前页面为准。失效或长期不更新的站，我们会尽量往后排或拿下。"}},{"@type":"Question","name":"用公益站要注意什么？","acceptedAnswer":{"@type":"Answer","text":"请勿压测、勿囤号、勿把入口发到大群。涉及账号登录的，先看对方是否只接受特定邮箱或社区等级。本站不代收、不保管任何 API Key。"}}]}]}</script>
+  <script>
+    (function () {
+      var saved = localStorage.getItem("xiantan.theme");
+      var theme = saved === "light" || saved === "dark"
+        ? saved
+        : (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="app" id="app">
+    <header class="topbar">
+      <div class="brand-cluster">
+        <a class="brand" href="/" aria-label="API中转站导航首页">
+          <img class="logo-mark" src="/img/icon-192.png" width="36" height="36" alt="API中转站导航">
+          <p class="brand-title">API中转站导航</p>
+        </a>
+      </div>
+      <nav class="top-links">
+        <a class="top-contact" href="/cat/charity">公益站</a>
+        <a class="top-contact" id="contactTop" href="#contact">联系我们</a>
+      </nav>
+    </header>
+
+    <main id="home" class="home-shell is-cat">
+      <aside class="sidebar">
+        <h3>有用分类</h3>
+        <nav class="filters" id="cats">
+          <button class="filter active" data-cat="all" type="button"><i>▦</i><span>全部中转</span></button>
+          <button class="filter" data-cat="charity" type="button"><i>♥</i><span>公益站</span></button>
+          <button class="filter" data-cat="stable" type="button"><i>▣</i><span>稳定企业向</span></button>
+          <button class="filter" data-cat="cheap" type="button"><i>◇</i><span>便宜个人向</span></button>
+          <button class="filter" data-cat="special" type="button"><i>✦</i><span>小有特色</span></button>
+          <button class="filter" data-cat="new" type="button"><i>＋</i><span>新站上榜</span></button>
+          <button class="filter" data-cat="online" type="button"><i>●</i><span>当前在线</span></button>
+          <button class="filter" data-cat="checkin" type="button"><i>日</i><span>签到送余额</span></button>
+          <button class="filter" data-cat="gift" type="button"><i>赠</i><span>新用户赠额</span></button>
+          <button class="filter" data-cat="cheaprate" type="button"><i>低</i><span>低倍率</span></button>
+          <button class="filter" data-cat="fast" type="button"><i>快</i><span>低延迟</span></button>
+          <button class="filter" data-cat="pay" type="button"><i>付</i><span>国内支付</span></button>
+          <button class="filter" data-cat="invite" type="button"><i>邀</i><span>邀请返利</span></button>
+          <button class="filter" data-cat="crypto" type="button"><i>U</i><span>加密充值</span></button>
+          <button class="filter" data-cat="invoice" type="button"><i>票</i><span>可开发票</span></button>
+          <button class="filter" data-cat="highup" type="button"><i>稳</i><span>高可用</span></button>
+          <button class="filter" data-cat="fav" type="button"><i>★</i><span>我的收藏</span></button>
+        </nav>
+        <h3>模型筛选</h3>
+        <div class="model-filters" id="modelFilters">
+          <button class="filter" data-model="gpt" type="button"><i>G</i><span>GPT</span></button>
+          <button class="filter" data-model="claude" type="button"><i>C</i><span>Claude</span></button>
+          <button class="filter" data-model="gemini" type="button"><i>N</i><span>Gemini</span></button>
+          <button class="filter" data-model="grok" type="button"><i>X</i><span>Grok</span></button>
+          <button class="filter" data-model="deepseek" type="button"><i>D</i><span>DeepSeek</span></button>
+          <button class="filter" data-model="kimi" type="button"><i>K</i><span>Kimi</span></button>
+          <button class="filter" data-model="qwen" type="button"><i>Q</i><span>Qwen</span></button>
+          <button class="filter" data-model="glm" type="button"><i>智</i><span>GLM</span></button>
+          <button class="filter" data-model="image" type="button"><i>图</i><span>生图</span></button>
+          <button class="filter" data-model="video" type="button"><i>影</i><span>视频</span></button>
+        </div>
+      </aside>
+      <div class="main-col">
+        <section class="hero">
+          <h1>公益站对照</h1>
+          <p class="seo-lead">对照用爱发电的免费 API 入口：常见登录门槛、停更和限流风险。本站只做导航，不代收、不保证额度，适合先看清楚再决定要不要用。</p>
+          <form class="search-box" id="searchForm">
+            <input id="q" type="search" placeholder="搜站点、模型、倍率或域名" autocomplete="off">
+            <button class="btn" id="randomBtn" type="button">随机探一站</button>
+            <button class="btn btn-primary" type="submit">搜索</button>
+          </form>
+          <section class="official-wrap">
+            <div class="official-head">
+              <h3>官方模型实况</h3>
+              <span id="officialMeta">已同步官方订阅 · 09/01 11:06</span>
+              <button class="btn" id="officialRefresh" type="button">刷新</button>
+            </div>
+            <div class="official" id="official"><!--STATIC_OFFICIAL--><a class="off-chip warn" href="/official/openai"><span class="dot warn"></span><span>OpenAI</span><strong>94.22%</strong><small>降级</small></a><a class="off-chip on" href="/official/anthropic"><span class="dot on"></span><span>Claude</span><strong>96.11%</strong><small>正常</small></a><a class="off-chip on" href="/official/gemini"><span class="dot on"></span><span>Gemini</span><strong>98.15%</strong><small>正常</small></a><a class="off-chip on" href="/official/deepseek"><span class="dot on"></span><span>DeepSeek</span><strong>98.27%</strong><small>正常</small></a><a class="off-chip on" href="/official/moonshot"><span class="dot on"></span><span>Kimi</span><strong>100.00%</strong><small>正常</small></a><a class="off-chip on" href="/official/xai"><span class="dot on"></span><span>Grok</span><strong>100.00%</strong><small>正常</small></a><!--/STATIC_OFFICIAL--></div>
+          </section>
+        </section>
+        <div class="stats">
+          <span id="resultMeta">公益站 <b>67</b> 站 · 探测在线 3691</span>
+          <span id="updatedAt"></span>
+          <div class="sorts" id="sorts">
+            <button class="filter active" data-sort="" type="button">综合</button>
+            <button class="filter" data-sort="uptime" type="button">可用优先</button>
+            <button class="filter" data-sort="latency" type="button">延迟优先</button>
+          </div>
+        </div>
+        <div id="grid"><!--STATIC_GRID--><p class="cat-back crumbs"><a href="/">首页</a><span>/</span><a href="/cat/charity">公益站</a></p>
+    <section class="type-block" id="type-charity">
+      <div class="type-head"><h1><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.4S4.6 15.4 3.2 10.8C2.2 7.6 4 5 6.8 5c1.7 0 2.9 1 3.7 2.3C11.3 6 12.5 5 14.2 5c2.8 0 4.6 2.6 3.6 5.8C16.4 15.4 12 20.4 12 20.4z"/></svg></span><span>公益站对照</span></h1></div>
+      <p class="seo-lead">对照用爱发电的免费 API 入口：常见登录门槛、停更和限流风险。本站只做导航，不代收、不保证额度，适合先看清楚再决定要不要用。 本页 67 站。</p>
+      <article class="seo-article"><h2>公益站是什么</h2><p>公益站一般指个人或小团队用爱发电、对外提供免费调用额度的 API 入口。常见做法是注册送一点额度、每日签到、或用 GitHub、LinuxDo 登录后再领。它不是 OpenAI、Anthropic 的官方渠道，也很少承诺稳定性和售后。</p><h2>本站怎么收录</h2><p>本页只收录能核到公开入口的公益站，并对照简介里的门槛和玩法。名单会变：失效的会沉下去，新出现的会补进来。我们不代管这些站，也不保证某一天还能打开。卡片上的「待测」表示本站还没做完整探测，不是说对方一定可用。</p><h2>怎么选、怎么用</h2><p>先看登录门槛和规则，再看自己能不能接受随时停服。需要 Claude Code、Codex 这类客户端的，确认对方是否真开放对应协议。额度够日常试一试就行，不要把生产任务或大量请求压上去。用之前建议先打开对方页面，看公告是不是还在更新。</p><h2>不适合把公益站当主力</h2><p>公益站资源有限。压测、囤号、把入口发到大群，都会把仅有的额度薅干，最后大家都不能用。要稳定跑业务，应该看付费中转或官方接口，并先小额实测。本站不代收充值，也不鉴定对方模型是不是「官方原厂」。</p><h2>常见问题</h2><dl class="seo-faq"><dt>公益站和普通 API 中转有什么区别？</dt><dd>普通中转多是付费买额度；公益站主打免费额度。公益站更便宜，但停更、限流、改规则都更常见，适合试用，不适合当长期主力。</dd><dt>这里的名单会保证能用吗？</dt><dd>不会。本站只做对照导航。入口、额度、模型是否还开放，都以对方当前页面为准。失效或长期不更新的站，我们会尽量往后排或拿下。</dd><dt>用公益站要注意什么？</dt><dd>请勿压测、勿囤号、勿把入口发到大群。涉及账号登录的，先看对方是否只接受特定邮箱或社区等级。本站不代收、不保管任何 API Key。</dd></dl></article>
+      <div class="type-head"><h2 class="related-title">公益站站点列表</h2><div class="type-actions"><span>67/67 站</span></div></div>
+      <div class="grid"><article class="card">
+      <a class="card-link" href="/site/900028-kktoken-cc">
+        <div class="card-head">
+          <div class="avatar">KK</div>
+          <div class="card-id">
+            <h3 class="card-title">kktoken</h3>
+            <p class="card-sub">kktoken.cc</p>
+          </div>
+          <span class="badge wait">待测</span>
+        </div>
+        <p class="desc">kktoken 注册送 100 额度、每日签到送 20，目前提供 claude-opus-4-8、claude-opus-4-8-thinking、claude-opus-5、claude-opus-5-thinking 四款 Claude Opus 模型。</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.4S4.6 15.4 3.2 10.8C2.2 7.6 4 5 6.8 5c1.7 0 2.9 1 3.7 2.3C11.3 6 12.5 5 14.2 5c2.8 0 4.6 2.6 3.6 5.8C16.4 15.4 12 20.4 12 20.4z"/></svg></span>公益站</span><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="15" rx="2.4"/><path d="M8 3.5v4M16 3.5v4M4 10h16"/><path d="M8.5 15.2l2.3 2.3 4.8-5"/></svg></span>签到送余额</span><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11h16v9.5a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 20.5V11z"/><path d="M3.5 7.5h17v3.5h-17z"/><path d="M12 7.5v14.5"/><path d="M12 7.5c0-2.4-1.6-4-3.4-4S6 6 7.2 7.8C8 8.8 10 9.2 12 7.5z"/><path d="M12 7.5c0-2.4 1.6-4 3.4-4S18 6 16.8 7.8C16 8.8 14 9.2 12 7.5z"/></svg></span>新用户赠额</span><span class="model">Claude</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>—</b></span>
+        <span><small>延迟</small><b>—</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="900028">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/900001-api-justwoker-icu">
+        <div class="card-head">
+          <div class="avatar">JU</div>
+          <div class="card-id">
+            <h3 class="card-title">JustWoker</h3>
+            <p class="card-sub">api.justwoker.icu</p>
+          </div>
+          <span class="badge wait">待测</span>
+        </div>
+        <p class="desc">JustWoker 是一个签到送额度的公益 API，每日签到可随机获得额度。</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.4S4.6 15.4 3.2 10.8C2.2 7.6 4 5 6.8 5c1.7 0 2.9 1 3.7 2.3C11.3 6 12.5 5 14.2 5c2.8 0 4.6 2.6 3.6 5.8C16.4 15.4 12 20.4 12 20.4z"/></svg></span>公益站</span><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="15" rx="2.4"/><path d="M8 3.5v4M16 3.5v4M4 10h16"/><path d="M8.5 15.2l2.3 2.3 4.8-5"/></svg></span>签到送余额</span><span class="model">未标明模型</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>—</b></span>
+        <span><small>延迟</small><b>—</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="900001">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/1915-tabitoken-com">
+        <div class="card-head">
+          <div class="avatar">TA</div>
+          <div class="card-id">
+            <h3 class="card-title">tabitoken</h3>
+            <p class="card-sub">tabitoken.com</p>
+          </div>
+          <span class="badge ok">在线</span>
+        </div>
+        <p class="desc">暂无简介，进去看整站状态和模型探测。</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.4S4.6 15.4 3.2 10.8C2.2 7.6 4 5 6.8 5c1.7 0 2.9 1 3.7 2.3C11.3 6 12.5 5 14.2 5c2.8 0 4.6 2.6 3.6 5.8C16.4 15.4 12 20.4 12 20.4z"/></svg></span>公益站</span><span class="model">未标明模型</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>97.3%</b></span>
+        <span><small>延迟</small><b>3.6s</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="1915">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/3282-co-agentrouter-org">
+        <div class="card-head">
+          <div class="avatar">CO</div>
+          <div class="card-id">
+            <h3 class="card-title">co</h3>
+            <p class="card-sub">co.agentrouter.org</p>
+          </div>
+          <span class="badge ok">在线</span>
+        </div>
+        <p class="desc">暂无简介，进去看整站状态和模型探测。</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.4S4.6 15.4 3.2 10.8C2.2 7.6 4 5 6.8 5c1.7 0 2.9 1 3.7 2.3C11.3 6 12.5 5 14.2 5c2.8 0 4.6 2.6 3.6 5.8C16.4 15.4 12 20.4 12 20.4z"/></svg></span>公益站</span><span class="model">未标明模型</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>100%</b></span>
+        <span><small>延迟</small><b>2.2s</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="3282">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/900019-ai-0d0d-top">
+        <div class="card-head">
+          <div class="avatar">0D</div>
+          <div class="card-id">
+            <h3 class="card-title">0DAI 模型站</h3>
+            <p class="card-sub">ai.0d0d.top</p>
+          </div>
+          <span class="badge wait">待测</span>
+        </div>
+        <p class="desc">0DAI 模型站把当前可调用的 6 个模型和 OpenAI 兼容示例直接摆在首页：mimo-v2.5、north-mini-code、minimax-m2.7、gpt-oss、deepseek-v4-flash、mimo-auto 都能在控制台建 Key 后接进去。</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.4S4.6 15.4 3.2 10.8C2.2 7.6 4 5 6.8 5c1.7 0 2.9 1 3.7 2.3C11.3 6 12.5 5 14.2 5c2.8 0 4.6 2.6 3.6 5.8C16.4 15.4 12 20.4 12 20.4z"/></svg></span>公益站</span><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M3.6 18.5c.6-3 2.7-4.7 5.4-4.7s4.8 1.7 5.4 4.7"/><circle cx="17" cy="9" r="2.3"/><path d="M16.2 13.9c2 .3 3.4 1.6 3.9 3.8"/></svg></span>邀请返利</span><span class="model">GPT</span><span class="model">DeepSeek</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>—</b></span>
+        <span><small>延迟</small><b>—</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="900019">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/3885-52mx-net">
+        <div class="card-head">
+          <div class="avatar">52</div>
+          <div class="card-id">
+            <h3 class="card-title">52mx</h3>
+            <p class="card-sub">52mx.net</p>
+          </div>
+          <span class="badge bad">异常</span>
+        </div>
+        <p class="desc">暂无简介，进去看整站状态和模型探测。</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.4S4.6 15.4 3.2 10.8C2.2 7.6 4 5 6.8 5c1.7 0 2.9 1 3.7 2.3C11.3 6 12.5 5 14.2 5c2.8 0 4.6 2.6 3.6 5.8C16.4 15.4 12 20.4 12 20.4z"/></svg></span>公益站</span><span class="model">未标明模型</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>0%</b></span>
+        <span><small>延迟</small><b>3.1s</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="3885">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/900022-api-66o-uk">
+        <div class="card-head">
+          <div class="avatar">66</div>
+          <div class="card-id">
+            <h3 class="card-title">66o API（追梦云API）</h3>
+            <p class="card-sub">api.66o.uk</p>
+          </div>
+          <span class="badge wait">待测</span>
+        </div>
+        <p class="desc">66o API公益站进门就是个双面戏法——域名叫66o.uk，站内后台系统名却自称&quot;追梦云API&quot;，连浏览器标题栏都懒得改，还留着通用New API字样。</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.4S4.6 15.4 3.2 10.8C2.2 7.6 4 5 6.8 5c1.7 0 2.9 1 3.7 2.3C11.3 6 12.5 5 14.2 5c2.8 0 4.6 2.6 3.6 5.8C16.4 15.4 12 20.4 12 20.4z"/></svg></span>公益站</span><span class="model">Claude</span><span class="model">DeepSeek</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>—</b></span>
+        <span><small>延迟</small><b>—</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="900022">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/900014-88888-qzz-io">
+        <div class="card-head">
+          <div class="avatar">88</div>
+          <div class="card-id">
+            <h3 class="card-title">88888 AI</h3>
+            <p class="card-sub">88888.qzz.io</p>
+          </div>
+          <span class="badge wait">待测</span>
+        </div>
+        <p class="desc">注册就送 $100 额度、还支持临时邮箱的公益免费 API 线路：OpenAI 兼容端点，自己建 key 就能白嫖一长串国产大模型——DeepSeek-v4、GLM5.1、Kimi-k2.6、MiniMax-m3、Qwen--3.5、Step 系列实测都能跑。</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.4S4.6 15.4 3.2 10.8C2.2 7.6 4 5 6.8 5c1.7 0 2.9 1 3.7 2.3C11.3 6 12.5 5 14.2 5c2.8 0 4.6 2.6 3.6 5.8C16.4 15.4 12 20.4 12 20.4z"/></svg></span>公益站</span><span class="model">GPT</span><span class="model">DeepSeek</span><span class="model">Kimi</span><span class="model">Qwen</span><span class="model">GLM</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>—</b></span>
+        <span><small>延迟</small><b>—</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="900014">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/900027-ai-baipiao-co">
+        <div class="card-head">
+          <div class="avatar">白嫖</div>
+          <div class="card-id">
+            <h3 class="card-title">白嫖福利站</h3>
+            <p class="card-sub">ai.baipiao.co</p>
+          </div>
+          <span class="badge wait">待测</span>
+        </div>
+        <p class="desc">白嫖 BaiPiao 自己开的公益 API 福利站，账号密码即可注册，目前不用邮箱验证；每天签到随机送 $1–$100，不定期还会在白嫖社区发兑换码。</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.4S4.6 15.4 3.2 10.8C2.2 7.6 4 5 6.8 5c1.7 0 2.9 1 3.7 2.3C11.3 6 12.5 5 14.2 5c2.8 0 4.6 2.6 3.6 5.8C16.4 15.4 12 20.4 12 20.4z"/></svg></span>公益站</span><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="15" rx="2.4"/><path d="M8 3.5v4M16 3.5v4M4 10h16"/><path d="M8.5 15.2l2.3 2.3 4.8-5"/></svg></span>签到送余额</span><span class="model">GPT</span><span class="model">Grok</span><span class="model">DeepSeek</span><span class="model">GLM</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>—</b></span>
+        <span><small>延迟</small><b>—</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="900027">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/1704-helpcoder-cc">
+        <div class="card-head">
+          <div class="avatar">帮帮</div>
+          <div class="card-id">
+            <h3 class="card-title">帮帮程序员</h3>
+            <p class="card-sub">helpcoder.cc</p>
+          </div>
+          <span class="badge ok">在线</span>
+        </div>
+        <p class="desc">支付 查看详情/访问官网｜OpenAI</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.4S4.6 15.4 3.2 10.8C2.2 7.6 4 5 6.8 5c1.7 0 2.9 1 3.7 2.3C11.3 6 12.5 5 14.2 5c2.8 0 4.6 2.6 3.6 5.8C16.4 15.4 12 20.4 12 20.4z"/></svg></span>公益站</span><span class="model">GPT</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>99.6%</b></span>
+        <span><small>延迟</small><b>2.2s</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="1704">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/900012-icoe-pp-ua">
+        <div class="card-head">
+          <div class="avatar">冰佬</div>
+          <div class="card-id">
+            <h3 class="card-title">冰佬公益站</h3>
+            <p class="card-sub">icoe.pp.ua</p>
+          </div>
+          <span class="badge wait">待测</span>
+        </div>
+        <p class="desc">冰佬公益站是老资格的那一挂公益站，如今临时落脚在 icoe.pp.ua 这个域名下，页面自己挂的招牌是「冰のCodex」——域名跟着心情换，招牌跟着域名飘，算是这站最典型的标签。</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.4S4.6 15.4 3.2 10.8C2.2 7.6 4 5 6.8 5c1.7 0 2.9 1 3.7 2.3C11.3 6 12.5 5 14.2 5c2.8 0 4.6 2.6 3.6 5.8C16.4 15.4 12 20.4 12 20.4z"/></svg></span>公益站</span><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M3.6 18.5c.6-3 2.7-4.7 5.4-4.7s4.8 1.7 5.4 4.7"/><circle cx="17" cy="9" r="2.3"/><path d="M16.2 13.9c2 .3 3.4 1.6 3.9 3.8"/></svg></span>邀请返利</span><span class="model">GPT</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>—</b></span>
+        <span><small>延迟</small><b>—</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="900012">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/900009-ai-hybgzs-com">
+        <div class="card-head">
+          <div class="avatar">黑与</div>
+          <div class="card-id">
+            <h3 class="card-title">黑与白公益站</h3>
+            <p class="card-sub">ai.hybgzs.com</p>
+          </div>
+          <span class="badge wait">待测</span>
+        </div>
+        <p class="desc">黑与白公益站（hybgzs）是一套&quot;双站体系&quot;——主站 ai.hybgzs.com 是 Done Hub 网关，管你怎么调用模型；福利站 cdk.hybgzs.com 管你怎么去赚配额（签到/转盘/农场），赚回来的量会转回主站接着造。</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.4S4.6 15.4 3.2 10.8C2.2 7.6 4 5 6.8 5c1.7 0 2.9 1 3.7 2.3C11.3 6 12.5 5 14.2 5c2.8 0 4.6 2.6 3.6 5.8C16.4 15.4 12 20.4 12 20.4z"/></svg></span>公益站</span><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="15" rx="2.4"/><path d="M8 3.5v4M16 3.5v4M4 10h16"/><path d="M8.5 15.2l2.3 2.3 4.8-5"/></svg></span>签到送余额</span><span class="model">GPT</span><span class="model">Claude</span><span class="model">Gemini</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>—</b></span>
+        <span><small>延迟</small><b>—</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="900009">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/1432-tokenrhythm-studio">
+        <div class="card-head">
+          <div class="avatar">基元</div>
+          <div class="card-id">
+            <h3 class="card-title">基元律动</h3>
+            <p class="card-sub">tokenrhythm.studio</p>
+          </div>
+          <span class="badge ok">在线</span>
+        </div>
+        <p class="desc">基元律动（tokenrhythm）是国产大模型聚合中转，支持 DeepSeek V4、GLM-5.2、Kimi、Qwen 3.7、MiniMax 等，兼容 OpenAI 协议。🎁 注册即送 68 元免费 token 额度，邀请好友双方各得 68 元（活动多次延长），下载客户端体验 OpenSquilla 新功能。传为华为前员工创业项目，N 站大量薅羊毛帖。</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11h16v9.5a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 20.5V11z"/><path d="M3.5 7.5h17v3.5h-17z"/><path d="M12 7.5v14.5"/><path d="M12 7.5c0-2.4-1.6-4-3.4-4S6 6 7.2 7.8C8 8.8 10 9.2 12 7.5z"/><path d="M12 7.5c0-2.4 1.6-4 3.4-4S18 6 16.8 7.8C16 8.8 14 9.2 12 7.5z"/></svg></span>新用户赠额</span><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M3.6 18.5c.6-3 2.7-4.7 5.4-4.7s4.8 1.7 5.4 4.7"/><circle cx="17" cy="9" r="2.3"/><path d="M16.2 13.9c2 .3 3.4 1.6 3.9 3.8"/></svg></span>邀请返利</span><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.4S4.6 15.4 3.2 10.8C2.2 7.6 4 5 6.8 5c1.7 0 2.9 1 3.7 2.3C11.3 6 12.5 5 14.2 5c2.8 0 4.6 2.6 3.6 5.8C16.4 15.4 12 20.4 12 20.4z"/></svg></span>公益站</span><span class="model">GPT</span><span class="model">DeepSeek</span><span class="model">Kimi</span><span class="model">Qwen</span><span class="model">GLM</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>99.6%</b></span>
+        <span><small>延迟</small><b>2.7s</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="1432">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>1</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/900018-api-7r-fit">
+        <div class="card-head">
+          <div class="avatar">九幺</div>
+          <div class="card-id">
+            <h3 class="card-title">九幺公益站</h3>
+            <p class="card-sub">api.7r.fit</p>
+          </div>
+          <span class="badge wait">待测</span>
+        </div>
+        <p class="desc">九幺公益站是个走 LinuxDo 账号登录的免费大模型中转站，额度大头不是靠天天签到攒出来的，而是站长在 LD士多挂着「九幺公益10000$额度」商品让人用 LDC 兑换，外加不定期在福利羊毛区甩大额 CDK。</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.4S4.6 15.4 3.2 10.8C2.2 7.6 4 5 6.8 5c1.7 0 2.9 1 3.7 2.3C11.3 6 12.5 5 14.2 5c2.8 0 4.6 2.6 3.6 5.8C16.4 15.4 12 20.4 12 20.4z"/></svg></span>公益站</span><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="15" rx="2.4"/><path d="M8 3.5v4M16 3.5v4M4 10h16"/><path d="M8.5 15.2l2.3 2.3 4.8-5"/></svg></span>签到送余额</span><span class="model">Claude</span><span class="model">Grok</span><span class="model">DeepSeek</span><span class="model">Qwen</span><span class="model">GLM</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>—</b></span>
+        <span><small>延迟</small><b>—</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="900018">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/900013-api-juziai-cc">
+        <div class="card-head">
+          <div class="avatar">橘子</div>
+          <div class="card-id">
+            <h3 class="card-title">橘子 AI（juziai）</h3>
+            <p class="card-sub">api.juziai.cc</p>
+          </div>
+          <span class="badge wait">待测</span>
+        </div>
+        <p class="desc">注册直接到账 $50 的公益免费 API 站，除了 OpenAI 兼容还开了 Anthropic 原生端点——能直接喂 Claude Code。</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.4S4.6 15.4 3.2 10.8C2.2 7.6 4 5 6.8 5c1.7 0 2.9 1 3.7 2.3C11.3 6 12.5 5 14.2 5c2.8 0 4.6 2.6 3.6 5.8C16.4 15.4 12 20.4 12 20.4z"/></svg></span>公益站</span><span class="model">GPT</span><span class="model">Claude</span><span class="model">Gemini</span><span class="model">Grok</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>—</b></span>
+        <span><small>延迟</small><b>—</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="900013">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/900034-aiyiwei-vip">
+        <div class="card-head">
+          <div class="avatar">聚合</div>
+          <div class="card-id">
+            <h3 class="card-title">聚合 API（aiyiwei）</h3>
+            <p class="card-sub">aiyiwei.vip</p>
+          </div>
+          <span class="badge wait">待测</span>
+        </div>
+        <p class="desc">模型杂、可生图、跑了挺久没掉链子的公益免费大站。</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.4S4.6 15.4 3.2 10.8C2.2 7.6 4 5 6.8 5c1.7 0 2.9 1 3.7 2.3C11.3 6 12.5 5 14.2 5c2.8 0 4.6 2.6 3.6 5.8C16.4 15.4 12 20.4 12 20.4z"/></svg></span>公益站</span><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="15" rx="2.4"/><path d="M8 3.5v4M16 3.5v4M4 10h16"/><path d="M8.5 15.2l2.3 2.3 4.8-5"/></svg></span>签到送余额</span><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4.8 13.2l8.4 8.4a1.4 1.4 0 0 0 2 0l6.2-6.2a1.4 1.4 0 0 0 0-2L13 4.8A2 2 0 0 0 11.6 4H5.5A1.5 1.5 0 0 0 4 5.5v6.1a2 2 0 0 0 .8 1.6z"/><circle cx="8.2" cy="8.2" r="1.2"/></svg></span>低倍率</span><span class="model">GPT</span><span class="model">生图</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>—</b></span>
+        <span><small>延迟</small><b>—</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="900034">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/900002-laisiai-tw-cpolar-io">
+        <div class="card-head">
+          <div class="avatar">莱斯</div>
+          <div class="card-id">
+            <h3 class="card-title">莱斯超级API</h3>
+            <p class="card-sub">laisiai.tw.cpolar.io</p>
+          </div>
+          <span class="badge wait">待测</span>
+        </div>
+        <p class="desc">莱斯超级API通过注册赠送和每日签到提供公益额度，支持 Mistral、GPT 5.4、Gemini 3.1、Gemini 2.5、DeepSeek 和千问系列模型。</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.4S4.6 15.4 3.2 10.8C2.2 7.6 4 5 6.8 5c1.7 0 2.9 1 3.7 2.3C11.3 6 12.5 5 14.2 5c2.8 0 4.6 2.6 3.6 5.8C16.4 15.4 12 20.4 12 20.4z"/></svg></span>公益站</span><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="15" rx="2.4"/><path d="M8 3.5v4M16 3.5v4M4 10h16"/><path d="M8.5 15.2l2.3 2.3 4.8-5"/></svg></span>签到送余额</span><span class="model">GPT</span><span class="model">Gemini</span><span class="model">DeepSeek</span><span class="model">Qwen</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>—</b></span>
+        <span><small>延迟</small><b>—</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="900002">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/900025-maoyulin-xyz">
+        <div class="card-head">
+          <div class="avatar">猫羽</div>
+          <div class="card-id">
+            <h3 class="card-title">猫羽雫公益站</h3>
+            <p class="card-sub">maoyulin.xyz</p>
+          </div>
+          <span class="badge wait">待测</span>
+        </div>
+        <p class="desc">猫羽雫公益站是个把公告栏活生生玩成段子板的免费大模型中转站，货币单位不叫美元不叫积分，干脆自定义成&quot;猫猫&quot;，站长自己形容主线路是台&quot;土豆服务器，随时爆炸&quot;。</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.4S4.6 15.4 3.2 10.8C2.2 7.6 4 5 6.8 5c1.7 0 2.9 1 3.7 2.3C11.3 6 12.5 5 14.2 5c2.8 0 4.6 2.6 3.6 5.8C16.4 15.4 12 20.4 12 20.4z"/></svg></span>公益站</span><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="15" rx="2.4"/><path d="M8 3.5v4M16 3.5v4M4 10h16"/><path d="M8.5 15.2l2.3 2.3 4.8-5"/></svg></span>签到送余额</span><span class="model">Gemini</span><span class="model">Grok</span><span class="model">DeepSeek</span><span class="model">Qwen</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>—</b></span>
+        <span><small>延迟</small><b>—</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="900025">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/900011-free-v36-cm">
+        <div class="card-head">
+          <div class="avatar">免费</div>
+          <div class="card-id">
+            <h3 class="card-title">免费 ChatGPT API（free.v36.cm）</h3>
+            <p class="card-sub">free.v36.cm</p>
+          </div>
+          <span class="badge wait">待测</span>
+        </div>
+        <p class="desc">免费 ChatGPT API（free.v36.cm）公益站脱胎自 GitHub 上 6.5k+ star 的老仓库 popjane/free_chatgpt_api，邮箱自助注册和 GitHub 一键授权两条路子都能领 Key，国内直连不用额外绕线。</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.4S4.6 15.4 3.2 10.8C2.2 7.6 4 5 6.8 5c1.7 0 2.9 1 3.7 2.3C11.3 6 12.5 5 14.2 5c2.8 0 4.6 2.6 3.6 5.8C16.4 15.4 12 20.4 12 20.4z"/></svg></span>公益站</span><span class="model">GPT</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>—</b></span>
+        <span><small>延迟</small><b>—</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="900011">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/1705-newapi-makelove-cloud">
+        <div class="card-head">
+          <div class="avatar">年华</div>
+          <div class="card-id">
+            <h3 class="card-title">年华 API 中转站</h3>
+            <p class="card-sub">newapi.makelove.cloud</p>
+          </div>
+          <span class="badge ok">在线</span>
+        </div>
+        <p class="desc">支付 查看详情/访问官网｜Claude OpenAI Gemini +2</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.4S4.6 15.4 3.2 10.8C2.2 7.6 4 5 6.8 5c1.7 0 2.9 1 3.7 2.3C11.3 6 12.5 5 14.2 5c2.8 0 4.6 2.6 3.6 5.8C16.4 15.4 12 20.4 12 20.4z"/></svg></span>公益站</span><span class="model">GPT</span><span class="model">Claude</span><span class="model">Gemini</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>98.1%</b></span>
+        <span><small>延迟</small><b>4.7s</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="1705">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/900010-free-llm-cups-moe">
+        <div class="card-head">
+          <div class="avatar">小欢</div>
+          <div class="card-id">
+            <h3 class="card-title">小欢公益站</h3>
+            <p class="card-sub">free-llm.cups.moe</p>
+          </div>
+          <span class="badge wait">待测</span>
+        </div>
+        <p class="desc">小欢公益站是博主&quot;小欢&quot;挂在自己个人博客 cups.moe 后院的免费大模型 API 服务，登录即送 200 次使用额度，额度快见底就去那篇 14.4 万阅读的博文底下留言喊话加量——没有邀请码、没有充值入口，全靠一篇博文加一条评论区撑着。</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.4S4.6 15.4 3.2 10.8C2.2 7.6 4 5 6.8 5c1.7 0 2.9 1 3.7 2.3C11.3 6 12.5 5 14.2 5c2.8 0 4.6 2.6 3.6 5.8C16.4 15.4 12 20.4 12 20.4z"/></svg></span>公益站</span><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M3.6 18.5c.6-3 2.7-4.7 5.4-4.7s4.8 1.7 5.4 4.7"/><circle cx="17" cy="9" r="2.3"/><path d="M16.2 13.9c2 .3 3.4 1.6 3.9 3.8"/></svg></span>邀请返利</span><span class="model">Claude</span><span class="model">DeepSeek</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>—</b></span>
+        <span><small>延迟</small><b>—</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="900010">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/900015-fufu-iqach-top">
+        <div class="card-head">
+          <div class="avatar">小米</div>
+          <div class="card-id">
+            <h3 class="card-title">小米 MiMo 公益站</h3>
+            <p class="card-sub">fufu.iqach.top</p>
+          </div>
+          <span class="badge wait">待测</span>
+        </div>
+        <p class="desc">专开小米自家 MiMo 全套模型的公益站，走 LinuxDo（L 站）授权登录、要等级 1 以上才放行。</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.4S4.6 15.4 3.2 10.8C2.2 7.6 4 5 6.8 5c1.7 0 2.9 1 3.7 2.3C11.3 6 12.5 5 14.2 5c2.8 0 4.6 2.6 3.6 5.8C16.4 15.4 12 20.4 12 20.4z"/></svg></span>公益站</span><span class="model">GPT</span><span class="model">Claude</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>—</b></span>
+        <span><small>延迟</small><b>—</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="900015">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/233-肖恩ai">
+        <div class="card-head">
+          <div class="avatar">肖恩</div>
+          <div class="card-id">
+            <h3 class="card-title">肖恩AI</h3>
+            <p class="card-sub">第三方</p>
+          </div>
+          <span class="badge ok">在线</span>
+        </div>
+        <p class="desc">半公益性质的站，轻度用户可以试试，有点坑的是模型并没有视觉能力</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.4S4.6 15.4 3.2 10.8C2.2 7.6 4 5 6.8 5c1.7 0 2.9 1 3.7 2.3C11.3 6 12.5 5 14.2 5c2.8 0 4.6 2.6 3.6 5.8C16.4 15.4 12 20.4 12 20.4z"/></svg></span>公益站</span><span class="model">未标明模型</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>99.6%</b></span>
+        <span><small>延迟</small><b>2.2s</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="233">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/900004-new-xinjianya-top">
+        <div class="card-head">
+          <div class="avatar">星见</div>
+          <div class="card-id">
+            <h3 class="card-title">星见雅 API</h3>
+            <p class="card-sub">new.xinjianya.top</p>
+          </div>
+          <span class="badge wait">待测</span>
+        </div>
+        <p class="desc">模型多到挑花眼的公益免费 API 站，自家「银狮」币制、10 银狮兑 1 刀。</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.4S4.6 15.4 3.2 10.8C2.2 7.6 4 5 6.8 5c1.7 0 2.9 1 3.7 2.3C11.3 6 12.5 5 14.2 5c2.8 0 4.6 2.6 3.6 5.8C16.4 15.4 12 20.4 12 20.4z"/></svg></span>公益站</span><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="15" rx="2.4"/><path d="M8 3.5v4M16 3.5v4M4 10h16"/><path d="M8.5 15.2l2.3 2.3 4.8-5"/></svg></span>签到送余额</span><span class="model">GPT</span><span class="model">Grok</span><span class="model">DeepSeek</span><span class="model">Kimi</span><span class="model">Qwen</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>—</b></span>
+        <span><small>延迟</small><b>—</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="900004">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/900031-yunshuapi-site">
+        <div class="card-head">
+          <div class="avatar">云枢</div>
+          <div class="card-id">
+            <h3 class="card-title">云枢 api</h3>
+            <p class="card-sub">yunshuapi.site</p>
+          </div>
+          <span class="badge bad">异常</span>
+        </div>
+        <p class="desc">云枢 API 是一条模型菜单铺得很全的公益线路，Claude Opus 全家桶、GPT-5.6 三兄弟（sol / terra / luna）、GPT-5.4/5.5、DeepSeek v4 和 gpt-image-2 生图一次挂齐。</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.4S4.6 15.4 3.2 10.8C2.2 7.6 4 5 6.8 5c1.7 0 2.9 1 3.7 2.3C11.3 6 12.5 5 14.2 5c2.8 0 4.6 2.6 3.6 5.8C16.4 15.4 12 20.4 12 20.4z"/></svg></span>公益站</span><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11h16v9.5a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 20.5V11z"/><path d="M3.5 7.5h17v3.5h-17z"/><path d="M12 7.5v14.5"/><path d="M12 7.5c0-2.4-1.6-4-3.4-4S6 6 7.2 7.8C8 8.8 10 9.2 12 7.5z"/><path d="M12 7.5c0-2.4 1.6-4 3.4-4S18 6 16.8 7.8C16 8.8 14 9.2 12 7.5z"/></svg></span>新用户赠额</span><span class="model">GPT</span><span class="model">Claude</span><span class="model">DeepSeek</span><span class="model">生图</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>—</b></span>
+        <span><small>延迟</small><b>—</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="900031">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/318-ai-chuyel-top">
+        <div class="card-head">
+          <div class="avatar">AI</div>
+          <div class="card-id">
+            <h3 class="card-title">ai.chuyel.top</h3>
+            <p class="card-sub">ai.chuyel.top</p>
+          </div>
+          <span class="badge bad">异常</span>
+        </div>
+        <p class="desc">暂无更多描述</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.4S4.6 15.4 3.2 10.8C2.2 7.6 4 5 6.8 5c1.7 0 2.9 1 3.7 2.3C11.3 6 12.5 5 14.2 5c2.8 0 4.6 2.6 3.6 5.8C16.4 15.4 12 20.4 12 20.4z"/></svg></span>公益站</span><span class="model">未标明模型</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>0%</b></span>
+        <span><small>延迟</small><b>11.6s</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="318">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/50-anyrouter-top">
+        <div class="card-head">
+          <div class="avatar">AN</div>
+          <div class="card-id">
+            <h3 class="card-title">AnyRouter</h3>
+            <p class="card-sub">anyrouter.top</p>
+          </div>
+          <span class="badge ok">在线</span>
+        </div>
+        <p class="desc">智能路由中转服务，支持多渠道自动切换。</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.4S4.6 15.4 3.2 10.8C2.2 7.6 4 5 6.8 5c1.7 0 2.9 1 3.7 2.3C11.3 6 12.5 5 14.2 5c2.8 0 4.6 2.6 3.6 5.8C16.4 15.4 12 20.4 12 20.4z"/></svg></span>公益站</span><span class="model">未标明模型</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>99.6%</b></span>
+        <span><small>延迟</small><b>2.0s</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="50">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>3</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>2</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/4364-api-hlool-top">
+        <div class="card-head">
+          <div class="avatar">AP</div>
+          <div class="card-id">
+            <h3 class="card-title">api</h3>
+            <p class="card-sub">api.hlool.top</p>
+          </div>
+          <span class="badge ok">在线</span>
+        </div>
+        <p class="desc">暂无简介，进去看整站状态和模型探测。</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.4S4.6 15.4 3.2 10.8C2.2 7.6 4 5 6.8 5c1.7 0 2.9 1 3.7 2.3C11.3 6 12.5 5 14.2 5c2.8 0 4.6 2.6 3.6 5.8C16.4 15.4 12 20.4 12 20.4z"/></svg></span>公益站</span><span class="model">未标明模型</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>100%</b></span>
+        <span><small>延迟</small><b>2.0s</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="4364">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/440-api-aisz-mom">
+        <div class="card-head">
+          <div class="avatar">AP</div>
+          <div class="card-id">
+            <h3 class="card-title">api.aisz.mom</h3>
+            <p class="card-sub">api.aisz.mom</p>
+          </div>
+          <span class="badge ok">在线</span>
+        </div>
+        <p class="desc">暂无更多描述</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.4S4.6 15.4 3.2 10.8C2.2 7.6 4 5 6.8 5c1.7 0 2.9 1 3.7 2.3C11.3 6 12.5 5 14.2 5c2.8 0 4.6 2.6 3.6 5.8C16.4 15.4 12 20.4 12 20.4z"/></svg></span>公益站</span><span class="model">未标明模型</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>99.6%</b></span>
+        <span><small>延迟</small><b>2.5s</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="440">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>1</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/473-api-chatanywhere-tech">
+        <div class="card-head">
+          <div class="avatar">AP</div>
+          <div class="card-id">
+            <h3 class="card-title">api.chatanywhere.tech</h3>
+            <p class="card-sub">api.chatanywhere.tech</p>
+          </div>
+          <span class="badge ok">在线</span>
+        </div>
+        <p class="desc">暂无更多描述</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.4S4.6 15.4 3.2 10.8C2.2 7.6 4 5 6.8 5c1.7 0 2.9 1 3.7 2.3C11.3 6 12.5 5 14.2 5c2.8 0 4.6 2.6 3.6 5.8C16.4 15.4 12 20.4 12 20.4z"/></svg></span>公益站</span><span class="model">未标明模型</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>99.6%</b></span>
+        <span><small>延迟</small><b>2.9s</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="473">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/510-api-futureppo-top">
+        <div class="card-head">
+          <div class="avatar">AP</div>
+          <div class="card-id">
+            <h3 class="card-title">api.futureppo.top</h3>
+            <p class="card-sub">api.futureppo.top</p>
+          </div>
+          <span class="badge ok">在线</span>
+        </div>
+        <p class="desc">暂无更多描述</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.4S4.6 15.4 3.2 10.8C2.2 7.6 4 5 6.8 5c1.7 0 2.9 1 3.7 2.3C11.3 6 12.5 5 14.2 5c2.8 0 4.6 2.6 3.6 5.8C16.4 15.4 12 20.4 12 20.4z"/></svg></span>公益站</span><span class="model">未标明模型</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>99.6%</b></span>
+        <span><small>延迟</small><b>1.3s</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="510">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/513-api-gemai-cc">
+        <div class="card-head">
+          <div class="avatar">AP</div>
+          <div class="card-id">
+            <h3 class="card-title">api.gemai.cc</h3>
+            <p class="card-sub">api.gemai.cc</p>
+          </div>
+          <span class="badge ok">在线</span>
+        </div>
+        <p class="desc">暂无更多描述</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.4S4.6 15.4 3.2 10.8C2.2 7.6 4 5 6.8 5c1.7 0 2.9 1 3.7 2.3C11.3 6 12.5 5 14.2 5c2.8 0 4.6 2.6 3.6 5.8C16.4 15.4 12 20.4 12 20.4z"/></svg></span>公益站</span><span class="model">Claude</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>99.6%</b></span>
+        <span><small>延迟</small><b>1.5s</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="513">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/533-api-iamhc-cn">
+        <div class="card-head">
+          <div class="avatar">AP</div>
+          <div class="card-id">
+            <h3 class="card-title">api.iamhc.cn</h3>
+            <p class="card-sub">api.iamhc.cn</p>
+          </div>
+          <span class="badge ok">在线</span>
+        </div>
+        <p class="desc">暂无更多描述</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.4S4.6 15.4 3.2 10.8C2.2 7.6 4 5 6.8 5c1.7 0 2.9 1 3.7 2.3C11.3 6 12.5 5 14.2 5c2.8 0 4.6 2.6 3.6 5.8C16.4 15.4 12 20.4 12 20.4z"/></svg></span>公益站</span><span class="model">未标明模型</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>98.5%</b></span>
+        <span><small>延迟</small><b>4.2s</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="533">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/4057-api456-me">
+        <div class="card-head">
+          <div class="avatar">AP</div>
+          <div class="card-id">
+            <h3 class="card-title">api456</h3>
+            <p class="card-sub">api456.me</p>
+          </div>
+          <span class="badge ok">在线</span>
+        </div>
+        <p class="desc">暂无简介，进去看整站状态和模型探测。</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.4S4.6 15.4 3.2 10.8C2.2 7.6 4 5 6.8 5c1.7 0 2.9 1 3.7 2.3C11.3 6 12.5 5 14.2 5c2.8 0 4.6 2.6 3.6 5.8C16.4 15.4 12 20.4 12 20.4z"/></svg></span>公益站</span><span class="model">未标明模型</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>100%</b></span>
+        <span><small>延迟</small><b>1.8s</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="4057">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/2483-api520-pro">
+        <div class="card-head">
+          <div class="avatar">AP</div>
+          <div class="card-id">
+            <h3 class="card-title">api520</h3>
+            <p class="card-sub">api520.pro</p>
+          </div>
+          <span class="badge ok">在线</span>
+        </div>
+        <p class="desc">暂无简介，进去看整站状态和模型探测。</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.4S4.6 15.4 3.2 10.8C2.2 7.6 4 5 6.8 5c1.7 0 2.9 1 3.7 2.3C11.3 6 12.5 5 14.2 5c2.8 0 4.6 2.6 3.6 5.8C16.4 15.4 12 20.4 12 20.4z"/></svg></span>公益站</span><span class="model">未标明模型</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>99.6%</b></span>
+        <span><small>延迟</small><b>2.5s</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="2483">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/1461-bmapi-020212-xyz">
+        <div class="card-head">
+          <div class="avatar">BM</div>
+          <div class="card-id">
+            <h3 class="card-title">BM API</h3>
+            <p class="card-sub">bmapi.020212.xyz</p>
+          </div>
+          <span class="badge ok">在线</span>
+        </div>
+        <p class="desc">BM API 注册即送月卡，邀请新人再送一个月（勿自邀会被封），月卡约 60 刀额度速度不错；另提供 gpt pro 套餐 4000 积分倍率 1x。</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M3.6 18.5c.6-3 2.7-4.7 5.4-4.7s4.8 1.7 5.4 4.7"/><circle cx="17" cy="9" r="2.3"/><path d="M16.2 13.9c2 .3 3.4 1.6 3.9 3.8"/></svg></span>邀请返利</span><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.4S4.6 15.4 3.2 10.8C2.2 7.6 4 5 6.8 5c1.7 0 2.9 1 3.7 2.3C11.3 6 12.5 5 14.2 5c2.8 0 4.6 2.6 3.6 5.8C16.4 15.4 12 20.4 12 20.4z"/></svg></span>公益站</span><span class="model">GPT</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>99.6%</b></span>
+        <span><small>延迟</small><b>893ms</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="1461">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/2756-cavoti-com">
+        <div class="card-head">
+          <div class="avatar">CA</div>
+          <div class="card-id">
+            <h3 class="card-title">cavoti</h3>
+            <p class="card-sub">cavoti.com</p>
+          </div>
+          <span class="badge ok">在线</span>
+        </div>
+        <p class="desc">暂无简介，进去看整站状态和模型探测。</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.4S4.6 15.4 3.2 10.8C2.2 7.6 4 5 6.8 5c1.7 0 2.9 1 3.7 2.3C11.3 6 12.5 5 14.2 5c2.8 0 4.6 2.6 3.6 5.8C16.4 15.4 12 20.4 12 20.4z"/></svg></span>公益站</span><span class="model">未标明模型</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>97%</b></span>
+        <span><small>延迟</small><b>3.1s</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="2756">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/900036-api-cheapcodex-online">
+        <div class="card-head">
+          <div class="avatar">CH</div>
+          <div class="card-id">
+            <h3 class="card-title">cheap</h3>
+            <p class="card-sub">api.cheapcodex.online</p>
+          </div>
+          <span class="badge wait">待测</span>
+        </div>
+        <p class="desc">cheap 是一条 AI API 公益线路，注册赠送 $20 额度，站内签到还能再领取 $20；支持通过 API Key 访问模型列表、Chat Completions 和 Responses 接口。</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.4S4.6 15.4 3.2 10.8C2.2 7.6 4 5 6.8 5c1.7 0 2.9 1 3.7 2.3C11.3 6 12.5 5 14.2 5c2.8 0 4.6 2.6 3.6 5.8C16.4 15.4 12 20.4 12 20.4z"/></svg></span>公益站</span><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="15" rx="2.4"/><path d="M8 3.5v4M16 3.5v4M4 10h16"/><path d="M8.5 15.2l2.3 2.3 4.8-5"/></svg></span>签到送余额</span><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11h16v9.5a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 20.5V11z"/><path d="M3.5 7.5h17v3.5h-17z"/><path d="M12 7.5v14.5"/><path d="M12 7.5c0-2.4-1.6-4-3.4-4S6 6 7.2 7.8C8 8.8 10 9.2 12 7.5z"/><path d="M12 7.5c0-2.4 1.6-4 3.4-4S18 6 16.8 7.8C16 8.8 14 9.2 12 7.5z"/></svg></span>新用户赠额</span><span class="model">GPT</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>—</b></span>
+        <span><small>延迟</small><b>—</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="900036">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/900030-chuan-sylu-cc">
+        <div class="card-head">
+          <div class="avatar">CH</div>
+          <div class="card-id">
+            <h3 class="card-title">chuan公益API</h3>
+            <p class="card-sub">chuan.sylu.cc</p>
+          </div>
+          <span class="badge wait">待测</span>
+        </div>
+        <p class="desc">chuan公益API 提供签到和邀请额度，签到最高送 50、邀请送 50；站点会在模型报错时尝试切换兜底模型，Gemini 系列严禁用于编程或大型任务。</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.4S4.6 15.4 3.2 10.8C2.2 7.6 4 5 6.8 5c1.7 0 2.9 1 3.7 2.3C11.3 6 12.5 5 14.2 5c2.8 0 4.6 2.6 3.6 5.8C16.4 15.4 12 20.4 12 20.4z"/></svg></span>公益站</span><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="15" rx="2.4"/><path d="M8 3.5v4M16 3.5v4M4 10h16"/><path d="M8.5 15.2l2.3 2.3 4.8-5"/></svg></span>签到送余额</span><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M3.6 18.5c.6-3 2.7-4.7 5.4-4.7s4.8 1.7 5.4 4.7"/><circle cx="17" cy="9" r="2.3"/><path d="M16.2 13.9c2 .3 3.4 1.6 3.9 3.8"/></svg></span>邀请返利</span><span class="model">GPT</span><span class="model">Gemini</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>—</b></span>
+        <span><small>延迟</small><b>—</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="900030">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/2582-chybenzun-top">
+        <div class="card-head">
+          <div class="avatar">CH</div>
+          <div class="card-id">
+            <h3 class="card-title">chybenzun</h3>
+            <p class="card-sub">chybenzun.top</p>
+          </div>
+          <span class="badge bad">异常</span>
+        </div>
+        <p class="desc">暂无简介，进去看整站状态和模型探测。</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.4S4.6 15.4 3.2 10.8C2.2 7.6 4 5 6.8 5c1.7 0 2.9 1 3.7 2.3C11.3 6 12.5 5 14.2 5c2.8 0 4.6 2.6 3.6 5.8C16.4 15.4 12 20.4 12 20.4z"/></svg></span>公益站</span><span class="model">未标明模型</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>0%</b></span>
+        <span><small>延迟</small><b>3.2s</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="2582">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/900037-claude-now">
+        <div class="card-head">
+          <div class="avatar">CL</div>
+          <div class="card-id">
+            <h3 class="card-title">Claude Now 镜像站</h3>
+            <p class="card-sub">claude.now</p>
+          </div>
+          <span class="badge wait">待测</span>
+        </div>
+        <p class="desc">Claude Now 公益站主打一个「零门槛」——浏览器打开 claude.now 就是完整的 Claude 网页聊天，不用注册、不用登录、不用魔法，连 API 是什么都不用懂。</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.4S4.6 15.4 3.2 10.8C2.2 7.6 4 5 6.8 5c1.7 0 2.9 1 3.7 2.3C11.3 6 12.5 5 14.2 5c2.8 0 4.6 2.6 3.6 5.8C16.4 15.4 12 20.4 12 20.4z"/></svg></span>公益站</span><span class="model">Claude</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>—</b></span>
+        <span><small>延迟</small><b>—</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="900037">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/900006-myapi-creitingameplays-com">
+        <div class="card-head">
+          <div class="avatar">DE</div>
+          <div class="card-id">
+            <h3 class="card-title">DeadlySignal API</h3>
+            <p class="card-sub">myapi.creitingameplays.com</p>
+          </div>
+          <span class="badge wait">待测</span>
+        </div>
+        <p class="desc">只开放 GitHub 登录注册的公益 AI API 站，GitHub 账号注册时间须满六个月。</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.4S4.6 15.4 3.2 10.8C2.2 7.6 4 5 6.8 5c1.7 0 2.9 1 3.7 2.3C11.3 6 12.5 5 14.2 5c2.8 0 4.6 2.6 3.6 5.8C16.4 15.4 12 20.4 12 20.4z"/></svg></span>公益站</span><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="15" rx="2.4"/><path d="M8 3.5v4M16 3.5v4M4 10h16"/><path d="M8.5 15.2l2.3 2.3 4.8-5"/></svg></span>签到送余额</span><span class="model">GPT</span><span class="model">Claude</span><span class="model">Gemini</span><span class="model">Grok</span><span class="model">DeepSeek</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>—</b></span>
+        <span><small>延迟</small><b>—</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="900006">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/900016-freeapi-dgbmc-top">
+        <div class="card-head">
+          <div class="avatar">DG</div>
+          <div class="card-id">
+            <h3 class="card-title">DGB 公益站</h3>
+            <p class="card-sub">freeapi.dgbmc.top</p>
+          </div>
+          <span class="badge wait">待测</span>
+        </div>
+        <p class="desc">注册随机送钱、临时邮箱也能薅的公益免费 API 站，OpenAI 兼容直连。</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.4S4.6 15.4 3.2 10.8C2.2 7.6 4 5 6.8 5c1.7 0 2.9 1 3.7 2.3C11.3 6 12.5 5 14.2 5c2.8 0 4.6 2.6 3.6 5.8C16.4 15.4 12 20.4 12 20.4z"/></svg></span>公益站</span><span class="model">GPT</span><span class="model">Gemini</span><span class="model">Grok</span><span class="model">生图</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>—</b></span>
+        <span><small>延迟</small><b>—</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="900016">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/1913-docode-cc">
+        <div class="card-head">
+          <div class="avatar">DO</div>
+          <div class="card-id">
+            <h3 class="card-title">docode</h3>
+            <p class="card-sub">docode.cc</p>
+          </div>
+          <span class="badge ok">在线</span>
+        </div>
+        <p class="desc">暂无简介，进去看整站状态和模型探测。</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.4S4.6 15.4 3.2 10.8C2.2 7.6 4 5 6.8 5c1.7 0 2.9 1 3.7 2.3C11.3 6 12.5 5 14.2 5c2.8 0 4.6 2.6 3.6 5.8C16.4 15.4 12 20.4 12 20.4z"/></svg></span>公益站</span><span class="model">未标明模型</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>99.6%</b></span>
+        <span><small>延迟</small><b>3.5s</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="1913">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/3744-gancaopu-com">
+        <div class="card-head">
+          <div class="avatar">GA</div>
+          <div class="card-id">
+            <h3 class="card-title">gancaopu</h3>
+            <p class="card-sub">gancaopu.com</p>
+          </div>
+          <span class="badge ok">在线</span>
+        </div>
+        <p class="desc">暂无简介，进去看整站状态和模型探测。</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.4S4.6 15.4 3.2 10.8C2.2 7.6 4 5 6.8 5c1.7 0 2.9 1 3.7 2.3C11.3 6 12.5 5 14.2 5c2.8 0 4.6 2.6 3.6 5.8C16.4 15.4 12 20.4 12 20.4z"/></svg></span>公益站</span><span class="model">未标明模型</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>99.6%</b></span>
+        <span><small>延迟</small><b>1.5s</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="3744">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/900023-ai-qaq-al">
+        <div class="card-head">
+          <div class="avatar">GG</div>
+          <div class="card-id">
+            <h3 class="card-title">GGBOOM 公益站</h3>
+            <p class="card-sub">ai.qaq.al</p>
+          </div>
+          <span class="badge wait">待测</span>
+        </div>
+        <p class="desc">GGBOOM 公益站是专供 Codex 系模型的免费网关，挂着 gpt-5.3-codex、gpt-5.2-codex、gpt-5.1-codex-max 这些型号，端点走 openai-responses 格式，Codex CLI 能原生对接。</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.4S4.6 15.4 3.2 10.8C2.2 7.6 4 5 6.8 5c1.7 0 2.9 1 3.7 2.3C11.3 6 12.5 5 14.2 5c2.8 0 4.6 2.6 3.6 5.8C16.4 15.4 12 20.4 12 20.4z"/></svg></span>公益站</span><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="15" rx="2.4"/><path d="M8 3.5v4M16 3.5v4M4 10h16"/><path d="M8.5 15.2l2.3 2.3 4.8-5"/></svg></span>签到送余额</span><span class="model">GPT</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>—</b></span>
+        <span><small>延迟</small><b>—</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="900023">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/900024-api-chengtx-vip">
+        <div class="card-head">
+          <div class="avatar">GO</div>
+          <div class="card-id">
+            <h3 class="card-title">GoGoGo 公益站</h3>
+            <p class="card-sub">api.chengtx.vip</p>
+          </div>
+          <span class="badge wait">待测</span>
+        </div>
+        <p class="desc">GoGoGo 公益站，这名字是从老横评里带出来的招牌，官网入口是 api.chengtx.vip。</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.4S4.6 15.4 3.2 10.8C2.2 7.6 4 5 6.8 5c1.7 0 2.9 1 3.7 2.3C11.3 6 12.5 5 14.2 5c2.8 0 4.6 2.6 3.6 5.8C16.4 15.4 12 20.4 12 20.4z"/></svg></span>公益站</span><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="15" rx="2.4"/><path d="M8 3.5v4M16 3.5v4M4 10h16"/><path d="M8.5 15.2l2.3 2.3 4.8-5"/></svg></span>签到送余额</span><span class="model">GPT</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>—</b></span>
+        <span><small>延迟</small><b>—</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="900024">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/900029-gorouter-app">
+        <div class="card-head">
+          <div class="avatar">GO</div>
+          <div class="card-id">
+            <h3 class="card-title">GoRouter 公益站</h3>
+            <p class="card-sub">gorouter.app</p>
+          </div>
+          <span class="badge wait">待测</span>
+        </div>
+        <p class="desc">GoRouter 是一套 New API 风格的模型控制台：当前可用 GitHub 登录，注册开关与签到功能都处于开启状态，控制台提供令牌、用量记录、模型和兑换入口。</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.4S4.6 15.4 3.2 10.8C2.2 7.6 4 5 6.8 5c1.7 0 2.9 1 3.7 2.3C11.3 6 12.5 5 14.2 5c2.8 0 4.6 2.6 3.6 5.8C16.4 15.4 12 20.4 12 20.4z"/></svg></span>公益站</span><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="15" rx="2.4"/><path d="M8 3.5v4M16 3.5v4M4 10h16"/><path d="M8.5 15.2l2.3 2.3 4.8-5"/></svg></span>签到送余额</span><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11h16v9.5a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 20.5V11z"/><path d="M3.5 7.5h17v3.5h-17z"/><path d="M12 7.5v14.5"/><path d="M12 7.5c0-2.4-1.6-4-3.4-4S6 6 7.2 7.8C8 8.8 10 9.2 12 7.5z"/><path d="M12 7.5c0-2.4 1.6-4 3.4-4S18 6 16.8 7.8C16 8.8 14 9.2 12 7.5z"/></svg></span>新用户赠额</span><span class="model">未标明模型</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>—</b></span>
+        <span><small>延迟</small><b>—</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="900029">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/900021-ai-huaibao-top">
+        <div class="card-head">
+          <div class="avatar">HU</div>
+          <div class="card-id">
+            <h3 class="card-title">Huainova（坏宝）公益站</h3>
+            <p class="card-sub">ai.huaibao.top</p>
+          </div>
+          <span class="badge wait">待测</span>
+        </div>
+        <p class="desc">Huainova（坏宝）公益站是一个靠社区号池吃饭的免费 API 站，巅峰期玩法花——注册送额度、签到、站内小游戏赚余额、每晚定点抽奖轮着来。</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.4S4.6 15.4 3.2 10.8C2.2 7.6 4 5 6.8 5c1.7 0 2.9 1 3.7 2.3C11.3 6 12.5 5 14.2 5c2.8 0 4.6 2.6 3.6 5.8C16.4 15.4 12 20.4 12 20.4z"/></svg></span>公益站</span><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="15" rx="2.4"/><path d="M8 3.5v4M16 3.5v4M4 10h16"/><path d="M8.5 15.2l2.3 2.3 4.8-5"/></svg></span>签到送余额</span><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11h16v9.5a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 20.5V11z"/><path d="M3.5 7.5h17v3.5h-17z"/><path d="M12 7.5v14.5"/><path d="M12 7.5c0-2.4-1.6-4-3.4-4S6 6 7.2 7.8C8 8.8 10 9.2 12 7.5z"/><path d="M12 7.5c0-2.4 1.6-4 3.4-4S18 6 16.8 7.8C16 8.8 14 9.2 12 7.5z"/></svg></span>新用户赠额</span><span class="model">未标明模型</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>—</b></span>
+        <span><small>延迟</small><b>—</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="900021">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/900008-beizhi-sylu-cc">
+        <div class="card-head">
+          <div class="avatar">LI</div>
+          <div class="card-id">
+            <h3 class="card-title">Liminality</h3>
+            <p class="card-sub">beizhi.sylu.cc</p>
+          </div>
+          <span class="badge wait">待测</span>
+        </div>
+        <p class="desc">Liminality 是一个采用每日签到模式的大模型聚合公益站。</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.4S4.6 15.4 3.2 10.8C2.2 7.6 4 5 6.8 5c1.7 0 2.9 1 3.7 2.3C11.3 6 12.5 5 14.2 5c2.8 0 4.6 2.6 3.6 5.8C16.4 15.4 12 20.4 12 20.4z"/></svg></span>公益站</span><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="15" rx="2.4"/><path d="M8 3.5v4M16 3.5v4M4 10h16"/><path d="M8.5 15.2l2.3 2.3 4.8-5"/></svg></span>签到送余额</span><span class="model">GPT</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>—</b></span>
+        <span><small>延迟</small><b>—</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="900008">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/1399-mcgrox-top">
+        <div class="card-head">
+          <div class="avatar">MC</div>
+          <div class="card-id">
+            <h3 class="card-title">mcgrox</h3>
+            <p class="card-sub">mcgrox.top</p>
+          </div>
+          <span class="badge ok">在线</span>
+        </div>
+        <p class="desc">mcgrox.top 提供 0.8 / 2 / 5 倍率分组的中转服务，新用户注册后进 QQ 群绑定账号口令即送 100 刀免费额度，邀请好友双方各得 100 刀。⚠️ 此前有帖子标注活动停止，近期重新发帖开启，以最新帖为准；不同帖子邀请码不同，需填邀请码才有奖励。</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11h16v9.5a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 20.5V11z"/><path d="M3.5 7.5h17v3.5h-17z"/><path d="M12 7.5v14.5"/><path d="M12 7.5c0-2.4-1.6-4-3.4-4S6 6 7.2 7.8C8 8.8 10 9.2 12 7.5z"/><path d="M12 7.5c0-2.4 1.6-4 3.4-4S18 6 16.8 7.8C16 8.8 14 9.2 12 7.5z"/></svg></span>新用户赠额</span><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M3.6 18.5c.6-3 2.7-4.7 5.4-4.7s4.8 1.7 5.4 4.7"/><circle cx="17" cy="9" r="2.3"/><path d="M16.2 13.9c2 .3 3.4 1.6 3.9 3.8"/></svg></span>邀请返利</span><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.4S4.6 15.4 3.2 10.8C2.2 7.6 4 5 6.8 5c1.7 0 2.9 1 3.7 2.3C11.3 6 12.5 5 14.2 5c2.8 0 4.6 2.6 3.6 5.8C16.4 15.4 12 20.4 12 20.4z"/></svg></span>公益站</span><span class="model">未标明模型</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>99.6%</b></span>
+        <span><small>延迟</small><b>1.9s</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="1399">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/900026-modeloc-com">
+        <div class="card-head">
+          <div class="avatar">MO</div>
+          <div class="card-id">
+            <h3 class="card-title">MODELOC 算力平台（注册填码互得 10 万算力 · Claude Opus 4.8 / GPT 5.5 旗舰闭源全开）</h3>
+            <p class="card-sub">modeloc.com</p>
+          </div>
+          <span class="badge wait">待测</span>
+        </div>
+        <p class="desc">一个「模型可信度 + 算力」平台，注册就白送算力去调一水儿的旗舰大模型，最馋的是别家公益线路多半只给国产，它这儿 Claude Opus 4.8 / 4.7 / 4.6、GPT 5.5 / 5.4、Gemini 3.5 Flash 这些闭源顶配全给你开着。</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.4S4.6 15.4 3.2 10.8C2.2 7.6 4 5 6.8 5c1.7 0 2.9 1 3.7 2.3C11.3 6 12.5 5 14.2 5c2.8 0 4.6 2.6 3.6 5.8C16.4 15.4 12 20.4 12 20.4z"/></svg></span>公益站</span><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M3.6 18.5c.6-3 2.7-4.7 5.4-4.7s4.8 1.7 5.4 4.7"/><circle cx="17" cy="9" r="2.3"/><path d="M16.2 13.9c2 .3 3.4 1.6 3.9 3.8"/></svg></span>邀请返利</span><span class="model">GPT</span><span class="model">Claude</span><span class="model">Gemini</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>—</b></span>
+        <span><small>延迟</small><b>—</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="900026">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/900032-motomoto-lol">
+        <div class="card-head">
+          <div class="avatar">MO</div>
+          <div class="card-id">
+            <h3 class="card-title">MotoMoto</h3>
+            <p class="card-sub">motomoto.lol</p>
+          </div>
+          <span class="badge wait">待测</span>
+        </div>
+        <p class="desc">MotoMoto 是不收费的 AI 公益站，目前提供 gpt-5.5 和 gpt-5.6-sol；注册赠送 $30 额度，每天签到还能领取 $50。</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.4S4.6 15.4 3.2 10.8C2.2 7.6 4 5 6.8 5c1.7 0 2.9 1 3.7 2.3C11.3 6 12.5 5 14.2 5c2.8 0 4.6 2.6 3.6 5.8C16.4 15.4 12 20.4 12 20.4z"/></svg></span>公益站</span><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="15" rx="2.4"/><path d="M8 3.5v4M16 3.5v4M4 10h16"/><path d="M8.5 15.2l2.3 2.3 4.8-5"/></svg></span>签到送余额</span><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11h16v9.5a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 20.5V11z"/><path d="M3.5 7.5h17v3.5h-17z"/><path d="M12 7.5v14.5"/><path d="M12 7.5c0-2.4-1.6-4-3.4-4S6 6 7.2 7.8C8 8.8 10 9.2 12 7.5z"/><path d="M12 7.5c0-2.4 1.6-4 3.4-4S18 6 16.8 7.8C16 8.8 14 9.2 12 7.5z"/></svg></span>新用户赠额</span><span class="model">GPT</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>—</b></span>
+        <span><small>延迟</small><b>—</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="900032">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/991-moyuu-cc">
+        <div class="card-head">
+          <div class="avatar">MO</div>
+          <div class="card-id">
+            <h3 class="card-title">moyuu.cc</h3>
+            <p class="card-sub">moyuu.cc</p>
+          </div>
+          <span class="badge ok">在线</span>
+        </div>
+        <p class="desc">暂无更多描述</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.4S4.6 15.4 3.2 10.8C2.2 7.6 4 5 6.8 5c1.7 0 2.9 1 3.7 2.3C11.3 6 12.5 5 14.2 5c2.8 0 4.6 2.6 3.6 5.8C16.4 15.4 12 20.4 12 20.4z"/></svg></span>公益站</span><span class="model">Claude</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>99.2%</b></span>
+        <span><small>延迟</small><b>1.6s</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="991">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/992-muyuan-do">
+        <div class="card-head">
+          <div class="avatar">MU</div>
+          <div class="card-id">
+            <h3 class="card-title">muyuan.do</h3>
+            <p class="card-sub">muyuan.do</p>
+          </div>
+          <span class="badge ok">在线</span>
+        </div>
+        <p class="desc">暂无更多描述</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.4S4.6 15.4 3.2 10.8C2.2 7.6 4 5 6.8 5c1.7 0 2.9 1 3.7 2.3C11.3 6 12.5 5 14.2 5c2.8 0 4.6 2.6 3.6 5.8C16.4 15.4 12 20.4 12 20.4z"/></svg></span>公益站</span><span class="model">未标明模型</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>99.6%</b></span>
+        <span><small>延迟</small><b>1.4s</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="992">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/900007-nofx-one">
+        <div class="card-head">
+          <div class="avatar">NO</div>
+          <div class="card-id">
+            <h3 class="card-title">NOFX</h3>
+            <p class="card-sub">nofx.one</p>
+          </div>
+          <span class="badge wait">待测</span>
+        </div>
+        <p class="desc">NOFX 注册送 20 积分，每日签到送 5 积分，每成功邀请一位好友再得 5 积分；积分可用于主流模型，优势是分组倍率较低，适合先用免费额度做日常体验。</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.4S4.6 15.4 3.2 10.8C2.2 7.6 4 5 6.8 5c1.7 0 2.9 1 3.7 2.3C11.3 6 12.5 5 14.2 5c2.8 0 4.6 2.6 3.6 5.8C16.4 15.4 12 20.4 12 20.4z"/></svg></span>公益站</span><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="15" rx="2.4"/><path d="M8 3.5v4M16 3.5v4M4 10h16"/><path d="M8.5 15.2l2.3 2.3 4.8-5"/></svg></span>签到送余额</span><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11h16v9.5a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 20.5V11z"/><path d="M3.5 7.5h17v3.5h-17z"/><path d="M12 7.5v14.5"/><path d="M12 7.5c0-2.4-1.6-4-3.4-4S6 6 7.2 7.8C8 8.8 10 9.2 12 7.5z"/><path d="M12 7.5c0-2.4 1.6-4 3.4-4S18 6 16.8 7.8C16 8.8 14 9.2 12 7.5z"/></svg></span>新用户赠额</span><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M3.6 18.5c.6-3 2.7-4.7 5.4-4.7s4.8 1.7 5.4 4.7"/><circle cx="17" cy="9" r="2.3"/><path d="M16.2 13.9c2 .3 3.4 1.6 3.9 3.8"/></svg></span>邀请返利</span><span class="model">未标明模型</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>—</b></span>
+        <span><small>延迟</small><b>—</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="900007">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/900005-api-rua-chat">
+        <div class="card-head">
+          <div class="avatar">RU</div>
+          <div class="card-id">
+            <h3 class="card-title">Rua Chat</h3>
+            <p class="card-sub">api.rua.chat</p>
+          </div>
+          <span class="badge wait">待测</span>
+        </div>
+        <p class="desc">Gemini 和 Grok 免费、Claude 走收费的公益站，受邀注册送 10 刀、每天签到再补 2–5 刀，综合倍率 0.5。</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.4S4.6 15.4 3.2 10.8C2.2 7.6 4 5 6.8 5c1.7 0 2.9 1 3.7 2.3C11.3 6 12.5 5 14.2 5c2.8 0 4.6 2.6 3.6 5.8C16.4 15.4 12 20.4 12 20.4z"/></svg></span>公益站</span><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="15" rx="2.4"/><path d="M8 3.5v4M16 3.5v4M4 10h16"/><path d="M8.5 15.2l2.3 2.3 4.8-5"/></svg></span>签到送余额</span><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11h16v9.5a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 20.5V11z"/><path d="M3.5 7.5h17v3.5h-17z"/><path d="M12 7.5v14.5"/><path d="M12 7.5c0-2.4-1.6-4-3.4-4S6 6 7.2 7.8C8 8.8 10 9.2 12 7.5z"/><path d="M12 7.5c0-2.4 1.6-4 3.4-4S18 6 16.8 7.8C16 8.8 14 9.2 12 7.5z"/></svg></span>新用户赠额</span><span class="model">GPT</span><span class="model">Claude</span><span class="model">Gemini</span><span class="model">Grok</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>—</b></span>
+        <span><small>延迟</small><b>—</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="900005">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/900003-ai-furry-vg">
+        <div class="card-head">
+          <div class="avatar">S3</div>
+          <div class="card-id">
+            <h3 class="card-title">S3AI API</h3>
+            <p class="card-sub">ai.furry.vg</p>
+          </div>
+          <span class="badge wait">待测</span>
+        </div>
+        <p class="desc">S3AI API 是一条低价多厂商聚合路由，但留了两个免费用法——NIM 分组免费不限速、free 分组近乎零成本，里面有 DeepSeek、mimo、nano-banana 系生图等模型，还独家带了 3D 生成 API。</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.4S4.6 15.4 3.2 10.8C2.2 7.6 4 5 6.8 5c1.7 0 2.9 1 3.7 2.3C11.3 6 12.5 5 14.2 5c2.8 0 4.6 2.6 3.6 5.8C16.4 15.4 12 20.4 12 20.4z"/></svg></span>公益站</span><span class="model">DeepSeek</span><span class="model">生图</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>—</b></span>
+        <span><small>延迟</small><b>—</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="900003">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/900020-new-sharedchat-cc">
+        <div class="card-head">
+          <div class="avatar">SH</div>
+          <div class="card-id">
+            <h3 class="card-title">SharedChat 公益入口</h3>
+            <p class="card-sub">new.sharedchat.cc</p>
+          </div>
+          <span class="badge wait">待测</span>
+        </div>
+        <p class="desc">SharedChat 的公益入口为 new.sharedchat.cc，页面含 Vibe Code 与图像/视频功能入口；但当前公开接口明确提示“旧转发链路已关闭”，模型网关未接入独立公益站。</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.4S4.6 15.4 3.2 10.8C2.2 7.6 4 5 6.8 5c1.7 0 2.9 1 3.7 2.3C11.3 6 12.5 5 14.2 5c2.8 0 4.6 2.6 3.6 5.8C16.4 15.4 12 20.4 12 20.4z"/></svg></span>公益站</span><span class="model">Claude</span><span class="model">视频</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>—</b></span>
+        <span><small>延迟</small><b>—</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="900020">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/900033-sharellm-net">
+        <div class="card-head">
+          <div class="avatar">SH</div>
+          <div class="card-id">
+            <h3 class="card-title">ShareLLM</h3>
+            <p class="card-sub">sharellm.net</p>
+          </div>
+          <span class="badge wait">待测</span>
+        </div>
+        <p class="desc">ShareLLM 提供 qwen、deepseek、glm、kimi 等国产模型免费调用，注册可得 120 / 5 小时与 600 / 周两档额度；海外模型需到 .net 站查看。</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.4S4.6 15.4 3.2 10.8C2.2 7.6 4 5 6.8 5c1.7 0 2.9 1 3.7 2.3C11.3 6 12.5 5 14.2 5c2.8 0 4.6 2.6 3.6 5.8C16.4 15.4 12 20.4 12 20.4z"/></svg></span>公益站</span><span class="model">GPT</span><span class="model">DeepSeek</span><span class="model">Kimi</span><span class="model">Qwen</span><span class="model">GLM</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>—</b></span>
+        <span><small>延迟</small><b>—</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="900033">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/2732-sub-100xlabs-space">
+        <div class="card-head">
+          <div class="avatar">SU</div>
+          <div class="card-id">
+            <h3 class="card-title">sub</h3>
+            <p class="card-sub">sub.100xlabs.space</p>
+          </div>
+          <span class="badge ok">在线</span>
+        </div>
+        <p class="desc">暂无简介，进去看整站状态和模型探测。</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.4S4.6 15.4 3.2 10.8C2.2 7.6 4 5 6.8 5c1.7 0 2.9 1 3.7 2.3C11.3 6 12.5 5 14.2 5c2.8 0 4.6 2.6 3.6 5.8C16.4 15.4 12 20.4 12 20.4z"/></svg></span>公益站</span><span class="model">未标明模型</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>95.1%</b></span>
+        <span><small>延迟</small><b>3.1s</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="2732">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/1574-tokeness-io">
+        <div class="card-head">
+          <div class="avatar">TO</div>
+          <div class="card-id">
+            <h3 class="card-title">Tokeness</h3>
+            <p class="card-sub">tokeness.io</p>
+          </div>
+          <span class="badge ok">在线</span>
+        </div>
+        <p class="desc">Tokeness 价格不错 0.1x：opus-4-8 输入 ¥3.5/1M、gpt5.5 输入 ¥3.5/1M，站长近期推出 0.06x 倍率，学生党实测稳定。</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4.8 13.2l8.4 8.4a1.4 1.4 0 0 0 2 0l6.2-6.2a1.4 1.4 0 0 0 0-2L13 4.8A2 2 0 0 0 11.6 4H5.5A1.5 1.5 0 0 0 4 5.5v6.1a2 2 0 0 0 .8 1.6z"/><circle cx="8.2" cy="8.2" r="1.2"/></svg></span>低倍率</span><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.4S4.6 15.4 3.2 10.8C2.2 7.6 4 5 6.8 5c1.7 0 2.9 1 3.7 2.3C11.3 6 12.5 5 14.2 5c2.8 0 4.6 2.6 3.6 5.8C16.4 15.4 12 20.4 12 20.4z"/></svg></span>公益站</span><span class="model">GPT</span><span class="model">Claude</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>99.2%</b></span>
+        <span><small>延迟</small><b>3.3s</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="1574">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/2040-true-sota-com">
+        <div class="card-head">
+          <div class="avatar">TR</div>
+          <div class="card-id">
+            <h3 class="card-title">true-sota</h3>
+            <p class="card-sub">true-sota.com</p>
+          </div>
+          <span class="badge ok">在线</span>
+        </div>
+        <p class="desc">暂无简介，进去看整站状态和模型探测。</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.4S4.6 15.4 3.2 10.8C2.2 7.6 4 5 6.8 5c1.7 0 2.9 1 3.7 2.3C11.3 6 12.5 5 14.2 5c2.8 0 4.6 2.6 3.6 5.8C16.4 15.4 12 20.4 12 20.4z"/></svg></span>公益站</span><span class="model">未标明模型</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>100%</b></span>
+        <span><small>延迟</small><b>1.6s</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="2040">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/900035-ultrarouter-org">
+        <div class="card-head">
+          <div class="avatar">UL</div>
+          <div class="card-id">
+            <h3 class="card-title">UltraRouter</h3>
+            <p class="card-sub">ultrarouter.org</p>
+          </div>
+          <span class="badge wait">待测</span>
+        </div>
+        <p class="desc">UltraRouter 是一条 OpenAI 兼容的公益 API 线路，每天签到赠送 $28 额度；目前可用 Claude Opus 5、Claude Sonnet 5、DeepSeek V4 和 Grok 4.6 等模型。</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.4S4.6 15.4 3.2 10.8C2.2 7.6 4 5 6.8 5c1.7 0 2.9 1 3.7 2.3C11.3 6 12.5 5 14.2 5c2.8 0 4.6 2.6 3.6 5.8C16.4 15.4 12 20.4 12 20.4z"/></svg></span>公益站</span><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="15" rx="2.4"/><path d="M8 3.5v4M16 3.5v4M4 10h16"/><path d="M8.5 15.2l2.3 2.3 4.8-5"/></svg></span>签到送余额</span><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11h16v9.5a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 20.5V11z"/><path d="M3.5 7.5h17v3.5h-17z"/><path d="M12 7.5v14.5"/><path d="M12 7.5c0-2.4-1.6-4-3.4-4S6 6 7.2 7.8C8 8.8 10 9.2 12 7.5z"/><path d="M12 7.5c0-2.4 1.6-4 3.4-4S18 6 16.8 7.8C16 8.8 14 9.2 12 7.5z"/></svg></span>新用户赠额</span><span class="model">GPT</span><span class="model">Claude</span><span class="model">Grok</span><span class="model">DeepSeek</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>—</b></span>
+        <span><small>延迟</small><b>—</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="900035">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/900017-v-api-de5-net">
+        <div class="card-head">
+          <div class="avatar">V-</div>
+          <div class="card-id">
+            <h3 class="card-title">V-API 公益站</h3>
+            <p class="card-sub">v-api.de5.net</p>
+          </div>
+          <span class="badge wait">待测</span>
+        </div>
+        <p class="desc">V-API 公益站是我这两天才摸到的新灶——2026年7月3日刚挂牌，公告、logo、后台启动时间三处戳互证，柴火都还没烧热，LinuxDo 上挂的 CDK 兑换码开张当天就被薅空三轮。</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.4S4.6 15.4 3.2 10.8C2.2 7.6 4 5 6.8 5c1.7 0 2.9 1 3.7 2.3C11.3 6 12.5 5 14.2 5c2.8 0 4.6 2.6 3.6 5.8C16.4 15.4 12 20.4 12 20.4z"/></svg></span>公益站</span><span class="model">GPT</span><span class="model">DeepSeek</span><span class="model">GLM</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>—</b></span>
+        <span><small>延迟</small><b>—</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="900017">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/1192-vsllm-com">
+        <div class="card-head">
+          <div class="avatar">VS</div>
+          <div class="card-id">
+            <h3 class="card-title">vsllm.com</h3>
+            <p class="card-sub">vsllm.com</p>
+          </div>
+          <span class="badge ok">在线</span>
+        </div>
+        <p class="desc">暂无更多描述</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.4S4.6 15.4 3.2 10.8C2.2 7.6 4 5 6.8 5c1.7 0 2.9 1 3.7 2.3C11.3 6 12.5 5 14.2 5c2.8 0 4.6 2.6 3.6 5.8C16.4 15.4 12 20.4 12 20.4z"/></svg></span>公益站</span><span class="model">未标明模型</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>98.9%</b></span>
+        <span><small>延迟</small><b>2.4s</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="1192">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/3748-x666-me">
+        <div class="card-head">
+          <div class="avatar">X6</div>
+          <div class="card-id">
+            <h3 class="card-title">x666</h3>
+            <p class="card-sub">x666.me</p>
+          </div>
+          <span class="badge ok">在线</span>
+        </div>
+        <p class="desc">暂无简介，进去看整站状态和模型探测。</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.4S4.6 15.4 3.2 10.8C2.2 7.6 4 5 6.8 5c1.7 0 2.9 1 3.7 2.3C11.3 6 12.5 5 14.2 5c2.8 0 4.6 2.6 3.6 5.8C16.4 15.4 12 20.4 12 20.4z"/></svg></span>公益站</span><span class="model">未标明模型</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>100%</b></span>
+        <span><small>延迟</small><b>1.4s</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="3748">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article></div>
+    </section><!--/STATIC_GRID--></div>
+        <div class="pager" id="pager"></div>
+        
+      </div>
+    </main>
+
+    <main id="detail" class="detail" hidden></main>
+    <main id="officialPage" class="detail official-page" hidden></main>
+
+    <footer class="site-foot">
+      <div class="site-foot-inner">
+        <section>
+          <a class="foot-brand" href="/">
+            <img src="/img/icon-192.png" width="40" height="40" alt="API中转站导航">
+            <div>
+              <strong>API中转站导航</strong>
+              <span>中转站导航 · 模型实况</span>
+            </div>
+          </a>
+          <p>用来对照第三方 API 中转站：先看 ChatGPT、Claude、DeepSeek 是否可用，再决定去哪家充值。目录按公益站、签到送余额、新用户赠额、低倍率、国内支付等分类排布。</p>
+          <p class="foot-keys">
+            <a href="/cat/charity">公益站</a>
+            <a href="/cat/cheaprate">低倍率API</a>
+            <a href="/cat/checkin">签到送余额</a>
+            <a href="/cat/gift">新用户赠额</a>
+            <a href="/cat/pay">国内支付API</a>
+            <a href="/cat/fast">低延迟中转</a>
+            <a href="/cat/highup">高可用API</a>
+            <a href="/model/gpt">ChatGPT中转</a>
+            <a href="/model/claude">Claude中转</a>
+            <a href="/model/deepseek">DeepSeek API</a>
+          </p>
+        </section>
+        <section>
+          <h3>怎么用</h3>
+          <p>顶部看官方模型实况，中间按分类浏览站点。卡片上的可用率和延迟来自整站探测，模型标签从站点简介提取，投票记在本站。充值前建议小额实测，对方站点规则以他们自己的页面为准。</p>
+        </section>
+        <section>
+          <h3>说明</h3>
+          <p>收录的都是第三方中转，不是官方渠道。状态会变，本站不保证任何站点的额度、价格或稳定性，也不提供官方上游充值。探币只记在这台电脑上，和中转站自己的签到余额不是一回事。</p>
+        </section>
+        <section id="contact">
+          <h3>联系我们</h3>
+          <p class="foot-contact">
+            邮箱 <a href="mailto:2201219073@qq.com">2201219073@qq.com</a><br>
+            QQ <a href="https://wpa.qq.com/msgrd?v=3&amp;uin=2201219073&amp;site=qq&amp;menu=yes" target="_blank" rel="noopener noreferrer">2201219073</a>
+          </p>
+        </section>
+      </div>
+      <p class="foot-copy">© API中转站导航 · 仅作导航对照，充值与使用风险自负</p>
+    </footer>
+  </div>
+
+  <div class="drawer-mask" id="drawerMask">
+    <div class="drawer" id="drawerBody"></div>
+  </div>
+  <div class="fab-dock" id="fabDock">
+    <button class="fab" id="toTopBtn" type="button" aria-label="回到顶部" title="回到顶部">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5"/><path d="m6 11 6-6 6 6"/></svg>
+    </button>
+    <button class="fab" id="fabThemeBtn" type="button" aria-label="切换浅色或深色" title="切换颜色">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 14.5A8.5 8.5 0 1 1 9.5 3 7 7 0 0 0 21 14.5z"/></svg>
+    </button>
+  </div>
+  <div class="toast" id="toast"></div>
+
+  <script src="/js/stations-data.js"></script>
+  <script src="/js/store.js"></script>
+  <script src="/js/icons.js"></script>
+  <script src="/js/seo.js"></script>
+  <script src="/js/official.js"></script>
+  <script src="/js/app.js"></script>
+</body>
+</html>

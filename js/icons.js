@@ -25,6 +25,8 @@ const CAT_ICON_PATH = {
   special:
     '<path d="M12 3.5l1.6 4.6L18.5 9l-3.6 3.1 1.1 4.9L12 14.8 8 17l1.1-4.9L5.5 9l4.9-.9L12 3.5z"/><path d="M18.8 4.2l.5 1.5 1.5.5-1.5.5-.5 1.5-.5-1.5-1.5-.5 1.5-.5z"/>',
   new: '<circle cx="12" cy="12" r="8.2"/><path d="M12 8.4v7.2M8.4 12h7.2"/>',
+  charity:
+    '<path d="M12 20.4S4.6 15.4 3.2 10.8C2.2 7.6 4 5 6.8 5c1.7 0 2.9 1 3.7 2.3C11.3 6 12.5 5 14.2 5c2.8 0 4.6 2.6 3.6 5.8C16.4 15.4 12 20.4 12 20.4z"/>',
   online:
     '<path d="M5 12a7 7 0 0 1 14 0"/><path d="M8.2 12a3.8 3.8 0 0 1 7.6 0"/><circle cx="12" cy="16.4" r="1.3"/>',
   fav: '<path d="M12 4.4l2.2 4.6 5 .7-3.6 3.5.9 5.1L12 16l-4.5 2.3.9-5.1L4.8 9.7l5-.7L12 4.4z"/>',
@@ -57,4 +59,8 @@ function voteIcon(dir) {
     return svgIcon('<path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/>', "vote-ico");
   }
   return svgIcon('<path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/>', "vote-ico");
+}
+
+if (typeof module === "object" && module.exports) {
+  module.exports = { svgIcon, catIcon, modelIcon, voteIcon, CAT_ICON_PATH, MODEL_ICON_PATH };
 }

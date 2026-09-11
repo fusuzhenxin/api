@@ -15,6 +15,7 @@ const ROOT = path.resolve(__dirname, "..");
 const SOURCE = "https://www.zuiquanapi.com";
 const UA = "XianTanNav/1.0 (local catalog sync)";
 const { fetchOfficialStatuses } = require("./official");
+const { mergeCharityIntoPayload } = require("./scrape-charity");
 
 const CATEGORY_MAP = {
   "premium-stable": { id: "stable", name: "稳定企业向" },
@@ -447,11 +448,22 @@ async function main() {
       { id: "cheap", name: "便宜个人向" },
       { id: "special", name: "小有特色" },
       { id: "new", name: "新站上榜" },
+      { id: "charity", name: "公益站" },
       { id: "online", name: "当前在线" },
       { id: "fav", name: "我的收藏" },
     ],
     stations,
   };
+
+  console.log("合并公益站…");
+  try {
+    const charity = await mergeCharityIntoPayload(payload);
+    console.log(
+      `公益站 ${charity.total}：打标 ${charity.tagged}，新补 ${charity.created}，跳过 ${charity.skipped}`
+    );
+  } catch (err) {
+    console.warn("charity merge fail", err.message);
+  }
 
   const dataDir = path.join(ROOT, "data");
   const jsDir = path.join(ROOT, "js");
@@ -466,6 +478,11 @@ async function main() {
 
   const online = stations.filter((s) => s.status && s.status.online).length;
   console.log(`完成：${stations.length} 个站点，在线 ${online}，已写入 data/stations.json`);
+  console.log("生成静态页…");
+  require("child_process").execFileSync(process.execPath, [path.join(__dirname, "make_sitemap.js")], {
+    cwd: ROOT,
+    stdio: "inherit",
+  });
 }
 
 main().catch((err) => {

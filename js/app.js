@@ -1,6 +1,7 @@
 const PREVIEW_SIZE = 6;
 const MORE_STEP = 12;
 const HOME_SECTIONS = [
+  "charity",
   "stable",
   "cheap",
   "special",
@@ -18,9 +19,10 @@ const HOME_SECTIONS = [
 ];
 const TYPE_SECTIONS = HOME_SECTIONS;
 const CAT_PAGE_SIZE = 24;
-const FEATURE_CHIPS = ["checkin", "gift", "cheaprate", "fast", "pay", "invite", "crypto", "invoice"];
+const FEATURE_CHIPS = ["charity", "checkin", "gift", "cheaprate", "fast", "pay", "invite", "crypto", "invoice"];
 const NAV_CATS = [
   "all",
+  "charity",
   "stable",
   "cheap",
   "special",
@@ -74,6 +76,7 @@ const CATEGORY_LABEL = {
   cheap: "便宜个人向",
   special: "小有特色",
   new: "新站上榜",
+  charity: "公益站",
   other: "更多收录",
   online: "当前在线",
   fav: "我的收藏",
@@ -178,6 +181,11 @@ function paintSeo(r) {
   const ctx = { total: state.data && state.data.stations ? state.data.stations.length : 0 };
   if (r.name === "site" && state.data) ctx.station = state.data.stations.find((s) => s.id === r.id);
   if (r.name === "official" && state.data) ctx.official = ((state.data.official) || []).find((x) => x.provider === r.provider);
+  if (r.name === "cat" && state.data) {
+    const list = stationsByCategory(r.id);
+    ctx.stations = r.id === "charity" ? list : [];
+    ctx.count = list.length;
+  }
   applySeo(seoFor(r, ctx));
 }
 
@@ -267,6 +275,8 @@ function sortStations(list) {
       return n > 0 ? n : 9e9;
     };
     copy.sort((a, b) => ms(a) - ms(b));
+  } else if (!state.sort && list.length && list.every((s) => (s.categories || []).includes("charity"))) {
+    copy.sort((a, b) => (b.charityPin || 0) - (a.charityPin || 0) || String(a.name || "").localeCompare(String(b.name || ""), "zh"));
   }
   return copy;
 }
@@ -412,6 +422,34 @@ function rememberLocalTally(id, data) {
   applyLocalVotes();
 }
 
+function optimisticVote(id, dir) {
+  const extra = extraVotes(id);
+  const prev = myVote(id);
+  let up = extra.up || 0;
+  let down = extra.down || 0;
+  let mine = "";
+  if (prev === dir) {
+    if (dir === "up") up = Math.max(0, up - 1);
+    else down = Math.max(0, down - 1);
+  } else {
+    if (prev === "up") up = Math.max(0, up - 1);
+    if (prev === "down") down = Math.max(0, down - 1);
+    if (dir === "up") up += 1;
+    else down += 1;
+    mine = dir;
+  }
+  return { up, down, mine };
+}
+
+function refreshVoteButtons() {
+  applyLocalVotes();
+  document.querySelectorAll("[data-vote-wrap]").forEach((box) => {
+    const id = box.getAttribute("data-vote-wrap");
+    const site = state.data && state.data.stations.find((s) => Number(s.id) === Number(id));
+    if (site) box.outerHTML = votePairHtml(site);
+  });
+}
+
 async function loadVotes() {
   try {
     const res = await fetch("/api/votes?voter=" + encodeURIComponent(voterId()), { cache: "no-store" });
@@ -419,7 +457,7 @@ async function loadVotes() {
     const data = await res.json();
     state.localVotes = data.stations || {};
     state.myVotes = data.mine || {};
-    applyLocalVotes();
+    refreshVoteButtons();
   } catch {
     /* file:// or vote store offline */
   }
@@ -454,6 +492,9 @@ function paintVotes(id) {
 }
 
 async function castVote(id, dir) {
+  const prev = { extra: extraVotes(id), mine: myVote(id) };
+  rememberLocalTally(id, optimisticVote(id, dir));
+  paintVotes(id);
   try {
     const res = await fetch("/api/votes", {
       method: "POST",
@@ -467,16 +508,28 @@ async function castVote(id, dir) {
     toast(data.mine === "up" ? "已点赞" : data.mine === "down" ? "已点踩" : "已取消投票");
   } catch (err) {
     console.warn(err);
-    toast("投票没记下，确认本地服务已启动");
+    rememberLocalTally(id, { up: prev.extra.up || 0, down: prev.extra.down || 0, mine: prev.mine || "" });
+    paintVotes(id);
+    toast("投票没记下，请稍后再试");
   }
+}
+
+function catExtraHtml(cat, count) {
+  if (typeof catBodyHtml === "function") {
+    const html = catBodyHtml(cat, { esc: escapeHtml, includeHeading: false, includeToc: false, count });
+    return html ? `<article class="seo-article">${html}</article>` : "";
+  }
+  return "";
 }
 
 function typeBlock(cat, list) {
   const shown = list.slice(0, PREVIEW_SIZE);
+  const href = cat === "other" ? "" : catPath(cat);
+  const title = `${catIcon(cat)}<span>${escapeHtml(CATEGORY_LABEL[cat] || cat)}</span>`;
   return `
     <section class="type-block" id="type-${escapeHtml(cat)}">
       <div class="type-head">
-        <h2>${catIcon(cat)}<span>${escapeHtml(CATEGORY_LABEL[cat] || cat)}</span></h2>
+        <h2>${href ? `<a class="type-jump" href="${href}">${title}</a>` : title}</h2>
         <div class="type-actions">
           <span>${shown.length}/${list.length} 站</span>
           ${moreButton(cat, list.length, shown.length, "link")}
@@ -815,18 +868,21 @@ function renderCatPage(cat) {
   const key = "page:" + cat;
   const shownN = shownCount(key, list.length, CAT_PAGE_SIZE);
   const slice = list.slice(0, shownN);
+  const extra = (typeof CAT_SEO !== "undefined" && CAT_SEO[cat]) || {};
   const label = CATEGORY_LABEL[cat] || cat;
-  const blurb = (typeof CAT_SEO !== "undefined" && CAT_SEO[cat] && CAT_SEO[cat].desc) || `${label}分类下的 API 中转站，对照 ChatGPT、Claude、DeepSeek 可用性与延迟。`;
+  const h1 = extra.h1 || label;
+  const blurb = extra.desc || `${label}分类下的 API 中转站，对照 ChatGPT、Claude、DeepSeek 可用性与延迟。`;
   $("#resultMeta").innerHTML = `${escapeHtml(label)} <b>${list.length}</b> 站 · 探测在线 ${g.online || "—"}`;
   $("#grid").innerHTML = `
-    <p class="cat-back crumbs"><a href="/">首页</a><span>/</span><span>${escapeHtml(label)} API中转站</span></p>
+    <p class="cat-back crumbs"><a href="/">首页</a><span>/</span><a href="${catPath(cat)}">${escapeHtml(label)}</a></p>
     <section class="type-block" id="type-${escapeHtml(cat)}">
       <div class="type-head">
-        <h1>${catIcon(cat)}<span>${escapeHtml(label)} API中转站推荐</span></h1>
+        <h1>${catIcon(cat)}<span>${escapeHtml(h1)}</span></h1>
       </div>
       <p class="seo-lead">${escapeHtml(blurb)} 本页 ${list.length} 站。</p>
+      ${catExtraHtml(cat, list.length)}
       <div class="type-head">
-        <h2 class="related-title">站点列表</h2>
+        <h2 class="related-title">${escapeHtml(label)}站点列表</h2>
         <div class="type-actions">
           <span>${shownN}/${list.length} 站</span>
           ${moreButton(key, list.length, shownN, "page")}
@@ -862,7 +918,7 @@ function renderModelPage(id) {
       <div class="type-head">
         <h1>${modelIcon(id)}<span>${escapeHtml(h1)}</span></h1>
       </div>
-      <p class="seo-lead">${escapeHtml(blurb)} 本页 ${list.length} 站。也可按<a href="${catPath("cheaprate")}">低倍率</a>、<a href="${catPath("checkin")}">签到送余额</a>、<a href="${catPath("pay")}">国内支付</a>。</p>
+      <p class="seo-lead">${escapeHtml(blurb)} 本页 ${list.length} 站。也可按<a href="${catPath("charity")}">公益站</a>、<a href="${catPath("cheaprate")}">低倍率</a>、<a href="${catPath("checkin")}">签到送余额</a>、<a href="${catPath("pay")}">国内支付</a>。</p>
       <ol class="pick-tips">
         <li>先看探测在线和延迟，再看投票。</li>
         <li>便宜不等于每个模型都通，先小额实测。</li>
@@ -892,6 +948,7 @@ function featChips(site) {
 }
 
 function cardHtml(site) {
+  const known = site.status && site.status.online != null;
   const online = site.status && site.status.online;
   const models = (site.models || [])
     .slice(0, 5)
@@ -906,7 +963,7 @@ function cardHtml(site) {
             <h3 class="card-title">${escapeHtml(site.name)}</h3>
             <p class="card-sub">${escapeHtml(site.domain || site.tag || "第三方中转")}${site.promoted ? " · 精选" : ""}</p>
           </div>
-          <span class="badge ${online ? "ok" : "bad"}">${online ? "在线" : "异常"}</span>
+          <span class="badge ${known ? (online ? "ok" : "bad") : "wait"}">${known ? (online ? "在线" : "异常") : "待测"}</span>
         </div>
         <p class="desc">${escapeHtml(site.description || "暂无简介，进去看整站状态和模型探测。")}</p>
         <div class="models">${featChips(site)}${models || `<span class="model">未标明模型</span>`}</div>
@@ -1066,7 +1123,7 @@ function metricGridHtml(site) {
 
 function relatedStations(site, n) {
   const cats = site.features || site.categories || [];
-  const cat = cats.find((c) => c !== "online") || cats[0];
+  const cat = cats.includes("charity") ? "charity" : cats.find((c) => c !== "online") || cats[0];
   const pool = state.data.stations.filter((s) => s.id !== site.id && (!cat || (s.categories || []).includes(cat)));
   return sortStations(pool).slice(0, n || 6);
 }
@@ -1085,7 +1142,8 @@ function renderDetail(id) {
   const checks = site.checks || [];
   const models = modelNames(site);
   const modelText = models.slice(0, 6).join("、") || "未标明具体模型";
-  const cat = (site.features || site.categories || [])[0];
+  const cats = site.features || site.categories || [];
+  const cat = cats.includes("charity") ? "charity" : cats[0];
   const catLabel = CATEGORY_LABEL[cat] || "API中转";
   const related = relatedStations(site, 6);
   const verdict = siteVerdict(site);
@@ -1103,9 +1161,9 @@ function renderDetail(id) {
     <section class="detail-hero">
       ${avatar(site, true)}
       <div>
-        <h1>${escapeHtml(site.name)} API中转站测评</h1>
+        <h1>${escapeHtml(site.name)}${(site.categories || []).includes("charity") ? "（公益站）" : ""}</h1>
         <div class="models">
-          <span class="badge ${online ? "ok" : "bad"}">${online ? "整站在线" : "整站异常"}</span>
+          <span class="badge ${site.status && site.status.online != null ? (online ? "ok" : "bad") : "wait"}">${site.status && site.status.online != null ? (online ? "整站在线" : "整站异常") : "尚未探测"}</span>
           ${site.promoted ? `<span class="badge">精选</span>` : ""}
           <span class="badge">${escapeHtml(site.tag || "第三方中转")}</span>
           ${(site.features || site.categories || []).map((c) => `<a class="model" href="${catPath(c)}">${catIcon(c)}${escapeHtml(CATEGORY_LABEL[c] || c)}</a>`).join("")}
@@ -1123,7 +1181,7 @@ function renderDetail(id) {
     </section>
     <section class="panel">
       <h2>${escapeHtml(site.name)} 是什么中转站？</h2>
-      <p class="article">${escapeHtml(site.name)}（${escapeHtml(site.domain || "第三方域名")}）是本站收录的 API 中转站，常见用途是对接 ChatGPT、Claude、DeepSeek、Gemini 等模型。当前探测${online ? "在线" : "异常"}。页面里的模型与倍率来自站点简介，不代替官方渠道。</p>
+      <p class="article">${escapeHtml(site.name)}（${escapeHtml(site.domain || "第三方域名")}）是本站收录的 ${ (site.categories || []).includes("charity") ? "公益 API 站" : "API 中转站"}，常见用途是对接 ChatGPT、Claude、DeepSeek、Gemini 等模型。当前探测${site.status && site.status.online != null ? (online ? "在线" : "异常") : "尚未探测"}。页面里的模型与倍率来自站点简介，不代替官方渠道。</p>
     </section>
     <section class="panel">
       <h2>模型与倍率</h2>
@@ -1148,19 +1206,25 @@ function renderDetail(id) {
         <dd>${escapeHtml(modelText)}。具体以对方控制台为准，本站按简介提取标签。</dd>
         <dt>延迟和可用性怎么看？</dt>
         <dd>可用率来自整站探测，延迟是最近几次访问耗时。在线不等于每个模型都通，ChatGPT 中转、Claude API 仍建议先小额测试。</dd>
-        <dt>怎么充值更稳妥？</dt>
-        <dd>先看本页探测和投票，再去对方站小额充值。${cat ? `同类还可看<a href="${catPath(cat)}">${escapeHtml(catLabel)} API中转站</a>。` : ""}本站不代收、不保证额度。</dd>
+        <dt>${(site.categories || []).includes("charity") ? escapeHtml(site.name) + " 是公益站吗？" : "怎么充值更稳妥？"}</dt>
+        <dd>${
+          (site.categories || []).includes("charity")
+            ? `本站把它归在<a href="${catPath("charity")}">公益站</a>/免费API。额度以对方页面为准，可能随时关停，请勿压测囤号。本站不代收、不保证额度。`
+            : `先看本页探测和投票，再去对方站小额充值。${cat ? `同类还可看<a href="${catPath(cat)}">${escapeHtml(catLabel)} API中转站</a>。` : ""}本站不代收、不保证额度。`
+        }</dd>
       </dl>
     </section>
     ${
       related.length
-        ? `<section><h2 class="related-title">同类 API 中转站</h2><div class="grid">${related.map(cardHtml).join("")}</div></section>`
+        ? `<section><h2 class="related-title">${(site.categories || []).includes("charity") ? "同类公益站" : "同类 API 中转站"}</h2><div class="grid">${related.map(cardHtml).join("")}</div></section>`
         : ""
     }
   `;
 }
 
 function render() {
+  const seoStatic = $("#seoStatic");
+  if (seoStatic) seoStatic.remove();
   refreshWallet();
   if (location.protocol !== "file:" && /^\/rank(\/|$)/i.test(location.pathname)) {
     history.replaceState({}, "", "/");
@@ -1409,10 +1473,10 @@ async function boot() {
     $("#app").innerHTML = `<div class="empty">还没有本地数据。在项目目录运行 <code>node scripts/scrape.js</code> 后再打开。</div>`;
     return;
   }
-  await loadVotes();
   $("#updatedAt").textContent = "数据更新于 " + fmtTime(state.data.updatedAt);
   renderOfficial();
   render();
+  loadVotes();
   refreshOfficialStatus();
 }
 

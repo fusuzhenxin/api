@@ -2,6 +2,7 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "regions": ["sin1"],
+  "buildCommand": "node scripts/make_sitemap.js",
   "headers": [
     {
       "source": "/js/stations-data.js",

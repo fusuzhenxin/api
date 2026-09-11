@@ -1,6 +1,12 @@
+site/*.html
 data/og/
 data/votes.json.lock
 __pycache__/
 *.pyc
 .DS_Store
 node_modules/
+.env
+.env.local
+.env.*.local
+.vercel
+.env*

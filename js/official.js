@@ -326,7 +326,7 @@ function saveCachedFeed(provider, xml) {
 async function readFeedText(item) {
   const urls = [];
   if (typeof location !== "undefined" && /^https?:$/.test(location.protocol)) {
-    urls.push("api/official/" + item.provider);
+    urls.push("/api/official/" + item.provider);
   }
   urls.push(item.rss);
   for (const extra of item.rssFallbacks || []) urls.push(extra);

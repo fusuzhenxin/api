@@ -20,6 +20,8 @@
     "国内支付API",
     "新用户赠额",
     "签到送余额",
+    "公益站",
+    "免费API",
     "OpenAI中转",
     "ChatGPT中转站",
     "GPT-4o API",
@@ -43,6 +45,7 @@
     cheap: "便宜个人向",
     special: "小有特色",
     new: "新站上榜",
+    charity: "公益站",
     other: "更多收录",
     online: "当前在线",
     fav: "我的收藏",
@@ -113,6 +116,44 @@
       title: "新站上榜API中转_最新收录站点",
       desc: "本站新收录的API中转站。新站波动可能更大，建议先看探测、小额测试再决定。",
       keys: "新API中转站,新站推荐",
+    },
+    charity: {
+      title: "公益站对照_免费API入口与使用注意",
+      h1: "公益站对照",
+      desc: "对照用爱发电的免费 API 入口：常见登录门槛、停更和限流风险。本站只做导航，不代收、不保证额度，适合先看清楚再决定要不要用。",
+      keys: "公益站,免费API,公益API",
+      sections: [
+        {
+          h: "公益站是什么",
+          p: "公益站一般指个人或小团队用爱发电、对外提供免费调用额度的 API 入口。常见做法是注册送一点额度、每日签到、或用 GitHub、LinuxDo 登录后再领。它不是 OpenAI、Anthropic 的官方渠道，也很少承诺稳定性和售后。",
+        },
+        {
+          h: "本站怎么收录",
+          p: "本页只收录能核到公开入口的公益站，并对照简介里的门槛和玩法。名单会变：失效的会沉下去，新出现的会补进来。我们不代管这些站，也不保证某一天还能打开。卡片上的「待测」表示本站还没做完整探测，不是说对方一定可用。",
+        },
+        {
+          h: "怎么选、怎么用",
+          p: "先看登录门槛和规则，再看自己能不能接受随时停服。需要 Claude Code、Codex 这类客户端的，确认对方是否真开放对应协议。额度够日常试一试就行，不要把生产任务或大量请求压上去。用之前建议先打开对方页面，看公告是不是还在更新。",
+        },
+        {
+          h: "不适合把公益站当主力",
+          p: "公益站资源有限。压测、囤号、把入口发到大群，都会把仅有的额度薅干，最后大家都不能用。要稳定跑业务，应该看付费中转或官方接口，并先小额实测。本站不代收充值，也不鉴定对方模型是不是「官方原厂」。",
+        },
+      ],
+      faq: [
+        {
+          q: "公益站和普通 API 中转有什么区别？",
+          a: "普通中转多是付费买额度；公益站主打免费额度。公益站更便宜，但停更、限流、改规则都更常见，适合试用，不适合当长期主力。",
+        },
+        {
+          q: "这里的名单会保证能用吗？",
+          a: "不会。本站只做对照导航。入口、额度、模型是否还开放，都以对方当前页面为准。失效或长期不更新的站，我们会尽量往后排或拿下。",
+        },
+        {
+          q: "用公益站要注意什么？",
+          a: "请勿压测、勿囤号、勿把入口发到大群。涉及账号登录的，先看对方是否只接受特定邮箱或社区等级。本站不代收、不保管任何 API Key。",
+        },
+      ],
     },
     online: {
       title: "当前在线API中转站_可用GPT接口",
@@ -324,8 +365,22 @@
     const upVotes = (site.votes && site.votes.up) || 0;
     const downVotes = (site.votes && site.votes.down) || 0;
     const isNew = ((site.categories || []).indexOf("new") >= 0);
+    const isCharity = ((site.categories || []).indexOf("charity") >= 0);
+    const known = site.status && site.status.online != null;
     const notes = [];
     if (isNew) notes.push("还在新站观察期，样本还少");
+    if (isCharity) notes.push("公益站用爱发电，资源有限、可能随时关停");
+
+    if (!known) {
+      return {
+        id: "watch",
+        label: isCharity ? "公益待测" : "待测",
+        sentence: isCharity
+          ? site.name + " 是公益站，整站探测尚未覆盖。免费额度可能随时关停或限流，先看对方页面再试用。"
+          : site.name + " 尚未探测，先别大额充值。",
+        notes,
+      };
+    }
 
     if (!online) {
       return {
@@ -394,15 +449,15 @@
 
   function homeSeo(ctx) {
     const n = (ctx.total != null ? ctx.total : 4000) + "+";
-    const title = "API中转站导航_ChatGPT/Claude/DeepSeek中转推荐";
+    const title = "API中转站导航_对照ChatGPT/Claude/DeepSeek再充值";
     const description =
       "本站收录" +
       n +
-      "家API中转站，实时对照ChatGPT中转、Claude API、DeepSeek API的可用性与延迟。按低倍率、签到送余额、国内支付筛选，充值前先看模型活着。";
+      "家第三方 API 中转，并单独对照公益站免费入口。看 ChatGPT、Claude、DeepSeek 是否在线、延迟如何，再决定去哪家。本站不代收充值。";
     return pack({
       title,
       description,
-      keywords: KEYWORDS.join(","),
+      keywords: uniqueKeywords("API中转站", "ChatGPT中转", "Claude中转", "DeepSeek API", "公益站", "低倍率API"),
       h1: "API中转站导航，先看 ChatGPT / Claude / DeepSeek 再充值",
       lead: description,
       path: "/",
@@ -453,6 +508,14 @@
                 text: "不是。签到送余额是中转站自己给的额度；探币只记在这台电脑上，不能用来给对方站充值。",
               },
             },
+            {
+              "@type": "Question",
+              name: "公益站能当主力用吗？",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "公益站多是网友用爱发电的免费额度，资源有限，可能随时关停或限流。本站只做对照，请勿压测、勿囤号，先看对方页面再决定要不要用。",
+              },
+            },
           ],
         },
       ],
@@ -464,7 +527,7 @@
     const label = MODEL_LABEL[id] || id;
     const title = (extra.title || label + "中转站") + "【API中转站导航】";
     const description = extra.desc || "本站收录支持" + label + "的API中转站，对照可用性与延迟后再充值。";
-    const keywords = [label, extra.keys, "API中转", "API中转站推荐"].filter(Boolean).join(",");
+    const keywords = uniqueKeywords(extra.keys, label);
     return pack({
       title,
       description,
@@ -493,37 +556,134 @@
     });
   }
 
+  function uniqueKeywords() {
+    const seen = new Set();
+    const out = [];
+    for (let i = 0; i < arguments.length; i += 1) {
+      String(arguments[i] || "")
+        .split(/[,，]/)
+        .forEach((raw) => {
+          const t = raw.trim();
+          if (t && !seen.has(t)) {
+            seen.add(t);
+            out.push(t);
+          }
+        });
+    }
+    return out.join(",");
+  }
+
+  function faqGraph(items) {
+    if (!items || !items.length) return null;
+    return {
+      "@type": "FAQPage",
+      mainEntity: items.map((row) => ({
+        "@type": "Question",
+        name: row.q,
+        acceptedAnswer: { "@type": "Answer", text: row.a },
+      })),
+    };
+  }
+
+  function catBodyHtml(id, opts) {
+    const extra = CAT_SEO[id] || {};
+    const escape = (opts && opts.esc) || esc;
+    const label = CAT_LABEL[id] || id;
+    const stations = (opts && opts.stations) || [];
+    const count = opts && opts.count;
+    const includeHeading = !!(opts && opts.includeHeading);
+    const includeToc = !!(opts && opts.includeToc);
+    const parts = [];
+    if (includeHeading) {
+      parts.push("<h1>" + escape(extra.h1 || label) + "</h1>");
+      parts.push(
+        '<p class="seo-lead">' +
+          escape(extra.desc || "") +
+          (count != null ? " 本页 " + count + " 站。" : "") +
+          "</p>"
+      );
+    }
+    (extra.sections || []).forEach((sec) => {
+      parts.push("<h2>" + escape(sec.h) + "</h2>");
+      parts.push("<p>" + escape(sec.p) + "</p>");
+    });
+    if (extra.faq && extra.faq.length) {
+      parts.push("<h2>常见问题</h2>");
+      parts.push('<dl class="seo-faq">');
+      extra.faq.forEach((row) => {
+        parts.push("<dt>" + escape(row.q) + "</dt><dd>" + escape(row.a) + "</dd>");
+      });
+      parts.push("</dl>");
+    }
+    if (includeToc && stations.length) {
+      parts.push("<h2>本页收录</h2>");
+      parts.push("<p>下面是目前对照到的公益站名称，点进去看入口和探测。简介和额度以对方当前页面为准。</p>");
+      parts.push('<ul class="seo-toc">');
+      stations.forEach((site) => {
+        parts.push("<li><a href=\"" + sitePath(site) + "\">" + escape(site.name) + "</a></li>");
+      });
+      parts.push("</ul>");
+    }
+    return parts.join("");
+  }
+
   function catSeo(id, ctx) {
     const label = CAT_LABEL[id] || id;
     const extra = CAT_SEO[id] || {};
-    const title = (extra.title || label + "API中转站") + "【API中转站导航】";
-    const description = extra.desc || "「" + label + "」分类下的API中转站，对照ChatGPT、Claude、DeepSeek可用性与延迟。";
-    const keywords = [label, extra.keys, KEYWORDS.slice(0, 8).join(",")].filter(Boolean).join(",");
+    const title = extra.title || label + " · API中转站导航";
+    const description = extra.desc || "「" + label + "」分类下的第三方 API 中转，先看探测再决定去哪家。";
+    const keywords = uniqueKeywords(extra.keys, label);
+    const stations = (ctx && ctx.stations) || [];
+    const origin = ctx && ctx.origin;
+    const count = ctx && ctx.count != null ? ctx.count : stations.length;
+    const graph = [
+      {
+        "@type": "CollectionPage",
+        name: extra.h1 || label,
+        description,
+        url: abs(origin, catPath(id)),
+        isPartOf: { "@type": "WebSite", name: "API中转站导航", url: abs(origin, "/") },
+        numberOfItems: count || undefined,
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "API中转站导航", item: abs(origin, "/") },
+          { "@type": "ListItem", position: 2, name: label, item: abs(origin, catPath(id)) },
+        ],
+      },
+    ];
+    if (id === "charity" && stations.length) {
+      graph.push({
+        "@type": "ItemList",
+        name: extra.h1 || label,
+        numberOfItems: count,
+        itemListElement: stations.slice(0, 20).map((site, i) => ({
+          "@type": "ListItem",
+          position: i + 1,
+          name: site.name,
+          url: abs(origin, sitePath(site)),
+        })),
+      });
+    }
+    const faq = faqGraph(extra.faq);
+    if (faq) graph.push(faq);
     return pack({
       title,
       description,
       keywords,
-      h1: label + " API中转站推荐",
+      h1: extra.h1 || label,
       lead: description,
       path: catPath(id),
       image: "/img/og.png",
       origin: ctx.origin,
-      graph: [
-        {
-          "@type": "CollectionPage",
-          name: title,
-          description,
-          url: abs(ctx.origin, catPath(id)),
-          isPartOf: { "@type": "WebSite", name: "API中转站导航", url: abs(ctx.origin, "/") },
-        },
-        {
-          "@type": "BreadcrumbList",
-          itemListElement: [
-            { "@type": "ListItem", position: 1, name: "API中转站导航", item: abs(ctx.origin, "/") },
-            { "@type": "ListItem", position: 2, name: label, item: abs(ctx.origin, catPath(id)) },
-          ],
-        },
-      ],
+      articleHtml: catBodyHtml(id, {
+        includeHeading: true,
+        includeToc: id === "charity",
+        stations: id === "charity" ? stations : [],
+        count,
+      }),
+      graph,
     });
   }
 
@@ -542,25 +702,33 @@
       });
     }
     const models = modelNames(site);
-    const modelText = models.slice(0, 4).join("/") || "GPT/Claude";
+    const isCharity = ((site.categories || []).indexOf("charity") >= 0);
+    const modelText = models.slice(0, 4).join("、") || "";
     const up = site.status && site.status.uptime != null ? site.status.uptime + "%" : "待测";
     const verdict = siteVerdict(site);
-    const title = site.name + " API中转测评_" + modelText + "倍率延迟【API中转站导航】";
+    const title = site.name + (isCharity ? "（公益站）" : "") + " · API中转站导航";
     const description = clip(
-      verdict.sentence + " 支持" + modelText + "，可用性" + up + "，延迟" + fmtMs(site.status && (site.status.avgMs || site.status.ms)) + "。",
+      isCharity
+        ? site.name + " 是本站对照的公益站。" + (modelText ? "简介提到" + modelText + "。" : "") + verdict.sentence
+        : verdict.sentence + (modelText ? " 简介提到" + modelText + "。" : "") + "可用性" + up + "，延迟" + fmtMs(site.status && (site.status.avgMs || site.status.ms)) + "。",
       160
     );
-    const keywords = [site.name, site.domain, modelText, "API中转", "ChatGPT中转", "Claude中转"].filter(Boolean).join(",");
+    const keywords = uniqueKeywords(site.name, site.domain, isCharity ? "公益站" : "API中转");
     const path = sitePath(site);
-    const faqQ1 = site.name + " 支持哪些模型？";
-    const faqA1 = "简介里提到：" + (modelText || "未标明") + "。具体以对方控制台为准，本站按简介提取标签。";
-    const faqQ2 = site.name + " 延迟和可用性怎么样？";
-    const faqA2 = "探测可用性" + up + "。在线不等于每个模型都通，ChatGPT、Claude 接口建议先小额测试。";
+    const crumbs = [
+      { "@type": "ListItem", position: 1, name: "API中转站导航", item: abs(ctx.origin, "/") },
+    ];
+    if (isCharity) {
+      crumbs.push({ "@type": "ListItem", position: 2, name: "公益站", item: abs(ctx.origin, catPath("charity")) });
+      crumbs.push({ "@type": "ListItem", position: 3, name: site.name, item: abs(ctx.origin, path) });
+    } else {
+      crumbs.push({ "@type": "ListItem", position: 2, name: site.name, item: abs(ctx.origin, path) });
+    }
     return pack({
       title,
       description,
       keywords,
-      h1: site.name + " API中转站测评",
+      h1: site.name + (isCharity ? "（公益站）" : ""),
       lead: verdict.sentence,
       verdict,
       path,
@@ -568,35 +736,15 @@
       origin: ctx.origin,
       graph: [
         {
-          "@type": "SoftwareApplication",
-          name: site.name + " API中转",
-          applicationCategory: "DeveloperApplication",
-          operatingSystem: "Web",
-          url: abs(ctx.origin, path),
+          "@type": "WebPage",
+          name: site.name,
           description,
-          offers: { "@type": "Offer", price: "0", priceCurrency: "CNY" },
+          url: abs(ctx.origin, path),
+          isPartOf: { "@type": "WebSite", name: "API中转站导航", url: abs(ctx.origin, "/") },
         },
         {
           "@type": "BreadcrumbList",
-          itemListElement: [
-            { "@type": "ListItem", position: 1, name: "API中转站导航", item: abs(ctx.origin, "/") },
-            { "@type": "ListItem", position: 2, name: site.name, item: abs(ctx.origin, path) },
-          ],
-        },
-        {
-          "@type": "FAQPage",
-          mainEntity: [
-            { "@type": "Question", name: faqQ1, acceptedAnswer: { "@type": "Answer", text: faqA1 } },
-            { "@type": "Question", name: faqQ2, acceptedAnswer: { "@type": "Answer", text: faqA2 } },
-            {
-              "@type": "Question",
-              name: "怎么给" + site.name + "充值更稳妥？",
-              acceptedAnswer: {
-                "@type": "Answer",
-                text: "先看本页探测和投票，再去对方站小额充值。本站不代收、不保证额度。",
-              },
-            },
-          ],
+          itemListElement: crumbs,
         },
       ],
     });
@@ -662,6 +810,7 @@
       path: seo.path,
       canonical,
       image,
+      articleHtml: seo.articleHtml || "",
       jsonld: JSON.stringify({
         "@context": "https://schema.org",
         "@graph": seo.graph || [],
@@ -670,7 +819,12 @@
   }
 
   function seoFor(route, ctx) {
-    const extra = { origin: originFrom(ctx || {}), total: ctx && ctx.total };
+    const extra = {
+      origin: originFrom(ctx || {}),
+      total: ctx && ctx.total,
+      stations: ctx && ctx.stations,
+      count: ctx && ctx.count,
+    };
     if (!route || route.name === "home") return homeSeo(extra);
     if (route.name === "cat") return catSeo(route.id, extra);
     if (route.name === "model") return modelSeo(route.id, extra);
@@ -686,7 +840,7 @@
     return pack({
       title: extra.title,
       description: extra.desc,
-      keywords: extra.keys + "," + KEYWORDS.slice(0, 6).join(","),
+      keywords: extra.keys,
       h1: extra.h1,
       lead: extra.lead,
       path,
@@ -865,5 +1019,7 @@
     applySeo,
     parseRoute,
     modelNames,
+    uniqueKeywords,
+    catBodyHtml,
   };
 });

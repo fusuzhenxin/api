@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI视频API中转站_视频生成接口【API中转站导航】</title>
+  <meta name="description" content="支持视频生成接口的API中转站。充值前先看本站探测，并小额实测对方模型。">
+  <meta name="keywords" content="视频API,AI视频接口,文生视频中转,视频">
+  <meta name="application-name" content="API中转站导航">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#070b14">
+  <meta name="msapplication-TileColor" content="#070b14">
+  <meta name="applicable-device" content="pc,mobile">
+  <meta name="msapplication-TileImage" content="/img/icon-192.png">
+  <link rel="canonical" href="https://www.veridrop.cn/model/video">
+  <link rel="sitemap" type="application/xml" href="https://www.veridrop.cn/sitemap.xml">
+  <link rel="icon" type="image/png" sizes="48x48" href="/img/icon-48.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/img/icon-96.png">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" sizes="16x16 32x32 48x48">
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="API中转站导航">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:title" content="AI视频API中转站_视频生成接口【API中转站导航】">
+  <meta property="og:description" content="支持视频生成接口的API中转站。充值前先看本站探测，并小额实测对方模型。">
+  <meta property="og:url" content="https://www.veridrop.cn/model/video">
+  <meta property="og:image" content="https://www.veridrop.cn/img/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AI视频API中转站_视频生成接口【API中转站导航】">
+  <meta name="twitter:description" content="支持视频生成接口的API中转站。充值前先看本站探测，并小额实测对方模型。">
+  <meta name="twitter:image" content="https://www.veridrop.cn/img/og.png">
+  <script type="application/ld+json" id="seo-jsonld">{"@context":"https://schema.org","@graph":[{"@type":"CollectionPage","name":"AI视频API中转站_视频生成接口【API中转站导航】","description":"支持视频生成接口的API中转站。充值前先看本站探测，并小额实测对方模型。","url":"https://www.veridrop.cn/model/video","isPartOf":{"@type":"WebSite","name":"API中转站导航","url":"https://www.veridrop.cn/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"API中转站导航","item":"https://www.veridrop.cn/"},{"@type":"ListItem","position":2,"name":"视频","item":"https://www.veridrop.cn/model/video"}]}]}</script>
+  <script>
+    (function () {
+      var saved = localStorage.getItem("xiantan.theme");
+      var theme = saved === "light" || saved === "dark"
+        ? saved
+        : (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="app" id="app">
+    <header class="topbar">
+      <div class="brand-cluster">
+        <a class="brand" href="/" aria-label="API中转站导航首页">
+          <img class="logo-mark" src="/img/icon-192.png" width="36" height="36" alt="API中转站导航">
+          <p class="brand-title">API中转站导航</p>
+        </a>
+      </div>
+      <nav class="top-links">
+        <a class="top-contact" href="/cat/charity">公益站</a>
+        <a class="top-contact" id="contactTop" href="#contact">联系我们</a>
+      </nav>
+    </header>
+
+    <main id="home" class="home-shell is-cat">
+      <aside class="sidebar">
+        <h3>有用分类</h3>
+        <nav class="filters" id="cats">
+          <button class="filter active" data-cat="all" type="button"><i>▦</i><span>全部中转</span></button>
+          <button class="filter" data-cat="charity" type="button"><i>♥</i><span>公益站</span></button>
+          <button class="filter" data-cat="stable" type="button"><i>▣</i><span>稳定企业向</span></button>
+          <button class="filter" data-cat="cheap" type="button"><i>◇</i><span>便宜个人向</span></button>
+          <button class="filter" data-cat="special" type="button"><i>✦</i><span>小有特色</span></button>
+          <button class="filter" data-cat="new" type="button"><i>＋</i><span>新站上榜</span></button>
+          <button class="filter" data-cat="online" type="button"><i>●</i><span>当前在线</span></button>
+          <button class="filter" data-cat="checkin" type="button"><i>日</i><span>签到送余额</span></button>
+          <button class="filter" data-cat="gift" type="button"><i>赠</i><span>新用户赠额</span></button>
+          <button class="filter" data-cat="cheaprate" type="button"><i>低</i><span>低倍率</span></button>
+          <button class="filter" data-cat="fast" type="button"><i>快</i><span>低延迟</span></button>
+          <button class="filter" data-cat="pay" type="button"><i>付</i><span>国内支付</span></button>
+          <button class="filter" data-cat="invite" type="button"><i>邀</i><span>邀请返利</span></button>
+          <button class="filter" data-cat="crypto" type="button"><i>U</i><span>加密充值</span></button>
+          <button class="filter" data-cat="invoice" type="button"><i>票</i><span>可开发票</span></button>
+          <button class="filter" data-cat="highup" type="button"><i>稳</i><span>高可用</span></button>
+          <button class="filter" data-cat="fav" type="button"><i>★</i><span>我的收藏</span></button>
+        </nav>
+        <h3>模型筛选</h3>
+        <div class="model-filters" id="modelFilters">
+          <button class="filter" data-model="gpt" type="button"><i>G</i><span>GPT</span></button>
+          <button class="filter" data-model="claude" type="button"><i>C</i><span>Claude</span></button>
+          <button class="filter" data-model="gemini" type="button"><i>N</i><span>Gemini</span></button>
+          <button class="filter" data-model="grok" type="button"><i>X</i><span>Grok</span></button>
+          <button class="filter" data-model="deepseek" type="button"><i>D</i><span>DeepSeek</span></button>
+          <button class="filter" data-model="kimi" type="button"><i>K</i><span>Kimi</span></button>
+          <button class="filter" data-model="qwen" type="button"><i>Q</i><span>Qwen</span></button>
+          <button class="filter" data-model="glm" type="button"><i>智</i><span>GLM</span></button>
+          <button class="filter" data-model="image" type="button"><i>图</i><span>生图</span></button>
+          <button class="filter" data-model="video" type="button"><i>影</i><span>视频</span></button>
+        </div>
+      </aside>
+      <div class="main-col">
+        <section class="hero">
+          <h1>AI 视频 API 中转站推荐</h1>
+          <p class="seo-lead">支持视频生成接口的API中转站。充值前先看本站探测，并小额实测对方模型。</p>
+          <form class="search-box" id="searchForm">
+            <input id="q" type="search" placeholder="搜站点、模型、倍率或域名" autocomplete="off">
+            <button class="btn" id="randomBtn" type="button">随机探一站</button>
+            <button class="btn btn-primary" type="submit">搜索</button>
+          </form>
+          <section class="official-wrap">
+            <div class="official-head">
+              <h3>官方模型实况</h3>
+              <span id="officialMeta">已同步官方订阅 · 09/01 11:06</span>
+              <button class="btn" id="officialRefresh" type="button">刷新</button>
+            </div>
+            <div class="official" id="official"><!--STATIC_OFFICIAL--><a class="off-chip warn" href="/official/openai"><span class="dot warn"></span><span>OpenAI</span><strong>94.22%</strong><small>降级</small></a><a class="off-chip on" href="/official/anthropic"><span class="dot on"></span><span>Claude</span><strong>96.11%</strong><small>正常</small></a><a class="off-chip on" href="/official/gemini"><span class="dot on"></span><span>Gemini</span><strong>98.15%</strong><small>正常</small></a><a class="off-chip on" href="/official/deepseek"><span class="dot on"></span><span>DeepSeek</span><strong>98.27%</strong><small>正常</small></a><a class="off-chip on" href="/official/moonshot"><span class="dot on"></span><span>Kimi</span><strong>100.00%</strong><small>正常</small></a><a class="off-chip on" href="/official/xai"><span class="dot on"></span><span>Grok</span><strong>100.00%</strong><small>正常</small></a><!--/STATIC_OFFICIAL--></div>
+          </section>
+        </section>
+        <div class="stats">
+          <span id="resultMeta">视频 <b>17</b> 站 · 探测在线 3691</span>
+          <span id="updatedAt"></span>
+          <div class="sorts" id="sorts">
+            <button class="filter active" data-sort="" type="button">综合</button>
+            <button class="filter" data-sort="uptime" type="button">可用优先</button>
+            <button class="filter" data-sort="latency" type="button">延迟优先</button>
+          </div>
+        </div>
+        <div id="grid"><!--STATIC_GRID--><p class="cat-back crumbs"><a href="/">首页</a><span>/</span><span>视频 中转</span></p>
+    <section class="type-block" id="model-video">
+      <div class="type-head"><h1><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="6.5" width="12.5" height="11" rx="2"/><path d="M16 10.2l4.5-2.4v8.4L16 13.8z"/></svg></span><span>AI 视频 API 中转站推荐</span></h1></div>
+      <p class="seo-lead">支持视频生成接口的API中转站。充值前先看本站探测，并小额实测对方模型。 本页 17 站。</p>
+      <div class="type-head"><h2 class="related-title">支持 视频 的站点</h2><div class="type-actions"><span>17/17 站</span></div></div>
+      <div class="grid"><article class="card">
+      <a class="card-link" href="/site/1356-wawapii-com">
+        <div class="card-head">
+          <div class="avatar"><img src="https://img.daheiai.com/i/2026/07/12/smmrz8.jpg" alt="" referrerpolicy="no-referrer"></div>
+          <div class="card-id">
+            <h3 class="card-title">瓦瓦AI</h3>
+            <p class="card-sub">wawapii.com · 精选</p>
+          </div>
+          <span class="badge ok">在线</span>
+        </div>
+        <p class="desc">📊 平台长期稳定运营，已服务万级用户。
+🏢 合同、转账、专票/普票一站开具，可验三方流水一致。
+🎬 全模态模型聚合、文本生图视频，需要的模型全都有，无需多平台对接。
+🧪 支持企业蒸馏：已服务 20+ 家企业客户，可蒸馏可自用，深度合作可洽谈。
+🛡️ 7×24 小时不停机运行，可用率 99.9%，接口响应低至 300ms。
+📞7×24 小时高质量服务售后，专属技术群，问题立即解决。</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3.5h7.2L19 8.2V20a1.5 1.5 0 0 1-1.5 1.5h-10A1.5 1.5 0 0 1 6 20V5a1.5 1.5 0 0 1 1-1.5z"/><path d="M14 3.6V8h4.4"/><path d="M9 12.2h6M9 15.6h4.5"/></svg></span>可开发票</span><span class="model">生图</span><span class="model">视频</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>99.6%</b></span>
+        <span><small>延迟</small><b>3.0s</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="1356">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>1647</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>356</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/4674-modnex-cc">
+        <div class="card-head">
+          <div class="avatar"><img src="https://img.daheiai.com/i/2026/08/28/zjs6i5.png" alt="" referrerpolicy="no-referrer"></div>
+          <div class="card-id">
+            <h3 class="card-title">ModNex-满血GPT</h3>
+            <p class="card-sub">modnex.cc · 精选</p>
+          </div>
+          <span class="badge ok">在线</span>
+        </div>
+        <p class="desc">⚡ 专注GPT满血，低至0.08X\r\n🔑 密钥自助管理，多模型统一接入\r\n🚀 国内直连无需魔法，接口稳定可靠\r\n🎨 自带无限画布，生图/生视频\r\n🎁 新用户首充赠送20%\r\n📋 支持普票专票，当天可开\r\n🛡️ 长期稳定运营，调用更安心</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11h16v9.5a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 20.5V11z"/><path d="M3.5 7.5h17v3.5h-17z"/><path d="M12 7.5v14.5"/><path d="M12 7.5c0-2.4-1.6-4-3.4-4S6 6 7.2 7.8C8 8.8 10 9.2 12 7.5z"/><path d="M12 7.5c0-2.4 1.6-4 3.4-4S18 6 16.8 7.8C16 8.8 14 9.2 12 7.5z"/></svg></span>新用户赠额</span><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4.8 13.2l8.4 8.4a1.4 1.4 0 0 0 2 0l6.2-6.2a1.4 1.4 0 0 0 0-2L13 4.8A2 2 0 0 0 11.6 4H5.5A1.5 1.5 0 0 0 4 5.5v6.1a2 2 0 0 0 .8 1.6z"/><circle cx="8.2" cy="8.2" r="1.2"/></svg></span>低倍率</span><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3.5h7.2L19 8.2V20a1.5 1.5 0 0 1-1.5 1.5h-10A1.5 1.5 0 0 1 6 20V5a1.5 1.5 0 0 1 1-1.5z"/><path d="M14 3.6V8h4.4"/><path d="M9 12.2h6M9 15.6h4.5"/></svg></span>可开发票</span><span class="model">GPT 0.08x</span><span class="model">生图</span><span class="model">视频</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>85.3%</b></span>
+        <span><small>延迟</small><b>4.3s</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="4674">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>2</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>1</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/1386-newapi-dragon3api-com">
+        <div class="card-head">
+          <div class="avatar"><img src="https://img.daheiai.com/i/2026/08/06/vz3dex.png" alt="" referrerpolicy="no-referrer"></div>
+          <div class="card-id">
+            <h3 class="card-title">DragonAPI</h3>
+            <p class="card-sub">newapi.dragon3api.com · 精选</p>
+          </div>
+          <span class="badge ok">在线</span>
+        </div>
+        <p class="desc">DRAGONAPI，专门为天才程序员准备
+GPT · Claude · 图片视频模型全线覆盖
+特惠 0.03 最低倍率 ｜ Pro 0.2 倍率 ｜ Claude 全网最低
+Pro 全自建号池，源头直供，24 小时全程不断线
+💰 白送 10 刀
+第一个在群里反馈 Pro 抽风的，10 刀额度直接到账
+🎁 进群先领20Mtoken试用，跑通了再充</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11h16v9.5a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 20.5V11z"/><path d="M3.5 7.5h17v3.5h-17z"/><path d="M12 7.5v14.5"/><path d="M12 7.5c0-2.4-1.6-4-3.4-4S6 6 7.2 7.8C8 8.8 10 9.2 12 7.5z"/><path d="M12 7.5c0-2.4 1.6-4 3.4-4S18 6 16.8 7.8C16 8.8 14 9.2 12 7.5z"/></svg></span>新用户赠额</span><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4.8 13.2l8.4 8.4a1.4 1.4 0 0 0 2 0l6.2-6.2a1.4 1.4 0 0 0 0-2L13 4.8A2 2 0 0 0 11.6 4H5.5A1.5 1.5 0 0 0 4 5.5v6.1a2 2 0 0 0 .8 1.6z"/><circle cx="8.2" cy="8.2" r="1.2"/></svg></span>低倍率</span><span class="model">GPT</span><span class="model">Claude</span><span class="model">视频</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>99.6%</b></span>
+        <span><small>延迟</small><b>1.9s</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="1386">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>21</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>17</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/240-anyaigc-ai">
+        <div class="card-head">
+          <div class="avatar"><img src="https://lsky.zhongzhuan.chat/i/2026/04/23/69e8f418603a3.png" alt="" referrerpolicy="no-referrer"></div>
+          <div class="card-id">
+            <h3 class="card-title">AnyAIGC中转站</h3>
+            <p class="card-sub">anyaigc.ai · 精选</p>
+          </div>
+          <span class="badge ok">在线</span>
+        </div>
+        <p class="desc">全网最稳定的官方企业级渠道 
+
+• 触达8个地区20万+客户 
+• 支持400+模型 
+• AI编程模型长期稳定性99.9%
+• 自带无限画布，生图/生视频
+• 可开普票/专票</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3.5h7.2L19 8.2V20a1.5 1.5 0 0 1-1.5 1.5h-10A1.5 1.5 0 0 1 6 20V5a1.5 1.5 0 0 1 1-1.5z"/><path d="M14 3.6V8h4.4"/><path d="M9 12.2h6M9 15.6h4.5"/></svg></span>可开发票</span><span class="model">生图</span><span class="model">视频</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>99.6%</b></span>
+        <span><small>延迟</small><b>2.9s</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="240">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>346</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>205</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/4663-apipaths-com">
+        <div class="card-head">
+          <div class="avatar">AP</div>
+          <div class="card-id">
+            <h3 class="card-title">apipaths.com</h3>
+            <p class="card-sub">apipaths.com</p>
+          </div>
+          <span class="badge ok">在线</span>
+        </div>
+        <p class="desc">apipaths 一个接口连接多种 AI 能力，支持 ChatGPT、Claude、Gemini、Grok 等主流模型，并支持图片生成、视频生成和 OpenAI 兼容接口。GPT 系列周末活动价 0.01，低倍率，邀请有返利，充值有周卡、月卡，自由充值灵活选择。长期稳定，不会跑路。</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M3.6 18.5c.6-3 2.7-4.7 5.4-4.7s4.8 1.7 5.4 4.7"/><circle cx="17" cy="9" r="2.3"/><path d="M16.2 13.9c2 .3 3.4 1.6 3.9 3.8"/></svg></span>邀请返利</span><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4.8 13.2l8.4 8.4a1.4 1.4 0 0 0 2 0l6.2-6.2a1.4 1.4 0 0 0 0-2L13 4.8A2 2 0 0 0 11.6 4H5.5A1.5 1.5 0 0 0 4 5.5v6.1a2 2 0 0 0 .8 1.6z"/><circle cx="8.2" cy="8.2" r="1.2"/></svg></span>低倍率</span><span class="model">GPT</span><span class="model">Claude</span><span class="model">Gemini</span><span class="model">Grok</span><span class="model">视频</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>96.6%</b></span>
+        <span><small>延迟</small><b>3.1s</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="4663">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>4</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>3</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/1503-crun-ai">
+        <div class="card-head">
+          <div class="avatar">CR</div>
+          <div class="card-id">
+            <h3 class="card-title">Crun</h3>
+            <p class="card-sub">crun.ai</p>
+          </div>
+          <span class="badge ok">在线</span>
+        </div>
+        <p class="desc">Crun 统一聚合平台：100+ 多模态模型（视频 Veo 3.1/GrokImagine/Seedance、图像 NanoBanana/GPT Image 2、音频 Suno、LLM 全系），OpenAI 兼容一行代码迁移，纯按量付费+积分体系，提供监控/日志/调试工具。</p>
+        <div class="models"><span class="model">GPT</span><span class="model">Grok</span><span class="model">生图</span><span class="model">视频</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>99.6%</b></span>
+        <span><small>延迟</small><b>1.5s</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="1503">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/1417-nexotoken-net">
+        <div class="card-head">
+          <div class="avatar">NE</div>
+          <div class="card-id">
+            <h3 class="card-title">NexoToken 纽智</h3>
+            <p class="card-sub">nexotoken.net</p>
+          </div>
+          <span class="badge ok">在线</span>
+        </div>
+        <p class="desc">NexoToken（纽智）低价分组主打 GPT·Codex：GPT-5.6 sol 输入 ¥0.5/输出 ¥3（每百万 Token）、claude-opus-4-8 ¥0.9/¥4.5，GPT 分组低至 0.03x；支持 Prompt Caching（缓存命中按输入价 1 折），音频/视频/图片生成模型齐全，有 AI 会员机制（99 元抵 1000 元、充值 10 元领 Codex 皮肤）。🎁 评论区留言送 2 刀额度。</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11h16v9.5a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 20.5V11z"/><path d="M3.5 7.5h17v3.5h-17z"/><path d="M12 7.5v14.5"/><path d="M12 7.5c0-2.4-1.6-4-3.4-4S6 6 7.2 7.8C8 8.8 10 9.2 12 7.5z"/><path d="M12 7.5c0-2.4 1.6-4 3.4-4S18 6 16.8 7.8C16 8.8 14 9.2 12 7.5z"/></svg></span>新用户赠额</span><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4.8 13.2l8.4 8.4a1.4 1.4 0 0 0 2 0l6.2-6.2a1.4 1.4 0 0 0 0-2L13 4.8A2 2 0 0 0 11.6 4H5.5A1.5 1.5 0 0 0 4 5.5v6.1a2 2 0 0 0 .8 1.6z"/><circle cx="8.2" cy="8.2" r="1.2"/></svg></span>低倍率</span><span class="model">GPT 0.03x</span><span class="model">Claude</span><span class="model">视频</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>99.2%</b></span>
+        <span><small>延迟</small><b>1.9s</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="1417">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/1598-wenming7-cn">
+        <div class="card-head">
+          <div class="avatar">稳明</div>
+          <div class="card-id">
+            <h3 class="card-title">稳明光语纪</h3>
+            <p class="card-sub">wenming7.cn</p>
+          </div>
+          <span class="badge ok">在线</span>
+        </div>
+        <p class="desc">H200集群私有化部署GLM5.2满血版本，模型不掺水、无隐性限流，适配Agent、批量任务、长文档开发。一站式接入Kimi K3、Seedance 2.0、Vidu Q3 Pro等国产最新大模型，新用户赠金测试，学生专享优惠，开放渠道代理合作。｜支持 国产/编程适配/视频生成｜支付 微信/支付宝/VISA｜标签 精选/新用户赠金/学生优惠｜按量: ¥1起充 ； 订阅: ¥29.9起</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="2.2"/><path d="M3 10.5h18"/><path d="M7 15h4"/></svg></span>国内支付</span><span class="model">Kimi</span><span class="model">GLM</span><span class="model">视频</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>72.6%</b></span>
+        <span><small>延迟</small><b>5.3s</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="1598">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/1566-sinytra-com">
+        <div class="card-head">
+          <div class="avatar">SI</div>
+          <div class="card-id">
+            <h3 class="card-title">Sinytra</h3>
+            <p class="card-sub">sinytra.com</p>
+          </div>
+          <span class="badge ok">在线</span>
+        </div>
+        <p class="desc">Sinytra 新开中转：Veo3.1 和 Sora2 均 0.06/s，banana2/bananapro 官渠非 flow 支持 4K。</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4.8 13.2l8.4 8.4a1.4 1.4 0 0 0 2 0l6.2-6.2a1.4 1.4 0 0 0 0-2L13 4.8A2 2 0 0 0 11.6 4H5.5A1.5 1.5 0 0 0 4 5.5v6.1a2 2 0 0 0 .8 1.6z"/><circle cx="8.2" cy="8.2" r="1.2"/></svg></span>低倍率</span><span class="model">生图</span><span class="model">视频</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>99.2%</b></span>
+        <span><small>延迟</small><b>1.9s</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="1566">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/1456-ai-070798-xyz">
+        <div class="card-head">
+          <div class="avatar">07</div>
+          <div class="card-id">
+            <h3 class="card-title">070798 AI</h3>
+            <p class="card-sub">ai.070798.xyz</p>
+          </div>
+          <span class="badge ok">在线</span>
+        </div>
+        <p class="desc">底层深度优化的 AI 分发系统，GPT 0.1x、Kiro 0.2x、Gemini 0.3x、max 号池 0.8x，gpt-image-2 0.06/张、grok 视频 0.3/条。充值 1:1，进群送测试额度。</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4.8 13.2l8.4 8.4a1.4 1.4 0 0 0 2 0l6.2-6.2a1.4 1.4 0 0 0 0-2L13 4.8A2 2 0 0 0 11.6 4H5.5A1.5 1.5 0 0 0 4 5.5v6.1a2 2 0 0 0 .8 1.6z"/><circle cx="8.2" cy="8.2" r="1.2"/></svg></span>低倍率</span><span class="model">GPT 0.1x</span><span class="model">Gemini 0.3x</span><span class="model">Grok</span><span class="model">生图</span><span class="model">视频</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>99.6%</b></span>
+        <span><small>延迟</small><b>1.2s</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="1456">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/1017-nexus-1982video-cn">
+        <div class="card-head">
+          <div class="avatar">NE</div>
+          <div class="card-id">
+            <h3 class="card-title">nexus.1982video.cn</h3>
+            <p class="card-sub">nexus.1982video.cn</p>
+          </div>
+          <span class="badge ok">在线</span>
+        </div>
+        <p class="desc">暂无更多描述</p>
+        <div class="models"><span class="model">视频</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>99.6%</b></span>
+        <span><small>延迟</small><b>1.6s</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="1017">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>1</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/108-duckagi-com">
+        <div class="card-head">
+          <div class="avatar">DU</div>
+          <div class="card-id">
+            <h3 class="card-title">DuckAGI</h3>
+            <p class="card-sub">duckagi.com</p>
+          </div>
+          <span class="badge ok">在线</span>
+        </div>
+        <p class="desc">多模态平台，支持 GPT-4o / Sora 等。</p>
+        <div class="models"><span class="model">GPT</span><span class="model">视频</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>99.2%</b></span>
+        <span><small>延迟</small><b>4.3s</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="108">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>3</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/1732-api-cursorai-art">
+        <div class="card-head">
+          <div class="avatar">AP</div>
+          <div class="card-id">
+            <h3 class="card-title">api.cursorai.art</h3>
+            <p class="card-sub">api.cursorai.art</p>
+          </div>
+          <span class="badge ok">在线</span>
+        </div>
+        <p class="desc">暂无简介，进去看整站状态和模型探测。</p>
+        <div class="models"><span class="model">视频</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>99.6%</b></span>
+        <span><small>延迟</small><b>2.1s</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="1732">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/1146-testvideo-site">
+        <div class="card-head">
+          <div class="avatar">TE</div>
+          <div class="card-id">
+            <h3 class="card-title">testvideo.site</h3>
+            <p class="card-sub">testvideo.site</p>
+          </div>
+          <span class="badge ok">在线</span>
+        </div>
+        <p class="desc">暂无更多描述</p>
+        <div class="models"><span class="model">视频</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>99.2%</b></span>
+        <span><small>延迟</small><b>3.7s</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="1146">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/371-aicli-opensora-de">
+        <div class="card-head">
+          <div class="avatar">AI</div>
+          <div class="card-id">
+            <h3 class="card-title">aicli.opensora.de</h3>
+            <p class="card-sub">aicli.opensora.de</p>
+          </div>
+          <span class="badge ok">在线</span>
+        </div>
+        <p class="desc">暂无更多描述</p>
+        <div class="models"><span class="model">视频</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>99.6%</b></span>
+        <span><small>延迟</small><b>2.7s</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="371">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/1600-dancehorse-ai">
+        <div class="card-head">
+          <div class="avatar">DA</div>
+          <div class="card-id">
+            <h3 class="card-title">DanceHorse</h3>
+            <p class="card-sub">dancehorse.ai</p>
+          </div>
+          <span class="badge bad">异常</span>
+        </div>
+        <p class="desc">AI Video API 供给层｜对接 Seedance/HappyHorse 等视频生成模型｜支持预充值、分销码、白标接口、返佣等多种合作方式｜面向 API 中转站、视频工具开发者、内容团队｜支持 视频生成｜支付 USDT/微信｜标签 精选/视频API/B2B</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.2l7.2 4.1v8.4L12 19.8l-7.2-4.1V7.3L12 3.2z"/><path d="M12 8.2v7.6M9.6 10.2c.6-.7 1.4-1 2.4-1 1.6 0 2.6.7 2.6 1.8s-1 1.7-2.6 1.9c1.8.1 2.8.8 2.8 2s-1.2 2-2.8 2c-1.1 0-2-.3-2.6-1"/></svg></span>加密充值</span><span class="model">视频</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>0%</b></span>
+        <span><small>延迟</small><b>1.8s</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="1600">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article><article class="card">
+      <a class="card-link" href="/site/900020-new-sharedchat-cc">
+        <div class="card-head">
+          <div class="avatar">SH</div>
+          <div class="card-id">
+            <h3 class="card-title">SharedChat 公益入口</h3>
+            <p class="card-sub">new.sharedchat.cc</p>
+          </div>
+          <span class="badge wait">待测</span>
+        </div>
+        <p class="desc">SharedChat 的公益入口为 new.sharedchat.cc，页面含 Vibe Code 与图像/视频功能入口；但当前公开接口明确提示“旧转发链路已关闭”，模型网关未接入独立公益站。</p>
+        <div class="models"><span class="feat"><span class="ico " aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.4S4.6 15.4 3.2 10.8C2.2 7.6 4 5 6.8 5c1.7 0 2.9 1 3.7 2.3C11.3 6 12.5 5 14.2 5c2.8 0 4.6 2.6 3.6 5.8C16.4 15.4 12 20.4 12 20.4z"/></svg></span>公益站</span><span class="model">Claude</span><span class="model">视频</span></div>
+      </a>
+      <div class="card-metrics">
+        <span><small>可用</small><b>—</b></span>
+        <span><small>延迟</small><b>—</b></span>
+        <span class="vote-cell"><small>投票</small><div class="vote-pair" data-vote-wrap="900020">
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V10.8"/><path d="M7 10.8h4.1L12.5 4.6A1.8 1.8 0 0 1 14.3 3.2h.2a1.7 1.7 0 0 1 1.6 2.2L15.2 10.8H19a2 2 0 0 1 2 2.3l-.8 5.2A2 2 0 0 1 18.2 20H7"/></svg></span><b>0</b></span>
+      <span class="vote-btn"><span class="ico vote-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v10.2"/><path d="M7 13.2h4.1l1.4 6.2a1.8 1.8 0 0 0 1.8 1.4h.2a1.7 1.7 0 0 0 1.6-2.2L15.2 13.2H19a2 2 0 0 0 2-2.3l-.8-5.2A2 2 0 0 0 18.2 4H7"/></svg></span><b>0</b></span>
+    </div></span>
+      </div>
+    </article></div>
+    </section><!--/STATIC_GRID--></div>
+        <div class="pager" id="pager"></div>
+        
+      </div>
+    </main>
+
+    <main id="detail" class="detail" hidden></main>
+    <main id="officialPage" class="detail official-page" hidden></main>
+
+    <footer class="site-foot">
+      <div class="site-foot-inner">
+        <section>
+          <a class="foot-brand" href="/">
+            <img src="/img/icon-192.png" width="40" height="40" alt="API中转站导航">
+            <div>
+              <strong>API中转站导航</strong>
+              <span>中转站导航 · 模型实况</span>
+            </div>
+          </a>
+          <p>用来对照第三方 API 中转站：先看 ChatGPT、Claude、DeepSeek 是否可用，再决定去哪家充值。目录按公益站、签到送余额、新用户赠额、低倍率、国内支付等分类排布。</p>
+          <p class="foot-keys">
+            <a href="/cat/charity">公益站</a>
+            <a href="/cat/cheaprate">低倍率API</a>
+            <a href="/cat/checkin">签到送余额</a>
+            <a href="/cat/gift">新用户赠额</a>
+            <a href="/cat/pay">国内支付API</a>
+            <a href="/cat/fast">低延迟中转</a>
+            <a href="/cat/highup">高可用API</a>
+            <a href="/model/gpt">ChatGPT中转</a>
+            <a href="/model/claude">Claude中转</a>
+            <a href="/model/deepseek">DeepSeek API</a>
+          </p>
+        </section>
+        <section>
+          <h3>怎么用</h3>
+          <p>顶部看官方模型实况，中间按分类浏览站点。卡片上的可用率和延迟来自整站探测，模型标签从站点简介提取，投票记在本站。充值前建议小额实测，对方站点规则以他们自己的页面为准。</p>
+        </section>
+        <section>
+          <h3>说明</h3>
+          <p>收录的都是第三方中转，不是官方渠道。状态会变，本站不保证任何站点的额度、价格或稳定性，也不提供官方上游充值。探币只记在这台电脑上，和中转站自己的签到余额不是一回事。</p>
+        </section>
+        <section id="contact">
+          <h3>联系我们</h3>
+          <p class="foot-contact">
+            邮箱 <a href="mailto:2201219073@qq.com">2201219073@qq.com</a><br>
+            QQ <a href="https://wpa.qq.com/msgrd?v=3&amp;uin=2201219073&amp;site=qq&amp;menu=yes" target="_blank" rel="noopener noreferrer">2201219073</a>
+          </p>
+        </section>
+      </div>
+      <p class="foot-copy">© API中转站导航 · 仅作导航对照，充值与使用风险自负</p>
+    </footer>
+  </div>
+
+  <div class="drawer-mask" id="drawerMask">
+    <div class="drawer" id="drawerBody"></div>
+  </div>
+  <div class="fab-dock" id="fabDock">
+    <button class="fab" id="toTopBtn" type="button" aria-label="回到顶部" title="回到顶部">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5"/><path d="m6 11 6-6 6 6"/></svg>
+    </button>
+    <button class="fab" id="fabThemeBtn" type="button" aria-label="切换浅色或深色" title="切换颜色">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 14.5A8.5 8.5 0 1 1 9.5 3 7 7 0 0 0 21 14.5z"/></svg>
+    </button>
+  </div>
+  <div class="toast" id="toast"></div>
+
+  <script src="/js/stations-data.js"></script>
+  <script src="/js/store.js"></script>
+  <script src="/js/icons.js"></script>
+  <script src="/js/seo.js"></script>
+  <script src="/js/official.js"></script>
+  <script src="/js/app.js"></script>
+</body>
+</html>

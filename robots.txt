@@ -1,12 +1,24 @@
 User-agent: *
 Allow: /
-Allow: /favicon.ico
+Allow: /cat/
+Allow: /site/
+Allow: /model/
+Allow: /official/
+Allow: /js/
+Allow: /css/
 Allow: /img/
+Allow: /favicon.ico
 Disallow: /api/
 Disallow: /data/votes.json
 
 User-agent: Baiduspider
 Allow: /
+Allow: /cat/
+Allow: /site/
+Allow: /model/
+Allow: /js/
+Allow: /css/
+Allow: /img/
 Disallow: /api/
 
 Sitemap: https://www.veridrop.cn/sitemap.xml
