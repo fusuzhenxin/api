@@ -14,6 +14,7 @@ const FILES = [
   "site.webmanifest",
   "BingSiteAuth.xml",
   "c025d4b26bb04ef3be4d77433253be71.txt",
+  "d33038435abe486a91d43f5460f51c80.txt",
 ];
 
 const DIRS = ["cat", "site", "model", "official", "js", "css", "img"];
