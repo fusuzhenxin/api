@@ -7,11 +7,11 @@
   "headers": [
     {
       "source": "/js/stations-data.js",
-      "headers": [{ "key": "Cache-Control", "value": "public, max-age=300, stale-while-revalidate=86400" }]
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=60, stale-while-revalidate=300" }]
     },
     {
       "source": "/js/(.*)",
-      "headers": [{ "key": "Cache-Control", "value": "public, max-age=300, stale-while-revalidate=86400" }]
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=60, stale-while-revalidate=300" }]
     },
     {
       "source": "/css/(.*)",

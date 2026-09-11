@@ -858,6 +858,10 @@ function renderHome() {
   }
 }
 
+function keepStaticCards() {
+  return !!($("#grid") && $("#grid").querySelector(".card"));
+}
+
 function renderCatPage(cat) {
   const g = state.data.global || {};
   $("#home").hidden = false;
@@ -865,6 +869,7 @@ function renderCatPage(cat) {
   if ($("#officialPage")) $("#officialPage").hidden = true;
   highlightCat(cat);
   const list = stationsByCategory(cat);
+  if (!list.length && keepStaticCards()) return;
   const key = "page:" + cat;
   const shownN = shownCount(key, list.length, CAT_PAGE_SIZE);
   const slice = list.slice(0, shownN);
@@ -904,6 +909,7 @@ function renderModelPage(id) {
   highlightCat("all");
   highlightModel(id);
   const list = stationsByModel(id);
+  if (!list.length && keepStaticCards()) return;
   const key = "model:" + id;
   const shownN = shownCount(key, list.length, CAT_PAGE_SIZE);
   const slice = list.slice(0, shownN);
