@@ -1,5 +1,5 @@
 function svgIcon(inner, cls) {
-  return `<span class="ico ${cls || ""}" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${inner}</svg></span>`;
+  return `<span class="ico ${cls || ""}" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${inner}</svg></span>`;
 }
 
 const CAT_ICON_PATH = {

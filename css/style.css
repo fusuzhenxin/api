@@ -476,6 +476,22 @@ a.btn {
   text-align: left;
   font-size: 15px;
 }
+.ico {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  flex: 0 0 20px;
+  line-height: 0;
+  overflow: hidden;
+  color: var(--blue);
+}
+.ico svg {
+  display: block;
+  width: 20px;
+  height: 20px;
+}
 .filter i,
 .filter .ico {
   width: 20px;
@@ -485,13 +501,6 @@ a.btn {
   font-style: normal;
   font-weight: 800;
   font-size: 14px;
-}
-.filter .ico svg,
-.type-head .ico svg,
-.vote-btn .ico svg {
-  display: block;
-  width: 100%;
-  height: 100%;
 }
 .filter span { flex: 1; }
 .filter:hover { background: var(--bg-soft); }
@@ -533,9 +542,16 @@ a.more-btn {
 .type-head h1 .ico,
 .type-head h2 .ico,
 .type-head h3 .ico {
-  width: 26px;
-  height: 26px;
+  width: 22px;
+  height: 22px;
+  flex: 0 0 22px;
   color: var(--teal);
+}
+.type-head h1 .ico svg,
+.type-head h2 .ico svg,
+.type-head h3 .ico svg {
+  width: 22px;
+  height: 22px;
 }
 .type-head h2 a.type-jump {
   display: inline-flex;
@@ -651,7 +667,12 @@ a.more-btn {
 .model .ico {
   width: 12px;
   height: 12px;
+  flex: 0 0 12px;
   color: inherit;
+}
+.model .ico svg {
+  width: 12px;
+  height: 12px;
 }
 .feat {
   display: inline-flex;
@@ -666,7 +687,12 @@ a.more-btn {
 .feat .ico {
   width: 12px;
   height: 12px;
+  flex: 0 0 12px;
   color: inherit;
+}
+.feat .ico svg {
+  width: 12px;
+  height: 12px;
 }
 .sorts { display: flex; gap: 6px; margin-left: auto; }
 .sorts .filter {
@@ -707,7 +733,12 @@ a.more-btn {
 .vote-btn .ico {
   width: 14px;
   height: 14px;
+  flex: 0 0 14px;
   color: inherit;
+}
+.vote-btn .ico svg {
+  width: 14px;
+  height: 14px;
 }
 .vote-btn[data-vote="up"] {
   color: var(--teal);
