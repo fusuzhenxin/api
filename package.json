@@ -2,7 +2,7 @@
   "name": "veridrop-api",
   "private": true,
   "scripts": {
-    "build": "node scripts/make_sitemap.js",
+    "build": "node scripts/make_sitemap.js && node scripts/copy-public.js",
     "start": "node scripts/serve.js"
   },
   "dependencies": {

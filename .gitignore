@@ -1,4 +1,5 @@
 site/*.html
+public/
 data/og/
 data/votes.json.lock
 __pycache__/

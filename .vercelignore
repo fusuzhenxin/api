@@ -1,0 +1,6 @@
+site
+public
+node_modules
+data/og
+.env
+.env.local
