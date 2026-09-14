@@ -7,8 +7,9 @@ const staticHtml = require("../js/static-html.js");
 const ROOT = path.resolve(__dirname, "..");
 const data = JSON.parse(fs.readFileSync(path.join(ROOT, "data", "stations.json"), "utf8"));
 const origin = (process.env.SITE_ORIGIN || "https://www.veridrop.cn").replace(/\/$/, "");
-const lastmod = (data.updatedAt || new Date().toISOString()).slice(0, 10);
-const charityMod = (data.charityUpdatedAt || lastmod).slice(0, 10);
+const built = new Date().toISOString().slice(0, 10);
+const lastmod = built;
+const charityMod = built;
 
 const CAT_IDS = [
   "charity",
@@ -28,32 +29,30 @@ const CAT_IDS = [
   "online",
 ];
 
-const urls = [{ loc: "/", pri: "1.0", freq: "hourly", lastmod }];
+const hubUrls = [{ loc: "/", pri: "1.0", freq: "daily", lastmod: built }];
 CAT_IDS.forEach((id) =>
-  urls.push({
+  hubUrls.push({
     loc: catPath(id),
     pri: id === "charity" ? "0.9" : "0.8",
     freq: "daily",
-    lastmod: id === "charity" ? charityMod : lastmod,
+    lastmod: id === "charity" ? charityMod : built,
   })
 );
 
 ["gpt", "claude", "gemini", "grok", "deepseek", "kimi", "qwen", "glm", "image", "video"].forEach((id) => {
-  urls.push({ loc: modelPath(id), pri: "0.9", freq: "daily", lastmod });
+  hubUrls.push({ loc: modelPath(id), pri: "0.9", freq: "daily", lastmod: built });
 });
 
 (data.official || []).forEach((item) => {
-  urls.push({ loc: officialPath(item.provider), pri: "0.7", freq: "hourly", lastmod });
+  hubUrls.push({ loc: officialPath(item.provider), pri: "0.7", freq: "weekly", lastmod: built });
 });
 
-(data.stations || []).forEach((site) => {
-  urls.push({
-    loc: sitePath(site),
-    pri: site.promoted ? "0.7" : "0.5",
-    freq: "daily",
-    lastmod,
-  });
-});
+const siteUrls = (data.stations || []).map((site) => ({
+  loc: sitePath(site),
+  pri: site.promoted ? "0.6" : "0.4",
+  freq: "weekly",
+  lastmod: built,
+}));
 
 function locUrl(pathname) {
   return (
@@ -197,18 +196,30 @@ function writeSeoPages() {
   );
 }
 
-const xml =
-  '<?xml version="1.0" encoding="UTF-8"?>\n' +
-  '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
-  urls
-    .map(
-      (u) =>
-        `  <url><loc>${locUrl(u.loc)}</loc><lastmod>${u.lastmod || lastmod}</lastmod><changefreq>${u.freq}</changefreq><priority>${u.pri}</priority></url>`
-    )
-    .join("\n") +
-  "\n</urlset>\n";
+function urlsetXml(list) {
+  return (
+    '<?xml version="1.0" encoding="UTF-8"?>\n' +
+    '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
+    list
+      .map(
+        (u) =>
+          `  <url><loc>${locUrl(u.loc)}</loc><lastmod>${u.lastmod || built}</lastmod><changefreq>${u.freq}</changefreq><priority>${u.pri}</priority></url>`
+      )
+      .join("\n") +
+    "\n</urlset>\n"
+  );
+}
 
-fs.writeFileSync(path.join(ROOT, "sitemap.xml"), xml);
+fs.writeFileSync(path.join(ROOT, "sitemap-pages.xml"), urlsetXml(hubUrls));
+fs.writeFileSync(path.join(ROOT, "sitemap-sites.xml"), urlsetXml(siteUrls));
+fs.writeFileSync(
+  path.join(ROOT, "sitemap.xml"),
+  '<?xml version="1.0" encoding="UTF-8"?>\n' +
+    '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
+    `  <sitemap><loc>${origin}/sitemap-pages.xml</loc><lastmod>${built}</lastmod></sitemap>\n` +
+    `  <sitemap><loc>${origin}/sitemap-sites.xml</loc><lastmod>${built}</lastmod></sitemap>\n` +
+    "</sitemapindex>\n"
+);
 fs.writeFileSync(
   path.join(ROOT, "robots.txt"),
   [
@@ -236,8 +247,9 @@ fs.writeFileSync(
     "Disallow: /api/",
     "",
     "Sitemap: " + origin + "/sitemap.xml",
+    "Sitemap: " + origin + "/sitemap-pages.xml",
     "",
   ].join("\n")
 );
 writeSeoPages();
-console.log("sitemap", urls.length, "urls ->", origin);
+console.log("sitemap", hubUrls.length, "hub +", siteUrls.length, "sites ->", origin);

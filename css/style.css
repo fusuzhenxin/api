@@ -475,6 +475,8 @@ a.btn {
   padding: 8px 8px;
   text-align: left;
   font-size: 15px;
+  text-decoration: none;
+  cursor: pointer;
 }
 .ico {
   display: inline-flex;

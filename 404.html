@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>页面不存在_API中转站导航</title>
+  <meta name="description" content="这个地址没有对应页面。回到首页继续对照第三方 API 中转站。">
+  <meta name="robots" content="noindex,follow">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/css/style.css?v=20260914">
+  <script>
+    (function () {
+      var saved = localStorage.getItem("xiantan.theme");
+      var theme = saved === "light" || saved === "dark"
+        ? saved
+        : (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="brand-cluster">
+        <a class="brand" href="/" aria-label="API中转站导航首页">
+          <img class="logo-mark" src="/img/icon-192.png" width="36" height="36" alt="API中转站导航">
+          <p class="brand-title">API中转站导航</p>
+        </a>
+      </div>
+    </header>
+    <main class="home-shell" style="display:block;padding:48px 20px 80px;max-width:720px;margin:0 auto;">
+      <h1>这个地址没有对应页面</h1>
+      <p class="seo-lead">可能是链接写错了，或这个站点已经从目录里拿掉。下面这些入口还在。</p>
+      <p class="foot-keys">
+        <a href="/">回到首页</a>
+        <a href="/cat/charity">公益站</a>
+        <a href="/cat/cheaprate">低倍率API</a>
+        <a href="/model/gpt">ChatGPT中转</a>
+        <a href="/model/claude">Claude中转</a>
+        <a href="/model/deepseek">DeepSeek API</a>
+      </p>
+    </main>
+  </div>
+</body>
+</html>

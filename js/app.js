@@ -371,17 +371,22 @@ function bindInfiniteScroll() {
   observeScrollSentinel();
 }
 
+function navCatHref(id) {
+  if (!id || id === "all" || id === "fav") return "/";
+  return catPath(id);
+}
+
 function renderSideNav() {
   if ($("#cats")) {
     $("#cats").innerHTML = NAV_CATS.map(
       (id) =>
-        `<button class="filter${id === (state.category || "all") ? " active" : ""}" data-cat="${id}" type="button">${catIcon(id)}<span>${escapeHtml(CATEGORY_LABEL[id] || id)}</span></button>`
+        `<a class="filter${id === (state.category || "all") ? " active" : ""}" href="${navCatHref(id)}" data-cat="${id}">${catIcon(id)}<span>${escapeHtml(CATEGORY_LABEL[id] || id)}</span></a>`
     ).join("");
   }
   if ($("#modelFilters")) {
     $("#modelFilters").innerHTML = MODEL_CHIPS.map(
       (m) =>
-        `<button class="filter${state.model === m.id ? " active" : ""}" data-model="${escapeHtml(m.id)}" type="button">${modelIcon(m.id)}<span>${escapeHtml(m.label)}</span></button>`
+        `<a class="filter${state.model === m.id ? " active" : ""}" href="${modelPath(m.id)}" data-model="${escapeHtml(m.id)}">${modelIcon(m.id)}<span>${escapeHtml(m.label)}</span></a>`
     ).join("");
   }
 }
@@ -1350,6 +1355,8 @@ function bind() {
   $("#cats").addEventListener("click", (e) => {
     const btn = e.target.closest("[data-cat]");
     if (!btn) return;
+    if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+    e.preventDefault();
     state.category = btn.dataset.cat;
     state.page = 1;
     goHomeAndScroll(btn.dataset.cat);
@@ -1357,6 +1364,8 @@ function bind() {
   $("#modelFilters").addEventListener("click", (e) => {
     const btn = e.target.closest("[data-model]");
     if (!btn) return;
+    if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+    e.preventDefault();
     const id = btn.dataset.model;
     state.page = 1;
     state.expanded = {};

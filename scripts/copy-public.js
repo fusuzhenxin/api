@@ -7,9 +7,12 @@ const PUB = path.join(ROOT, "public");
 
 const FILES = [
   "index.html",
+  "404.html",
   "favicon.ico",
   "robots.txt",
   "sitemap.xml",
+  "sitemap-pages.xml",
+  "sitemap-sites.xml",
   "llms.txt",
   "site.webmanifest",
   "BingSiteAuth.xml",

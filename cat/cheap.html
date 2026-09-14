@@ -45,7 +45,7 @@
       document.documentElement.setAttribute("data-theme", theme);
     })();
   </script>
-  <link rel="stylesheet" href="/css/style.css?v=20260911">
+  <link rel="stylesheet" href="/css/style.css?v=20260914">
 </head>
 <body>
   <div class="app" id="app">
@@ -66,36 +66,36 @@
       <aside class="sidebar">
         <h3>有用分类</h3>
         <nav class="filters" id="cats">
-          <button class="filter active" data-cat="all" type="button"><i>▦</i><span>全部中转</span></button>
-          <button class="filter" data-cat="charity" type="button"><i>♥</i><span>公益站</span></button>
-          <button class="filter" data-cat="stable" type="button"><i>▣</i><span>稳定企业向</span></button>
-          <button class="filter" data-cat="cheap" type="button"><i>◇</i><span>便宜个人向</span></button>
-          <button class="filter" data-cat="special" type="button"><i>✦</i><span>小有特色</span></button>
-          <button class="filter" data-cat="new" type="button"><i>＋</i><span>新站上榜</span></button>
-          <button class="filter" data-cat="online" type="button"><i>●</i><span>当前在线</span></button>
-          <button class="filter" data-cat="checkin" type="button"><i>日</i><span>签到送余额</span></button>
-          <button class="filter" data-cat="gift" type="button"><i>赠</i><span>新用户赠额</span></button>
-          <button class="filter" data-cat="cheaprate" type="button"><i>低</i><span>低倍率</span></button>
-          <button class="filter" data-cat="fast" type="button"><i>快</i><span>低延迟</span></button>
-          <button class="filter" data-cat="pay" type="button"><i>付</i><span>国内支付</span></button>
-          <button class="filter" data-cat="invite" type="button"><i>邀</i><span>邀请返利</span></button>
-          <button class="filter" data-cat="crypto" type="button"><i>U</i><span>加密充值</span></button>
-          <button class="filter" data-cat="invoice" type="button"><i>票</i><span>可开发票</span></button>
-          <button class="filter" data-cat="highup" type="button"><i>稳</i><span>高可用</span></button>
-          <button class="filter" data-cat="fav" type="button"><i>★</i><span>我的收藏</span></button>
+          <a class="filter active" href="/" data-cat="all"><i>▦</i><span>全部中转</span></a>
+          <a class="filter" href="/cat/charity" data-cat="charity"><i>♥</i><span>公益站</span></a>
+          <a class="filter" href="/cat/stable" data-cat="stable"><i>▣</i><span>稳定企业向</span></a>
+          <a class="filter" href="/cat/cheap" data-cat="cheap"><i>◇</i><span>便宜个人向</span></a>
+          <a class="filter" href="/cat/special" data-cat="special"><i>✦</i><span>小有特色</span></a>
+          <a class="filter" href="/cat/new" data-cat="new"><i>＋</i><span>新站上榜</span></a>
+          <a class="filter" href="/cat/online" data-cat="online"><i>●</i><span>当前在线</span></a>
+          <a class="filter" href="/cat/checkin" data-cat="checkin"><i>日</i><span>签到送余额</span></a>
+          <a class="filter" href="/cat/gift" data-cat="gift"><i>赠</i><span>新用户赠额</span></a>
+          <a class="filter" href="/cat/cheaprate" data-cat="cheaprate"><i>低</i><span>低倍率</span></a>
+          <a class="filter" href="/cat/fast" data-cat="fast"><i>快</i><span>低延迟</span></a>
+          <a class="filter" href="/cat/pay" data-cat="pay"><i>付</i><span>国内支付</span></a>
+          <a class="filter" href="/cat/invite" data-cat="invite"><i>邀</i><span>邀请返利</span></a>
+          <a class="filter" href="/cat/crypto" data-cat="crypto"><i>U</i><span>加密充值</span></a>
+          <a class="filter" href="/cat/invoice" data-cat="invoice"><i>票</i><span>可开发票</span></a>
+          <a class="filter" href="/cat/highup" data-cat="highup"><i>稳</i><span>高可用</span></a>
+          <a class="filter" href="/" data-cat="fav"><i>★</i><span>我的收藏</span></a>
         </nav>
         <h3>模型筛选</h3>
         <div class="model-filters" id="modelFilters">
-          <button class="filter" data-model="gpt" type="button"><i>G</i><span>GPT</span></button>
-          <button class="filter" data-model="claude" type="button"><i>C</i><span>Claude</span></button>
-          <button class="filter" data-model="gemini" type="button"><i>N</i><span>Gemini</span></button>
-          <button class="filter" data-model="grok" type="button"><i>X</i><span>Grok</span></button>
-          <button class="filter" data-model="deepseek" type="button"><i>D</i><span>DeepSeek</span></button>
-          <button class="filter" data-model="kimi" type="button"><i>K</i><span>Kimi</span></button>
-          <button class="filter" data-model="qwen" type="button"><i>Q</i><span>Qwen</span></button>
-          <button class="filter" data-model="glm" type="button"><i>智</i><span>GLM</span></button>
-          <button class="filter" data-model="image" type="button"><i>图</i><span>生图</span></button>
-          <button class="filter" data-model="video" type="button"><i>影</i><span>视频</span></button>
+          <a class="filter" href="/model/gpt" data-model="gpt"><i>G</i><span>GPT</span></a>
+          <a class="filter" href="/model/claude" data-model="claude"><i>C</i><span>Claude</span></a>
+          <a class="filter" href="/model/gemini" data-model="gemini"><i>N</i><span>Gemini</span></a>
+          <a class="filter" href="/model/grok" data-model="grok"><i>X</i><span>Grok</span></a>
+          <a class="filter" href="/model/deepseek" data-model="deepseek"><i>D</i><span>DeepSeek</span></a>
+          <a class="filter" href="/model/kimi" data-model="kimi"><i>K</i><span>Kimi</span></a>
+          <a class="filter" href="/model/qwen" data-model="qwen"><i>Q</i><span>Qwen</span></a>
+          <a class="filter" href="/model/glm" data-model="glm"><i>智</i><span>GLM</span></a>
+          <a class="filter" href="/model/image" data-model="image"><i>图</i><span>生图</span></a>
+          <a class="filter" href="/model/video" data-model="video"><i>影</i><span>视频</span></a>
         </div>
       </aside>
       <div class="main-col">
@@ -399,11 +399,11 @@ GPT-5.6 0.06× · Claude 0.25× · Gemini 0.5× · CCMAX满血低至0.8× · 绘
   </div>
   <div class="toast" id="toast"></div>
 
-  <script src="/js/stations-data.js?v=20260911c"></script>
-  <script src="/js/store.js?v=20260911c"></script>
-  <script src="/js/icons.js?v=20260911c"></script>
-  <script src="/js/seo.js?v=20260911c"></script>
-  <script src="/js/official.js?v=20260911c"></script>
-  <script src="/js/app.js?v=20260911c"></script>
+  <script src="/js/stations-data.js?v=20260914"></script>
+  <script src="/js/store.js?v=20260914"></script>
+  <script src="/js/icons.js?v=20260914"></script>
+  <script src="/js/seo.js?v=20260914"></script>
+  <script src="/js/official.js?v=20260914"></script>
+  <script src="/js/app.js?v=20260914"></script>
 </body>
 </html>

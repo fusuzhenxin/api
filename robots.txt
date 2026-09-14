@@ -22,3 +22,4 @@ Allow: /img/
 Disallow: /api/
 
 Sitemap: https://www.veridrop.cn/sitemap.xml
+Sitemap: https://www.veridrop.cn/sitemap-pages.xml
