@@ -79,17 +79,17 @@
     },
     invite: {
       title: "邀请返利API中转站_拉新返佣推荐",
-      desc: "有邀请返利的API中转站合集。对照站点在线状态后，再看返佣规则是否适合自己。",
+      desc: "有邀请返利、拉新返佣的 API 中转站合集。先对照本站探测是否在线，再去对方页面看返佣规则是否适合自己。本站不代收充值。",
       keys: "邀请返利,API中转返佣",
     },
     crypto: {
       title: "加密充值API中转站_USDT充值接口",
-      desc: "支持加密货币、USDT充值的API中转站。本站提供可用性与延迟对照，充值前建议小额测试。",
+      desc: "支持加密货币、USDT 充值的 API 中转站。本站对照可用性和延迟，充值前建议先小额测试；汇率、到账和网络以对方页面为准。",
       keys: "USDT充值API,加密充值中转",
     },
     invoice: {
       title: "可开发票API中转站_企业报销接口",
-      desc: "可开发票的API中转站，方便企业对接GPT、Claude并报销。请以对方站点开票说明为准。",
+      desc: "可开发票的 API 中转站，方便企业对接 GPT、Claude 并报销。本站只做对照，开票类目、税率和抬头请以对方站点说明为准。",
       keys: "API开发票,企业API中转",
     },
     highup: {
@@ -99,22 +99,22 @@
     },
     stable: {
       title: "稳定企业向API中转站推荐",
-      desc: "偏企业、稳定性要求更高的API中转站。本站对照可用性，充值前请自行核实合同与售后。",
+      desc: "偏企业、对稳定性要求更高的 API 中转站。本站对照探测可用性，充值前请自行核实合同、售后和开票，本站不代收、不担保。",
       keys: "企业API中转,稳定中转站",
     },
     cheap: {
       title: "便宜个人向API中转站_低价GPT推荐",
-      desc: "面向个人、价格更友好的API中转站。覆盖便宜GPT、DeepSeek等，先看延迟再充值。",
+      desc: "面向个人、价格更友好的 API 中转站。覆盖便宜 GPT、DeepSeek 等常见接口，先看本站延迟和可用性，再小额充值实测。",
       keys: "便宜API中转,个人GPT接口",
     },
     special: {
       title: "有特色的API中转站_小众接口推荐",
-      desc: "有特色玩法或模型组合的API中转站。本站只做对照，特色以对方站点介绍为准。",
+      desc: "有特色玩法或模型组合的 API 中转站。本站只做导航对照，特色、限时活动和具体模型都以对方站点当前介绍为准。",
       keys: "特色API中转,小众GPT接口",
     },
     new: {
       title: "新站上榜API中转_最新收录站点",
-      desc: "本站新收录的API中转站。新站波动可能更大，建议先看探测、小额测试再决定。",
+      desc: "本站新收录的 API 中转站。新站探测样本少、波动可能更大，建议先看可用性、只小额测试，再决定要不要继续充。",
       keys: "新API中转站,新站推荐",
     },
     charity: {
@@ -157,17 +157,17 @@
     },
     online: {
       title: "当前在线API中转站_可用GPT接口",
-      desc: "当前探测在线的API中转站。在线不等于模型一定可用，充值前仍建议小额实测。",
+      desc: "当前整站探测在线的 API 中转站。在线不等于每个模型都能用，充值前仍建议对照延迟和投票，并先小额实测。",
       keys: "在线API中转,可用GPT接口",
     },
     other: {
       title: "更多API中转站收录",
-      desc: "尚未归入常用标签的API中转站，可在本站继续按模型或关键词筛选。",
+      desc: "尚未归入常用标签的 API 中转站，可按模型或关键词继续筛。本站只做对照，不代收充值，具体规则以对方页面为准。",
       keys: "API中转站大全",
     },
     fav: {
       title: "我收藏的API中转站",
-      desc: "你在这台设备上收藏的API中转站，方便对比常用ChatGPT、Claude中转。",
+      desc: "你在这台设备上收藏的 API 中转站，方便对比常用 ChatGPT、Claude 中转。收藏只存在本地，不会同步到其他电脑。",
       keys: "收藏的中转站",
     },
   };
@@ -206,7 +206,7 @@
     },
     grok: {
       title: "Grok中转站推荐_Grok API接口",
-      desc: "Grok API、xAI中转站列表。本站对照可用性，充值前建议小额实测。",
+      desc: "Grok API、xAI 中转站列表。本站对照整站可用性和延迟，充值前建议小额实测；模型是否开通以对方控制台为准。",
       keys: "Grok中转,Grok API,xAI中转",
       h1: "Grok API 中转站推荐",
     },
@@ -218,43 +218,44 @@
     },
     kimi: {
       title: "Kimi中转站推荐_月之暗面API接口",
-      desc: "Kimi / 月之暗面 API 中转站对照，看探测状态再充值。",
+      desc: "Kimi / 月之暗面 API 中转站对照。看本站探测是否在线、延迟如何，再决定去哪家充值，额度与模型以对方页面为准。",
       keys: "Kimi中转,Kimi API,月之暗面API",
       h1: "Kimi API 中转站推荐",
     },
     qwen: {
       title: "通义千问中转站_Qwen API接口推荐",
-      desc: "Qwen / 通义千问 API 中转站列表。本站对照可用性与延迟。",
+      desc: "Qwen / 通义千问 API 中转站列表。本站对照可用性和延迟，方便先看清再充值，具体模型以对方控制台为准。",
       keys: "Qwen中转,通义千问API,千问接口",
       h1: "Qwen / 通义千问中转站推荐",
     },
     glm: {
       title: "智谱GLM中转站_GLM API接口推荐",
-      desc: "GLM / 智谱 API 中转站对照，看探测再决定充哪家。",
+      desc: "GLM / 智谱 API 中转站对照。看探测状态和延迟后再决定充哪家，本站不代收充值，模型清单以对方控制台为准。",
       keys: "GLM中转,智谱API,ChatGLM接口",
       h1: "GLM / 智谱中转站推荐",
     },
     image: {
       title: "AI生图API中转站_绘图接口推荐",
-      desc: "支持生图、绘图接口的API中转站。本站对照整站可用性，具体模型以对方控制台为准。",
+      desc: "支持生图、绘图接口的 API 中转站。本站对照整站可用性，具体画质、计费和模型名称以对方控制台为准，建议先小额试。",
       keys: "生图API,AI绘图接口,文生图中转",
       h1: "AI 生图 API 中转站推荐",
     },
     video: {
       title: "AI视频API中转站_视频生成接口",
-      desc: "支持视频生成接口的API中转站。充值前先看本站探测，并小额实测对方模型。",
+      desc: "支持视频生成接口的 API 中转站。充值前先看本站探测，并小额实测对方模型；生成时长和计费以对方页面为准。",
       keys: "视频API,AI视频接口,文生视频中转",
       h1: "AI 视频 API 中转站推荐",
     },
   };
 
   const OFFICIAL_SEO = {
-    openai: { title: "OpenAI官方状态_ChatGPT模型实况", desc: "OpenAI官方状态对照，看ChatGPT、GPT接口是否降级，再决定去哪家API中转充值。", keys: "OpenAI状态,ChatGPT官方状态" },
-    anthropic: { title: "Claude官方状态_Anthropic模型实况", desc: "Claude官方状态对照，排查Claude API是否异常，避免盲目给中转站充值。", keys: "Claude状态,Anthropic状态" },
-    google: { title: "Gemini官方状态_Google模型实况", desc: "Gemini官方状态对照，查看Google模型是否可用。", keys: "Gemini状态" },
-    xai: { title: "Grok官方状态_xAI模型实况", desc: "Grok / xAI官方状态对照，查看Grok接口是否正常。", keys: "Grok状态,xAI状态" },
-    deepseek: { title: "DeepSeek官方状态_模型实况", desc: "DeepSeek官方状态对照，查看DeepSeek API是否可用。", keys: "DeepSeek状态" },
-    moonshot: { title: "Kimi官方状态_月之暗面实况", desc: "Kimi官方状态对照，查看月之暗面接口是否正常。", keys: "Kimi状态" },
+    openai: { title: "OpenAI官方状态_ChatGPT模型实况", desc: "OpenAI 官方状态对照，看 ChatGPT、GPT 接口是否降级。上游异常时很多中转会一起受影响，再决定去哪家充值。", keys: "OpenAI状态,ChatGPT官方状态" },
+    anthropic: { title: "Claude官方状态_Anthropic模型实况", desc: "Claude 官方状态对照，排查 Anthropic 接口是否异常。上游故障时第三方中转常一起受影响，避免盲目充值。", keys: "Claude状态,Anthropic状态" },
+    google: { title: "Gemini官方状态_Google模型实况", desc: "Gemini / Google 官方状态对照，查看模型是否可用或降级。上游异常时中转站也会受影响，充值前建议先看本页。", keys: "Gemini状态" },
+    gemini: { title: "Gemini官方状态_Google模型实况", desc: "Gemini / Google 官方状态对照，查看模型是否可用或降级。上游异常时中转站也会受影响，充值前建议先看本页。", keys: "Gemini状态" },
+    xai: { title: "Grok官方状态_xAI模型实况", desc: "Grok / xAI 官方状态对照，查看接口是否正常。上游降级时很多第三方中转会一起受影响，本页只在站内对照公开状态。", keys: "Grok状态,xAI状态" },
+    deepseek: { title: "DeepSeek官方状态_模型实况", desc: "DeepSeek 官方状态对照，查看 API 是否可用。上游异常时中转站可能一起受影响，本站不跳转官方后台，只做对照。", keys: "DeepSeek状态" },
+    moonshot: { title: "Kimi官方状态_月之暗面实况", desc: "Kimi / 月之暗面官方状态对照，查看接口是否正常。上游异常时第三方中转常一起受影响，充值前建议先看本页。", keys: "Kimi状态" },
   };
 
   function esc(s) {
@@ -342,6 +343,16 @@
   function clip(s, n) {
     const t = String(s || "").replace(/\s+/g, " ").trim();
     return t.length > n ? t.slice(0, n - 1) + "…" : t;
+  }
+
+  function ensureDesc(s) {
+    const pad = "本页只做第三方 API 中转对照，不代收充值，模型与额度以对方当前页面为准。";
+    let t = String(s || "").replace(/\s+/g, " ").trim();
+    if (t.length < 50) {
+      if (t && !/[。.!？?]$/.test(t)) t += "。";
+      t = (t + pad).replace(/\s+/g, " ").trim();
+    }
+    return clip(t, 160);
   }
 
   function fmtMs(ms) {
@@ -526,7 +537,7 @@
     const extra = MODEL_SEO[id] || {};
     const label = MODEL_LABEL[id] || id;
     const title = (extra.title || label + "中转站") + "【API中转站导航】";
-    const description = extra.desc || "本站收录支持" + label + "的API中转站，对照可用性与延迟后再充值。";
+    const description = extra.desc || "本站收录支持" + label + "的 API 中转站，对照可用性与延迟后再决定去哪家充值。本站不代收，模型以对方控制台为准。";
     const keywords = uniqueKeywords(extra.keys, label);
     return pack({
       title,
@@ -631,7 +642,7 @@
     const label = CAT_LABEL[id] || id;
     const extra = CAT_SEO[id] || {};
     const title = extra.title || label + " · API中转站导航";
-    const description = extra.desc || "「" + label + "」分类下的第三方 API 中转，先看探测再决定去哪家。";
+    const description = extra.desc || "「" + label + "」分类下的第三方 API 中转。本站对照探测和投票，先看再决定去哪家，不代收充值。";
     const keywords = uniqueKeywords(extra.keys, label);
     const stations = (ctx && ctx.stations) || [];
     const origin = ctx && ctx.origin;
@@ -707,11 +718,10 @@
     const up = site.status && site.status.uptime != null ? site.status.uptime + "%" : "待测";
     const verdict = siteVerdict(site);
     const title = site.name + (isCharity ? "（公益站）" : "") + " · API中转站导航";
-    const description = clip(
+    const description = ensureDesc(
       isCharity
         ? site.name + " 是本站对照的公益站。" + (modelText ? "简介提到" + modelText + "。" : "") + verdict.sentence
-        : verdict.sentence + (modelText ? " 简介提到" + modelText + "。" : "") + "可用性" + up + "，延迟" + fmtMs(site.status && (site.status.avgMs || site.status.ms)) + "。",
-      160
+        : verdict.sentence + (modelText ? " 简介提到" + modelText + "。" : "") + "可用性" + up + "，延迟" + fmtMs(site.status && (site.status.avgMs || site.status.ms)) + "。"
     );
     const keywords = uniqueKeywords(site.name, site.domain, isCharity ? "公益站" : "API中转");
     const path = sitePath(site);
@@ -754,7 +764,7 @@
     const extra = OFFICIAL_SEO[provider] || {};
     const label = (item && item.label) || provider;
     const title = (extra.title || label + "官方模型实况") + "【API中转站导航】";
-    const description = extra.desc || label + "官方状态对照，充值API中转前先看上游是否降级。";
+    const description = extra.desc || label + "官方状态对照，充值 API 中转前先看上游是否降级。上游异常时很多中转会一起受影响，本页只做对照。";
     return pack({
       title,
       description,
@@ -802,7 +812,7 @@
     const image = seo.image && /^https?:/i.test(seo.image) ? seo.image : abs(origin, seo.image || "/img/og.png");
     return {
       title: seo.title,
-      description: seo.description,
+      description: ensureDesc(seo.description),
       keywords: seo.keywords,
       h1: seo.h1 || seo.title,
       lead: seo.lead || seo.description,
