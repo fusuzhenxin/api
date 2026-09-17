@@ -152949,10 +152949,86 @@
       "checks": [],
       "charitySlug": "claude-now",
       "charityPin": 0
+    },
+    {
+      "id": 900038,
+      "name": "KiosAPI",
+      "url": "https://kiosapi.com/",
+      "domain": "kiosapi.com",
+      "logo": "",
+      "tag": "公益站",
+      "description": "带免费分组的中转站：Free 组倍率 0，目前开着 34 个模型，kimi-k3、glm-5.3、qwen3.8 系列、deepseek-v4-flash、gpt-oss-20b、gemini-2.0-flash、grok-4.6-fast 这些都能直接白嫖。",
+      "categories": [
+        "charity"
+      ],
+      "features": [
+        "charity"
+      ],
+      "promoted": false,
+      "rank": 0,
+      "createdAt": "",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "status": {
+        "online": null,
+        "ms": null,
+        "uptime": null,
+        "avgMs": null,
+        "checkedAt": ""
+      },
+      "models": [
+        {
+          "id": "gpt",
+          "label": "GPT",
+          "rate": null,
+          "mentioned": true
+        },
+        {
+          "id": "gemini",
+          "label": "Gemini",
+          "rate": null,
+          "mentioned": true
+        },
+        {
+          "id": "grok",
+          "label": "Grok",
+          "rate": null,
+          "mentioned": true
+        },
+        {
+          "id": "deepseek",
+          "label": "DeepSeek",
+          "rate": null,
+          "mentioned": true
+        },
+        {
+          "id": "kimi",
+          "label": "Kimi",
+          "rate": null,
+          "mentioned": true
+        },
+        {
+          "id": "qwen",
+          "label": "Qwen",
+          "rate": null,
+          "mentioned": true
+        },
+        {
+          "id": "glm",
+          "label": "GLM",
+          "rate": null,
+          "mentioned": true
+        }
+      ],
+      "checks": [],
+      "charitySlug": "kiosapi",
+      "charityPin": 0
     }
   ],
   "officialUpdatedAt": "2026-09-01T03:06:16.852Z",
   "featuresUpdatedAt": "2026-09-01T03:56:59.402Z",
-  "charityUpdatedAt": "2026-09-11T07:40:57.184Z",
+  "charityUpdatedAt": "2026-09-17T09:58:19.704Z",
   "charitySource": "https://baipiao.org/charity/"
 }

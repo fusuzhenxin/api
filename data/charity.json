@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-11T07:40:57.185Z",
+  "updatedAt": "2026-09-17T09:58:19.705Z",
   "source": "https://baipiao.org/charity/",
   "items": [
     {
@@ -23,6 +23,17 @@
       "status": "active",
       "pin": 1001,
       "stationId": 3282
+    },
+    {
+      "slug": "kiosapi",
+      "name": "KiosAPI",
+      "url": "https://kiosapi.com/",
+      "domain": "kiosapi.com",
+      "summary": "带免费分组的中转站：Free 组倍率 0，目前开着 34 个模型，kimi-k3、glm-5.3、qwen3.8 系列、deepseek-v4-flash、gpt-oss-20b、gemini-2.0-flash、grok-4.6-fast 这些都能直接白嫖。没有签到、注册也不送额度——免费就是免费分组本身，注册完过一道 Telegram 机器人验证就能用。官方对 Free 组只承诺「100% 免费」，稳定性明说不保证，模型清单还经常变。",
+      "tags": "免费api,免费分组,openai兼容,国产模型,kimi,glm,qwen,无签到",
+      "status": "active",
+      "pin": 0,
+      "stationId": 900038
     },
     {
       "slug": "laisiai",
@@ -102,26 +113,37 @@
       "stationId": 900005
     },
     {
-      "slug": "deadlysignal-api",
-      "name": "DeadlySignal API",
-      "url": "https://myapi.creitingameplays.com/",
-      "domain": "myapi.creitingameplays.com",
-      "summary": "只开放 GitHub 登录注册的公益 AI API 站，GitHub 账号注册时间须满六个月。站内开启每日签到，接口兼容 OpenAI，公开菜单覆盖 GPT、Claude、Grok、Kimi、DeepSeek、GLM、Gemini 和 Qwen 等系列。",
-      "tags": "免费api,openai兼容,github登录,每日签到,gpt,claude,gemini",
+      "slug": "anyrouter",
+      "name": "AnyRouter",
+      "url": "https://anyrouter.top/register",
+      "domain": "anyrouter.top",
+      "summary": "注册立得 $50 免费额度、每日签到再领 $25、邀好友双方各得 $50 的公益 Claude Code 线路：拿到 key 填进 Claude Code 就直接白嫖 Claude（Opus 4 / Sonnet 4），主站直连之外另给一条大陆优化的后端线路。",
+      "tags": "免费api,claude,claude code,注册送额度,每日签到,大陆优化",
       "status": "active",
       "pin": 0,
-      "stationId": 900006
+      "stationId": 50
     },
     {
-      "slug": "nofx-one",
-      "name": "NOFX",
-      "url": "https://nofx.one/zh-CN",
-      "domain": "nofx.one",
-      "summary": "NOFX 注册送 20 积分，每日签到送 5 积分，每成功邀请一位好友再得 5 积分；积分可用于主流模型，优势是分组倍率较低，适合先用免费额度做日常体验。",
-      "tags": "免费api,注册送积分,每日签到,邀请奖励,低倍率,主流模型",
+      "slug": "gemai",
+      "name": "gemai 公益站",
+      "url": "https://api.gemai.cc/sign-up",
+      "domain": "api.gemai.cc",
+      "summary": "不堆国产凑数、专挂一线旗舰的公益免费 API 站，Claude Opus 4.8、Gemini 3.1 Pro、GPT-5.5、Grok 4.3 全在，模型多到要自己拉列表。注册送 100 元、每天签到再随机加，OpenAI 兼容直连。就是免费余额够不着最贵那几个，得挑便宜款薅。",
+      "tags": "免费api,claude,gemini,gpt,grok,注册送额度,每日签到",
       "status": "active",
       "pin": 0,
-      "stationId": 900007
+      "stationId": 513
+    },
+    {
+      "slug": "supxh",
+      "name": "肖恩AI",
+      "url": "https://free.supxh.xin/register",
+      "domain": "free.supxh.xin",
+      "summary": "新人注册立得 5000 点免费额度，每日签到再领 1000~3000 点，免费用 Claude Opus 4.5 / Sonnet 4.5、Gemini 3.1 Pro 等大模型，按「额度/次」扣的公益免费线路。",
+      "tags": "免费api,claude,gemini,deepseek,每日签到",
+      "status": "active",
+      "pin": 0,
+      "stationId": 233
     },
     {
       "slug": "liminality",
@@ -135,6 +157,17 @@
       "stationId": 900008
     },
     {
+      "slug": "52mx",
+      "name": "52模型",
+      "url": "https://52mx.net/sign-up",
+      "domain": "52mx.net",
+      "summary": "开源模型限免一大把、付费主力是 Claude 旗舰（$7.5/1M 输出）的公益站，签到攒额度尚可、还能生图。有个得记牢的坑：可能封号，建议买 1 元永久保号套餐兜底。OpenAI 兼容直连。",
+      "tags": "免费api,claude,开源模型,限免,每日签到,生图",
+      "status": "active",
+      "pin": 0,
+      "stationId": 3885
+    },
+    {
       "slug": "helpcoder",
       "name": "helpcoder 公益站",
       "url": "https://helpcoder.cc/",
@@ -146,15 +179,26 @@
       "stationId": 1704
     },
     {
-      "slug": "52mx",
-      "name": "52模型",
-      "url": "https://52mx.net/sign-up",
-      "domain": "52mx.net",
-      "summary": "开源模型限免一大把、付费主力是 Claude 旗舰（$7.5/1M 输出）的公益站，签到攒额度尚可、还能生图。有个得记牢的坑：可能封号，建议买 1 元永久保号套餐兜底。OpenAI 兼容直连。",
-      "tags": "免费api,claude,开源模型,限免,每日签到,生图",
+      "slug": "true-sota",
+      "name": "TrueSOTA",
+      "url": "https://true-sota.com/register",
+      "domain": "true-sota.com",
+      "summary": "TrueSOTA 是一条 OpenAI 兼容的 GPT API 线路，没有每日签到；免费额度主要靠邀请获取，每成功邀请 1 人获得 $20，每周最多邀请 10 人。",
+      "tags": "免费api,gpt-5.6,邀请奖励,openai兼容",
       "status": "active",
       "pin": 0,
-      "stationId": 3885
+      "stationId": 2040
+    },
+    {
+      "slug": "muyuan",
+      "name": "君の公益",
+      "url": "https://muyuan.do/",
+      "domain": "muyuan.do",
+      "summary": "君の公益（muyuan.do）是 linux.do 老哥「慕鸢」个人在养的一条公益站 New API 网关，签到额度看资源脸色浮动、但天天有得签，唯一门槛是——只认 Codex CLI / Claude Code CLI 两个客户端调用，网页聊天党在这儿走不通。注册路子有邮箱验证、LinuxDo 一键登录（门槛随资源紧张随时调）、Passkey 三条，2026-05-31 还临时开过 QQ 邮箱注册的口子。",
+      "tags": "免费api,gpt,codex cli,claude code cli,每日签到,linuxdo",
+      "status": "active",
+      "pin": 0,
+      "stationId": 992
     },
     {
       "slug": "bmapi",
@@ -168,26 +212,26 @@
       "stationId": 1461
     },
     {
-      "slug": "hybgzs",
-      "name": "黑与白公益站",
-      "url": "https://ai.hybgzs.com/",
-      "domain": "ai.hybgzs.com",
-      "summary": "黑与白公益站（hybgzs）是一套\"双站体系\"——主站 ai.hybgzs.com 是 Done Hub 网关，管你怎么调用模型；福利站 cdk.hybgzs.com 管你怎么去赚配额（签到/转盘/农场），赚回来的量会转回主站接着造，这种\"调用归调用、搞钱归搞钱\"的拆分玩法我目前只在这一家见过。支持 OpenAI/Claude/Gemini 三种协议直连，国内卡了还能切一条 EdgeOne 优化线。",
-      "tags": "免费api,claude,gpt,gemini,linuxdo,每日签到",
+      "slug": "chuyel-furry",
+      "name": "初叶 Furry API",
+      "url": "https://ai.chuyel.top/register",
+      "domain": "ai.chuyel.top",
+      "summary": "按「次」计费的公益免费 API 站——不按 token 烧，签到一次就够调五十到两百次，还能生图。带点二次元 / furry 调性的小站，门槛低、回血快，OpenAI 兼容直连。",
+      "tags": "免费api,按次计费,生图,每日签到,二次元",
       "status": "active",
       "pin": 0,
-      "stationId": 900009
+      "stationId": 318
     },
     {
-      "slug": "xiaohuan",
-      "name": "小欢公益站",
-      "url": "https://free-llm.cups.moe/",
-      "domain": "free-llm.cups.moe",
-      "summary": "小欢公益站是博主\"小欢\"挂在自己个人博客 cups.moe 后院的免费大模型 API 服务，登录即送 200 次使用额度，额度快见底就去那篇 14.4 万阅读的博文底下留言喊话加量——没有邀请码、没有充值入口，全靠一篇博文加一条评论区撑着。",
-      "tags": "免费api,claude,deepseek,linux.do登录,博客公益站,claude code",
+      "slug": "chuan-api",
+      "name": "chuan公益API",
+      "url": "https://chuan.sylu.cc/",
+      "domain": "chuan.sylu.cc",
+      "summary": "chuan公益API 提供签到和邀请额度，签到最高送 50、邀请送 50；站点会在模型报错时尝试切换兜底模型，Gemini 系列严禁用于编程或大型任务。",
+      "tags": "免费api,签到额度,邀请奖励,openai兼容,gemini限制",
       "status": "active",
       "pin": 0,
-      "stationId": 900010
+      "stationId": 900030
     },
     {
       "slug": "docode",
@@ -201,28 +245,6 @@
       "stationId": 1913
     },
     {
-      "slug": "free-v36",
-      "name": "免费 ChatGPT API（free.v36.cm）",
-      "url": "https://free.v36.cm/",
-      "domain": "free.v36.cm",
-      "summary": "免费 ChatGPT API（free.v36.cm）公益站脱胎自 GitHub 上 6.5k+ star 的老仓库 popjane/free_chatgpt_api，邮箱自助注册和 GitHub 一键授权两条路子都能领 Key，国内直连不用额外绕线。免费池主力是 gpt-4o-mini、gpt-3.5-turbo 这类走量款，gpt-4 全系只定期限量开放，超过 RPM 96 会被限流拦截。",
-      "tags": "免费api,gpt-3.5,gpt-4o-mini,github oauth,免验证邮箱,openai兼容",
-      "status": "active",
-      "pin": 0,
-      "stationId": 900011
-    },
-    {
-      "slug": "icoe",
-      "name": "冰佬公益站",
-      "url": "https://icoe.pp.ua/",
-      "domain": "icoe.pp.ua",
-      "summary": "冰佬公益站是老资格的那一挂公益站，如今临时落脚在 icoe.pp.ua 这个域名下，页面自己挂的招牌是「冰のCodex」——域名跟着心情换，招牌跟着域名飘，算是这站最典型的标签。进门这道槛比大多数站都严，邮箱只收 gmail.com 和 linux.do 两家后缀，外加 LinuxDo 一键登录，注册还得碰运气抽到邀请码；架上现摆的是 GPT、Codex 这条线的型号，不画图。",
-      "tags": "gpt/codex,linuxdo oauth,邮箱白名单,邀请码抽奖,号池贡献",
-      "status": "active",
-      "pin": 0,
-      "stationId": 900012
-    },
-    {
       "slug": "makelove-nianhua",
       "name": "年华 API",
       "url": "https://newapi.makelove.cloud/sign-up",
@@ -234,15 +256,15 @@
       "stationId": 1705
     },
     {
-      "slug": "juziai",
-      "name": "橘子 AI（juziai）",
-      "url": "https://api.juziai.cc/",
-      "domain": "api.juziai.cc",
-      "summary": "注册直接到账 $50 的公益免费 API 站，除了 OpenAI 兼容还开了 Anthropic 原生端点——能直接喂 Claude Code。GPT-5.5、Claude Opus、Gemini 3.1 Pro、Grok 一站凑齐，默认 key 就能调一大片，白嫖党拿去接客户端正合适。",
-      "tags": "免费api,claudecode,claude,gpt,gemini,grok,注册送额度",
+      "slug": "xiaohuan",
+      "name": "小欢公益站",
+      "url": "https://free-llm.cups.moe/",
+      "domain": "free-llm.cups.moe",
+      "summary": "小欢公益站是博主\"小欢\"挂在自己个人博客 cups.moe 后院的免费大模型 API 服务，登录即送 200 次使用额度，额度快见底就去那篇 14.4 万阅读的博文底下留言喊话加量——没有邀请码、没有充值入口，全靠一篇博文加一条评论区撑着。",
+      "tags": "免费api,claude,deepseek,linux.do登录,博客公益站,claude code",
       "status": "active",
       "pin": 0,
-      "stationId": 900013
+      "stationId": 900010
     },
     {
       "slug": "grox",
@@ -265,6 +287,50 @@
       "status": "active",
       "pin": 0,
       "stationId": 1574
+    },
+    {
+      "slug": "free-v36",
+      "name": "免费 ChatGPT API（free.v36.cm）",
+      "url": "https://free.v36.cm/",
+      "domain": "free.v36.cm",
+      "summary": "免费 ChatGPT API（free.v36.cm）公益站脱胎自 GitHub 上 6.5k+ star 的老仓库 popjane/free_chatgpt_api，邮箱自助注册和 GitHub 一键授权两条路子都能领 Key，国内直连不用额外绕线。免费池主力是 gpt-4o-mini、gpt-3.5-turbo 这类走量款，gpt-4 全系只定期限量开放，超过 RPM 96 会被限流拦截。",
+      "tags": "免费api,gpt-3.5,gpt-4o-mini,github oauth,免验证邮箱,openai兼容",
+      "status": "active",
+      "pin": 0,
+      "stationId": 900011
+    },
+    {
+      "slug": "juziai",
+      "name": "橘子 AI（juziai）",
+      "url": "https://api.juziai.cc/",
+      "domain": "api.juziai.cc",
+      "summary": "注册直接到账 $50 的公益免费 API 站，除了 OpenAI 兼容还开了 Anthropic 原生端点——能直接喂 Claude Code。GPT-5.5、Claude Opus、Gemini 3.1 Pro、Grok 一站凑齐，默认 key 就能调一大片，白嫖党拿去接客户端正合适。",
+      "tags": "免费api,claudecode,claude,gpt,gemini,grok,注册送额度",
+      "status": "active",
+      "pin": 0,
+      "stationId": 900013
+    },
+    {
+      "slug": "icoe",
+      "name": "冰佬公益站",
+      "url": "https://icoe.pp.ua/",
+      "domain": "icoe.pp.ua",
+      "summary": "冰佬公益站是老资格的那一挂公益站，如今临时落脚在 icoe.pp.ua 这个域名下，页面自己挂的招牌是「冰のCodex」——域名跟着心情换，招牌跟着域名飘，算是这站最典型的标签。进门这道槛比大多数站都严，邮箱只收 gmail.com 和 linux.do 两家后缀，外加 LinuxDo 一键登录，注册还得碰运气抽到邀请码；架上现摆的是 GPT、Codex 这条线的型号，不画图。",
+      "tags": "gpt/codex,linuxdo oauth,邮箱白名单,邀请码抽奖,号池贡献",
+      "status": "active",
+      "pin": 0,
+      "stationId": 900012
+    },
+    {
+      "slug": "bohe",
+      "name": "薄荷公益站",
+      "url": "https://x666.me/",
+      "domain": "x666.me",
+      "summary": "薄荷公益站是那种进门先看你攒了几颗星、星越高手越松的免费 API 站，LinuxDo 授权登录不挑信任等级，注册直接到手 25 点额度。它把 Gemini 3、Grok 4.20、GPT-5.4/5.5 这些型号按星级和分组拆着放，想摸到 gemini-2.5-pro-1m 的百万上下文，还得靠社区凑份子的 CLI 凭证池撑着。",
+      "tags": "免费api,gemini,grok,linuxdo登录,星级机制,cli凭证池",
+      "status": "active",
+      "pin": 0,
+      "stationId": 3748
     },
     {
       "slug": "88888-ai",
@@ -333,15 +399,15 @@
       "stationId": 900017
     },
     {
-      "slug": "bohe",
-      "name": "薄荷公益站",
-      "url": "https://x666.me/",
-      "domain": "x666.me",
-      "summary": "薄荷公益站是那种进门先看你攒了几颗星、星越高手越松的免费 API 站，LinuxDo 授权登录不挑信任等级，注册直接到手 25 点额度。它把 Gemini 3、Grok 4.20、GPT-5.4/5.5 这些型号按星级和分组拆着放，想摸到 gemini-2.5-pro-1m 的百万上下文，还得靠社区凑份子的 CLI 凭证池撑着。",
-      "tags": "免费api,gemini,grok,linuxdo登录,星级机制,cli凭证池",
+      "slug": "aiyiwei",
+      "name": "聚合 API（aiyiwei）",
+      "url": "https://aiyiwei.vip/register",
+      "domain": "aiyiwei.vip",
+      "summary": "模型杂、可生图、跑了挺久没掉链子的公益免费大站。每天签到攒点小额额度，综合倍率 0.2–0.8 偏低，拿来当长期挂着的通用备用正合适。OpenAI 兼容直连。",
+      "tags": "免费api,聚合,生图,每日签到,低倍率",
       "status": "active",
       "pin": 0,
-      "stationId": 3748
+      "stationId": 900034
     },
     {
       "slug": "jiuyao",
@@ -386,6 +452,17 @@
       "status": "active",
       "pin": 0,
       "stationId": 900019
+    },
+    {
+      "slug": "cheap",
+      "name": "cheap",
+      "url": "https://api.cheapcodex.online/register",
+      "domain": "api.cheapcodex.online",
+      "summary": "cheap 是一条 AI API 公益线路，注册赠送 $20 额度，站内签到还能再领取 $20；支持通过 API Key 访问模型列表、Chat Completions 和 Responses 接口。",
+      "tags": "免费api,ai api,注册送额度,签到送额度,openai兼容",
+      "status": "active",
+      "pin": 0,
+      "stationId": 900036
     },
     {
       "slug": "sharedchat",
@@ -463,6 +540,17 @@
       "status": "active",
       "pin": 0,
       "stationId": 2582
+    },
+    {
+      "slug": "claude-now",
+      "name": "Claude Now 镜像站",
+      "url": "https://www.claude.now/",
+      "domain": "claude.now",
+      "summary": "Claude Now 公益站主打一个「零门槛」——浏览器打开 claude.now 就是完整的 Claude 网页聊天，不用注册、不用登录、不用魔法，连 API 是什么都不用懂。背后是公益号池共享普通账号在扛，跟着官方周限和封号节奏波动，能用尽量用、别当稳定饭碗。",
+      "tags": "免注册,免登录,claude,镜像站,网页版",
+      "status": "active",
+      "pin": 0,
+      "stationId": 900037
     },
     {
       "slug": "ggboom",
@@ -564,26 +652,26 @@
       "stationId": 1192
     },
     {
-      "slug": "anyrouter",
-      "name": "AnyRouter",
-      "url": "https://anyrouter.top/register",
-      "domain": "anyrouter.top",
-      "summary": "注册立得 $50 免费额度、每日签到再领 $25、邀好友双方各得 $50 的公益 Claude Code 线路：拿到 key 填进 Claude Code 就直接白嫖 Claude（Opus 4 / Sonnet 4），主站直连之外另给一条大陆优化的后端线路。",
-      "tags": "免费api,claude,claude code,注册送额度,每日签到,大陆优化",
+      "slug": "deadlysignal-api",
+      "name": "DeadlySignal API",
+      "url": "https://myapi.creitingameplays.com/",
+      "domain": "myapi.creitingameplays.com",
+      "summary": "只开放 GitHub 登录注册的公益 AI API 站，GitHub 账号注册时间须满六个月。站内开启每日签到，接口兼容 OpenAI，公开菜单覆盖 GPT、Claude、Grok、Kimi、DeepSeek、GLM、Gemini 和 Qwen 等系列。",
+      "tags": "免费api,openai兼容,github登录,每日签到,gpt,claude,gemini",
       "status": "active",
       "pin": 0,
-      "stationId": 50
+      "stationId": 900006
     },
     {
-      "slug": "gemai",
-      "name": "gemai 公益站",
-      "url": "https://api.gemai.cc/sign-up",
-      "domain": "api.gemai.cc",
-      "summary": "不堆国产凑数、专挂一线旗舰的公益免费 API 站，Claude Opus 4.8、Gemini 3.1 Pro、GPT-5.5、Grok 4.3 全在，模型多到要自己拉列表。注册送 100 元、每天签到再随机加，OpenAI 兼容直连。就是免费余额够不着最贵那几个，得挑便宜款薅。",
-      "tags": "免费api,claude,gemini,gpt,grok,注册送额度,每日签到",
+      "slug": "nofx-one",
+      "name": "NOFX",
+      "url": "https://nofx.one/zh-CN",
+      "domain": "nofx.one",
+      "summary": "NOFX 注册送 20 积分，每日签到送 5 积分，每成功邀请一位好友再得 5 积分；积分可用于主流模型，优势是分组倍率较低，适合先用免费额度做日常体验。",
+      "tags": "免费api,注册送积分,每日签到,邀请奖励,低倍率,主流模型",
       "status": "active",
       "pin": 0,
-      "stationId": 513
+      "stationId": 900007
     },
     {
       "slug": "future-hub",
@@ -597,17 +685,6 @@
       "stationId": 510
     },
     {
-      "slug": "supxh",
-      "name": "肖恩AI",
-      "url": "https://free.supxh.xin/register",
-      "domain": "free.supxh.xin",
-      "summary": "新人注册立得 5000 点免费额度，每日签到再领 1000~3000 点，免费用 Claude Opus 4.5 / Sonnet 4.5、Gemini 3.1 Pro 等大模型，按「额度/次」扣的公益免费线路。",
-      "tags": "免费api,claude,gemini,deepseek,每日签到",
-      "status": "active",
-      "pin": 0,
-      "stationId": 233
-    },
-    {
       "slug": "gorouter",
       "name": "GoRouter 公益站",
       "url": "https://gorouter.app/",
@@ -617,61 +694,6 @@
       "status": "active",
       "pin": 0,
       "stationId": 900029
-    },
-    {
-      "slug": "chuyel-furry",
-      "name": "初叶 Furry API",
-      "url": "https://ai.chuyel.top/register",
-      "domain": "ai.chuyel.top",
-      "summary": "按「次」计费的公益免费 API 站——不按 token 烧，签到一次就够调五十到两百次，还能生图。带点二次元 / furry 调性的小站，门槛低、回血快，OpenAI 兼容直连。",
-      "tags": "免费api,按次计费,生图,每日签到,二次元",
-      "status": "active",
-      "pin": 0,
-      "stationId": 318
-    },
-    {
-      "slug": "true-sota",
-      "name": "TrueSOTA",
-      "url": "https://true-sota.com/register",
-      "domain": "true-sota.com",
-      "summary": "TrueSOTA 是一条 OpenAI 兼容的 GPT API 线路，没有每日签到；免费额度主要靠邀请获取，每成功邀请 1 人获得 $20，每周最多邀请 10 人。",
-      "tags": "免费api,gpt-5.6,邀请奖励,openai兼容",
-      "status": "active",
-      "pin": 0,
-      "stationId": 2040
-    },
-    {
-      "slug": "muyuan",
-      "name": "君の公益",
-      "url": "https://muyuan.do/",
-      "domain": "muyuan.do",
-      "summary": "君の公益（muyuan.do）是 linux.do 老哥「慕鸢」个人在养的一条公益站 New API 网关，签到额度看资源脸色浮动、但天天有得签，唯一门槛是——只认 Codex CLI / Claude Code CLI 两个客户端调用，网页聊天党在这儿走不通。注册路子有邮箱验证、LinuxDo 一键登录（门槛随资源紧张随时调）、Passkey 三条，2026-05-31 还临时开过 QQ 邮箱注册的口子。",
-      "tags": "免费api,gpt,codex cli,claude code cli,每日签到,linuxdo",
-      "status": "active",
-      "pin": 0,
-      "stationId": 992
-    },
-    {
-      "slug": "chuan-api",
-      "name": "chuan公益API",
-      "url": "https://chuan.sylu.cc/",
-      "domain": "chuan.sylu.cc",
-      "summary": "chuan公益API 提供签到和邀请额度，签到最高送 50、邀请送 50；站点会在模型报错时尝试切换兜底模型，Gemini 系列严禁用于编程或大型任务。",
-      "tags": "免费api,签到额度,邀请奖励,openai兼容,gemini限制",
-      "status": "active",
-      "pin": 0,
-      "stationId": 900030
-    },
-    {
-      "slug": "yunshuapi",
-      "name": "云枢 api",
-      "url": "https://yunshuapi.site/sign-up",
-      "domain": "yunshuapi.site",
-      "summary": "云枢 API 是一条模型菜单铺得很全的公益线路，Claude Opus 全家桶、GPT-5.6 三兄弟（sol / terra / luna）、GPT-5.4/5.5、DeepSeek v4 和 gpt-image-2 生图一次挂齐。任意邮箱注册即送 $200 新人额度，走 New API 网关、OpenAI 与 Anthropic 双端点兼容，Claude Code 能直接接。",
-      "tags": "免费api,claude,gpt,deepseek,claude code,opus 5,gpt-5.6,生图,注册送额度",
-      "status": "expired",
-      "pin": 0,
-      "stationId": 900031
     },
     {
       "slug": "motomoto",
@@ -685,6 +707,28 @@
       "stationId": 900032
     },
     {
+      "slug": "yunshuapi",
+      "name": "云枢 api",
+      "url": "https://yunshuapi.site/sign-up",
+      "domain": "yunshuapi.site",
+      "summary": "云枢 API 是一条模型菜单铺得很全的公益线路，Claude Opus 全家桶、GPT-5.6 三兄弟（sol / terra / luna）、GPT-5.4/5.5、DeepSeek v4 和 gpt-image-2 生图一次挂齐。任意邮箱注册即送 $200 新人额度，走 New API 网关、OpenAI 与 Anthropic 双端点兼容，Claude Code 能直接接。",
+      "tags": "免费api,claude,gpt,deepseek,claude code,opus 5,gpt-5.6,生图,注册送额度",
+      "status": "expired",
+      "pin": 0,
+      "stationId": 900031
+    },
+    {
+      "slug": "hybgzs",
+      "name": "黑与白公益站",
+      "url": "https://ai.hybgzs.com/",
+      "domain": "ai.hybgzs.com",
+      "summary": "黑与白公益站（hybgzs）是一套\"双站体系\"——主站 ai.hybgzs.com 是 Done Hub 网关，管你怎么调用模型；福利站 cdk.hybgzs.com 管你怎么去赚配额（签到/转盘/农场），赚回来的量会转回主站接着造，这种\"调用归调用、搞钱归搞钱\"的拆分玩法我目前只在这一家见过。支持 OpenAI/Claude/Gemini 三种协议直连，国内卡了还能切一条 EdgeOne 优化线。",
+      "tags": "免费api,claude,gpt,gemini,linuxdo,每日签到",
+      "status": "active",
+      "pin": 0,
+      "stationId": 900009
+    },
+    {
       "slug": "sharellm",
       "name": "ShareLLM",
       "url": "https://sharellm.net/sign-up",
@@ -696,17 +740,6 @@
       "stationId": 900033
     },
     {
-      "slug": "aiyiwei",
-      "name": "聚合 API（aiyiwei）",
-      "url": "https://aiyiwei.vip/register",
-      "domain": "aiyiwei.vip",
-      "summary": "模型杂、可生图、跑了挺久没掉链子的公益免费大站。每天签到攒点小额额度，综合倍率 0.2–0.8 偏低，拿来当长期挂着的通用备用正合适。OpenAI 兼容直连。",
-      "tags": "免费api,聚合,生图,每日签到,低倍率",
-      "status": "active",
-      "pin": 0,
-      "stationId": 900034
-    },
-    {
       "slug": "ultrarouter",
       "name": "UltraRouter",
       "url": "https://ultrarouter.org/sign-up",
@@ -716,28 +749,6 @@
       "status": "active",
       "pin": 0,
       "stationId": 900035
-    },
-    {
-      "slug": "cheap",
-      "name": "cheap",
-      "url": "https://api.cheapcodex.online/register",
-      "domain": "api.cheapcodex.online",
-      "summary": "cheap 是一条 AI API 公益线路，注册赠送 $20 额度，站内签到还能再领取 $20；支持通过 API Key 访问模型列表、Chat Completions 和 Responses 接口。",
-      "tags": "免费api,ai api,注册送额度,签到送额度,openai兼容",
-      "status": "active",
-      "pin": 0,
-      "stationId": 900036
-    },
-    {
-      "slug": "claude-now",
-      "name": "Claude Now 镜像站",
-      "url": "https://www.claude.now/",
-      "domain": "claude.now",
-      "summary": "Claude Now 公益站主打一个「零门槛」——浏览器打开 claude.now 就是完整的 Claude 网页聊天，不用注册、不用登录、不用魔法，连 API 是什么都不用懂。背后是公益号池共享普通账号在扛，跟着官方周限和封号节奏波动，能用尽量用、别当稳定饭碗。",
-      "tags": "免注册,免登录,claude,镜像站,网页版",
-      "status": "active",
-      "pin": 0,
-      "stationId": 900037
     }
   ]
 }
