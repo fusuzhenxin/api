@@ -1409,8 +1409,8 @@
       });
     }
     state.basicMs = Date.now() - started;
-    const view = (location.hash || "#home").replace("#", "");
-    if (!signal.aborted && (view === "basic" || view === "home" || view === "detect")) showMcView("detect");
+    const view = viewFromLocation();
+    if (!signal.aborted && (view === "basic" || view === "home" || view === "detect")) showMcView("detect", true);
   }
 
   function showReady(id, outcome) {
@@ -1832,10 +1832,33 @@
     setProp("og:description", seo.description);
     setMeta("twitter:title", seo.title);
     setMeta("twitter:description", seo.description);
-    setProp("og:url", location.origin + location.pathname + (name === "home" ? "" : "#" + name));
+    const path = pathForView(name);
+    setProp("og:url", location.origin + path);
+    const canonical = document.querySelector('link[rel="canonical"]');
+    if (canonical) canonical.setAttribute("href", location.origin + path);
   }
 
-  function showMcView(name) {
+  function pathForView(name) {
+    return name === "home" ? "/check" : "/check/" + name;
+  }
+
+  function viewFromPath(pathname) {
+    const path = String(pathname || "").replace(/\/$/, "");
+    if (path === "/check") return "home";
+    const match = path.match(/^\/check\/(detect|basic|candy|pelican)$/);
+    return match ? match[1] : "";
+  }
+
+  function viewFromLocation() {
+    const path = location.pathname.replace(/\/$/, "");
+    const sub = path.match(/^\/check\/(detect|basic|candy|pelican)$/);
+    if (sub) return sub[1];
+    const hash = (location.hash || "").replace("#", "");
+    if (["home", "detect", "basic", "candy", "pelican"].indexOf(hash) >= 0) return hash;
+    return "home";
+  }
+
+  function showMcView(name, push) {
     const names = ["home", "detect", "basic", "candy", "pelican"];
     if (names.indexOf(name) < 0) name = "home";
     applyViewSeo(name);
@@ -1848,7 +1871,11 @@
     const setup = $("mcSetup");
     const slot = document.getElementById("setup-" + name);
     if (setup && slot) slot.appendChild(setup);
-    if (location.hash !== "#" + name) history.replaceState(null, "", "#" + name);
+    const path = pathForView(name);
+    if (location.pathname.replace(/\/$/, "") !== path) {
+      const method = push ? "pushState" : "replaceState";
+      history[method]({ view: name }, "", path);
+    }
     paintSetupGate();
     paintDetectRows();
   }
@@ -2072,7 +2099,7 @@
     });
     $("runAll").addEventListener("click", function () {
       if (!hasSetup()) {
-        showMcView("basic");
+        showMcView("basic", true);
         setNote("先填写接口地址和 Key，再开始检测。");
         $("base").focus();
         return;
@@ -2087,10 +2114,25 @@
         state.jobs[key].abort();
       });
     });
-    const hash = (location.hash || "#home").replace("#", "");
-    showMcView(hash);
-    window.addEventListener("hashchange", function () {
-      showMcView((location.hash || "#home").replace("#", ""));
+    showMcView(viewFromLocation(), false);
+    window.addEventListener("popstate", function () {
+      showMcView(viewFromLocation(), false);
+    });
+    document.addEventListener("click", function (event) {
+      if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || event.button) return;
+      const link = event.target.closest("a");
+      if (!link || link.target === "_blank") return;
+      let url;
+      try {
+        url = new URL(link.getAttribute("href"), location.origin);
+      } catch (err) {
+        return;
+      }
+      if (url.origin !== location.origin) return;
+      const name = viewFromPath(url.pathname);
+      if (!name) return;
+      event.preventDefault();
+      showMcView(name, true);
     });
     paintHistory();
     $("copyReport").addEventListener("click", function () {

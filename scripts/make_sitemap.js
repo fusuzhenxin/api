@@ -33,6 +33,10 @@ const hubUrls = [
   { loc: "/", pri: "1.0", freq: "daily", lastmod: built },
   { loc: "/check", pri: "0.8", freq: "weekly", lastmod: built },
   { loc: "/apply", pri: "0.6", freq: "monthly", lastmod: built },
+  { loc: "/check/detect", pri: "0.7", freq: "weekly", lastmod: built },
+  { loc: "/check/basic", pri: "0.7", freq: "weekly", lastmod: built },
+  { loc: "/check/candy", pri: "0.7", freq: "weekly", lastmod: built },
+  { loc: "/check/pelican", pri: "0.7", freq: "weekly", lastmod: built },
 ];
 CAT_IDS.forEach((id) =>
   hubUrls.push({

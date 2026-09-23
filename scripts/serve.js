@@ -231,6 +231,10 @@ http
       send(res, 200, "text/html; charset=utf-8", fs.readFileSync(staticHtml));
       return;
     }
+    if (/^\/check\/(detect|basic|candy|pelican)$/.test(clean)) {
+      send(res, 200, "text/html; charset=utf-8", fs.readFileSync(path.join(ROOT, "check.html")));
+      return;
+    }
     if (isSpaPath(url)) {
       try {
         serveSpa(req, res, clean);

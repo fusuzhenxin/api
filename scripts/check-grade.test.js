@@ -190,6 +190,9 @@ test("page lists every runner", function () {
   assert.ok(client.indexOf("function candyCount") >= 0);
   assert.ok(html.indexOf('name="candyCount" value="20"') >= 0);
   assert.ok(html.indexOf('id="protocol"') < 0);
+  assert.ok(html.indexOf('href="/check/candy"') >= 0);
+  assert.ok(html.indexOf('href="#candy"') < 0);
+  assert.ok(client.indexOf("function pathForView") >= 0);
   assert.ok(client.indexOf("function protocolFor") >= 0);
   assert.ok(html.indexOf("这道题是固定的糖果题") < 0);
   assert.ok(html.indexOf("鹈鹕汽车") < 0);
