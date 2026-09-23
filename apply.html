@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>申请收录_API中转站导航</title>
+  <meta name="description" content="把 API 中转站或公益站的公开信息发给站长申请收录。需要站点名称、网址、联系邮箱和简介。发送失败时可改发邮箱或 QQ。本站不代收充值。">
+  <meta name="keywords" content="API中转站收录,申请收录,GPT中转,Claude中转,公益站,API中转站导航">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#f3f6fb">
+  <link rel="canonical" href="https://www.veridrop.cn/apply">
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32.png">
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="API中转站导航">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:title" content="申请收录_API中转站导航">
+  <meta property="og:description" content="把 API 中转站或公益站的公开信息发给站长申请收录。发送失败时可改发邮箱或 QQ。">
+  <meta property="og:url" content="https://www.veridrop.cn/apply">
+  <meta property="og:image" content="https://www.veridrop.cn/img/og.png">
+  <script>
+    (function () {
+      document.documentElement.setAttribute("data-theme", "light");
+    })();
+  </script>
+  <link rel="stylesheet" href="/css/style.css?v=20260923l">
+</head>
+<body class="mc-page">
+  <header class="topbar">
+    <div class="brand-cluster">
+      <a class="brand" href="/" aria-label="API中转站导航首页">
+        <img class="logo-mark" src="/img/icon-192.png" width="36" height="36" alt="API中转站导航">
+        <p class="brand-title">API中转站导航</p>
+      </a>
+    </div>
+    <nav class="top-links">
+      <a class="top-contact" href="/cat/charity">公益站</a>
+      <a class="top-contact" href="/check">模型检测</a>
+      <a class="top-contact" href="/apply" aria-current="page">申请收录</a>
+      <a class="top-contact" href="/#contact">联系我们</a>
+    </nav>
+  </header>
+  <main class="mc-wrap">
+    <div class="mc-hero">
+      <div>
+        <h1>申请收录</h1>
+        <p>填写站点的公开信息，发到站长邮箱。收录前会打开你填的网址核对。本站只做导航，不代收充值，也不保证一定收录。不要填写 API Key 或密码。</p>
+        <i class="mc-bar"></i>
+      </div>
+    </div>
+    <section class="mc-card">
+      <form id="applyForm">
+        <div class="mc-fields">
+          <label class="mc-field">
+            <span>站点名称</span>
+            <input name="name" required maxlength="40" autocomplete="organization" placeholder="对方页面上的名字">
+          </label>
+          <label class="mc-field">
+            <span>你的称呼</span>
+            <input name="applicant" maxlength="40" autocomplete="name" placeholder="怎么称呼你">
+          </label>
+          <label class="mc-field mc-field-wide">
+            <span>网站地址</span>
+            <input name="url" type="url" required inputmode="url" placeholder="https://example.com" autocomplete="url">
+          </label>
+          <label class="mc-field mc-field-wide">
+            <span>接口地址，没有就留空</span>
+            <input name="api" type="url" inputmode="url" placeholder="https://api.example.com/v1" autocomplete="off">
+          </label>
+          <fieldset class="mc-field mc-field-wide">
+            <span>站点类型</span>
+            <div class="mc-choices">
+              <label class="t-blue"><input type="radio" name="kind" value="paid" checked> 付费中转</label>
+              <label class="t-rose"><input type="radio" name="kind" value="charity"> 公益站</label>
+            </div>
+          </fieldset>
+          <fieldset class="mc-field mc-field-wide">
+            <span>支持的模型</span>
+            <div class="mc-choices">
+              <label class="t-blue"><input type="checkbox" name="models" value="GPT"> GPT</label>
+              <label class="t-blue"><input type="checkbox" name="models" value="Claude"> Claude</label>
+              <label class="t-blue"><input type="checkbox" name="models" value="Gemini"> Gemini</label>
+              <label class="t-blue"><input type="checkbox" name="models" value="Grok"> Grok</label>
+              <label class="t-teal"><input type="checkbox" name="models" value="DeepSeek"> DeepSeek</label>
+              <label class="t-teal"><input type="checkbox" name="models" value="Kimi"> Kimi</label>
+              <label class="t-teal"><input type="checkbox" name="models" value="Qwen"> Qwen</label>
+              <label class="t-teal"><input type="checkbox" name="models" value="GLM"> GLM</label>
+              <label class="t-amber"><input type="checkbox" name="models" value="生图"> 生图</label>
+              <label class="t-amber"><input type="checkbox" name="models" value="视频"> 视频</label>
+            </div>
+          </fieldset>
+          <fieldset class="mc-field mc-field-wide">
+            <span>站点特点</span>
+            <div class="mc-choices">
+              <label class="t-teal"><input type="checkbox" name="features" value="签到送余额"> 签到送余额</label>
+              <label class="t-teal"><input type="checkbox" name="features" value="新用户赠额"> 新用户赠额</label>
+              <label class="t-amber"><input type="checkbox" name="features" value="低倍率"> 低倍率</label>
+              <label class="t-amber"><input type="checkbox" name="features" value="国内支付"> 国内支付</label>
+              <label class="t-blue"><input type="checkbox" name="features" value="邀请返利"> 邀请返利</label>
+              <label class="t-blue"><input type="checkbox" name="features" value="加密充值"> 加密充值</label>
+              <label class="t-rose"><input type="checkbox" name="features" value="可开发票"> 可开发票</label>
+            </div>
+          </fieldset>
+          <label class="mc-field">
+            <span>联系邮箱</span>
+            <input name="email" type="email" required maxlength="80" autocomplete="email" placeholder="方便回复你">
+          </label>
+          <label class="mc-field">
+            <span>QQ 或微信，选填</span>
+            <input name="contact" maxlength="40" autocomplete="off" placeholder="另一种联系方式">
+          </label>
+          <label class="mc-field mc-field-wide">
+            <span>简介</span>
+            <textarea name="intro" required maxlength="800" placeholder="怎么打开、怎么注册、大概怎么收费。不要贴 Key。"></textarea>
+          </label>
+        </div>
+        <label class="mc-hp">公司<input name="company" tabindex="-1" autocomplete="off"></label>
+        <button class="mc-btn mc-btn-solid" id="applySend" type="submit">发送到站长邮箱</button>
+        <p id="applyNote" class="mc-meta" aria-live="polite"></p>
+        <div id="applyFail" class="mc-fail" hidden>
+          <p>发送失败。请把下面的内容发给站长邮箱 <a href="mailto:2201219073@qq.com">2201219073@qq.com</a>，或 QQ <a href="https://wpa.qq.com/msgrd?v=3&amp;uin=2201219073&amp;site=qq&amp;menu=yes" target="_blank" rel="noopener noreferrer">2201219073</a>。</p>
+          <textarea id="applyCopy" readonly></textarea>
+          <button class="mc-btn" id="applyCopyBtn" type="button">复制申请内容</button>
+        </div>
+      </form>
+      <noscript>
+        <p>页面脚本没有加载，表格发不出去。请把站点名称、网址、联系邮箱和简介发到 2201219073@qq.com，或 QQ 2201219073。</p>
+      </noscript>
+    </section>
+  </main>
+  <script src="/js/apply.js?v=20260923k"></script>
+</body>
+</html>

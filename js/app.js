@@ -162,11 +162,28 @@ function jumpToTop() {
   document.body.scrollTop = 0;
 }
 
+function isStandalonePage(url) {
+  return (
+    url === "/check" ||
+    url.startsWith("/check/") ||
+    url.startsWith("/check#") ||
+    url.startsWith("/check?") ||
+    url === "/apply" ||
+    url.startsWith("/apply/") ||
+    url.startsWith("/apply#") ||
+    url.startsWith("/apply?")
+  );
+}
+
 function go(path) {
   const next = String(path || "/").replace(/^#/, "");
   const url = next.startsWith("/") ? next : "/" + next;
   if (location.protocol === "file:") {
     location.hash = url;
+    return;
+  }
+  if (isStandalonePage(url)) {
+    location.href = url;
     return;
   }
   if (location.pathname + location.search === url) {
@@ -1437,6 +1454,7 @@ function bind() {
     const href = a.getAttribute("href");
     if (!href || href.startsWith("#") || href.startsWith("http") || href.startsWith("//") || href.startsWith("/api/") || href.startsWith("mailto:")) return;
     if (!href.startsWith("/")) return;
+    if (isStandalonePage(href)) return;
     if (/\.(xml|json|txt|png|ico|svg|css|js|jpe?g|webp)$/i.test(href)) return;
     e.preventDefault();
     go(href);

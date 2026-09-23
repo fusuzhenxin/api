@@ -7,6 +7,8 @@ const PUB = path.join(ROOT, "public");
 
 const FILES = [
   "index.html",
+  "check.html",
+  "apply.html",
   "404.html",
   "favicon.ico",
   "robots.txt",

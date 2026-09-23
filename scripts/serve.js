@@ -4,6 +4,7 @@ const path = require("path");
 const { spawn } = require("child_process");
 const { parseRoute, seoFor, injectSeoHtml, ogPayload } = require("../js/seo.js");
 const { dump: dumpVotes, getOne: getVote, vote: castVote } = require("../lib/votes");
+const { acceptApply } = require("../lib/apply-mail");
 const { fetchOfficialFeed } = require("../lib/official-feed");
 
 const ROOT = path.resolve(__dirname, "..");
@@ -191,6 +192,25 @@ http
     const url = decodeURIComponent(parsed.pathname);
     if (url.replace(/\/$/, "") === "/api/votes") {
       serveVotes(req, res, parsed);
+      return;
+    }
+    if (url.replace(/\/$/, "") === "/api/apply") {
+      if (req.method !== "POST") {
+        sendJson(res, 405, { ok: false, error: "method not allowed" });
+        return;
+      }
+      readBody(req, 20000)
+        .then(function (raw) {
+          return acceptApply(JSON.parse(raw || "{}"));
+        })
+        .then(function (result) {
+          if (result.ok) sendJson(res, 200, { ok: true });
+          else if (result.error) sendJson(res, 400, { ok: false, error: result.error });
+          else sendJson(res, 502, { ok: false });
+        })
+        .catch(function () {
+          sendJson(res, 400, { ok: false, error: "提交内容无法读取" });
+        });
       return;
     }
     if (url.startsWith("/api/official/")) {

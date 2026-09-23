@@ -29,7 +29,11 @@ const CAT_IDS = [
   "online",
 ];
 
-const hubUrls = [{ loc: "/", pri: "1.0", freq: "daily", lastmod: built }];
+const hubUrls = [
+  { loc: "/", pri: "1.0", freq: "daily", lastmod: built },
+  { loc: "/check", pri: "0.8", freq: "weekly", lastmod: built },
+  { loc: "/apply", pri: "0.6", freq: "monthly", lastmod: built },
+];
 CAT_IDS.forEach((id) =>
   hubUrls.push({
     loc: catPath(id),
