@@ -2,6 +2,12 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "regions": ["sin1"],
+  "functions": {
+    "api/apply.js": {
+      "maxDuration": 10,
+      "regions": ["iad1"]
+    }
+  },
   "buildCommand": "node scripts/make_sitemap.js && node scripts/copy-public.js",
   "outputDirectory": "public",
   "headers": [
