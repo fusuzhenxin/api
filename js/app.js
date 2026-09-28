@@ -285,15 +285,15 @@ function siteLatencyMs(site) {
 function sortStations(list) {
   const copy = list.slice();
   if (state.sort === "uptime") {
-    copy.sort((a, b) => (b.status && b.status.uptime != null ? b.status.uptime : 0) - (a.status && a.status.uptime != null ? a.status.uptime : 0));
+    copy.sort((a, b) => (b.status && b.status.uptime != null ? b.status.uptime : -1) - (a.status && a.status.uptime != null ? a.status.uptime : -1));
   } else if (state.sort === "latency") {
     const ms = (s) => {
       const n = s.status && (s.status.avgMs || s.status.ms);
       return n > 0 ? n : 9e9;
     };
     copy.sort((a, b) => ms(a) - ms(b));
-  } else if (!state.sort && list.length && list.every((s) => (s.categories || []).includes("charity"))) {
-    copy.sort((a, b) => (b.charityPin || 0) - (a.charityPin || 0) || String(a.name || "").localeCompare(String(b.name || ""), "zh"));
+  } else {
+    copy.sort((a, b) => compareStations(a, b));
   }
   return copy;
 }
@@ -786,14 +786,21 @@ function officialBoard(item) {
     </article>`;
 }
 
+function officialIsToday(value) {
+  const d = new Date(value || "");
+  if (Number.isNaN(d.getTime())) return false;
+  const now = new Date();
+  return d.getFullYear() === now.getFullYear() && d.getMonth() === now.getMonth() && d.getDate() === now.getDate();
+}
+
 function renderOfficial() {
   const box = $("#official");
   const list = (state.data && state.data.official) || [];
   const liveAt = state.data && state.data.officialUpdatedAt;
   if ($("#officialMeta")) {
-    $("#officialMeta").textContent = liveAt
+    $("#officialMeta").textContent = officialIsToday(liveAt)
       ? "已同步官方订阅 · " + fmtTime(liveAt)
-      : "正在同步官方状态…";
+      : "正在同步今天的官方状态…";
   }
   if (!box) return;
   if (!list.length) {
@@ -854,7 +861,6 @@ function officialForModel(model) {
 }
 
 function renderHome() {
-  const g = state.data.global || {};
   $("#home").hidden = false;
   $("#detail").hidden = true;
   if ($("#officialPage")) $("#officialPage").hidden = true;
@@ -863,7 +869,8 @@ function renderHome() {
   const blocks = sections.map((cat) => ({ cat, list: stationsByCategory(cat) })).filter((row) => row.list.length);
   const rest = otherStations();
   const total = applySharedFilters(state.data.stations.slice()).length;
-  $("#resultMeta").innerHTML = `全部类型 <b>${total}</b> 站 · 全库 ${state.data.stations.length} · 探测在线 ${g.online || "—"}`;
+  const onlineCount = state.data.stations.filter((s) => s.status && s.status.online).length;
+  $("#resultMeta").innerHTML = `全部类型 <b>${total}</b> 站 · 全库 ${state.data.stations.length} · 探测在线 ${onlineCount}`;
   const parts = [];
   blocks.forEach((row) => {
     parts.push(typeBlock(row.cat, row.list));
@@ -885,7 +892,6 @@ function keepStaticCards() {
 }
 
 function renderCatPage(cat) {
-  const g = state.data.global || {};
   $("#home").hidden = false;
   $("#detail").hidden = true;
   if ($("#officialPage")) $("#officialPage").hidden = true;
@@ -899,7 +905,8 @@ function renderCatPage(cat) {
   const label = CATEGORY_LABEL[cat] || cat;
   const h1 = extra.h1 || label;
   const blurb = extra.desc || `${label}分类下的 API 中转站，对照 ChatGPT、Claude、DeepSeek 可用性与延迟。`;
-  $("#resultMeta").innerHTML = `${escapeHtml(label)} <b>${list.length}</b> 站 · 探测在线 ${g.online || "—"}`;
+  const onlineCount = list.filter((s) => s.status && s.status.online).length;
+  $("#resultMeta").innerHTML = `${escapeHtml(label)} <b>${list.length}</b> 站 · 探测在线 ${onlineCount}`;
   $("#grid").innerHTML = `
     <p class="cat-back crumbs"><a href="/">首页</a><span>/</span><a href="${catPath(cat)}">${escapeHtml(label)}</a></p>
     <section class="type-block" id="type-${escapeHtml(cat)}">
@@ -924,7 +931,6 @@ function renderCatPage(cat) {
 }
 
 function renderModelPage(id) {
-  const g = state.data.global || {};
   $("#home").hidden = false;
   $("#detail").hidden = true;
   if ($("#officialPage")) $("#officialPage").hidden = true;
@@ -939,7 +945,8 @@ function renderModelPage(id) {
   const label = (typeof MODEL_LABEL !== "undefined" && MODEL_LABEL[id]) || id;
   const h1 = extra.h1 || label + " API中转站推荐";
   const blurb = extra.desc || `本站收录支持 ${label} 的 API 中转站，对照可用性与延迟后再充值。`;
-  $("#resultMeta").innerHTML = `${escapeHtml(label)} <b>${list.length}</b> 站 · 探测在线 ${g.online || "—"}`;
+  const onlineCount = list.filter((s) => s.status && s.status.online).length;
+  $("#resultMeta").innerHTML = `${escapeHtml(label)} <b>${list.length}</b> 站 · 探测在线 ${onlineCount}`;
   $("#grid").innerHTML = `
     <p class="cat-back crumbs"><a href="/">首页</a><span>/</span><span>${escapeHtml(label)} 中转</span></p>
     <section class="type-block" id="model-${escapeHtml(id)}">
@@ -976,12 +983,13 @@ function featChips(site) {
 }
 
 function cardHtml(site) {
-  const known = site.status && site.status.online != null;
-  const online = site.status && site.status.online;
+  const view = probeStatus(site);
   const models = (site.models || [])
     .slice(0, 5)
     .map((m) => `<span class="model">${escapeHtml(m.label)}${m.rate ? " " + m.rate + "x" : ""}</span>`)
     .join("");
+  const uptime = site.status && site.status.uptime != null ? site.status.uptime + "%" : "—";
+  const latency = fmtMs(site.status && (site.status.avgMs || site.status.ms));
   return `
     <article class="card">
       <a class="card-link" href="${sitePath(site)}">
@@ -989,16 +997,16 @@ function cardHtml(site) {
           ${avatar(site)}
           <div class="card-id">
             <h3 class="card-title">${escapeHtml(site.name)}</h3>
-            <p class="card-sub">${escapeHtml(site.domain || site.tag || "第三方中转")}${site.promoted ? " · 精选" : ""}</p>
+            <p class="card-sub">${escapeHtml(site.domain || site.tag || "第三方中转")}${site.promoted ? " · 精选" : ""} · ${escapeHtml(probeClock(site) === "尚未探测" ? "尚未探测" : "探测 " + probeClock(site))}</p>
           </div>
-          <span class="badge ${known ? (online ? "ok" : "bad") : "wait"}">${known ? (online ? "在线" : "异常") : "待测"}</span>
+          <span class="badge ${view.cls}">${view.label}</span>
         </div>
         <p class="desc">${escapeHtml(site.description || "暂无简介，进去看整站状态和模型探测。")}</p>
         <div class="models">${featChips(site)}${models || `<span class="model">未标明模型</span>`}</div>
       </a>
       <div class="card-metrics">
-        <span><small>可用</small><b>${site.status && site.status.uptime != null ? site.status.uptime + "%" : "—"}</b></span>
-        <span><small>延迟</small><b>${fmtMs(site.status && (site.status.avgMs || site.status.ms))}</b></span>
+        <span><small>可用</small><b>${uptime}</b></span>
+        <span><small>延迟</small><b>${latency}</b></span>
         <span class="vote-cell"><small>投票</small>${votePairHtml(site)}</span>
       </div>
     </article>`;
@@ -1011,7 +1019,10 @@ function modelRows(site) {
     const siteOn = site.status && site.status.online;
     let label = "未标明";
     let cls = "";
-    if (!siteOn) {
+    if (site.status && site.status.online == null) {
+      label = "待测";
+      cls = "wait";
+    } else if (!siteOn) {
       label = "整站异常";
       cls = "bad";
     } else if (m.mentioned) {
@@ -1165,7 +1176,8 @@ function renderDetail(id) {
     return;
   }
   rememberView(id);
-  const online = site.status && site.status.online;
+  const view = probeStatus(site);
+  const online = !!(site.status && site.status.online);
   const fav = isFav(id);
   const checks = site.checks || [];
   const models = modelNames(site);
@@ -1191,13 +1203,13 @@ function renderDetail(id) {
       <div>
         <h1>${escapeHtml(site.name)}${(site.categories || []).includes("charity") ? "（公益站）" : ""}</h1>
         <div class="models">
-          <span class="badge ${site.status && site.status.online != null ? (online ? "ok" : "bad") : "wait"}">${site.status && site.status.online != null ? (online ? "整站在线" : "整站异常") : "尚未探测"}</span>
+          <span class="badge ${view.cls}">${view.detail}</span>
           ${site.promoted ? `<span class="badge">精选</span>` : ""}
           <span class="badge">${escapeHtml(site.tag || "第三方中转")}</span>
           ${(site.features || site.categories || []).map((c) => `<a class="model" href="${catPath(c)}">${catIcon(c)}${escapeHtml(CATEGORY_LABEL[c] || c)}</a>`).join("")}
           ${(site.models || []).slice(0, 6).map((m) => `<a class="model" href="${modelPath(m.id)}">${escapeHtml(m.label)}${m.rate ? " " + m.rate + "x" : ""}</a>`).join("")}
         </div>
-        <p class="card-sub">${escapeHtml(site.domain || "")} · 最近探测 ${fmtTime(site.status && site.status.checkedAt)}</p>
+        <p class="card-sub">${escapeHtml(site.domain || "")} · 最近探测 ${escapeHtml(probeClock(site))}</p>
       </div>
       <div class="detail-actions">
         ${votePairHtml(site)}
@@ -1474,6 +1486,8 @@ async function refreshOfficialStatus() {
   if ($("#officialMeta")) $("#officialMeta").textContent = "正在同步官方状态…";
   try {
     const list = await fetchOfficialLive((state.data && state.data.official) || []);
+    const live = list.filter((row) => row && row.level !== "unknown");
+    if (!live.length) throw new Error("empty official");
     if (!state.data) state.data = {};
     state.data.official = list;
     state.data.officialUpdatedAt = new Date().toISOString();
@@ -1482,7 +1496,7 @@ async function refreshOfficialStatus() {
     if (r.name === "site") renderDetail(r.id);
     if (r.name === "official") renderOfficialPage(r.provider);
   } catch (err) {
-    if ($("#officialMeta")) $("#officialMeta").textContent = "官方状态同步失败";
+    if ($("#officialMeta")) $("#officialMeta").textContent = "今天的官方状态没有同步成功";
     console.warn(err);
   }
 }

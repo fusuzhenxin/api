@@ -77,11 +77,7 @@
   }
 
   function sortStations(list) {
-    const copy = list.slice();
-    if (copy.length && copy.every((s) => (s.categories || []).includes("charity"))) {
-      copy.sort((a, b) => (b.charityPin || 0) - (a.charityPin || 0) || String(a.name || "").localeCompare(String(b.name || ""), "zh"));
-    }
-    return copy;
+    return list.slice().sort((a, b) => seo.compareStations(a, b));
   }
 
   function byCategory(data, cat) {
@@ -118,28 +114,29 @@
   }
 
   function cardHtml(site) {
-    const known = site.status && site.status.online != null;
-    const online = site.status && site.status.online;
+    const view = seo.probeStatus(site);
     const models = (site.models || [])
       .slice(0, 5)
       .map((m) => `<span class="model">${esc(m.label)}${m.rate ? " " + m.rate + "x" : ""}</span>`)
       .join("");
+    const uptime = site.status && site.status.uptime != null ? site.status.uptime + "%" : "—";
+    const latency = fmtMs(site.status && (site.status.avgMs || site.status.ms));
     return `<article class="card">
       <a class="card-link" href="${sitePath(site)}">
         <div class="card-head">
           ${avatar(site)}
           <div class="card-id">
             <h3 class="card-title">${esc(site.name)}</h3>
-            <p class="card-sub">${esc(site.domain || site.tag || "第三方中转")}${site.promoted ? " · 精选" : ""}</p>
+            <p class="card-sub">${esc(site.domain || site.tag || "第三方中转")}${site.promoted ? " · 精选" : ""} · ${esc(seo.probeClock(site) === "尚未探测" ? "尚未探测" : "探测 " + seo.probeClock(site))}</p>
           </div>
-          <span class="badge ${known ? (online ? "ok" : "bad") : "wait"}">${known ? (online ? "在线" : "异常") : "待测"}</span>
+          <span class="badge ${view.cls}">${view.label}</span>
         </div>
         <p class="desc">${esc(site.description || "暂无简介，进去看整站状态和模型探测。")}</p>
         <div class="models">${featChips(site)}${models || `<span class="model">未标明模型</span>`}</div>
       </a>
       <div class="card-metrics">
-        <span><small>可用</small><b>${site.status && site.status.uptime != null ? site.status.uptime + "%" : "—"}</b></span>
-        <span><small>延迟</small><b>${fmtMs(site.status && (site.status.avgMs || site.status.ms))}</b></span>
+        <span><small>可用</small><b>${uptime}</b></span>
+        <span><small>延迟</small><b>${latency}</b></span>
         <span class="vote-cell"><small>投票</small>${votePairHtml(site)}</span>
       </div>
     </article>`;
@@ -286,7 +283,8 @@
 
   function sitePage(site, data) {
     if (!site) return `<a class="back" href="/">← 返回</a><div class="empty">没有这个站点</div>`;
-    const online = site.status && site.status.online;
+    const view = seo.probeStatus(site);
+    const online = !!(site.status && site.status.online);
     const models = modelNames(site);
     const modelText = models.slice(0, 6).join("、") || "未标明具体模型";
     const cats = site.categories || [];
@@ -311,14 +309,12 @@
       <div>
         <h1>${esc(site.name)}${isCharity ? "（公益站）" : ""}</h1>
         <div class="models">
-          <span class="badge ${site.status && site.status.online != null ? (online ? "ok" : "bad") : "wait"}">${
-            site.status && site.status.online != null ? (online ? "整站在线" : "整站异常") : "尚未探测"
-          }</span>
+          <span class="badge ${view.cls}">${esc(view.detail)}</span>
           <span class="badge">${esc(site.tag || "第三方中转")}</span>
           ${cats.map((c) => `<a class="model" href="${catPath(c)}">${esc(CAT_LABEL[c] || c)}</a>`).join("")}
           ${(site.models || []).slice(0, 6).map((m) => `<a class="model" href="${modelPath(m.id)}">${esc(m.label)}</a>`).join("")}
         </div>
-        <p class="card-sub">${esc(site.domain || "")} · 最近探测 ${fmtTime(site.status && site.status.checkedAt)}</p>
+        <p class="card-sub">${esc(site.domain || "")} · 最近探测 ${esc(seo.probeClock(site))}</p>
       </div>
       <div class="detail-actions">
         ${votePairHtml(site)}
@@ -391,7 +387,11 @@
   }
 
   function officialMeta(data) {
-    return data && data.officialUpdatedAt ? "已同步官方订阅 · " + fmtTime(data.officialUpdatedAt) : "官方状态以公开订阅为准";
+    if (!data || !data.officialUpdatedAt) return "正在同步今天的官方状态…";
+    const d = new Date(data.officialUpdatedAt);
+    const now = new Date();
+    const today = !Number.isNaN(d.getTime()) && d.getFullYear() === now.getFullYear() && d.getMonth() === now.getMonth() && d.getDate() === now.getDate();
+    return today ? "已同步官方订阅 · " + fmtTime(data.officialUpdatedAt) : "正在同步今天的官方状态…";
   }
 
   return {

@@ -365,6 +365,71 @@
     return site && site.id ? "/og/site/" + site.id + ".jpg" : "/img/og.png";
   }
 
+  function probeCheckedAt(site) {
+    const raw = site && site.status && site.status.checkedAt;
+    const t = raw ? new Date(raw).getTime() : NaN;
+    return Number.isNaN(t) ? 0 : t;
+  }
+
+  function hasStationBlurb(site) {
+    const raw = String((site && site.description) || "").replace(/\s+/g, " ").trim();
+    if (raw.length < 8) return false;
+    return raw.indexOf("暂无简介") !== 0;
+  }
+
+  function probeLatency(site) {
+    const n = site && site.status && (site.status.avgMs || site.status.ms);
+    const v = Number(n);
+    return n > 0 && !Number.isNaN(v) ? v : 1e12;
+  }
+
+  function stationRank(site) {
+    const known = !!(site && site.status && site.status.online != null);
+    const online = !!(site && site.status && site.status.online);
+    const blurb = hasStationBlurb(site);
+    let tier = 5;
+    if (known && online && blurb) tier = 0;
+    else if (known && online) tier = 1;
+    else if (known && blurb) tier = 2;
+    else if (known) tier = 3;
+    else if (blurb) tier = 4;
+    return {
+      tier: tier,
+      latency: tier <= 1 ? probeLatency(site) : 1e12,
+      checked: probeCheckedAt(site),
+    };
+  }
+
+  function compareStations(a, b) {
+    const ra = stationRank(a);
+    const rb = stationRank(b);
+    if (ra.tier !== rb.tier) return ra.tier - rb.tier;
+    if (ra.latency !== rb.latency) return ra.latency - rb.latency;
+    if (ra.checked !== rb.checked) return rb.checked - ra.checked;
+    const pin = (b.charityPin || 0) - (a.charityPin || 0);
+    if (pin) return pin;
+    return String(a.name || "").localeCompare(String(b.name || ""), "zh");
+  }
+
+  function probeStatus(site) {
+    const known = !!(site && site.status && site.status.online != null);
+    const online = !!(site && site.status && site.status.online);
+    if (!known) return { label: "待测", detail: "尚未探测", cls: "wait" };
+    if (online) return { label: "在线", detail: "整站在线", cls: "ok" };
+    return { label: "异常", detail: "整站异常", cls: "bad" };
+  }
+
+  function probeClock(site) {
+    const t = probeCheckedAt(site);
+    if (!t) return "尚未探测";
+    return new Date(t).toLocaleString("zh-CN", {
+      month: "2-digit",
+      day: "2-digit",
+      hour: "2-digit",
+      minute: "2-digit",
+    });
+  }
+
   function siteVerdict(site) {
     if (!site) {
       return { id: "watch", label: "待看", sentence: "目录里没有这个站。", notes: [] };
@@ -1029,6 +1094,11 @@
     rankPath,
     RANK_SEO,
     ogPath,
+    probeCheckedAt,
+    hasStationBlurb,
+    compareStations,
+    probeStatus,
+    probeClock,
     siteVerdict,
     ogPayload,
     slugify,
