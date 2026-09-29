@@ -268,7 +268,15 @@ function mergeStation(base, extra) {
 function normalizeSite(raw, extras = {}) {
   const id = Number(raw.id);
   const name = decodeEntities(raw.name || extras.name || "").trim();
-  const description = decodeEntities(raw.description || extras.description || "").trim();
+  const description = decodeEntities(raw.description || extras.description || "")
+    .replace(/\\r\\n/g, "\n")
+    .replace(/\\n/g, "\n")
+    .replace(/\\r/g, "\n")
+    .replace(/\r\n/g, "\n")
+    .replace(/\r/g, "\n")
+    .replace(/\n+/g, " ")
+    .replace(/[ \t]{2,}/g, " ")
+    .trim();
   const categories = extras.categories || [];
   const text = `${name} ${description} ${raw.tag || ""}`;
   return {

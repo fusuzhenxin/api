@@ -1478,6 +1478,7 @@
   }
 
   async function runProtected(suite, work) {
+    if (!guardSetup()) return;
     if (suite === "all") {
       if (state.jobs.basic || state.jobs.candy || state.jobs.pelican || state.jobs.all) return;
     } else if (state.jobs[suite] || state.jobs.all) return;
@@ -1880,24 +1881,88 @@
     paintDetectRows();
   }
 
+  function missingSetup() {
+    const missing = [];
+    if (!$("base").value.trim()) missing.push("接口地址");
+    if (!$("apiKey").value.trim()) missing.push("Key");
+    return missing;
+  }
+
   function hasSetup() {
-    return $("base").value.trim() && $("apiKey").value.trim();
+    return !missingSetup().length;
+  }
+
+  function missingLabel(missing) {
+    if (missing.length > 1) return "接口地址和 Key";
+    return missing[0];
+  }
+
+  function setupRemindText(missing) {
+    return "还不能检测：还没填 " + missingLabel(missing) + "。填好后才能开始。这些内容只存在这台浏览器里。";
   }
 
   function paintSetupGate() {
+    const missing = missingSetup();
+    const ready = !missing.length;
+    const remind = $("setupRemind");
+    if (remind) {
+      remind.hidden = ready;
+      remind.textContent = ready ? "" : setupRemindText(missing);
+    }
+    if ($("base")) $("base").classList.toggle("is-missing", !$("base").value.trim());
+    if ($("apiKey")) $("apiKey").classList.toggle("is-missing", !$("apiKey").value.trim());
     const gate = $("needSetup");
-    if (!gate) return;
-    const ready = hasSetup();
-    gate.hidden = ready;
+    if (gate) {
+      gate.hidden = ready;
+      const title = gate.querySelector("h2");
+      const copy = gate.querySelector("p");
+      if (title) title.textContent = "还不能检测";
+      if (copy && !ready) copy.textContent = "还没填 " + missingLabel(missing) + "。到基础测试页填写。地址、Key 和检测结果只存在这台浏览器里。";
+    }
+    if (!$("scoreVerdict")) return;
     if (!ready) {
       $("scoreVerdict").textContent = "还不能检测";
-      $("scoreMind").textContent = "先去基础测试页填写中转地址和 Key。填好之后再跑，结果才会出现在这一页。";
+      $("scoreMind").textContent = "先填写 " + missingLabel(missing) + "。填好之后再跑，结果才会出现在这一页。";
       return;
     }
     if ($("scoreVerdict").textContent === "还不能检测") {
       $("scoreVerdict").textContent = "还没有检测";
       $("scoreMind").textContent = "地址和 Key 已经有了。去基础测试跑一轮，分数和降智判断会汇总到这里。";
     }
+  }
+
+  function guardSetup() {
+    const missing = missingSetup();
+    if (!missing.length) {
+      try {
+        G.normalizeBase($("base").value);
+      } catch (err) {
+        const panel = document.querySelector(".mc-view.is-on");
+        const name = panel ? panel.getAttribute("data-view-panel") : "";
+        if (name !== "basic" && name !== "candy" && name !== "pelican") showMcView("basic", true);
+        paintSetupGate();
+        const remind = $("setupRemind");
+        const message = err.message || "接口地址无法使用";
+        if (remind) {
+          remind.hidden = false;
+          remind.textContent = message;
+        }
+        $("base").classList.add("is-missing");
+        $("base").focus();
+        setNote(message);
+        return false;
+      }
+      return true;
+    }
+    paintSetupGate();
+    const panel = document.querySelector(".mc-view.is-on");
+    const name = panel ? panel.getAttribute("data-view-panel") : "";
+    if (name !== "basic" && name !== "candy" && name !== "pelican") showMcView("basic", true);
+    (!$("base").value.trim() ? $("base") : $("apiKey")).focus();
+    setNote(setupRemindText(missing));
+    const remind = $("setupRemind");
+    if (remind) remind.scrollIntoView({ block: "nearest" });
+    return false;
   }
 
   async function loadModels() {
@@ -2037,8 +2102,24 @@
     });
   }
 
+  function applyIncomingBase() {
+    const incoming = new URLSearchParams(location.search).get("base");
+    if (!incoming || !$("base")) return;
+    let text = "";
+    try {
+      text = G.normalizeBase(incoming);
+    } catch (err) {
+      return;
+    }
+    $("base").value = text;
+    persist();
+    paintSetupGate();
+    if (history.replaceState) history.replaceState({}, "", location.pathname + location.hash);
+  }
+
   function bind() {
     restore();
+    applyIncomingBase();
     paintCandyList();
     if (!$("modelCustom").value.trim() && $("model").value) $("modelCustom").value = $("model").value;
     ["base", "apiKey", "modelCustom", "rememberKey"].forEach(function (id) {
@@ -2098,12 +2179,6 @@
       runOneExtra("pelican");
     });
     $("runAll").addEventListener("click", function () {
-      if (!hasSetup()) {
-        showMcView("basic", true);
-        setNote("先填写接口地址和 Key，再开始检测。");
-        $("base").focus();
-        return;
-      }
       runProtected("all", async function (ctx, signal) {
         await runBasicSuite(ctx, signal);
         if (!signal.aborted) await runIds(EXTRA_TESTS, ctx, signal);
@@ -2133,6 +2208,7 @@
       if (!name) return;
       event.preventDefault();
       showMcView(name, true);
+      if (link.id === "goSetup") (!$("base").value.trim() ? $("base") : $("apiKey")).focus();
     });
     paintHistory();
     $("copyReport").addEventListener("click", function () {

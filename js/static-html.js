@@ -101,7 +101,7 @@
     const feats = site.features || (site.categories || []).filter((c) => FEATURE_CHIPS.includes(c));
     return feats
       .filter((id) => FEATURE_CHIPS.includes(id))
-      .map((id) => `<span class="feat">${catIcon(id)}${esc(CAT_LABEL[id] || id)}</span>`)
+      .map((id) => `<span class="feat feat-${esc(id)}">${catIcon(id)}${esc(CAT_LABEL[id] || id)}</span>`)
       .join("");
   }
 
@@ -113,6 +113,46 @@
     </div>`;
   }
 
+  function stationDomain(site) {
+    const host = String((site && site.domain) || "")
+      .trim()
+      .replace(/^https?:\/\//i, "")
+      .split("/")[0]
+      .split("?")[0];
+    if (!/^[a-z0-9.-]+\.[a-z]{2,}$/i.test(host)) return "";
+    return host;
+  }
+
+  function domainTools(site) {
+    const host = stationDomain(site);
+    const copy = host ? `<button class="card-mini card-copy" type="button" data-copy="${esc(host)}">复制</button>` : "";
+    const detect = host ? `<a class="card-mini card-detect" href="/check?base=${encodeURIComponent("https://" + host)}">拿去检测</a>` : "";
+    if (!copy && !detect) return "";
+    return `<span class="card-tools">${copy}${detect}</span>`;
+  }
+
+  function cardIdentity(site) {
+    const host = stationDomain(site);
+    const href = sitePath(site);
+    const domainText = host || site.tag || "第三方中转";
+    return `<div class="card-identity">
+      <a class="card-ava" href="${href}">${avatar(site)}</a>
+      <div class="card-id">
+        <h3 class="card-title"><a class="card-title-link" href="${href}">${esc(site.name)}</a></h3>
+        <div class="card-subline">
+          <a class="card-sub" href="${href}">${esc(domainText)}${site.promoted ? " · 精选" : ""}</a>
+          ${domainTools(site)}
+        </div>
+      </div>
+    </div>`;
+  }
+
+  function openSiteLink(site) {
+    const url = site && site.url ? String(site.url).trim() : "";
+    if (!/^https?:\/\//i.test(url)) return "";
+    return `<a class="card-open" target="_blank" rel="noopener noreferrer" href="${esc(url)}"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 5h5v5"/><path d="M19 5 10 14"/><path d="M16 13.5V19H5V8h5.5"/></svg><span>打开站点</span></a>`;
+  }
+
   function cardHtml(site) {
     const view = seo.probeStatus(site);
     const models = (site.models || [])
@@ -122,16 +162,13 @@
     const uptime = site.status && site.status.uptime != null ? site.status.uptime + "%" : "—";
     const latency = fmtMs(site.status && (site.status.avgMs || site.status.ms));
     return `<article class="card">
+      <div class="card-head">
+        ${cardIdentity(site)}
+        ${openSiteLink(site)}
+        <span class="badge ${view.cls}">${view.label}</span>
+      </div>
       <a class="card-link" href="${sitePath(site)}">
-        <div class="card-head">
-          ${avatar(site)}
-          <div class="card-id">
-            <h3 class="card-title">${esc(site.name)}</h3>
-            <p class="card-sub">${esc(site.domain || site.tag || "第三方中转")}${site.promoted ? " · 精选" : ""} · ${esc(seo.probeClock(site) === "尚未探测" ? "尚未探测" : "探测 " + seo.probeClock(site))}</p>
-          </div>
-          <span class="badge ${view.cls}">${view.label}</span>
-        </div>
-        <p class="desc">${esc(site.description || "暂无简介，进去看整站状态和模型探测。")}</p>
+        <p class="desc">${esc(seo.plainDesc(site.description) || "暂无简介，进去看整站状态和模型探测。")}</p>
         <div class="models">${featChips(site)}${models || `<span class="model">未标明模型</span>`}</div>
       </a>
       <div class="card-metrics">
@@ -235,7 +272,7 @@
   }
 
   function siteDescHtml(text) {
-    const raw = String(text || "").replace(/\s+/g, " ").trim();
+    const raw = seo.plainDesc(text);
     if (!raw) return `<p class="article">这份公开简介比较短，详情以对方站点为准。</p>`;
     return `<div class="site-desc"><p>${esc(raw)}</p></div>`;
   }
@@ -311,10 +348,13 @@
         <div class="models">
           <span class="badge ${view.cls}">${esc(view.detail)}</span>
           <span class="badge">${esc(site.tag || "第三方中转")}</span>
-          ${cats.map((c) => `<a class="model" href="${catPath(c)}">${esc(CAT_LABEL[c] || c)}</a>`).join("")}
+          ${cats.map((c) => `<a class="${FEATURE_CHIPS.includes(c) ? "feat feat-" + esc(c) : "model"}" href="${catPath(c)}">${esc(CAT_LABEL[c] || c)}</a>`).join("")}
           ${(site.models || []).slice(0, 6).map((m) => `<a class="model" href="${modelPath(m.id)}">${esc(m.label)}</a>`).join("")}
         </div>
-        <p class="card-sub">${esc(site.domain || "")} · 最近探测 ${esc(seo.probeClock(site))}</p>
+        <div class="card-subline">
+          <span class="card-sub">${esc(site.domain || "")}</span>
+          ${domainTools(site)}
+        </div>
       </div>
       <div class="detail-actions">
         ${votePairHtml(site)}

@@ -371,8 +371,20 @@
     return Number.isNaN(t) ? 0 : t;
   }
 
+  function plainDesc(text) {
+    return String(text || "")
+      .replace(/\\r\\n/g, "\n")
+      .replace(/\\n/g, "\n")
+      .replace(/\\r/g, "\n")
+      .replace(/\r\n/g, "\n")
+      .replace(/\r/g, "\n")
+      .replace(/\n+/g, " ")
+      .replace(/[ \t]{2,}/g, " ")
+      .trim();
+  }
+
   function hasStationBlurb(site) {
-    const raw = String((site && site.description) || "").replace(/\s+/g, " ").trim();
+    const raw = plainDesc(site && site.description);
     if (raw.length < 8) return false;
     return raw.indexOf("暂无简介") !== 0;
   }
@@ -417,17 +429,6 @@
     if (!known) return { label: "待测", detail: "尚未探测", cls: "wait" };
     if (online) return { label: "在线", detail: "整站在线", cls: "ok" };
     return { label: "异常", detail: "整站异常", cls: "bad" };
-  }
-
-  function probeClock(site) {
-    const t = probeCheckedAt(site);
-    if (!t) return "尚未探测";
-    return new Date(t).toLocaleString("zh-CN", {
-      month: "2-digit",
-      day: "2-digit",
-      hour: "2-digit",
-      minute: "2-digit",
-    });
   }
 
   function siteVerdict(site) {
@@ -1095,10 +1096,10 @@
     RANK_SEO,
     ogPath,
     probeCheckedAt,
+    plainDesc,
     hasStationBlurb,
     compareStations,
     probeStatus,
-    probeClock,
     siteVerdict,
     ogPayload,
     slugify,

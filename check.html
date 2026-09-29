@@ -39,7 +39,7 @@
       document.documentElement.setAttribute("data-theme", "light");
     })();
   </script>
-  <link rel="stylesheet" href="/css/style.css?v=20260928a">
+  <link rel="stylesheet" href="/css/style.css?v=20260929e">
 </head>
 <body class="mc-page">
   <header class="topbar">
@@ -144,6 +144,8 @@
   </div>
 
   <main class="mc-wrap">
+    <p id="setupRemind" class="mc-remind" hidden>还不能检测。</p>
+    <p class="mc-local">检测数据只在这台浏览器里。地址、Key、历史记录和每一项结果不会同步到别的浏览器，也不会发到本站。</p>
     <section class="mc-view is-on" data-view-panel="home">
       <div class="mc-hero">
         <div>
@@ -215,8 +217,8 @@
         </div>
       </div>
       <section class="mc-card mc-need" id="needSetup">
-        <h2>还没有填写接口</h2>
-        <p>没有中转地址和 Key，这里没有结果可以汇总。地址和 Key 填在基础测试页，只保存在这台浏览器里。</p>
+        <h2>还不能检测</h2>
+        <p>还没填接口地址和 Key。填在基础测试页，只存在这台浏览器里。</p>
         <a class="mc-btn mc-btn-solid" id="goSetup" href="/check/basic">去填写地址和 Key</a>
       </section>
       <section class="mc-card mc-detect" id="labScore">
@@ -399,6 +401,6 @@
     <p class="foot-copy">© API中转站导航 · 模型检测只对照这一次调用，充值与使用风险自负</p>
   </footer>
   <script src="/js/check-grade.js?v=20260923o"></script>
-  <script src="/js/check.js?v=20260923s"></script>
+  <script src="/js/check.js?v=20260929f"></script>
 </body>
 </html>

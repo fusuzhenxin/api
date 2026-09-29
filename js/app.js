@@ -252,8 +252,34 @@ function applySharedFilters(list) {
   return list;
 }
 
+function explicitCat() {
+  const r = route();
+  if (r.name === "model") {
+    const cat = new URLSearchParams(location.search).get("cat") || "";
+    if (NAV_CATS.includes(cat) && cat !== "all") return cat;
+    return "";
+  }
+  if (r.name === "cat" && NAV_CATS.includes(r.id) && r.id !== "all") return r.id;
+  return "";
+}
+
+function modelFilterPath(model, cat) {
+  const base = modelPath(model);
+  if (!cat || cat === "all" || !NAV_CATS.includes(cat)) return base;
+  return base + "?cat=" + encodeURIComponent(cat);
+}
+
+function stationInCategory(site, cat) {
+  if (!cat || cat === "all") return true;
+  if (cat === "online") return !!(site.status && site.status.online);
+  if (cat === "fav") return loadUser().favorites.includes(site.id);
+  return (site.categories || []).includes(cat);
+}
+
 function stationsByModel(id) {
   let list = state.data.stations.filter((s) => (s.models || []).some((m) => m.id === id));
+  const cat = explicitCat();
+  if (cat) list = list.filter((s) => stationInCategory(s, cat));
   const q = state.query.trim().toLowerCase();
   if (q) {
     list = list.filter((s) => {
@@ -264,6 +290,66 @@ function stationsByModel(id) {
     });
   }
   return sortStations(list);
+}
+
+function stationDomain(site) {
+  const host = String((site && site.domain) || "")
+    .trim()
+    .replace(/^https?:\/\//i, "")
+    .split("/")[0]
+    .split("?")[0];
+  if (!/^[a-z0-9.-]+\.[a-z]{2,}$/i.test(host)) return "";
+  return host;
+}
+
+function stationCheckBase(site) {
+  const host = stationDomain(site);
+  return host ? "https://" + host : "";
+}
+
+function domainTools(site) {
+  const host = stationDomain(site);
+  const base = stationCheckBase(site);
+  const copy = host ? `<button class="card-mini card-copy" type="button" data-copy="${escapeHtml(host)}">复制</button>` : "";
+  const detect = base ? `<a class="card-mini card-detect" href="/check?base=${encodeURIComponent(base)}">拿去检测</a>` : "";
+  if (!copy && !detect) return "";
+  return `<span class="card-tools">${copy}${detect}</span>`;
+}
+
+function copyText(text) {
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    return navigator.clipboard.writeText(text);
+  }
+  return new Promise((resolve, reject) => {
+    const area = document.createElement("textarea");
+    area.value = text;
+    area.setAttribute("readonly", "");
+    area.style.position = "fixed";
+    area.style.left = "-9999px";
+    document.body.appendChild(area);
+    area.select();
+    try {
+      document.execCommand("copy") ? resolve() : reject(new Error("copy"));
+    } catch (err) {
+      reject(err);
+    } finally {
+      area.remove();
+    }
+  });
+}
+
+function onCopyClick(e) {
+  const btn = e.target.closest("[data-copy]");
+  if (!btn) return false;
+  e.preventDefault();
+  e.stopPropagation();
+  const text = btn.getAttribute("data-copy") || "";
+  if (!text) return true;
+  copyText(text).then(
+    () => toast("域名已复制"),
+    () => toast(text)
+  );
+  return true;
 }
 
 function stationsByCategory(cat) {
@@ -336,7 +422,11 @@ function scrollSentinelHtml(shown, total) {
 function pageListKey() {
   const r = route();
   if (r.name === "cat") return "page:" + r.id;
-  if (r.name === "model") return "model:" + r.id;
+  if (r.name === "model") {
+    const cat = explicitCat();
+    return "model:" + r.id + (cat ? ":" + cat : "");
+  }
+  if (r.name === "home" && state.query.trim()) return "search";
   return "";
 }
 
@@ -561,9 +651,14 @@ function typeBlock(cat, list) {
     </section>`;
 }
 
+function searchedStations() {
+  return sortStations(applySharedFilters(state.data.stations.slice()));
+}
+
 function listForMoreKey(key) {
+  if (key === "search") return searchedStations();
   if (key === "other" || key === "page:other") return otherStations();
-  if (String(key).startsWith("model:")) return stationsByModel(key.slice(6));
+  if (String(key).startsWith("model:")) return stationsByModel(key.slice(6).split(":")[0]);
   if (String(key).startsWith("page:")) return stationsByCategory(key.slice(5));
   return stationsByCategory(key);
 }
@@ -860,10 +955,39 @@ function officialForModel(model) {
   );
 }
 
+function renderSearchResults() {
+  state.category = "all";
+  highlightCat("all");
+  const list = searchedStations();
+  const shownN = shownCount("search", list.length, CAT_PAGE_SIZE);
+  const slice = list.slice(0, shownN);
+  const onlineCount = list.filter((s) => s.status && s.status.online).length;
+  const q = state.query.trim();
+  $("#resultMeta").innerHTML = `「${escapeHtml(q)}」 <b>${list.length}</b> 站 · 探测在线 ${onlineCount}`;
+  $("#grid").innerHTML = `
+    <section class="type-block">
+      <div class="type-head">
+        <h2><span>搜索结果</span></h2>
+        <div class="type-actions"><span>${shownN}/${list.length} 站</span></div>
+      </div>
+      ${
+        slice.length
+          ? `<div class="grid">${slice.map(cardHtml).join("")}</div>${scrollSentinelHtml(shownN, list.length)}`
+          : `<div class="empty">没有符合条件的中转站</div>`
+      }
+    </section>`;
+  $("#pager").innerHTML = "";
+  observeScrollSentinel();
+}
+
 function renderHome() {
   $("#home").hidden = false;
   $("#detail").hidden = true;
   if ($("#officialPage")) $("#officialPage").hidden = true;
+  if (state.query.trim()) {
+    renderSearchResults();
+    return;
+  }
   const sections = HOME_SECTIONS.slice();
   if (stationsByCategory("fav").length) sections.push("fav");
   const blocks = sections.map((cat) => ({ cat, list: stationsByCategory(cat) })).filter((row) => row.list.length);
@@ -934,19 +1058,23 @@ function renderModelPage(id) {
   $("#home").hidden = false;
   $("#detail").hidden = true;
   if ($("#officialPage")) $("#officialPage").hidden = true;
-  highlightCat("all");
+  const cat = explicitCat();
+  state.category = cat || "all";
+  highlightCat(state.category);
   highlightModel(id);
   const list = stationsByModel(id);
-  if (!list.length && keepStaticCards()) return;
-  const key = "model:" + id;
+  if (!list.length && !cat && keepStaticCards()) return;
+  const key = "model:" + id + (cat ? ":" + cat : "");
   const shownN = shownCount(key, list.length, CAT_PAGE_SIZE);
   const slice = list.slice(0, shownN);
   const extra = (typeof MODEL_SEO !== "undefined" && MODEL_SEO[id]) || {};
   const label = (typeof MODEL_LABEL !== "undefined" && MODEL_LABEL[id]) || id;
+  const catLabel = cat ? CATEGORY_LABEL[cat] || cat : "";
   const h1 = extra.h1 || label + " API中转站推荐";
   const blurb = extra.desc || `本站收录支持 ${label} 的 API 中转站，对照可用性与延迟后再充值。`;
   const onlineCount = list.filter((s) => s.status && s.status.online).length;
-  $("#resultMeta").innerHTML = `${escapeHtml(label)} <b>${list.length}</b> 站 · 探测在线 ${onlineCount}`;
+  const metaLabel = catLabel ? `${label} · ${catLabel}` : label;
+  $("#resultMeta").innerHTML = `${escapeHtml(metaLabel)} <b>${list.length}</b> 站 · 探测在线 ${onlineCount}`;
   $("#grid").innerHTML = `
     <p class="cat-back crumbs"><a href="/">首页</a><span>/</span><span>${escapeHtml(label)} 中转</span></p>
     <section class="type-block" id="model-${escapeHtml(id)}">
@@ -969,7 +1097,7 @@ function renderModelPage(id) {
       <div class="grid">${slice.map(cardHtml).join("")}</div>
       ${scrollSentinelHtml(shownN, list.length)}
     </section>
-    ${slice.length ? "" : `<div class="empty">还没有标明该模型的站点</div>`}`;
+    ${slice.length ? "" : `<div class="empty">${catLabel ? "没有同时符合的站点" : "还没有标明该模型的站点"}</div>`}`;
   $("#pager").innerHTML = "";
   observeScrollSentinel();
 }
@@ -978,8 +1106,31 @@ function featChips(site) {
   const feats = site.features || (site.categories || []).filter((c) => FEATURE_CHIPS.includes(c));
   return feats
     .filter((id) => FEATURE_CHIPS.includes(id))
-    .map((id) => `<span class="feat">${catIcon(id)}${escapeHtml(CATEGORY_LABEL[id] || id)}</span>`)
+    .map((id) => `<span class="feat feat-${escapeHtml(id)}">${catIcon(id)}${escapeHtml(CATEGORY_LABEL[id] || id)}</span>`)
     .join("");
+}
+
+function cardIdentity(site) {
+  const host = stationDomain(site);
+  const href = sitePath(site);
+  const domainText = host || site.tag || "第三方中转";
+  return `
+    <div class="card-identity">
+      <a class="card-ava" href="${href}">${avatar(site)}</a>
+      <div class="card-id">
+        <h3 class="card-title"><a class="card-title-link" href="${href}">${escapeHtml(site.name)}</a></h3>
+        <div class="card-subline">
+          <a class="card-sub" href="${href}">${escapeHtml(domainText)}${site.promoted ? " · 精选" : ""}</a>
+          ${domainTools(site)}
+        </div>
+      </div>
+    </div>`;
+}
+
+function openSiteLink(site) {
+  const url = site && site.url ? String(site.url).trim() : "";
+  if (!/^https?:\/\//i.test(url)) return "";
+  return `<a class="card-open" target="_blank" rel="noopener noreferrer" href="${escapeHtml(url)}"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 5h5v5"/><path d="M19 5 10 14"/><path d="M16 13.5V19H5V8h5.5"/></svg><span>打开站点</span></a>`;
 }
 
 function cardHtml(site) {
@@ -992,16 +1143,13 @@ function cardHtml(site) {
   const latency = fmtMs(site.status && (site.status.avgMs || site.status.ms));
   return `
     <article class="card">
+      <div class="card-head">
+        ${cardIdentity(site)}
+        ${openSiteLink(site)}
+        <span class="badge ${view.cls}">${view.label}</span>
+      </div>
       <a class="card-link" href="${sitePath(site)}">
-        <div class="card-head">
-          ${avatar(site)}
-          <div class="card-id">
-            <h3 class="card-title">${escapeHtml(site.name)}</h3>
-            <p class="card-sub">${escapeHtml(site.domain || site.tag || "第三方中转")}${site.promoted ? " · 精选" : ""} · ${escapeHtml(probeClock(site) === "尚未探测" ? "尚未探测" : "探测 " + probeClock(site))}</p>
-          </div>
-          <span class="badge ${view.cls}">${view.label}</span>
-        </div>
-        <p class="desc">${escapeHtml(site.description || "暂无简介，进去看整站状态和模型探测。")}</p>
+        <p class="desc">${escapeHtml(plainDesc(site.description) || "暂无简介，进去看整站状态和模型探测。")}</p>
         <div class="models">${featChips(site)}${models || `<span class="model">未标明模型</span>`}</div>
       </a>
       <div class="card-metrics">
@@ -1206,10 +1354,13 @@ function renderDetail(id) {
           <span class="badge ${view.cls}">${view.detail}</span>
           ${site.promoted ? `<span class="badge">精选</span>` : ""}
           <span class="badge">${escapeHtml(site.tag || "第三方中转")}</span>
-          ${(site.features || site.categories || []).map((c) => `<a class="model" href="${catPath(c)}">${catIcon(c)}${escapeHtml(CATEGORY_LABEL[c] || c)}</a>`).join("")}
+          ${(site.features || site.categories || []).map((c) => `<a class="${FEATURE_CHIPS.includes(c) ? "feat feat-" + escapeHtml(c) : "model"}" href="${catPath(c)}">${catIcon(c)}${escapeHtml(CATEGORY_LABEL[c] || c)}</a>`).join("")}
           ${(site.models || []).slice(0, 6).map((m) => `<a class="model" href="${modelPath(m.id)}">${escapeHtml(m.label)}${m.rate ? " " + m.rate + "x" : ""}</a>`).join("")}
         </div>
-        <p class="card-sub">${escapeHtml(site.domain || "")} · 最近探测 ${escapeHtml(probeClock(site))}</p>
+        <div class="card-subline">
+          <span class="card-sub">${escapeHtml(site.domain || "")}</span>
+          ${domainTools(site)}
+        </div>
       </div>
       <div class="detail-actions">
         ${votePairHtml(site)}
@@ -1287,16 +1438,19 @@ function render() {
     renderOfficialPage(r.provider);
   } else if (r.name === "cat") {
     if (officialPage) officialPage.hidden = true;
+    state.model = "";
     highlightModel("");
     renderCatPage(r.id);
   } else if (r.name === "model") {
     if (officialPage) officialPage.hidden = true;
     state.model = r.id;
+    state.category = explicitCat() || "all";
     renderModelPage(r.id);
   } else {
     if (officialPage) officialPage.hidden = true;
     if (location.protocol !== "file:") {
       const q = new URLSearchParams(location.search).get("q") || "";
+      if (q !== state.query) delete state.expanded.search;
       state.query = q;
       if ($("#q")) $("#q").value = q;
     }
@@ -1341,6 +1495,10 @@ function bind() {
     state.page = 1;
     state.expanded = {};
     go(state.query ? "/?q=" + encodeURIComponent(state.query) : "/");
+    if (state.query) {
+      const meta = $("#resultMeta");
+      if (meta) meta.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
   });
   $("#randomBtn").addEventListener("click", () => {
     const list = filteredStations();
@@ -1386,8 +1544,35 @@ function bind() {
     if (!btn) return;
     if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
     e.preventDefault();
-    state.category = btn.dataset.cat;
     state.page = 1;
+    if (route().name === "model" && state.model) {
+      e.stopPropagation();
+      const id = btn.dataset.cat;
+      const cur = explicitCat();
+      const next = !id || id === "all" || id === cur ? "" : id;
+      state.expanded = {};
+      go(modelFilterPath(state.model, next));
+      return;
+    }
+    if (state.query.trim()) {
+      state.query = "";
+      if ($("#q")) $("#q").value = "";
+      state.expanded = {};
+      state.category = btn.dataset.cat;
+      const id = btn.dataset.cat;
+      if (!id || id === "all") {
+        go("/");
+        return;
+      }
+      if (id === "fav") {
+        state.scrollTo = "fav";
+        go("/");
+        return;
+      }
+      go("/cat/" + id);
+      return;
+    }
+    state.category = btn.dataset.cat;
     goHomeAndScroll(btn.dataset.cat);
   });
   $("#modelFilters").addEventListener("click", (e) => {
@@ -1395,18 +1580,29 @@ function bind() {
     if (!btn) return;
     if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
     e.preventDefault();
+    e.stopPropagation();
     const id = btn.dataset.model;
     state.page = 1;
     state.expanded = {};
+    if (state.query.trim()) {
+      state.query = "";
+      if ($("#q")) $("#q").value = "";
+    }
+    const keep = explicitCat();
     if (route().name === "model" && route().id === id) {
       state.model = "";
-      go("/");
+      if (keep && keep !== "fav") go("/cat/" + keep);
+      else if (keep === "fav") {
+        state.scrollTo = "fav";
+        go("/");
+      } else go("/");
       return;
     }
     state.model = id;
-    go(modelPath(id));
+    go(modelFilterPath(id, keep));
   });
   $("#grid").addEventListener("click", (e) => {
+    if (onCopyClick(e)) return;
     const vote = e.target.closest("[data-vote]");
     if (vote) {
       e.preventDefault();
@@ -1423,6 +1619,7 @@ function bind() {
     toggleMore(btn.dataset.more);
   });
   $("#detail").addEventListener("click", (e) => {
+    if (onCopyClick(e)) return;
     const vote = e.target.closest("[data-vote]");
     if (vote) {
       castVote(vote.dataset.id, vote.dataset.vote);
