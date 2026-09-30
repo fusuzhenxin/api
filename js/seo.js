@@ -1081,6 +1081,66 @@
     return { name: "home" };
   }
 
+  const STATUS_TAGS = ["highup", "fast"];
+
+  function syncStatusTags(site) {
+    const features = (site.features || []).filter((id) => STATUS_TAGS.indexOf(id) < 0);
+    const categories = (site.categories || []).filter((id) => STATUS_TAGS.indexOf(id) < 0);
+    const st = site.status || {};
+    const up = st.uptime;
+    const ms = st.avgMs != null ? st.avgMs : st.ms;
+    if (st.online && typeof up === "number" && up >= 99.8) {
+      features.push("highup");
+      categories.push("highup");
+    }
+    if (typeof ms === "number" && ms > 0 && ms < 400) {
+      features.push("fast");
+      categories.push("fast");
+    }
+    site.features = features;
+    site.categories = categories;
+  }
+
+  function applyRemoteStatus(stations, remote) {
+    const map = remote && typeof remote === "object" ? remote : {};
+    let changed = 0;
+    (stations || []).forEach((site) => {
+      if (!site || site.id == null) return;
+      const raw = map[String(site.id)];
+      if (!raw || typeof raw !== "object") return;
+      const checkedAt = typeof raw.checkedAt === "string" ? raw.checkedAt : "";
+      const nextAt = Date.parse(checkedAt);
+      if (!checkedAt || Number.isNaN(nextAt)) return;
+      const prev = site.status || {};
+      const prevAt = Date.parse(prev.checkedAt || "");
+      if (!Number.isNaN(prevAt) && nextAt <= prevAt) return;
+      let online = null;
+      if (typeof raw.online === "boolean") online = raw.online;
+      else if (raw.online === 0 || raw.online === 1 || raw.online === "0" || raw.online === "1") {
+        online = Boolean(Number(raw.online));
+      }
+      if (online == null) return;
+      const num = (value) => {
+        if (value == null || value === "") return null;
+        const n = Number(value);
+        return Number.isFinite(n) ? n : null;
+      };
+      const ms = num(raw.ms);
+      const uptime = num(raw.uptime);
+      const avgMs = num(raw.avgMs);
+      site.status = {
+        online,
+        ms: ms != null ? ms : prev.ms != null ? prev.ms : null,
+        uptime: uptime != null ? uptime : prev.uptime != null ? prev.uptime : null,
+        avgMs: avgMs != null ? avgMs : prev.avgMs != null ? prev.avgMs : null,
+        checkedAt,
+      };
+      syncStatusTags(site);
+      changed += 1;
+    });
+    return changed;
+  }
+
   return {
     KEYWORDS,
     CAT_LABEL,
@@ -1107,6 +1167,7 @@
     injectSeoHtml,
     applySeo,
     parseRoute,
+    applyRemoteStatus,
     modelNames,
     uniqueKeywords,
     catBodyHtml,

@@ -6,6 +6,7 @@ const { parseRoute, seoFor, injectSeoHtml, ogPayload } = require("../js/seo.js")
 const { dump: dumpVotes, getOne: getVote, vote: castVote } = require("../lib/votes");
 const { acceptApply } = require("../lib/apply-mail");
 const { fetchOfficialFeed } = require("../lib/official-feed");
+const { getStationStatus, cronAuthorized } = require("../lib/station-status");
 
 const ROOT = path.resolve(__dirname, "..");
 const PORT = Number(process.env.PORT) || 4173;
@@ -210,6 +211,35 @@ http
         })
         .catch(function () {
           sendJson(res, 400, { ok: false, error: "提交内容无法读取" });
+        });
+      return;
+    }
+    if (url.replace(/\/$/, "") === "/api/station-status" || url.replace(/\/$/, "") === "/api/cron/station-status") {
+      const force = url.replace(/\/$/, "") === "/api/cron/station-status";
+      if (req.method !== "GET") {
+        sendJson(res, 405, { ok: false });
+        return;
+      }
+      if (force && !cronAuthorized(req.headers.authorization || "")) {
+        sendJson(res, 401, { ok: false });
+        return;
+      }
+      getStationStatus({ force })
+        .then((result) => {
+          if (force) {
+            sendJson(res, 200, {
+              ok: !result.stale,
+              fetchedAt: result.payload.fetchedAt,
+              count: Object.keys(result.payload.stations || {}).length,
+              stale: Boolean(result.stale),
+            });
+            return;
+          }
+          sendJson(res, 200, result.payload);
+        })
+        .catch((err) => {
+          console.error(err);
+          sendJson(res, 503, { ok: false });
         });
       return;
     }

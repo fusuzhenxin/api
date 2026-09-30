@@ -2,6 +2,8 @@ site/*.html
 public/
 data/og/
 data/votes.json.lock
+data/station-status.json
+data/station-status.json.tmp
 __pycache__/
 *.pyc
 .DS_Store

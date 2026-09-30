@@ -2,6 +2,12 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "regions": ["sin1"],
+  "crons": [
+    {
+      "path": "/api/cron/station-status",
+      "schedule": "30 10 * * *"
+    }
+  ],
   "functions": {
     "api/apply.js": {
       "maxDuration": 10,

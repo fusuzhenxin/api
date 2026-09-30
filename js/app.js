@@ -989,7 +989,7 @@ function renderHome() {
     return;
   }
   const sections = HOME_SECTIONS.slice();
-  if (stationsByCategory("fav").length) sections.push("fav");
+  if (stationsByCategory("fav").length) sections.unshift("fav");
   const blocks = sections.map((cat) => ({ cat, list: stationsByCategory(cat) })).filter((row) => row.list.length);
   const rest = otherStations();
   const total = applySharedFilters(state.data.stations.slice()).length;
@@ -1544,6 +1544,7 @@ function bind() {
     if (!btn) return;
     if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
     e.preventDefault();
+    if (btn.dataset.cat === "fav") e.stopPropagation();
     state.page = 1;
     if (route().name === "model" && state.model) {
       e.stopPropagation();
@@ -1722,6 +1723,44 @@ async function boot() {
   render();
   loadVotes();
   refreshOfficialStatus();
+  refreshStationStatus();
+}
+
+async function refreshStationStatus() {
+  if (location.protocol === "file:" || typeof applyRemoteStatus !== "function" || !state.data) return;
+  const key = "veridrop.status.v1";
+  const maxAge = 60 * 60 * 1000;
+  let payload = null;
+  try {
+    const saved = JSON.parse(sessionStorage.getItem(key) || "null");
+    if (saved && saved.stations && Date.now() - Date.parse(saved.fetchedAt) < maxAge) payload = saved;
+  } catch {
+    payload = null;
+  }
+  if (!payload) {
+    try {
+      const res = await fetch("/api/station-status");
+      if (!res.ok) return;
+      payload = await res.json();
+      if (!payload || !payload.stations) return;
+      try {
+        sessionStorage.setItem(key, JSON.stringify({ fetchedAt: payload.fetchedAt, stations: payload.stations }));
+      } catch {
+        /* this browser refused the cache */
+      }
+    } catch (err) {
+      console.warn(err);
+      return;
+    }
+  }
+  const changed = applyRemoteStatus(state.data.stations, payload.stations);
+  if (payload.fetchedAt && $("#updatedAt")) {
+    $("#updatedAt").textContent = "数据更新于 " + fmtTime(payload.fetchedAt);
+  }
+  if (!changed) return;
+  const y = window.scrollY;
+  render();
+  if (y) window.scrollTo(0, y);
 }
 
 boot();
