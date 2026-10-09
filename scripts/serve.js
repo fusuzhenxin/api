@@ -7,6 +7,7 @@ const { dump: dumpVotes, getOne: getVote, vote: castVote } = require("../lib/vot
 const { acceptApply } = require("../lib/apply-mail");
 const { fetchOfficialFeed } = require("../lib/official-feed");
 const { getStationStatus, cronAuthorized } = require("../lib/station-status");
+const { recordVisit, readVisits } = require("../lib/visits");
 
 const ROOT = path.resolve(__dirname, "..");
 const PORT = Number(process.env.PORT) || 4173;
@@ -193,6 +194,35 @@ http
     const url = decodeURIComponent(parsed.pathname);
     if (url.replace(/\/$/, "") === "/api/votes") {
       serveVotes(req, res, parsed);
+      return;
+    }
+    if (url.replace(/\/$/, "") === "/api/visit") {
+      const done = (result) => {
+        res.writeHead(result.status, result.headers).end(result.body);
+      };
+      if (req.method === "GET") {
+        readVisits({
+          key: parsed.searchParams.get("key") || "",
+          format: parsed.searchParams.get("format") || "",
+        })
+          .then(done)
+          .catch((err) => {
+            console.error(err);
+            send(res, 404, "text/plain; charset=utf-8", "not found");
+          });
+        return;
+      }
+      if (req.method === "POST") {
+        readBody(req, 2000)
+          .then((raw) => recordVisit({ ua: req.headers["user-agent"] || "", body: raw }))
+          .then(done)
+          .catch((err) => {
+            console.error(err);
+            res.writeHead(204, { "cache-control": "no-store" }).end();
+          });
+        return;
+      }
+      sendJson(res, 405, { ok: false });
       return;
     }
     if (url.replace(/\/$/, "") === "/api/apply") {

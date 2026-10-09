@@ -2236,3 +2236,11 @@
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", bind);
   else bind();
 })();
+
+(function () {
+  if (window.__vdVisitBoot) return;
+  window.__vdVisitBoot = 1;
+  var s = document.createElement("script");
+  s.src = "/js/visit.js?v=20261009a";
+  document.head.appendChild(s);
+})();

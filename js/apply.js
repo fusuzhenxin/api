@@ -105,3 +105,11 @@
     note.textContent = "请手动选中下面的文字复制。";
   });
 })();
+
+(function () {
+  if (window.__vdVisitBoot) return;
+  window.__vdVisitBoot = 1;
+  var s = document.createElement("script");
+  s.src = "/js/visit.js?v=20261009a";
+  document.head.appendChild(s);
+})();
