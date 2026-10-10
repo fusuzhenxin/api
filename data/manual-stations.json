@@ -29,7 +29,7 @@
       "status": {
         "online": true,
         "ms": 2047,
-        "uptime": null,
+        "uptime": 100,
         "avgMs": 1207,
         "checkedAt": "2026-10-10T08:22:46.830Z"
       },
