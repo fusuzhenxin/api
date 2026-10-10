@@ -110,6 +110,6 @@
   if (window.__vdVisitBoot) return;
   window.__vdVisitBoot = 1;
   var s = document.createElement("script");
-  s.src = "/js/visit.js?v=20261009a";
+  s.src = "/js/visit.js?v=20261010a";
   document.head.appendChild(s);
 })();
