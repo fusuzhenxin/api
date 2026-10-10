@@ -159,7 +159,7 @@
       .slice(0, 5)
       .map((m) => `<span class="model">${esc(m.label)}${m.rate ? " " + m.rate + "x" : ""}</span>`)
       .join("");
-    const uptime = site.status && site.status.uptime != null ? site.status.uptime + "%" : "—";
+    const uptime = site.status && site.status.uptime != null ? site.status.uptime + "%" : site.status && site.status.online === true ? "在线" : site.status && site.status.online === false ? "异常" : "—";
     const latency = fmtMs(site.status && (site.status.avgMs || site.status.ms));
     return `<article class="card">
       <div class="card-head">
@@ -279,7 +279,7 @@
 
   function metricGridHtml(site) {
     const st = site.status || {};
-    const up = st.uptime != null ? st.uptime + "%" : "待测";
+    const up = st.uptime != null ? st.uptime + "%" : st.online === true ? "在线" : st.online === false ? "异常" : "待测";
     const upVotes = (site.votes && site.votes.up) || 0;
     const downVotes = (site.votes && site.votes.down) || 0;
     return `<div class="metric-grid">

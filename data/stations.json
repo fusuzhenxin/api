@@ -153025,6 +153025,89 @@
       "checks": [],
       "charitySlug": "kiosapi",
       "charityPin": 0
+    },
+    {
+      "id": 800001,
+      "name": "EzAPI",
+      "url": "https://ezapi.site/",
+      "domain": "ezapi.site",
+      "logo": "https://ezapi.site/assets/logo.png",
+      "tag": "第三方",
+      "description": "EzAPI，可用 QQ 邮箱注册，按倍率计费。QQ 群 171280617 加群并绑定 QQ 可领 1 美元测试额度。邀请他人时，对方加群并绑定后双方各得 1 美元，邀请人另得对方首充的 5%。付费分组里有 0.04 倍率档。目前 Key 实测到 GPT、Claude、Gemini、Grok，另有生图模型 gemini-3-pro-image-preview。\n\n2026-10-10 实测四把 Key，整站在线。四次模型列表都返回 200。\nGPT：/v1/models 约 1.0 秒，可见 gpt-5.5、gpt-5.6-sol、gpt-5.6-terra、gpt-6-sol、gpt-6-astra、gpt-6.1-sol。gpt-5.5 对话 75.4 秒返回 200，没有按「只回复 ok」作答，回了英文问句。输入计 4388 token，其中 4344 为缓存。\nClaude：/v1/models 约 0.76 秒，可见 13 个 Claude 模型。claude-haiku-4-5-20251001 走 /v1/messages，4.0 秒和 3.2 秒两次都返回 200，没有回 ok，内容是在讲自己的角色和限制。输入只计 2 token。\nGrok：/v1/models 约 1.0 秒，可见 grok-4.5、grok-4.6。grok-4.5 对话 4.3 秒返回 200，实际模型名是 grok-4.5-build。没有回 ok，回复说原消息像是乱了。输入计 208 token，其中 128 为缓存，输出含 114 个推理 token。\nGemini：/v1/models 约 2.0 秒，可见 gemini-3.1-pro-preview、gemini-3-pro-image-preview、gemini-3.8-flash、gemini-2.5-flash。gemini-2.5-flash 对话 1.7 秒返回 200，没有按「只回复 ok」作答，回了英文问句。输入计 256 token。",
+      "categories": [
+        "new",
+        "gift",
+        "invite",
+        "cheaprate"
+      ],
+      "features": [
+        "gift",
+        "invite",
+        "cheaprate"
+      ],
+      "promoted": false,
+      "rank": 0,
+      "createdAt": "2026-10-10",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "status": {
+        "online": true,
+        "ms": 2047,
+        "uptime": null,
+        "avgMs": 1207,
+        "checkedAt": "2026-10-10T08:22:13.131Z"
+      },
+      "models": [
+        {
+          "id": "gpt",
+          "label": "GPT",
+          "rate": null,
+          "mentioned": true
+        },
+        {
+          "id": "claude",
+          "label": "Claude",
+          "rate": null,
+          "mentioned": true
+        },
+        {
+          "id": "gemini",
+          "label": "Gemini",
+          "rate": null,
+          "mentioned": true
+        },
+        {
+          "id": "grok",
+          "label": "Grok",
+          "rate": null,
+          "mentioned": true
+        },
+        {
+          "id": "image",
+          "label": "生图",
+          "rate": null,
+          "mentioned": true
+        }
+      ],
+      "checks": [
+        {
+          "checkedAt": "2026-10-10T07:03:46.678Z",
+          "ms": 1007,
+          "online": true
+        },
+        {
+          "checkedAt": "2026-10-10T07:12:35.251Z",
+          "ms": 1019,
+          "online": true
+        },
+        {
+          "checkedAt": "2026-10-10T08:22:13.131Z",
+          "ms": 2047,
+          "online": true
+        }
+      ]
     }
   ],
   "officialUpdatedAt": "2026-09-01T03:06:16.852Z",

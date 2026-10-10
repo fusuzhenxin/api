@@ -304,6 +304,47 @@ function normalizeSite(raw, extras = {}) {
   };
 }
 
+function mergeManualStations(payload) {
+  const file = path.join(ROOT, "data", "manual-stations.json");
+  if (!fs.existsSync(file)) return 0;
+  let manual;
+  try {
+    manual = JSON.parse(fs.readFileSync(file, "utf8"));
+  } catch (err) {
+    console.warn("手工收录读取失败", err.message);
+    return 0;
+  }
+  const list = Array.isArray(manual) ? manual : manual.stations || [];
+  const stations = payload.stations || [];
+  let added = 0;
+  for (const incoming of list) {
+    if (!incoming || !incoming.url || !incoming.domain) continue;
+    const domain = String(incoming.domain).replace(/^www\./i, "").toLowerCase();
+    const idx = stations.findIndex((s) => {
+      const d = String(s.domain || "").replace(/^www\./i, "").toLowerCase();
+      return (d && d === domain) || Number(s.id) === Number(incoming.id);
+    });
+    if (idx >= 0) {
+      const prev = stations[idx];
+      const probed = prev.status && prev.status.checkedAt;
+      const voted = prev.votes && (prev.votes.up || prev.votes.down);
+      stations[idx] = {
+        ...prev,
+        ...incoming,
+        id: prev.id,
+        status: probed ? prev.status : incoming.status || prev.status,
+        votes: voted ? prev.votes : incoming.votes || prev.votes,
+        checks: prev.checks && prev.checks.length ? prev.checks : incoming.checks || [],
+      };
+      continue;
+    }
+    stations.push(incoming);
+    added += 1;
+  }
+  payload.stations = stations;
+  return added;
+}
+
 async function main() {
   console.log("拉取首页…");
   const home = await request(SOURCE + "/");
@@ -472,6 +513,9 @@ async function main() {
   } catch (err) {
     console.warn("charity merge fail", err.message);
   }
+
+  const manualAdded = mergeManualStations(payload);
+  if (manualAdded) console.log("手工收录新补", manualAdded);
 
   const dataDir = path.join(ROOT, "data");
   const jsDir = path.join(ROOT, "js");
