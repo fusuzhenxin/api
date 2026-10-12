@@ -1357,6 +1357,105 @@ html[data-theme="light"] .vote-btn[data-vote="down"] {
   .search-box { flex-wrap: wrap; }
 }
 
+.panel-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+.panel-row h2 { margin: 0; }
+.channel-out {
+  color: var(--muted);
+  font-size: 13px;
+  white-space: nowrap;
+}
+.channel-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 12px;
+}
+.channel-card {
+  padding: 14px 16px 12px;
+  border-radius: 16px;
+  background: var(--bg-soft);
+  border: 1px solid var(--line);
+}
+.channel-card header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+.channel-card h3 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+}
+.channel-model {
+  margin: 6px 0 12px;
+  color: var(--muted);
+  font-size: 12px;
+}
+.channel-model span {
+  display: inline-block;
+  margin-right: 6px;
+  padding: 1px 6px;
+  border-radius: 999px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+}
+.channel-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+.channel-stats div {
+  padding: 8px 10px;
+  border-radius: 12px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+}
+.channel-stats span,
+.channel-foot span {
+  display: block;
+  color: var(--muted);
+  font-size: 12px;
+}
+.channel-stats strong {
+  display: block;
+  margin-top: 4px;
+  font-size: 16px;
+  font-variant-numeric: tabular-nums;
+}
+.channel-foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin: 12px 0 8px;
+}
+.channel-foot strong {
+  font-size: 28px;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  font-variant-numeric: tabular-nums;
+  color: var(--teal);
+}
+.channel-foot.mid strong { color: var(--amber-text); }
+.channel-foot.bad strong { color: var(--rose); }
+.channel-timeline { height: 16px; }
+.channel-scale {
+  display: flex;
+  justify-content: space-between;
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 11px;
+}
+@media (max-width: 860px) {
+  .channel-grid { grid-template-columns: 1fr; }
+}
+
 .lab {
   width: min(1120px, calc(100% - 40px));
   margin: 0 auto;

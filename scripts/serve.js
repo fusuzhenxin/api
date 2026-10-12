@@ -8,6 +8,7 @@ const { acceptApply } = require("../lib/apply-mail");
 const { fetchOfficialFeed } = require("../lib/official-feed");
 const { getStationStatus, cronAuthorized } = require("../lib/station-status");
 const { recordVisit, readVisits } = require("../lib/visits");
+const { proxyChannelMonitor } = require("../lib/channel-monitor");
 
 const ROOT = path.resolve(__dirname, "..");
 const PORT = Number(process.env.PORT) || 4173;
@@ -270,6 +271,24 @@ http
         .catch((err) => {
           console.error(err);
           sendJson(res, 503, { ok: false });
+        });
+      return;
+    }
+    if (url.replace(/\/$/, "") === "/api/channel-monitor") {
+      if (req.method !== "GET") {
+        sendJson(res, 405, { error: "method not allowed" });
+        return;
+      }
+      proxyChannelMonitor(parsed.searchParams.get("id") || "")
+        .then((result) => {
+          res.writeHead(result.status, {
+            "Content-Type": "application/json; charset=utf-8",
+            "Cache-Control": result.status === 200 ? "public, max-age=60" : "no-store",
+          }).end(JSON.stringify(result.payload));
+        })
+        .catch((err) => {
+          console.error(err);
+          sendJson(res, 502, { error: "unavailable" });
         });
       return;
     }

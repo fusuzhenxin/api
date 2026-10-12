@@ -1315,6 +1315,83 @@ function relatedStations(site, n) {
   return sortStations(pool).slice(0, n || 6);
 }
 
+function channelItems(payload) {
+  const data = payload && (payload.data || payload);
+  const items = data && (data.items || data.channels);
+  return Array.isArray(items) ? items : [];
+}
+
+function channelStatusText(status) {
+  const s = String(status || "").toLowerCase();
+  if (s === "operational" || s === "ok" || s === "normal") return "正常";
+  if (!s) return "未知";
+  return "异常";
+}
+
+function channelProviderLabel(provider) {
+  const key = String(provider || "").toLowerCase();
+  const names = { deepseek: "DeepSeek", openai: "OpenAI", anthropic: "Claude", gemini: "Gemini", grok: "Grok" };
+  return names[key] || provider || "";
+}
+
+function channelMonitorBody(payload) {
+  const items = channelItems(payload).filter((it) => !it.admin_only);
+  if (!items.length) return `<p class="card-sub">对方渠道页暂时没有公开渠道。</p>`;
+  return `<div class="channel-grid">${items.map((it) => {
+    const timeline = Array.isArray(it.timeline) ? it.timeline.slice() : [];
+    timeline.sort((a, b) => String(a.checked_at || "").localeCompare(String(b.checked_at || "")));
+    const bars = timeline.map((point) => {
+      const ok = String(point.status || "").toLowerCase() === "operational";
+      const title = fmtTime(point.checked_at) + " · " + (point.latency_ms != null ? Math.round(point.latency_ms) + " ms" : "—");
+      return `<i class="seg ${ok ? "on" : "off"}" title="${escapeHtml(title)}"></i>`;
+    }).join("");
+    const pct = Number(it.availability_7d);
+    const pctText = Number.isFinite(pct) ? pct.toFixed(2) + "%" : "—";
+    const tone = !Number.isFinite(pct) ? "" : pct >= 95 ? "good" : pct >= 80 ? "mid" : "bad";
+    const ok = String(it.primary_status || "").toLowerCase() === "operational";
+    const chat = it.primary_latency_ms != null ? Math.round(it.primary_latency_ms) + " ms" : "—";
+    const ping = it.primary_ping_latency_ms != null ? Math.round(it.primary_ping_latency_ms) + " ms" : "—";
+    return `<article class="channel-card">
+      <header>
+        <h3>${escapeHtml(it.name || "未命名渠道")}</h3>
+        <span class="badge ${ok ? "ok" : "bad"}">${channelStatusText(it.primary_status)}</span>
+      </header>
+      <p class="channel-model">${it.provider ? `<span>${escapeHtml(channelProviderLabel(it.provider))}</span>` : ""}${escapeHtml(it.primary_model || "")}</p>
+      <div class="channel-stats">
+        <div><span>对话延迟</span><strong>${escapeHtml(chat)}</strong></div>
+        <div><span>端点延迟</span><strong>${escapeHtml(ping)}</strong></div>
+      </div>
+      <div class="channel-foot ${tone}"><span>可用性 · 7 天</span><strong>${escapeHtml(pctText)}</strong></div>
+      ${bars ? `<div class="timeline channel-timeline">${bars}</div><p class="channel-scale"><span>较早</span><span>最近</span></p>` : ""}
+    </article>`;
+  }).join("")}</div>`;
+}
+
+function loadChannelMonitor(site) {
+  const api = site && site.channelMonitor;
+  if (!api || !site.id) return;
+  const box = document.getElementById("channelMonitor");
+  if (!box || box.getAttribute("data-api") !== api) return;
+  const proxy = "/api/channel-monitor?id=" + encodeURIComponent(site.id);
+  const paint = (payload) => {
+    const current = document.getElementById("channelMonitor");
+    if (!current || current.getAttribute("data-api") !== api) return;
+    const body = current.querySelector("[data-channel-body]");
+    if (body) body.innerHTML = channelMonitorBody(payload);
+  };
+  const fail = () => {
+    const current = document.getElementById("channelMonitor");
+    if (!current || current.getAttribute("data-api") !== api) return;
+    const body = current.querySelector("[data-channel-body]");
+    if (body) body.innerHTML = `<p class="card-sub">渠道状态暂时没有取到。</p>`;
+  };
+  const read = (url) => fetch(url, { credentials: "omit" }).then((res) => {
+    if (!res.ok) throw new Error(String(res.status));
+    return res.json();
+  });
+  read(proxy).then(paint).catch(() => read(api).then(paint).catch(fail));
+}
+
 function renderDetail(id) {
   const site = state.data.stations.find((s) => s.id === id);
   $("#home").hidden = true;
@@ -1370,6 +1447,14 @@ function renderDetail(id) {
         ${site.url ? `<a class="btn btn-primary" target="_blank" rel="noopener noreferrer" href="${escapeHtml(site.url)}">访问站点</a>` : ""}
       </div>
     </section>
+    ${site.channelMonitor ? `<section class="panel" id="channelMonitor" data-api="${escapeHtml(site.channelMonitor)}">
+      <div class="panel-row">
+        <h2>模型渠道状态</h2>
+        ${site.channelPage ? `<a class="channel-out" href="${escapeHtml(site.channelPage)}" target="_blank" rel="noopener noreferrer">对方渠道页</a>` : ""}
+      </div>
+      <p class="card-sub">数字来自对方公开渠道页，按最近 7 天统计。</p>
+      <div data-channel-body><p class="card-sub">正在读取渠道状态…</p></div>
+    </section>` : ""}
     <section class="panel">
       <h2>${escapeHtml(site.name)} 是什么中转站？</h2>
       <p class="article">${escapeHtml(site.name)}（${escapeHtml(site.domain || "第三方域名")}）是本站收录的 ${ (site.categories || []).includes("charity") ? "公益 API 站" : "API 中转站"}，常见用途是对接 ChatGPT、Claude、DeepSeek、Gemini 等模型。当前探测${site.status && site.status.online != null ? (online ? "在线" : "异常") : "尚未探测"}。页面里的模型与倍率来自站点简介，不代替官方渠道。</p>
@@ -1411,6 +1496,7 @@ function renderDetail(id) {
         : ""
     }
   `;
+  loadChannelMonitor(site);
 }
 
 function render() {

@@ -3,11 +3,11 @@
     {
       "id": 800001,
       "name": "EzAPI",
-      "url": "https://ezapi.site/",
+      "url": "https://ezapi.site/sign-up?aff=peNn",
       "domain": "ezapi.site",
       "logo": "https://ezapi.site/assets/logo.png",
       "tag": "第三方",
-      "description": "EzAPI，可用 QQ 邮箱注册，按倍率计费。QQ 群 171280617 加群并绑定 QQ 可领 1 美元测试额度。邀请他人时，对方加群并绑定后双方各得 1 美元，邀请人另得对方首充的 5%。付费分组里有 0.04 倍率档。目前 Key 实测到 GPT、Claude、Gemini、Grok，另有生图模型 gemini-3-pro-image-preview。\n\n2026-10-10 实测四把 Key，整站在线。四次模型列表都返回 200。\nGPT：/v1/models 约 1.0 秒，可见 gpt-5.5、gpt-5.6-sol、gpt-5.6-terra、gpt-6-sol、gpt-6-astra、gpt-6.1-sol。gpt-5.5 对话 75.4 秒返回 200，没有按「只回复 ok」作答，回了英文问句。输入计 4388 token，其中 4344 为缓存。\nClaude：/v1/models 约 0.76 秒，可见 13 个 Claude 模型。claude-haiku-4-5-20251001 走 /v1/messages，4.0 秒和 3.2 秒两次都返回 200，没有回 ok，内容是在讲自己的角色和限制。输入只计 2 token。\nGrok：/v1/models 约 1.0 秒，可见 grok-4.5、grok-4.6。grok-4.5 对话 4.3 秒返回 200，实际模型名是 grok-4.5-build。没有回 ok，回复说原消息像是乱了。输入计 208 token，其中 128 为缓存，输出含 114 个推理 token。\nGemini：/v1/models 约 2.0 秒，可见 gemini-3.1-pro-preview、gemini-3-pro-image-preview、gemini-3.8-flash、gemini-2.5-flash。gemini-2.5-flash 对话 1.7 秒返回 200，没有按「只回复 ok」作答，回了英文问句。输入计 256 token。",
+      "description": "EzAPI，可用 QQ 邮箱注册，按倍率计费。\n🎁 新用户赠额：QQ 群 171280617 加群并绑定 QQ，可领 1 美元测试额度。\n🤝 邀请返利：对方加群并绑定后，双方各得 1 美元，邀请人另得对方首充的 5%。\n💰 低倍率：付费分组里有 0.04 倍率档。\n🤖 模型：支持 GPT、Claude、Gemini、Grok，以及生图模型 gemini-3-pro-image-preview。",
       "categories": [
         "new",
         "gift",
@@ -79,6 +79,81 @@
         {
           "checkedAt": "2026-10-10T08:22:46.830Z",
           "ms": 2047,
+          "online": true
+        }
+      ]
+    },
+    {
+      "id": 800002,
+      "name": "橘API",
+      "url": "https://oranexa.top/register?aff=GWWEFJTBBUZQ",
+      "channelMonitor": "https://oranexa.top/api/v1/channel-monitors",
+      "channelPage": "https://oranexa.top/monitor",
+      "domain": "oranexa.top",
+      "logo": "https://oranexa.top/assets/theme/oranexa-mark.svg",
+      "tag": "第三方",
+      "description": "橘API，站内名橘-API，按分组倍率计费。\n📧 注册：QQ 邮箱或 Gmail 可以注册。\n🐟 蓝色肥鱼：DeepSeek 0.06 倍，模型 deepseek-v4.1-flash。\n🌐 国模聚合：0.09 倍，几乎全天不拉闸，含 DeepSeek、GLM、Kimi、MiniMax。\n🤖 GPT：不降智 0.07 倍，另有 0.16 倍和特惠 0.06 倍。\n✨ Claude：分组 0.9 倍。\n🎨 生图：image2.5 为 1K、2K、4K 各 0.03 美元一张，banana pro 为 0.08 美元一张。\n🎫 充值：使用兑换码充值。",
+      "categories": [
+        "new",
+        "cheaprate"
+      ],
+      "features": [
+        "cheaprate"
+      ],
+      "promoted": false,
+      "rank": 0,
+      "createdAt": "2026-10-12",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "status": {
+        "online": true,
+        "ms": 366,
+        "uptime": null,
+        "avgMs": 595,
+        "checkedAt": "2026-10-12T01:48:34.573Z"
+      },
+      "models": [
+        {
+          "id": "gpt",
+          "label": "GPT",
+          "rate": null,
+          "mentioned": true
+        },
+        {
+          "id": "claude",
+          "label": "Claude",
+          "rate": null,
+          "mentioned": true
+        },
+        {
+          "id": "deepseek",
+          "label": "DeepSeek",
+          "rate": null,
+          "mentioned": true
+        },
+        {
+          "id": "image",
+          "label": "生图",
+          "rate": null,
+          "mentioned": true
+        }
+      ],
+      "checks": [
+        {
+          "checkedAt": "2026-10-12T01:48:34.573Z",
+          "ms": 1045,
+          "online": true
+        },
+        {
+          "checkedAt": "2026-10-12T01:48:34.573Z",
+          "ms": 375,
+          "online": true
+        },
+        {
+          "checkedAt": "2026-10-12T01:48:34.573Z",
+          "ms": 366,
           "online": true
         }
       ]
