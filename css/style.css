@@ -768,6 +768,7 @@ a.card-open svg {
   color: var(--amber-text);
 }
 .badge.ok { background: var(--teal-dim); color: var(--teal); }
+.badge.mid { background: rgba(198, 122, 0, 0.14); color: var(--amber-text); }
 .badge.bad { background: rgba(255, 93, 122, 0.14); color: var(--rose); }
 .badge.wait { background: rgba(148, 163, 184, 0.16); color: var(--muted, #8b95a8); }
 .desc {
@@ -1130,6 +1131,7 @@ html[data-theme="light"] .vote-btn[data-vote="down"] {
   background: var(--seg-idle);
 }
 .seg.on { background: var(--teal); }
+.seg.mid { background: var(--amber); }
 .seg.off { background: var(--rose); }
 .article {
   white-space: pre-line;

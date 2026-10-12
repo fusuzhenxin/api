@@ -1324,13 +1324,23 @@ function channelItems(payload) {
 function channelStatusText(status) {
   const s = String(status || "").toLowerCase();
   if (s === "operational" || s === "ok" || s === "normal") return "正常";
+  if (s === "degraded") return "波动";
+  if (s === "missing") return "无数据";
   if (!s) return "未知";
   return "异常";
 }
 
+function channelStatusClass(status) {
+  const s = String(status || "").toLowerCase();
+  if (s === "operational" || s === "ok" || s === "normal") return "ok";
+  if (s === "degraded") return "mid";
+  if (s === "missing") return "wait";
+  return "bad";
+}
+
 function channelProviderLabel(provider) {
   const key = String(provider || "").toLowerCase();
-  const names = { deepseek: "DeepSeek", openai: "OpenAI", anthropic: "Claude", gemini: "Gemini", grok: "Grok" };
+  const names = { deepseek: "DeepSeek", openai: "OpenAI", anthropic: "Claude", gemini: "Gemini", grok: "Grok", claude: "Claude", codex: "Codex", cc: "Claude", cx: "Codex" };
   return names[key] || provider || "";
 }
 
@@ -1341,25 +1351,26 @@ function channelMonitorBody(payload) {
     const timeline = Array.isArray(it.timeline) ? it.timeline.slice() : [];
     timeline.sort((a, b) => String(a.checked_at || "").localeCompare(String(b.checked_at || "")));
     const bars = timeline.map((point) => {
-      const ok = String(point.status || "").toLowerCase() === "operational";
+      const cls = channelStatusClass(point.status);
+      const seg = cls === "ok" ? "on" : cls === "mid" ? "mid" : cls === "wait" ? "idle" : "off";
       const title = fmtTime(point.checked_at) + " · " + (point.latency_ms != null ? Math.round(point.latency_ms) + " ms" : "—");
-      return `<i class="seg ${ok ? "on" : "off"}" title="${escapeHtml(title)}"></i>`;
+      return `<i class="seg ${seg}" title="${escapeHtml(title)}"></i>`;
     }).join("");
     const pct = Number(it.availability_7d);
     const pctText = Number.isFinite(pct) ? pct.toFixed(2) + "%" : "—";
     const tone = !Number.isFinite(pct) ? "" : pct >= 95 ? "good" : pct >= 80 ? "mid" : "bad";
-    const ok = String(it.primary_status || "").toLowerCase() === "operational";
+    const badge = channelStatusClass(it.primary_status);
     const chat = it.primary_latency_ms != null ? Math.round(it.primary_latency_ms) + " ms" : "—";
-    const ping = it.primary_ping_latency_ms != null ? Math.round(it.primary_ping_latency_ms) + " ms" : "—";
+    const ping = it.primary_ping_latency_ms != null ? Math.round(it.primary_ping_latency_ms) + " ms" : "";
     return `<article class="channel-card">
       <header>
         <h3>${escapeHtml(it.name || "未命名渠道")}</h3>
-        <span class="badge ${ok ? "ok" : "bad"}">${channelStatusText(it.primary_status)}</span>
+        <span class="badge ${badge}">${channelStatusText(it.primary_status)}</span>
       </header>
       <p class="channel-model">${it.provider ? `<span>${escapeHtml(channelProviderLabel(it.provider))}</span>` : ""}${escapeHtml(it.primary_model || "")}</p>
       <div class="channel-stats">
         <div><span>对话延迟</span><strong>${escapeHtml(chat)}</strong></div>
-        <div><span>端点延迟</span><strong>${escapeHtml(ping)}</strong></div>
+        ${ping ? `<div><span>端点延迟</span><strong>${escapeHtml(ping)}</strong></div>` : ""}
       </div>
       <div class="channel-foot ${tone}"><span>可用性 · 7 天</span><strong>${escapeHtml(pctText)}</strong></div>
       ${bars ? `<div class="timeline channel-timeline">${bars}</div><p class="channel-scale"><span>较早</span><span>最近</span></p>` : ""}

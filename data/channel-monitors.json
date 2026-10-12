@@ -1,4 +1,9 @@
 {
+  "37": "https://status.ikuncode.cc/api/status?period=7d&board=all",
+  "479": "https://status.claudecode.net.cn/api/status?period=7d&board=all",
+  "818": "https://status.dragoncode.codes/api/status?period=7d&board=all",
+  "1529": "https://status.jiuqiuai.top/api/status",
   "2391": "https://claudecode.top/api/v1/channel-monitors",
+  "4137": "https://status.momoapi.top/api/status?period=7d&board=all",
   "800002": "https://oranexa.top/api/v1/channel-monitors"
 }
