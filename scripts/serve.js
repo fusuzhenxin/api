@@ -9,6 +9,7 @@ const { fetchOfficialFeed } = require("../lib/official-feed");
 const { getStationStatus, cronAuthorized } = require("../lib/station-status");
 const { recordVisit, readVisits } = require("../lib/visits");
 const { proxyChannelMonitor } = require("../lib/channel-monitor");
+const { renderCheckPage } = require("./copy-public");
 
 const ROOT = path.resolve(__dirname, "..");
 const PORT = Number(process.env.PORT) || 4173;
@@ -311,7 +312,8 @@ http
       return;
     }
     if (/^\/check\/(detect|basic|candy|pelican)$/.test(clean)) {
-      send(res, 200, "text/html; charset=utf-8", fs.readFileSync(path.join(ROOT, "check.html")));
+      const html = fs.readFileSync(path.join(ROOT, "check.html"), "utf8");
+      send(res, 200, "text/html; charset=utf-8", renderCheckPage(html, clean.split("/")[2]));
       return;
     }
     if (isSpaPath(url)) {

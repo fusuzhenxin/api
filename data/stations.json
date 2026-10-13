@@ -58485,37 +58485,6 @@
       ]
     },
     {
-      "id": 1979,
-      "name": "qa",
-      "url": "https://qa.dashun9527.com",
-      "domain": "qa.dashun9527.com",
-      "logo": "",
-      "tag": "第三方",
-      "description": "",
-      "categories": [
-        "highup"
-      ],
-      "promoted": false,
-      "rank": 0.020793,
-      "createdAt": "2026-08-09 03:59:19",
-      "votes": {
-        "up": 0,
-        "down": 0
-      },
-      "status": {
-        "online": true,
-        "ms": 3167,
-        "uptime": 100,
-        "avgMs": 2524,
-        "checkedAt": "2026-08-31T10:09:04.278Z"
-      },
-      "models": [],
-      "checks": [],
-      "features": [
-        "highup"
-      ]
-    },
-    {
       "id": 3368,
       "name": "ahhilai",
       "url": "https://ahhilai.top",
@@ -74161,33 +74130,6 @@
       "features": [
         "highup"
       ]
-    },
-    {
-      "id": 2246,
-      "name": "nexusacc",
-      "url": "https://nexusacc.itssx.com",
-      "domain": "nexusacc.itssx.com",
-      "logo": "",
-      "tag": "第三方",
-      "description": "",
-      "categories": [],
-      "promoted": false,
-      "rank": 0.02035,
-      "createdAt": "2026-08-09 03:59:20",
-      "votes": {
-        "up": 0,
-        "down": 0
-      },
-      "status": {
-        "online": true,
-        "ms": 4438,
-        "uptime": 97.3,
-        "avgMs": 3376,
-        "checkedAt": "2026-08-31T10:09:27.888Z"
-      },
-      "models": [],
-      "checks": [],
-      "features": []
     },
     {
       "id": 2936,
@@ -108303,7 +108245,7 @@
       "domain": "api.aijws.com",
       "logo": "",
       "tag": "第三方",
-      "description": "禾维AI实测榜（更新于 2026-08-08）：综合分 0、平均在线率 41.6%、平均延迟 5.11s、覆盖模型 8 个（另见: https://veridrop.org/relays）",
+      "description": "我的贾维斯中转，接口地址 api.aijws.com。站点说明写的是体验好、价格优惠，使用问题可以联系客服。\n🕐 客服：7×24 小时，交流群 796808428。\n🤖 满血Pro：gpt-5.6-sol 与 gpt-5.5 为输入 ¥0.5、输出 ¥3、缓存 ¥0.05 / 百万 token；gpt-5.6-terra 为输入 ¥0.25、输出 ¥1.5、缓存 ¥0.025。\n✨ 官方渠道CC满血：claude-opus-4-6、claude-opus-4-7、claude-opus-4-8 都是输入 ¥5、输出 ¥25、缓存 ¥0.5、写入 ¥10 / 百万 token。",
       "categories": [
         "highup"
       ],
@@ -108321,7 +108263,20 @@
         "avgMs": 1168,
         "checkedAt": "2026-08-31T10:08:54.359Z"
       },
-      "models": [],
+      "models": [
+        {
+          "id": "gpt",
+          "label": "GPT",
+          "rate": null,
+          "mentioned": true
+        },
+        {
+          "id": "claude",
+          "label": "Claude",
+          "rate": null,
+          "mentioned": true
+        }
+      ],
       "checks": [],
       "features": [
         "highup"
@@ -124241,33 +124196,6 @@
       "features": [
         "highup"
       ]
-    },
-    {
-      "id": 2848,
-      "name": "ai",
-      "url": "https://ai.yhgs.cloud",
-      "domain": "ai.yhgs.cloud",
-      "logo": "",
-      "tag": "第三方",
-      "description": "",
-      "categories": [],
-      "promoted": false,
-      "rank": 0.019039,
-      "createdAt": "2026-08-09 03:59:23",
-      "votes": {
-        "up": 0,
-        "down": 0
-      },
-      "status": {
-        "online": true,
-        "ms": 2883,
-        "uptime": 99.6,
-        "avgMs": 2931,
-        "checkedAt": "2026-08-31T10:10:17.604Z"
-      },
-      "models": [],
-      "checks": [],
-      "features": []
     },
     {
       "id": 1958,
@@ -149113,33 +149041,6 @@
         "uptime": 0,
         "avgMs": 5812,
         "checkedAt": "2026-08-31T10:08:00.947Z"
-      },
-      "models": [],
-      "checks": [],
-      "features": []
-    },
-    {
-      "id": 1021,
-      "name": "nimabo.cn",
-      "url": "https://nimabo.cn/",
-      "domain": "nimabo.cn",
-      "logo": "🌐",
-      "tag": "第三方",
-      "description": "暂无更多描述",
-      "categories": [],
-      "promoted": false,
-      "rank": 0,
-      "createdAt": "2026-06-09 21:31:46",
-      "votes": {
-        "up": 0,
-        "down": 0
-      },
-      "status": {
-        "online": false,
-        "ms": 2596,
-        "uptime": 0,
-        "avgMs": 2593,
-        "checkedAt": "2026-08-31T10:08:01.914Z"
       },
       "models": [],
       "checks": [],

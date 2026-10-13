@@ -205,6 +205,16 @@ test("page lists every runner", function () {
   assert.ok(html.indexOf("t-teal") >= 0);
   assert.ok(html.indexOf("t-rose") >= 0);
   assert.ok(html.indexOf("GPT降智") >= 0);
+  assert.ok(html.indexOf("6 道题") < 0);
+  assert.ok(html.indexOf("21 和 29") < 0);
+  assert.ok(html.indexOf("这页在测什么") >= 0);
+  assert.ok(html.indexOf("迷惑辨析、数量关系、约束求解、演绎") >= 0);
+  const { renderCheckPage } = require("./copy-public");
+  const candyPage = renderCheckPage(html, "candy");
+  assert.ok(candyPage.indexOf("<title>糖果测试_GPT降智逻辑题_API中转站导航</title>") >= 0);
+  assert.ok(candyPage.indexOf("https://www.veridrop.cn/check/candy") >= 0);
+  assert.ok(candyPage.indexOf("能用来判断中转站降智吗？") >= 0);
+  assert.ok(candyPage.indexOf('"name":"糖果测试"') >= 0);
   assert.ok(client.indexOf("function applyViewSeo") >= 0);
   ["candy", "pelican"].forEach(function (id) {
     assert.ok(client.indexOf("\n    " + id + ":") >= 0, "runner " + id);

@@ -468,7 +468,8 @@ async function main() {
     await sleep(120);
   }
 
-  const stations = [...byId.values()].sort((a, b) => {
+  const droppedStationIds = new Set([1021, 1979, 2246, 2848]);
+  const stations = [...byId.values()].filter((site) => !droppedStationIds.has(site.id)).sort((a, b) => {
     if (a.promoted !== b.promoted) return a.promoted ? -1 : 1;
     return (b.rank || 0) - (a.rank || 0);
   });
