@@ -1130,7 +1130,97 @@ function cardIdentity(site) {
 function openSiteLink(site) {
   const url = site && site.url ? String(site.url).trim() : "";
   if (!/^https?:\/\//i.test(url)) return "";
-  return `<a class="card-open" target="_blank" rel="noopener noreferrer" href="${escapeHtml(url)}"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 5h5v5"/><path d="M19 5 10 14"/><path d="M16 13.5V19H5V8h5.5"/></svg><span>打开站点</span></a>`;
+  return `<a class="card-open" data-leave target="_blank" rel="noopener noreferrer" href="${escapeHtml(url)}"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 5h5v5"/><path d="M19 5 10 14"/><path d="M16 13.5V19H5V8h5.5"/></svg><span>打开站点</span></a>`;
+}
+
+let pendingLeave = null;
+
+function safeLeaveUrl(href) {
+  try {
+    const url = new URL(href, location.href);
+    if (url.protocol !== "http:" && url.protocol !== "https:") return "";
+    if (url.origin === location.origin) return "";
+    return url.href;
+  } catch {
+    return "";
+  }
+}
+
+function ensureLeaveDialog() {
+  if ($("#leaveMask")) return;
+  const mask = document.createElement("div");
+  mask.id = "leaveMask";
+  mask.className = "leave-mask";
+  mask.innerHTML = `
+    <div class="leave-panel" role="dialog" aria-modal="true" aria-labelledby="leaveTitle">
+      <h3 id="leaveTitle">前往前先看一下</h3>
+      <p class="leave-host" id="leaveHost"></p>
+      <p>对方站点不由本站运营，探测在线也不等于推荐充值。</p>
+      <p>中转站可能停服、改价、跑路或泄露密钥。</p>
+      <p>先核对域名、条款和退款规则。</p>
+      <p>按需小额充值，不要一次存入大额余额。</p>
+      <div class="leave-actions">
+        <button class="btn btn-primary" id="leaveGo" type="button">继续访问</button>
+        <button class="btn" id="leaveStay" type="button">留下</button>
+      </div>
+    </div>`;
+  document.body.appendChild(mask);
+  mask.addEventListener("click", (e) => {
+    if (e.target.id === "leaveMask" || e.target.id === "leaveStay") closeLeave();
+    if (e.target.id === "leaveGo") confirmLeave();
+  });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && mask.classList.contains("show")) {
+      e.preventDefault();
+      closeLeave();
+    }
+  });
+}
+
+function openLeave(url, opener) {
+  ensureLeaveDialog();
+  pendingLeave = { url, opener };
+  let host = url;
+  try {
+    host = new URL(url).hostname;
+  } catch {
+    host = url;
+  }
+  $("#leaveHost").textContent = "即将打开 " + host;
+  $("#leaveMask").classList.add("show");
+  const go = $("#leaveGo");
+  if (go) go.focus();
+}
+
+function closeLeave() {
+  const mask = $("#leaveMask");
+  const opener = pendingLeave && pendingLeave.opener;
+  pendingLeave = null;
+  if (mask) mask.classList.remove("show");
+  if (opener && opener.focus) opener.focus();
+}
+
+function confirmLeave() {
+  const pending = pendingLeave;
+  closeLeave();
+  if (!pending || !pending.url) return;
+  const a = document.createElement("a");
+  a.href = pending.url;
+  a.target = "_blank";
+  a.rel = "noopener noreferrer";
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+}
+
+function onLeaveClick(e) {
+  const link = e.target.closest("a[data-leave]");
+  if (!link) return false;
+  const url = safeLeaveUrl(link.getAttribute("href") || "");
+  if (!url) return false;
+  e.preventDefault();
+  openLeave(url, link);
+  return true;
 }
 
 function cardHtml(site) {
@@ -1455,7 +1545,7 @@ function renderDetail(id) {
         <button class="btn" data-fav="${site.id}">${fav ? "已收藏" : "收藏"}</button>
         <button class="btn" type="button" data-share="link">复制链接</button>
         <a class="btn" href="${cardUrl}" target="_blank" rel="noopener noreferrer">分享图</a>
-        ${site.url ? `<a class="btn btn-primary" target="_blank" rel="noopener noreferrer" href="${escapeHtml(site.url)}">访问站点</a>` : ""}
+        ${site.url ? `<a class="btn btn-primary" data-leave target="_blank" rel="noopener noreferrer" href="${escapeHtml(site.url)}">访问站点</a>` : ""}
       </div>
     </section>
     ${site.channelMonitor ? `<section class="panel" id="channelMonitor" data-api="${escapeHtml(site.channelMonitor)}">
@@ -1579,6 +1669,7 @@ function openCheckin() {
 }
 
 function bind() {
+  ensureLeaveDialog();
   if ($("#contactTop")) {
     $("#contactTop").addEventListener("click", (e) => {
       e.preventDefault();
@@ -1756,6 +1847,7 @@ function bind() {
   window.addEventListener("hashchange", render);
   window.addEventListener("popstate", render);
   document.addEventListener("click", (e) => {
+    if (onLeaveClick(e)) return;
     const a = e.target.closest("a[href]");
     if (!a || a.target === "_blank" || a.hasAttribute("download")) return;
     const href = a.getAttribute("href");

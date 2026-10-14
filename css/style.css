@@ -1183,6 +1183,45 @@ html[data-theme="light"] .vote-btn[data-vote="down"] {
 }
 .toast.show { display: block; }
 
+.leave-mask {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: var(--mask);
+}
+.leave-mask.show { display: flex; }
+.leave-panel {
+  width: min(440px, 100%);
+  background: var(--drawer-bg);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 22px;
+  box-shadow: var(--shadow);
+}
+.leave-panel h3 { margin: 0 0 8px; font-size: 18px; }
+.leave-host {
+  margin: 0 0 12px;
+  color: var(--text);
+  font-weight: 700;
+  word-break: break-all;
+}
+.leave-panel p { margin: 0 0 8px; color: var(--muted); line-height: 1.7; }
+.leave-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+}
+.leave-actions .btn {
+  flex: 1;
+  cursor: pointer;
+  font: inherit;
+}
+
 .site-foot {
   border-top: 1px solid var(--line);
   background: var(--panel);
