@@ -46,6 +46,7 @@
     special: "小有特色",
     new: "新站上榜",
     charity: "公益站",
+    owner: "站长在用",
     other: "更多收录",
     online: "当前在线",
     fav: "我的收藏",
@@ -116,6 +117,12 @@
       title: "新站上榜API中转_最新收录站点",
       desc: "本站新收录的 API 中转站。新站探测样本少、波动可能更大，建议先看可用性、只小额测试，再决定要不要继续充。",
       keys: "新API中转站,新站推荐",
+    },
+    owner: {
+      title: "站长在用的API中转站",
+      h1: "站长在用",
+      desc: "站长自己在用的 API 中转站。探测在线也不等于推荐充值，打开前先核对域名，按需小额试用。",
+      keys: "站长在用,API中转站",
     },
     charity: {
       title: "公益站对照_免费API入口与使用注意",
@@ -517,7 +524,7 @@
       verdict: v.label,
       verdict_id: v.id,
       sentence: v.sentence,
-      uptime: st.uptime != null ? st.uptime + "%" : "待测",
+      uptime: availabilityText(site),
       latency: fmtMs(st.avgMs || st.ms),
       votes: (votes.up || 0) + " / " + (votes.down || 0),
       online: !!st.online,
@@ -772,6 +779,14 @@
     });
   }
 
+  function availabilityText(site) {
+    const st = (site && site.status) || {};
+    if (st.uptime != null && st.uptime !== "") return st.uptime + "%";
+    if (st.online === true) return "在线";
+    if (st.online === false) return "异常";
+    return "待测";
+  }
+
   function siteSeo(site, ctx) {
     if (!site) {
       return pack({
@@ -789,7 +804,7 @@
     const models = modelNames(site);
     const isCharity = ((site.categories || []).indexOf("charity") >= 0);
     const modelText = models.slice(0, 4).join("、") || "";
-    const up = site.status && site.status.uptime != null ? site.status.uptime + "%" : "待测";
+    const up = availabilityText(site);
     const verdict = siteVerdict(site);
     const title = site.name + (isCharity ? "（公益站）" : "") + " · API中转站导航";
     const description = ensureDesc(

@@ -157,6 +157,177 @@
           "online": true
         }
       ]
+    },
+    {
+      "id": 2825,
+      "name": "HUBWAY",
+      "url": "https://api.hubway.cc/register?aff=6GA5TD6SDK6J",
+      "domain": "api.hubway.cc",
+      "logo": "",
+      "tag": "第三方",
+      "description": "HUBWAY 是 AI API 网关，注册页在 api.hubway.cc，公开接口地址是 https://hubway.cc。\n📝 注册：只开放 QQ 邮箱，并且要做邮箱验证。站方副标题写的是防止被恶意注册。\n💰 计费：模型广场写充值比例 1 元到账 10 美元，页面上的价格要再除以 10，才是最终结算价。\n⚡ GPT-0.08 高并发稳定组：综合倍率 0.08，缓存约 80%，不支持 GPT-6。公开型号是 gpt-5.4、gpt-5.4-mini、gpt-5.5、gpt-5.6-luna、gpt-5.6-sol、gpt-5.6-terra。\n⚡ GPT-0.1 plus：综合倍率 0.1，缓存约 90%。分组说明写支持 gpt-6-astra，公开型号列表目前仍是上面这 6 个 GPT。\n⚡ GPT-0.12 满智分组、GPT-0.15 满智分组：公开型号同样是这 6 个 GPT。0.15 的说明是满智。\n🤖 CC-MAX 满血 0.9x：自建号池，满血满状态。型号有 claude-opus-4-6、claude-opus-4-7、claude-opus-4-8、claude-sonnet-4-6、claude-haiku-4-5-20251001、claude-fable-5。\n💬 控制台菜单有余额充值、TG 通知群、QQ 群，以及在线聊天和生图 https://hubway.cc/chat。",
+      "categories": [
+        "highup",
+        "cheaprate"
+      ],
+      "features": [
+        "cheaprate"
+      ],
+      "promoted": false,
+      "ownerPick": true,
+      "rank": 0.019641,
+      "createdAt": "2026-08-09 03:59:23",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "status": {
+        "online": true,
+        "ms": 2039,
+        "uptime": 100,
+        "avgMs": 1743,
+        "checkedAt": "2026-08-31T10:10:15.284Z"
+      },
+      "models": [
+        {
+          "id": "gpt",
+          "label": "GPT",
+          "rate": null,
+          "mentioned": true
+        },
+        {
+          "id": "claude",
+          "label": "Claude",
+          "rate": null,
+          "mentioned": true
+        }
+      ],
+      "checks": [],
+      "channelPage": "https://api.hubway.cc/monitor",
+      "channelBoard": "/data/channel-boards/2825.json",
+      "channelReadAt": "2026-10-15T06:32:32.076Z"
+    },
+    {
+      "id": 800003,
+      "name": "Go Gateway",
+      "url": "https://newapi.gogogogoapp.mom/sign-up?aff=rjoL",
+      "domain": "newapi.gogogogoapp.mom",
+      "logo": "",
+      "tag": "第三方",
+      "description": "Go Gateway 是 New API 中转，控制台在 newapi.gogogogoapp.mom。\n💰 充值：公开配置是 7.3 元换 1 美元额度，余额按美元显示。Stripe 单价是 8。\n🤖 模型广场公开 150 个型号，厂商包括 OpenAI、Anthropic、Google、xAI、DeepSeek、智谱、Moonshot、阿里巴巴、MiniMax、字节跳动、百度。\n⚡ Codex 低价渠道：站方说明是低价 GPT Plus，分组倍率 1。型号包括 gpt-5.4、gpt-5.4-mini、gpt-5.5、gpt-5.6-luna、gpt-5.6-sol、gpt-5.6-terra、gpt-6-astra、gpt-6-sol、gpt-6.1-sol。\n⚡ GPT Pro 号池：站方说明是高价 GPT Pro，分组倍率 1.5。兜底号池写的是企业专线、24 小时稳定，分组倍率 2.4。\n🤖 Claude：kiro 反代说明是低价 opus 4.7 / 4.8，分组倍率 1.8，含 claude-opus-4-7、claude-opus-4-8、claude-sonnet-5。满血官反写的是不限客户端，分组倍率 13。满血官代写的是 AWS 平替，只能在 Claude Code 里用，分组倍率 18。AWS 最强性能写的是企业级正规渠道，支持 claude-opus-4-7 和 claude-opus-4-8，分组倍率 25.5。\n📐 上面的分组倍率取自该站公开价格接口，按分组相乘，不是统一的 0.x 综合倍率。\n🌐 国模：DeepSeek、GLM、Kimi、Qwen 的分组说明写倍率即折扣，当前分组倍率都是 5.5。公开型号里有 deepseek-v4-flash、glm-5.2、glm-5.3、kimi-k2.6、kimi-k2.7-code、qwen3.7-max。\n🎨 另外有 Gemini 生文、Grok 生文，以及 gpt-image-2。\n📘 文档入口在站内 about 页的 Codex 一节。可以用 GitHub 登录。站内签到是关的。",
+      "categories": [],
+      "features": [],
+      "promoted": false,
+      "ownerPick": true,
+      "rank": 0,
+      "createdAt": "2026-10-15",
+      "votes": {
+        "up": 0,
+        "down": 0
+      },
+      "status": {
+        "online": true,
+        "ms": 512,
+        "uptime": null,
+        "avgMs": 512,
+        "checkedAt": "2026-10-15T04:23:29.096Z"
+      },
+      "models": [
+        {
+          "id": "gpt",
+          "label": "GPT",
+          "rate": null,
+          "mentioned": true
+        },
+        {
+          "id": "claude",
+          "label": "Claude",
+          "rate": null,
+          "mentioned": true
+        },
+        {
+          "id": "gemini",
+          "label": "Gemini",
+          "rate": null,
+          "mentioned": true
+        },
+        {
+          "id": "grok",
+          "label": "Grok",
+          "rate": null,
+          "mentioned": true
+        },
+        {
+          "id": "deepseek",
+          "label": "DeepSeek",
+          "rate": null,
+          "mentioned": true
+        },
+        {
+          "id": "kimi",
+          "label": "Kimi",
+          "rate": null,
+          "mentioned": true
+        },
+        {
+          "id": "glm",
+          "label": "GLM",
+          "rate": null,
+          "mentioned": true
+        },
+        {
+          "id": "qwen",
+          "label": "Qwen",
+          "rate": null,
+          "mentioned": true
+        },
+        {
+          "id": "image",
+          "label": "生图",
+          "rate": null,
+          "mentioned": true
+        },
+        {
+          "id": "video",
+          "label": "视频",
+          "rate": null,
+          "mentioned": true
+        }
+      ],
+      "checks": [
+        {
+          "checkedAt": "2026-10-15T04:23:29.096Z",
+          "ms": 512,
+          "online": true
+        }
+      ],
+      "channelPage": "https://newapi.gogogogoapp.mom/service-health",
+      "modelProbe": {
+        "at": "2026-10-15T08:20:07.203Z",
+        "lead": "Claude 换分组后又问了一遍。GPT、Grok、DeepSeek 仍是 10/15 11:56 的结果。",
+        "items": [
+          {
+            "family": "GPT",
+            "model": "gpt-6-astra",
+            "ok": true
+          },
+          {
+            "family": "Claude",
+            "model": "claude-opus-5",
+            "ok": true
+          },
+          {
+            "family": "Grok",
+            "model": "grok-4.6",
+            "ok": true
+          },
+          {
+            "family": "DeepSeek",
+            "model": "deepseek-v4-flash",
+            "ok": true
+          }
+        ]
+      }
     }
   ]
 }

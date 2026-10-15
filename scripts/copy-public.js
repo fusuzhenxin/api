@@ -141,6 +141,12 @@ if (require.main === module) {
   fs.mkdirSync(PUB, { recursive: true });
   FILES.forEach(copyFile);
   DIRS.forEach(copyDir);
+  const boardSrc = path.join(ROOT, "data", "channel-boards");
+  if (fs.existsSync(boardSrc)) {
+    const boardDest = path.join(PUB, "data", "channel-boards");
+    fs.mkdirSync(path.dirname(boardDest), { recursive: true });
+    fs.cpSync(boardSrc, boardDest, { recursive: true });
+  }
   const checkHtml = fs.readFileSync(path.join(PUB, "check.html"), "utf8");
   const checkDir = path.join(PUB, "check");
   fs.mkdirSync(checkDir, { recursive: true });

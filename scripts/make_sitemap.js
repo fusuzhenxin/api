@@ -13,6 +13,7 @@ const charityMod = built;
 
 const CAT_IDS = [
   "charity",
+  "owner",
   "checkin",
   "gift",
   "cheaprate",

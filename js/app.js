@@ -2,6 +2,7 @@ const PREVIEW_SIZE = 6;
 const MORE_STEP = 12;
 const HOME_SECTIONS = [
   "charity",
+  "owner",
   "stable",
   "cheap",
   "special",
@@ -23,6 +24,7 @@ const FEATURE_CHIPS = ["charity", "checkin", "gift", "cheaprate", "fast", "pay",
 const NAV_CATS = [
   "all",
   "charity",
+  "owner",
   "stable",
   "cheap",
   "special",
@@ -80,6 +82,7 @@ const CATEGORY_LABEL = {
   other: "更多收录",
   online: "当前在线",
   fav: "我的收藏",
+  owner: "站长在用",
 };
 
 const state = {
@@ -273,6 +276,7 @@ function stationInCategory(site, cat) {
   if (!cat || cat === "all") return true;
   if (cat === "online") return !!(site.status && site.status.online);
   if (cat === "fav") return loadUser().favorites.includes(site.id);
+  if (cat === "owner") return !!(site && site.ownerPick && hasStationBlurb(site) && !(site.status && site.status.online === false));
   return (site.categories || []).includes(cat);
 }
 
@@ -354,6 +358,7 @@ function onCopyClick(e) {
 
 function stationsByCategory(cat) {
   if (cat === "other") return sortStations(otherStations());
+  if (cat === "owner") return sortStations(ownerPickStations());
   const user = loadUser();
   let list = state.data.stations.slice();
   if (cat === "online") list = list.filter((s) => s.status && s.status.online);
@@ -393,7 +398,15 @@ function otherStations() {
   for (const site of state.data.stations) {
     if ((site.categories || []).some((c) => TYPE_SECTIONS.includes(c))) tagged.add(site.id);
   }
-  return applySharedFilters(state.data.stations.filter((s) => !tagged.has(s.id)));
+  return applySharedFilters(state.data.stations.filter((s) => !tagged.has(s.id) && !s.ownerPick));
+}
+
+function ownerPickStations() {
+  const list = state.data.stations.filter((site) => {
+    if (!site || !site.ownerPick || !hasStationBlurb(site)) return false;
+    return !(site.status && site.status.online === false);
+  });
+  return applySharedFilters(list);
 }
 
 function shownCount(key, total, base) {
@@ -638,6 +651,7 @@ function typeBlock(cat, list) {
   const shown = list.slice(0, PREVIEW_SIZE);
   const href = cat === "other" ? "" : catPath(cat);
   const title = `${catIcon(cat)}<span>${escapeHtml(CATEGORY_LABEL[cat] || cat)}</span>`;
+  const note = cat === "owner" ? `<p class="seo-lead">站长在用，先小额试。</p>` : "";
   return `
     <section class="type-block" id="type-${escapeHtml(cat)}">
       <div class="type-head">
@@ -647,6 +661,7 @@ function typeBlock(cat, list) {
           ${moreButton(cat, list.length, shown.length, "link")}
         </div>
       </div>
+      ${note}
       <div class="grid">${shown.map(cardHtml).join("")}</div>
     </section>`;
 }
@@ -1250,43 +1265,216 @@ function cardHtml(site) {
     </article>`;
 }
 
-function modelRows(site) {
-  const mentioned = site.models && site.models.length ? site.models : FALLBACK_MODELS.map((m) => ({ ...m, mentioned: false }));
-  return mentioned.map((m) => {
-    const up = officialForModel(m);
-    const siteOn = site.status && site.status.online;
-    let label = "未标明";
-    let cls = "";
-    if (site.status && site.status.online == null) {
-      label = "待测";
-      cls = "wait";
-    } else if (!siteOn) {
-      label = "整站异常";
-      cls = "bad";
-    } else if (m.mentioned) {
-      label = "已标明可用";
-      cls = "ok";
-    } else if (siteOn) {
-      label = "整站在线";
-      cls = "ok";
+const CHANNEL_FAMILY_LABEL = {
+  gpt: "GPT",
+  grok: "Grok",
+  claude: "Claude",
+  deepseek: "DeepSeek",
+  gemini: "Gemini",
+  kimi: "Kimi",
+};
+const CHANNEL_FAMILY_ORDER = ["gpt", "grok", "claude", "deepseek", "gemini", "kimi"];
+
+function channelFamilyId(item) {
+  const provider = String((item && item.provider) || "").toLowerCase();
+  const model = String((item && item.primary_model) || "").toLowerCase();
+  const table = {
+    openai: "gpt",
+    gpt: "gpt",
+    anthropic: "claude",
+    claude: "claude",
+    cc: "claude",
+    grok: "grok",
+    xai: "grok",
+    gemini: "gemini",
+    google: "gemini",
+    deepseek: "deepseek",
+    kimi: "kimi",
+    moonshot: "kimi",
+  };
+  if (table[provider]) return table[provider];
+  if (model.startsWith("gpt")) return "gpt";
+  if (model.includes("claude")) return "claude";
+  if (model.startsWith("grok")) return "grok";
+  if (model.startsWith("gemini")) return "gemini";
+  if (model.startsWith("deepseek")) return "deepseek";
+  if (model.startsWith("kimi")) return "kimi";
+  return "";
+}
+
+function medianNumber(values) {
+  const nums = values.map(Number).filter((n) => Number.isFinite(n)).sort((a, b) => a - b);
+  if (!nums.length) return null;
+  const mid = Math.floor(nums.length / 2);
+  if (nums.length % 2) return nums[mid];
+  return (nums[mid - 1] + nums[mid]) / 2;
+}
+
+function channelMajorityStatus(statuses) {
+  const order = ["异常", "波动", "无数据", "未知", "正常"];
+  const counts = new Map();
+  for (const status of statuses) {
+    const text = channelStatusText(status);
+    counts.set(text, (counts.get(text) || 0) + 1);
+  }
+  let best = "未知";
+  let bestN = 0;
+  for (const text of order) {
+    const n = counts.get(text) || 0;
+    if (n > bestN) {
+      best = text;
+      bestN = n;
     }
-    if (up && up.online === false) {
-      label = up.level === "minor" ? "上游降级" : "上游异常";
-      cls = "bad";
+  }
+  return bestN ? best : "未知";
+}
+
+function channelBadgeClass(text) {
+  if (text === "正常") return "ok";
+  if (text === "波动") return "mid";
+  if (text === "无数据" || text === "读取中") return "wait";
+  if (text === "异常") return "bad";
+  return "";
+}
+
+function channelFamilySummary(payload) {
+  const map = new Map();
+  for (const item of channelItems(payload).filter((it) => !it.admin_only)) {
+    const id = channelFamilyId(item);
+    if (!id) continue;
+    if (!map.has(id)) {
+      map.set(id, { id, label: CHANNEL_FAMILY_LABEL[id] || id, chats: [], statuses: [] });
     }
-    const ms = (up && up.ms) || (site.status && (site.status.avgMs || site.status.ms));
-    const width = Math.max(8, Math.min(100, 100 - Number(ms || 800) / 40));
-    return `
+    const row = map.get(id);
+    if (item.primary_latency_ms != null) row.chats.push(item.primary_latency_ms);
+    row.statuses.push(item.primary_status);
+  }
+  for (const row of map.values()) {
+    row.ms = medianNumber(row.chats);
+    row.status = channelMajorityStatus(row.statuses);
+  }
+  return map;
+}
+
+function listedModels(site) {
+  return site.models && site.models.length
+    ? site.models
+    : FALLBACK_MODELS.map((m) => ({ ...m, mentioned: false }));
+}
+
+function modelRateText(model) {
+  return model && model.rate ? model.rate + "x 倍率" : "倍率未标明";
+}
+
+function modelNoteText(site, mode) {
+  if (mode === "channel") {
+    return "延迟用上面渠道状态的对话耗时。同一模型有多条渠道时取中位数。倍率仍按简介。";
+  }
+  const names = typeof modelNames === "function" ? modelNames(site) : [];
+  const text = names.slice(0, 6).join("、") || "未标明具体模型";
+  return `简介里提到：${text}。再叠加整站探测和官方上游状态。未写明的模型按整站状态估算，充值前建议小额实测。`;
+}
+
+function catalogModelView(site, model) {
+  const up = officialForModel(model);
+  const siteOn = site.status && site.status.online;
+  let label = "未标明";
+  let cls = "";
+  if (site.status && site.status.online == null) {
+    label = "待测";
+    cls = "wait";
+  } else if (!siteOn) {
+    label = "整站异常";
+    cls = "bad";
+  } else if (model.mentioned) {
+    label = "已标明可用";
+    cls = "ok";
+  } else if (siteOn) {
+    label = "整站在线";
+    cls = "ok";
+  }
+  if (up && up.online === false) {
+    label = up.level === "minor" ? "上游降级" : "上游异常";
+    cls = "bad";
+  }
+  const ms = (up && up.ms) || (site.status && (site.status.avgMs || site.status.ms));
+  return { label, cls, ms };
+}
+
+function modelRowHtml(label, badge, cls, rate, ms) {
+  const known = ms != null && Number.isFinite(Number(ms));
+  const width = known ? Math.max(8, Math.min(100, 100 - Number(ms) / 40)) : 8;
+  return `
       <div class="model-row">
-        <b>${escapeHtml(m.label)}</b>
-        <span class="badge ${cls}">${label}</span>
-        <span>${m.rate ? m.rate + "x 倍率" : "倍率未标明"}</span>
+        <b>${escapeHtml(label)}</b>
+        <span class="badge ${cls}">${escapeHtml(badge)}</span>
+        <span>${escapeHtml(rate)}</span>
         <div>
           <div class="bar"><i style="width:${width}%"></i></div>
-          <small>${fmtMs(ms)}</small>
+          <small>${known ? escapeHtml(fmtMs(ms)) : "…"}</small>
         </div>
       </div>`;
-  }).join("");
+}
+
+function modelRows(site, channelSummary) {
+  const mentioned = listedModels(site);
+  if (channelSummary === "wait") {
+    return mentioned.map((model) => modelRowHtml(model.label, "读取中", "wait", modelRateText(model), null)).join("");
+  }
+  const ranked = channelSummary
+    ? [...channelSummary.values()].filter((row) => row.ms != null)
+    : [];
+  if (!ranked.length) {
+    return mentioned.map((model) => {
+      const view = catalogModelView(site, model);
+      return modelRowHtml(model.label, view.label, view.cls, modelRateText(model), view.ms);
+    }).join("");
+  }
+  ranked.sort((a, b) => {
+    const ia = CHANNEL_FAMILY_ORDER.indexOf(a.id);
+    const ib = CHANNEL_FAMILY_ORDER.indexOf(b.id);
+    return (ia < 0 ? 99 : ia) - (ib < 0 ? 99 : ib);
+  });
+  const used = new Set(ranked.map((row) => row.id));
+  const byId = new Map(mentioned.map((model) => [String(model.id || "").toLowerCase(), model]));
+  const html = ranked.map((row) => {
+    const model = byId.get(row.id);
+    const label = model && model.label ? model.label : row.label;
+    return modelRowHtml(label, row.status, channelBadgeClass(row.status), modelRateText(model), row.ms);
+  });
+  for (const model of mentioned) {
+    if (used.has(String(model.id || "").toLowerCase())) continue;
+    const view = catalogModelView(site, model);
+    html.push(modelRowHtml(model.label, view.label, view.cls, modelRateText(model), view.ms));
+  }
+  return html.join("");
+}
+
+function modelTableEls() {
+  const root = document.getElementById("detail");
+  if (!root) return {};
+  return {
+    table: root.querySelector("[data-model-table]"),
+    note: root.querySelector("[data-model-note]"),
+  };
+}
+
+function showCatalogModelRows(site) {
+  const els = modelTableEls();
+  if (els.table) els.table.innerHTML = modelRows(site);
+  if (els.note) els.note.textContent = modelNoteText(site);
+}
+
+function applyChannelModelRows(site, payload) {
+  const els = modelTableEls();
+  if (!els.table) return;
+  const summary = channelFamilySummary(payload);
+  if (![...summary.values()].some((row) => row.ms != null)) {
+    showCatalogModelRows(site);
+    return;
+  }
+  els.table.innerHTML = modelRows(site, summary);
+  if (els.note) els.note.textContent = modelNoteText(site, "channel");
 }
 
 function splitSiteDesc(text) {
@@ -1399,10 +1587,14 @@ function metricGridHtml(site) {
 }
 
 function relatedStations(site, n) {
+  const limit = n || 6;
   const cats = site.features || site.categories || [];
-  const cat = cats.includes("charity") ? "charity" : cats.find((c) => c !== "online") || cats[0];
-  const pool = state.data.stations.filter((s) => s.id !== site.id && (!cat || (s.categories || []).includes(cat)));
-  return sortStations(pool).slice(0, n || 6);
+  const charity = cats.includes("charity");
+  const picks = charity ? [] : ownerPickStations().filter((item) => item.id !== site.id);
+  const cat = charity ? "charity" : cats.find((c) => c !== "online") || cats[0];
+  const pickIds = new Set(picks.map((item) => item.id));
+  const pool = state.data.stations.filter((s) => s.id !== site.id && !pickIds.has(s.id) && (!cat || (s.categories || []).includes(cat)));
+  return picks.concat(sortStations(pool)).slice(0, limit);
 }
 
 function channelItems(payload) {
@@ -1430,7 +1622,7 @@ function channelStatusClass(status) {
 
 function channelProviderLabel(provider) {
   const key = String(provider || "").toLowerCase();
-  const names = { deepseek: "DeepSeek", openai: "OpenAI", anthropic: "Claude", gemini: "Gemini", grok: "Grok", claude: "Claude", codex: "Codex", cc: "Claude", cx: "Codex" };
+  const names = { deepseek: "DeepSeek", openai: "OpenAI", anthropic: "Claude", gemini: "Gemini", grok: "Grok", kimi: "Kimi", claude: "Claude", codex: "Codex", cc: "Claude", cx: "Codex" };
   return names[key] || provider || "";
 }
 
@@ -1468,29 +1660,111 @@ function channelMonitorBody(payload) {
   }).join("")}</div>`;
 }
 
+function modelProbeHtml(site) {
+  const probe = site && site.modelProbe;
+  const items = probe && Array.isArray(probe.items) ? probe.items : [];
+  if (!items.length) return "";
+  const at = new Date(probe.at);
+  const known = !Number.isNaN(at.getTime());
+  const stale = known && Date.now() - at.getTime() > 24 * 60 * 60 * 1000;
+  const when = known
+    ? at.toLocaleString("zh-CN", {
+        timeZone: "Asia/Shanghai",
+        month: "2-digit",
+        day: "2-digit",
+        hour: "2-digit",
+        minute: "2-digit",
+      })
+    : "";
+  return `<section class="panel">
+    <h2>站长实测</h2>
+    <p class="card-sub">${when ? escapeHtml(when) + " " : ""}${escapeHtml(probe.lead || "用站长自己的密钥各问了一句。")}${stale ? "这次已经超过一天，只供参考。" : "超过一天只供参考。"}密钥不留在本站。</p>
+    <div class="channel-grid">${items.map((item) => {
+      const ok = item.ok === true;
+      return `<article class="channel-card">
+        <header>
+          <h3>${escapeHtml(item.family || "模型")}</h3>
+          <span class="badge ${ok ? "ok" : "bad"}">${ok ? "通过" : "未通过"}</span>
+        </header>
+        <p class="channel-model">${escapeHtml(item.model || "")}</p>
+        ${item.note ? `<p class="card-sub">${escapeHtml(item.note)}</p>` : ""}
+      </article>`;
+    }).join("")}</div>
+  </section>`;
+}
+
+function channelSource(site) {
+  return (site && (site.channelBoard || site.channelMonitor)) || "";
+}
+
+function channelReadText(site) {
+  if (!site || !site.channelReadAt) return "数字来自对方公开渠道页，按最近 7 天统计。";
+  const at = new Date(site.channelReadAt);
+  const when = Number.isNaN(at.getTime())
+    ? ""
+    : at.toLocaleString("zh-CN", {
+        timeZone: "Asia/Shanghai",
+        month: "2-digit",
+        day: "2-digit",
+        hour: "2-digit",
+        minute: "2-digit",
+      });
+  return (when ? when + " " : "") + "从对方监控页读到的渠道，按最近 7 天。";
+}
+
+function channelStatusHtml(site) {
+  const page = site.channelPage
+    ? `<a class="channel-out" href="${escapeHtml(site.channelPage)}" target="_blank" rel="noopener noreferrer">对方渠道页</a>`
+    : "";
+  const api = channelSource(site);
+  if (!api) {
+    if (!site.channelPage) return "";
+    return `<section class="panel">
+      <div class="panel-row">
+        <h2>模型渠道状态</h2>
+        ${page}
+      </div>
+      <p class="card-sub">对方的模型状态在登录后的页面里。本站没有公开接口，不同步最近 7 天的数字。</p>
+    </section>`;
+  }
+  return `<section class="panel" id="channelMonitor" data-api="${escapeHtml(api)}">
+    <div class="panel-row">
+      <h2>模型渠道状态</h2>
+      ${page}
+    </div>
+    <p class="card-sub">${escapeHtml(channelReadText(site))}</p>
+    <div data-channel-body><p class="card-sub">正在读取渠道状态…</p></div>
+  </section>`;
+}
+
 function loadChannelMonitor(site) {
-  const api = site && site.channelMonitor;
+  const api = channelSource(site);
   if (!api || !site.id) return;
   const box = document.getElementById("channelMonitor");
   if (!box || box.getAttribute("data-api") !== api) return;
-  const proxy = "/api/channel-monitor?id=" + encodeURIComponent(site.id);
+  const first = site.channelBoard || "/api/channel-monitor?id=" + encodeURIComponent(site.id);
   const paint = (payload) => {
     const current = document.getElementById("channelMonitor");
     if (!current || current.getAttribute("data-api") !== api) return;
     const body = current.querySelector("[data-channel-body]");
     if (body) body.innerHTML = channelMonitorBody(payload);
+    applyChannelModelRows(site, payload);
   };
   const fail = () => {
     const current = document.getElementById("channelMonitor");
     if (!current || current.getAttribute("data-api") !== api) return;
     const body = current.querySelector("[data-channel-body]");
     if (body) body.innerHTML = `<p class="card-sub">渠道状态暂时没有取到。</p>`;
+    showCatalogModelRows(site);
   };
   const read = (url) => fetch(url, { credentials: "omit" }).then((res) => {
     if (!res.ok) throw new Error(String(res.status));
     return res.json();
   });
-  read(proxy).then(paint).catch(() => read(api).then(paint).catch(fail));
+  read(first).then(paint).catch(() => {
+    if (!site.channelMonitor || site.channelMonitor === first) return fail();
+    return read(site.channelMonitor).then(paint).catch(fail);
+  });
 }
 
 function renderDetail(id) {
@@ -1548,22 +1822,16 @@ function renderDetail(id) {
         ${site.url ? `<a class="btn btn-primary" data-leave target="_blank" rel="noopener noreferrer" href="${escapeHtml(site.url)}">访问站点</a>` : ""}
       </div>
     </section>
-    ${site.channelMonitor ? `<section class="panel" id="channelMonitor" data-api="${escapeHtml(site.channelMonitor)}">
-      <div class="panel-row">
-        <h2>模型渠道状态</h2>
-        ${site.channelPage ? `<a class="channel-out" href="${escapeHtml(site.channelPage)}" target="_blank" rel="noopener noreferrer">对方渠道页</a>` : ""}
-      </div>
-      <p class="card-sub">数字来自对方公开渠道页，按最近 7 天统计。</p>
-      <div data-channel-body><p class="card-sub">正在读取渠道状态…</p></div>
-    </section>` : ""}
+    ${channelStatusHtml(site)}
+    ${modelProbeHtml(site)}
     <section class="panel">
       <h2>${escapeHtml(site.name)} 是什么中转站？</h2>
       <p class="article">${escapeHtml(site.name)}（${escapeHtml(site.domain || "第三方域名")}）是本站收录的 ${ (site.categories || []).includes("charity") ? "公益 API 站" : "API 中转站"}，常见用途是对接 ChatGPT、Claude、DeepSeek、Gemini 等模型。当前探测${site.status && site.status.online != null ? (online ? "在线" : "异常") : "尚未探测"}。页面里的模型与倍率来自站点简介，不代替官方渠道。</p>
     </section>
     <section class="panel">
       <h2>模型与倍率</h2>
-      <p class="card-sub" style="margin-bottom:12px">简介里提到：${escapeHtml(modelText)}。再叠加整站探测和官方上游状态。未写明的模型按整站状态估算，充值前建议小额实测。</p>
-      <div class="model-table">${modelRows(site)}</div>
+      <p class="card-sub" data-model-note style="margin-bottom:12px">${escapeHtml(modelNoteText(site, channelSource(site) ? "channel" : ""))}</p>
+      <div class="model-table" data-model-table>${modelRows(site, channelSource(site) ? "wait" : null)}</div>
     </section>
     ${
       checks.length

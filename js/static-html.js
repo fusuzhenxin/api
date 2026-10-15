@@ -8,6 +8,7 @@
 })(typeof window !== "undefined" ? window : globalThis, function (seo, icons) {
   const HOME_SECTIONS = [
     "charity",
+    "owner",
     "stable",
     "cheap",
     "special",
@@ -83,12 +84,15 @@
   function byCategory(data, cat) {
     const list = data.stations || [];
     if (cat === "online") return sortStations(list.filter((s) => s.status && s.status.online));
+    if (cat === "owner") {
+      return sortStations(list.filter((s) => s && s.ownerPick && seo.hasStationBlurb(s) && !(s.status && s.status.online === false)));
+    }
     if (cat === "other") {
       const tagged = new Set();
       list.forEach((s) => {
         if ((s.categories || []).some((c) => HOME_SECTIONS.includes(c))) tagged.add(s.id);
       });
-      return sortStations(list.filter((s) => !tagged.has(s.id)));
+      return sortStations(list.filter((s) => !tagged.has(s.id) && !s.ownerPick));
     }
     return sortStations(list.filter((s) => (s.categories || []).includes(cat)));
   }
@@ -201,11 +205,13 @@
       href && list.length > shown.length
         ? `<a class="btn" href="${href}">查看全部 ${list.length} 站</a>`
         : "";
+    const note = cat === "owner" ? `<p class="seo-lead">站长在用，先小额试。</p>` : "";
     return `<section class="type-block" id="type-${esc(cat)}">
       <div class="type-head">
         <h2>${href ? `<a class="type-jump" href="${href}">${title}</a>` : title}</h2>
         <div class="type-actions"><span>${shown.length}/${list.length} 站</span>${more}</div>
       </div>
+      ${note}
       <div class="grid">${shown.map(cardHtml).join("")}</div>
     </section>`;
   }
