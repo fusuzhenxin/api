@@ -69,14 +69,16 @@ async function main() {
   await test("an old ping without acted counts as an interaction only", async function () {
     useMemory();
     const body = JSON.stringify({ id: "abc123xyz4567890", kind: "home" });
-    await visits.recordVisit({ ua: CHROME, body: body });
-    await visits.recordVisit({ ua: CHROME, body: body });
+    await visits.recordVisit({ ua: CHROME, origin: "https://www.veridrop.cn", body: body });
+    await visits.recordVisit({ ua: CHROME, origin: "https://www.veridrop.cn", body: body });
     await visits.recordVisit({
       ua: "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; GPTBot/1.2; +https://openai.com/gptbot)",
+      origin: "https://www.veridrop.cn",
       body: JSON.stringify({ id: "gptbotvisitor0001", kind: "site", acted: false }),
     });
     await visits.recordVisit({
       ua: CHROME,
+      origin: "https://www.veridrop.cn",
       body: JSON.stringify({ id: "secondbrowser0001", kind: "check" }),
     });
     const denied = await visits.readVisits({ key: "nope-nope-nope-no", format: "json" });
@@ -100,18 +102,22 @@ async function main() {
     useMemory();
     await visits.recordVisit({
       ua: EDGE,
+      origin: "https://www.veridrop.cn",
       body: JSON.stringify({ id: "abc123xyz4567890", kind: "home", acted: false }),
     });
     await visits.recordVisit({
       ua: EDGE,
+      origin: "https://www.veridrop.cn",
       body: JSON.stringify({ id: "abc123xyz4567890", kind: "home", acted: false }),
     });
     await visits.recordVisit({
       ua: EDGE,
+      origin: "https://www.veridrop.cn",
       body: JSON.stringify({ id: "abc123xyz4567890", kind: "site", acted: true }),
     });
     await visits.recordVisit({
       ua: CHROME,
+      origin: "https://www.veridrop.cn",
       body: JSON.stringify({ id: "secondbrowser0001", kind: "check", acted: false }),
     });
     const report = await visits.readVisits({ key: "local-visit-key-16", format: "json" });
@@ -132,6 +138,7 @@ async function main() {
     assert.strictEqual(before.days[0].kinds.site, 1);
     await visits.recordVisit({
       ua: CHROME,
+      origin: "https://www.veridrop.cn",
       body: JSON.stringify({ id: "legacybrowser0001", kind: "home", acted: false }),
     });
     const after = JSON.parse((await visits.readVisits({ key: "local-visit-key-16", format: "json" })).body);
@@ -139,6 +146,92 @@ async function main() {
     assert.strictEqual(after.days[0].acted, 1);
     assert.strictEqual(after.days[0].kinds.site, 1);
     assert.strictEqual(after.days[0].kinds.home, 0);
+    assert.strictEqual(after.site, "veridrop");
+  });
+
+  await test("an old day map stays on the directory site", function () {
+    const today = visits.shanghaiDate();
+    const migrated = visits.asSites({
+      days: { [today]: { abc123xyz4567890: "home" } },
+    });
+    assert.strictEqual(migrated.sites.veridrop.days[today].abc123xyz4567890, "home");
+    assert.strictEqual(migrated.days, undefined);
+    const kept = visits.asSites({
+      sites: { veridrop: { days: { [today]: { abc123xyz4567890: { k: "check", o: 1, a: 0 } } } } },
+      days: { [today]: { otherbrowser0000001: "home" } },
+    });
+    assert.strictEqual(kept.sites.veridrop.days[today].abc123xyz4567890.k, "check");
+    assert.strictEqual(kept.sites.veridrop.days[today].otherbrowser0000001, undefined);
+  });
+
+  await test("modeltool is counted apart from the directory", async function () {
+    useMemory();
+    const saved = await visits.recordVisit({
+      ua: EDGE,
+      origin: "https://www.modeltool.cn",
+      body: JSON.stringify({ id: "modeltoolbrowser01", site: "modeltool", acted: false }),
+    });
+    assert.strictEqual(saved.status, 204);
+    assert.strictEqual(saved.headers["access-control-allow-origin"], "https://www.modeltool.cn");
+    await visits.recordVisit({
+      ua: EDGE,
+      origin: "https://www.modeltool.cn",
+      body: JSON.stringify({ id: "modeltoolbrowser01", site: "modeltool", acted: true }),
+    });
+    await visits.recordVisit({
+      ua: CHROME,
+      origin: "https://www.veridrop.cn",
+      body: JSON.stringify({ id: "modeltoolbrowser01", kind: "home", acted: false }),
+    });
+    await visits.recordVisit({
+      ua: CHROME,
+      origin: "https://www.veridrop.cn",
+      body: JSON.stringify({ id: "spoofbrowser000001", site: "modeltool", acted: false }),
+    });
+    await visits.recordVisit({
+      ua: CHROME,
+      origin: "https://www.modeltool.cn",
+      body: JSON.stringify({ id: "barebrowser00000001", kind: "home", acted: false }),
+    });
+    await visits.recordVisit({
+      ua: CHROME,
+      body: JSON.stringify({ id: "nooriginbrowser0001", kind: "home", acted: false }),
+    });
+    const dropped = await visits.recordVisit({
+      ua: CHROME,
+      origin: "https://evil.example",
+      body: JSON.stringify({ id: "evilbrowser0000001", site: "modeltool", acted: false }),
+    });
+    assert.strictEqual(dropped.headers["access-control-allow-origin"], undefined);
+    const tool = JSON.parse((await visits.readVisits({ key: "local-visit-key-16", format: "json", site: "modeltool" })).body);
+    const veri = JSON.parse((await visits.readVisits({ key: "local-visit-key-16", format: "json" })).body);
+    assert.strictEqual(tool.site, "modeltool");
+    assert.strictEqual(tool.days[0].open, 1);
+    assert.strictEqual(tool.days[0].acted, 1);
+    assert.strictEqual(veri.site, "veridrop");
+    assert.strictEqual(veri.days[0].open, 1);
+    assert.strictEqual(veri.days[0].acted, 0);
+    assert.strictEqual(veri.days[0].kinds.home, 1);
+    const unknown = await visits.readVisits({ key: "local-visit-key-16", format: "json", site: "other" });
+    assert.strictEqual(unknown.status, 404);
+    const toolPage = await visits.readVisits({ key: "local-visit-key-16", format: "", site: "modeltool" });
+    assert.ok(toolPage.body.indexOf("降智检测") >= 0);
+    assert.ok(toolPage.body.indexOf("站点页") < 0);
+    assert.ok(toolPage.body.indexOf("这里只算当前这个站") >= 0);
+    assert.ok(toolPage.body.indexOf('data-site-link="veridrop"') >= 0);
+    assert.ok(toolPage.body.indexOf('data-site-link="modeltool"') >= 0);
+    assert.ok(toolPage.body.indexOf("local-visit-key-16") < 0);
+    assert.ok(toolPage.body.indexOf('id="open-total" class="num">1<') >= 0);
+    const homePage = await visits.readVisits({ key: "local-visit-key-16", format: "" });
+    assert.ok(homePage.body.indexOf("站点页") >= 0);
+    assert.ok(homePage.body.indexOf("只算有操作") >= 0);
+    assert.ok(homePage.body.indexOf("local-visit-key-16") < 0);
+    const pre = visits.preflightVisit("https://www.modeltool.cn");
+    assert.strictEqual(pre.status, 204);
+    assert.strictEqual(pre.headers["access-control-allow-origin"], "https://www.modeltool.cn");
+    assert.strictEqual(pre.headers["access-control-allow-headers"], "content-type");
+    const blocked = visits.preflightVisit("https://evil.example");
+    assert.strictEqual(blocked.headers["access-control-allow-origin"], undefined);
   });
 }
 

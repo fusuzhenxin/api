@@ -7,7 +7,7 @@ const { dump: dumpVotes, getOne: getVote, vote: castVote } = require("../lib/vot
 const { acceptApply } = require("../lib/apply-mail");
 const { fetchOfficialFeed } = require("../lib/official-feed");
 const { getStationStatus, cronAuthorized } = require("../lib/station-status");
-const { recordVisit, readVisits } = require("../lib/visits");
+const { preflightVisit, recordVisit, readVisits } = require("../lib/visits");
 const { proxyChannelMonitor } = require("../lib/channel-monitor");
 const { renderCheckPage } = require("./copy-public");
 
@@ -202,10 +202,15 @@ http
       const done = (result) => {
         res.writeHead(result.status, result.headers).end(result.body);
       };
+      if (req.method === "OPTIONS") {
+        done(preflightVisit(req.headers.origin || ""));
+        return;
+      }
       if (req.method === "GET") {
         readVisits({
           key: parsed.searchParams.get("key") || "",
           format: parsed.searchParams.get("format") || "",
+          site: parsed.searchParams.get("site") || "",
         })
           .then(done)
           .catch((err) => {
@@ -215,12 +220,13 @@ http
         return;
       }
       if (req.method === "POST") {
+        const origin = req.headers.origin || "";
         readBody(req, 2000)
-          .then((raw) => recordVisit({ ua: req.headers["user-agent"] || "", body: raw }))
+          .then((raw) => recordVisit({ ua: req.headers["user-agent"] || "", origin: origin, body: raw }))
           .then(done)
           .catch((err) => {
             console.error(err);
-            res.writeHead(204, { "cache-control": "no-store" }).end();
+            done(preflightVisit(origin));
           });
         return;
       }

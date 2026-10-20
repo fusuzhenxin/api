@@ -1,4 +1,4 @@
-const { recordVisit, readVisits } = require("../lib/visits");
+const { preflightVisit, recordVisit, readVisits } = require("../lib/visits");
 
 function fromResult(result) {
   return new Response(result.body, { status: result.status, headers: result.headers });
@@ -11,6 +11,7 @@ async function GET(request) {
       await readVisits({
         key: url.searchParams.get("key") || "",
         format: url.searchParams.get("format") || "",
+        site: url.searchParams.get("site") || "",
       })
     );
   } catch (err) {
@@ -20,17 +21,28 @@ async function GET(request) {
 }
 
 async function POST(request) {
+  const origin = request.headers.get("origin") || "";
   try {
     return fromResult(
       await recordVisit({
         ua: request.headers.get("user-agent") || "",
+        origin: origin,
         body: await request.text(),
       })
     );
+  } catch (err) {
+    console.error(err);
+    return fromResult(preflightVisit(origin));
+  }
+}
+
+async function OPTIONS(request) {
+  try {
+    return fromResult(preflightVisit(request.headers.get("origin") || ""));
   } catch (err) {
     console.error(err);
     return new Response(null, { status: 204, headers: { "cache-control": "no-store" } });
   }
 }
 
-module.exports = { GET, POST };
+module.exports = { GET, POST, OPTIONS };

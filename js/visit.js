@@ -4,6 +4,24 @@
   if (location.protocol === "file:") return;
   if (navigator.webdriver) return;
 
+  var script = document.currentScript;
+  if (!script || !script.getAttribute) {
+    var nodes = document.querySelectorAll("script[data-site]");
+    script = null;
+    for (var n = nodes.length - 1; n >= 0; n -= 1) {
+      var src = nodes[n].getAttribute("src") || "";
+      if (src.indexOf("visit.js") >= 0) {
+        script = nodes[n];
+        break;
+      }
+    }
+  }
+  var siteAttr = script && script.getAttribute("data-site");
+  var site = siteAttr && /^[a-z0-9]{1,24}$/.test(siteAttr) ? siteAttr : "";
+  var endpointAttr = script && script.getAttribute("data-endpoint");
+  var endpoint = "/api/visit";
+  if (endpointAttr === "https://www.veridrop.cn/api/visit") endpoint = endpointAttr;
+
   var ua = navigator.userAgent || "";
   if (/ahrefs|mj12bot|bingbot|yandex|shapbot|applebot|googlebot|google-inspectiontool|google-extended|petalbot|bytespider|baiduspider|semrush|dotbot|sogou|360spider|yisouspider|gptbot|chatgpt-user|oai-searchbot|claudebot|claude-searchbot|claude-user|anthropic-ai|perplexity|ccbot|amazonbot|meta-externalagent|meta-externalfetcher|cohere-ai|diffbot|youbot|curl\/|wget\/|python-requests|go-http-client|headlesschrome|local-mirror|scrapy|httpclient|spider|crawler|slurp|\bbot\b/i.test(ua)) return;
 
@@ -69,10 +87,13 @@
     if (already(acted, today)) return Promise.resolve();
     var id = visitorId();
     if (!id || typeof fetch !== "function") return Promise.resolve();
-    return fetch("/api/visit", {
+    var payload = { id: id, acted: acted };
+    if (site) payload.site = site;
+    else payload.kind = kind();
+    return fetch(endpoint, {
       method: "POST",
       headers: { "content-type": "application/json" },
-      body: JSON.stringify({ id: id, kind: kind(), acted: acted }),
+      body: JSON.stringify(payload),
       keepalive: true,
     })
       .then(function (res) {
