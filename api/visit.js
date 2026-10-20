@@ -1,7 +1,8 @@
 const { preflightVisit, recordVisit, readVisits } = require("../lib/visits");
 
 function fromResult(result) {
-  return new Response(result.body, { status: result.status, headers: result.headers });
+  const body = result.status === 204 || result.status === 304 ? null : result.body;
+  return new Response(body, { status: result.status, headers: result.headers });
 }
 
 async function GET(request) {
